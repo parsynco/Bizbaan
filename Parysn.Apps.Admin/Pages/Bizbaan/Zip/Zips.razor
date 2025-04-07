@@ -1,125 +1,126 @@
 ﻿@page "/biz/zips"
 @using System.Diagnostics
-
+@inject IUIHelper _helper
 @{
-    
+
 }
 <PageTitle>بیزبان | مدیریت زیپ کد</PageTitle>
 <MudContainer Class="d-flex align-center justify-center flex-column">
-    <MudPaper Elevation="1" Class="d-flex align-center pa-2" Width="100%">
-        <MudText>مدیریت  زیپ کد </MudText>
-        <MudSpacer />
-        <MudFab StartIcon="fal fa-plus " IconSize="Size.Small" Href="/biz/zips/add" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">
-        </MudFab>
-    </MudPaper>
-    <MudPaper Class="mt-4" Elevation="0" Width="100%">
-        <MudDataGrid Loading="_loading" Context="ctx" Filterable="true" SortMode="@SortMode.Multiple" Groupable="false" Items="@_dataList" Elevation="0" Dense="false" Hover="true" Bordered="false" Striped="true" Style="overflow-x: auto;">
-            <Columns>
+	<MudPaper Elevation="1" Class="d-flex align-center pa-2" Width="100%">
+		<MudText>مدیریت  زیپ کد </MudText>
+		<MudSpacer />
+		<MudFab StartIcon="fal fa-plus " IconSize="Size.Small" Href="/biz/zips/add" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">
+		</MudFab>
+	</MudPaper>
+	<MudPaper Class="mt-4" Elevation="0" Width="100%">
+		<MudDataGrid Loading="_loading" Context="ctx" Filterable="true" SortMode="@SortMode.Multiple" Groupable="false" Items="@_dataList" Elevation="0" Dense="false" Hover="true" Bordered="false" Striped="true" Style="overflow-x: auto;">
+			<Columns>
 
-                <PropertyColumn Property="x => x.State" Title="ایالت " />
-                <PropertyColumn Property="x => x.State_Abbr" Title="ایالت (مخفف) " />
-                <PropertyColumn Property="x => x.City" Title="شهر " />
-                <PropertyColumn Property="x => x.County_Area" Title="منطقه " />
-                <PropertyColumn Property="x => x.Zipcode" Title="زیپ کد " />
-                <PropertyColumn Property="x => x.Created_At" Title="تاریخ ایجاد">
-                    <CellTemplate>
-                        <MudText>@(((DateTime)context.Item.Created_At).ToString("yyyy/MM/dd"))</MudText>
-                    </CellTemplate>
-                </PropertyColumn>
-                <TemplateColumn CellClass="d-flex justify-end" Title="عملیات">
-                    <CellTemplate>
-                        <MudButtonGroup Size="Size.Small" Color="Color.Primary" OverrideStyles="true" Variant="Variant.Text">
-                            <MudIconButton Href="@($"/biz/zips/edit/{context.Item.Id}")" Size="Size.Small" Color="Color.Warning" Icon="fal fa-edit" Class="TableOprButtons"></MudIconButton>
-                            <MudIconButton OnClick="(()=>OpenDialog(context.Item.Id))" Size="Size.Small" Color="Color.Error" Icon="fal fa-trash" Class="TableOprButtons"></MudIconButton>
-                        </MudButtonGroup>
-                    </CellTemplate>
-                </TemplateColumn>
-            </Columns>
+				<PropertyColumn Property="x => x.State" Title="ایالت " />
+				<PropertyColumn Property="x => x.State_Abbr" Title="ایالت (مخفف) " />
+				<PropertyColumn Property="x => x.City" Title="شهر " />
+				<PropertyColumn Property="x => x.County_Area" Title="منطقه " />
+				<PropertyColumn Property="x => x.Zipcode" Title="زیپ کد " />
+				<PropertyColumn Property="x => x.Created_At" Title="تاریخ ایجاد">
+					<CellTemplate>
+						<MudText>@(((DateTime)context.Item.Created_At).ToString("yyyy/MM/dd"))</MudText>
+					</CellTemplate>
+				</PropertyColumn>
+				<TemplateColumn CellClass="d-flex justify-end" Title="عملیات">
+					<CellTemplate>
+						<MudButtonGroup Size="Size.Small" Color="Color.Primary" OverrideStyles="true" Variant="Variant.Text">
+							<MudIconButton Href="@($"/biz/zips/edit/{context.Item.Id}")" Size="Size.Small" Color="Color.Warning" Icon="fal fa-edit" Class="TableOprButtons"></MudIconButton>
+							<MudIconButton OnClick="(()=>OpenDialog(context.Item.Id))" Size="Size.Small" Color="Color.Error" Icon="fal fa-trash" Class="TableOprButtons"></MudIconButton>
+						</MudButtonGroup>
+					</CellTemplate>
+				</TemplateColumn>
+			</Columns>
 
-        </MudDataGrid>
-        <MudPagination SelectedChanged="(int p)=>Paginate(p)" Count="PageCount" Class="pa-4" />
+		</MudDataGrid>
+		<MudPagination SelectedChanged="(int p)=>Paginate(p)" Count="PageCount" Class="pa-4" />
 
-    </MudPaper>
+	</MudPaper>
 </MudContainer>
 @code {
-    [Inject] private IDialogService _dialogSrvc { get; set; }
-    HttpClientHelper<ZipModel> hch = new HttpClientHelper<ZipModel>(UIHelper.ApiUrl());
-    HttpClient _hc;
-    private List<string> _events = new();
-    ZipModel[] _dataList = [];
-    private bool _visible;
-    private bool _loading = false;
-    private int ItemIdToDelete { get; set; } = 0;
-    public int Page { get; set; } = 1;
-    public int PageCount { get; set; } = 1;
-    private async void OpenDialog(int id)
-    {
+	[Inject] private IDialogService _dialogSrvc { get; set; }
+	HttpClientHelper<ZipModel> hch;
+	HttpClient _hc;
+	private List<string> _events = new();
+	ZipModel[] _dataList = [];
+	private bool _visible;
+	private bool _loading = false;
+	private int ItemIdToDelete { get; set; } = 0;
+	public int Page { get; set; } = 1;
+	public int PageCount { get; set; } = 1;
+	private async void OpenDialog(int id)
+	{
 
-        ItemIdToDelete = id;
-        var conf = await _dialogSrvc.Show<DeleteConfirm>().Result;
-        if (!conf.Canceled)
-        {
-            DeleteItem();
-        }
-    }
-    public async Task Paginate(int p)
-    {
-        Page = p;
-        LoadData();
-    }
+		ItemIdToDelete = id;
+		var conf = await _dialogSrvc.Show<DeleteConfirm>().Result;
+		if (!conf.Canceled)
+		{
+			DeleteItem();
+		}
+	}
+	public async Task Paginate(int p)
+	{
+		Page = p;
+		LoadData();
+	}
 
-    protected override async Task OnInitializedAsync()
-    {
-        hch.SetToken(await USR.GetToken());
-        _hc = hch.Instance();
-        GetPages();
-        LoadData(true);
-        await base.OnInitializedAsync();
-    }
+	protected override async Task OnInitializedAsync()
+	{
+		hch = new HttpClientHelper<ZipModel>(_helper.ApiUrl());
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		GetPages();
+		LoadData(true);
+		await base.OnInitializedAsync();
+	}
 
-    private async void DeleteItem()
-    {
-        var res = await hch.Post(new { Id = ItemIdToDelete }, $"zip/Delete?Id={ItemIdToDelete}");
-        _snackbar.Add(res.Msg, (res.Status == ResponseObjectStatusEnum.Error || res.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
-        if (res.Status == ResponseObjectStatusEnum.Success)
-        {
-            _visible = false;
-            StateHasChanged();
-            LoadData();
-        }
+	private async void DeleteItem()
+	{
+		var res = await hch.Post(new { Id = ItemIdToDelete }, $"zip/Delete?Id={ItemIdToDelete}");
+		_snackbar.Add(res.Msg, (res.Status == ResponseObjectStatusEnum.Error || res.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+		if (res.Status == ResponseObjectStatusEnum.Success)
+		{
+			_visible = false;
+			StateHasChanged();
+			LoadData();
+		}
 
-    }
-    private async void LoadData(bool changed = false)
-    {
-        try
-        {
-            _loading = true;
-            var data = await _hc.GetFromJsonAsync<ZipModel[]>($"zip/paged/{Page}");
-            _dataList = data;
-            _loading = false;
-            StateHasChanged();
-        }
-        catch (Exception ex)
-        {
-            Debug.WriteLine(ex.Message);
-        }
+	}
+	private async void LoadData(bool changed = false)
+	{
+		try
+		{
+			_loading = true;
+			var data = await _hc.GetFromJsonAsync<ZipModel[]>($"zip/paged/{Page}");
+			_dataList = data;
+			_loading = false;
+			StateHasChanged();
+		}
+		catch (Exception ex)
+		{
+			Debug.WriteLine(ex.Message);
+		}
 
-    }
-    private async void GetPages()
-    {
-        try
-        {
-            var data = await _hc.GetFromJsonAsync<int>($"zip/pages");
-            PageCount = data;
-            StateHasChanged();
+	}
+	private async void GetPages()
+	{
+		try
+		{
+			var data = await _hc.GetFromJsonAsync<int>($"zip/pages");
+			PageCount = data;
+			StateHasChanged();
 
-        }
-        catch (Exception ex)
-        {
-            Debug.WriteLine(ex.Message);
-        }
+		}
+		catch (Exception ex)
+		{
+			Debug.WriteLine(ex.Message);
+		}
 
-    }
+	}
 
 
 

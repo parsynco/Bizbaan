@@ -2,6 +2,8 @@
 @using Microsoft.AspNetCore.Components.Web
 @inject IConfiguration _conf
 @inject IJSRuntime jsRuntime
+@inject IUIHelper _helper
+
 <PageTitle>بیزبان | ویرایش  بیزینس </PageTitle>
 <MudContainer>
 	<MudCard>
@@ -176,7 +178,7 @@
 	public string SearchBoxContent = "";
 	private bool _saving { get; set; } = false;
 	private static AdModel model = new AdModel();
-	HttpClientHelper<AdModel> hch = new HttpClientHelper<AdModel>(UIHelper.ApiUrl());
+	HttpClientHelper<AdModel> hch;
 	List<AdCategoryModel> Categories = new List<AdCategoryModel>();
 	List<ZipModel> Zips = new List<ZipModel>();
 	HttpClient _hc;
@@ -184,6 +186,7 @@
 	protected override async Task OnParametersSetAsync() => await jsRuntime.InvokeVoidAsync("ActiveMap", new { mode = true });
 	protected override async Task OnInitializedAsync()
 	{
+		hch = new HttpClientHelper<AdModel>(_helper.ApiUrl());
 		GEOPIFY_APIKEY = _conf["GEOPIFY_APIKEY"];
 		hch.SetToken(await USR.GetToken());
 		_hc = hch.Instance();
@@ -286,7 +289,7 @@
 	// }
 	private async void mediaSelected(Tuple<int, string> selectedItem)
 	{
-		model.Logo = UIHelper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
+		model.Logo = _helper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
 		StateHasChanged();
 
 	}

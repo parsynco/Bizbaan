@@ -1,71 +1,73 @@
 ﻿@page "/biz/ads/images/add/{adid:int}"
+@inject IUIHelper _helper
 <PageTitle>بیزبان | ایجاد عکس بیزنس </PageTitle>
 <MudContainer>
-    <MudCard>
-        <MudCardContent>
+	<MudCard>
+		<MudCardContent>
 
-            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
-                <MudText>ثبت عکس بیزنس جدید</MudText>
-                <MudSpacer />
-                <MudButton Size="Size.Small" IconSize="Size.Small" Href="@($"/biz/ads/images/{adid}")" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
-                    <MudText>بازگشت</MudText>
-                </MudButton>
-            </MudCardHeader>
-            <MudContainer Class="mt-3">
-                <MudForm dir="rtl">
-                    <MudGrid>
-                        <MudItem xs="12" lg="12">
-                            @if (!string.IsNullOrEmpty(SelectedImage))
-                            {
-                                <div><img style="width:3rem;height:3rem;" src="@SelectedImage" /></div>
-                            }
-                            <MediaSelector OnMediaSelected="mediaSelected" Title="لوگو " DisplayInline="false"></MediaSelector>
-                        </MudItem>
-                    </MudGrid>
-                </MudForm>
-            </MudContainer>
+			<MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+				<MudText>ثبت عکس بیزنس جدید</MudText>
+				<MudSpacer />
+				<MudButton Size="Size.Small" IconSize="Size.Small" Href="@($"/biz/ads/images/{adid}")" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
+					<MudText>بازگشت</MudText>
+				</MudButton>
+			</MudCardHeader>
+			<MudContainer Class="mt-3">
+				<MudForm dir="rtl">
+					<MudGrid>
+						<MudItem xs="12" lg="12">
+							@if (!string.IsNullOrEmpty(SelectedImage))
+							{
+								<div><img style="width:3rem;height:3rem;" src="@SelectedImage" /></div>
+							}
+							<MediaSelector OnMediaSelected="mediaSelected" Title="لوگو " DisplayInline="false"></MediaSelector>
+						</MudItem>
+					</MudGrid>
+				</MudForm>
+			</MudContainer>
 
-        </MudCardContent>
-        <MudCardActions>
-            <MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
-                @if (_saving)
-                {
-                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
-                }
-                else
-                {
-                    <MudText>ذخیره</MudText>
-                }
-            </MudButton>
+		</MudCardContent>
+		<MudCardActions>
+			<MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+				@if (_saving)
+				{
+					<MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+				}
+				else
+				{
+					<MudText>ذخیره</MudText>
+				}
+			</MudButton>
 
-        </MudCardActions>
-    </MudCard>
+		</MudCardActions>
+	</MudCard>
 </MudContainer>
 
 @code {
-    private bool _saving { get; set; } = false;
-    private AdImageModel model = new AdImageModel();
-    [Parameter] public int adid { get; set; }
-    public string SelectedImage{ get; set; }
-    HttpClientHelper<AdImageModel> hch = new HttpClientHelper<AdImageModel>(UIHelper.ApiUrl());
-    private async void RegisterModel()
-    {
-        _saving = true;
-        hch.SetToken(await USR.GetToken());
-        model.AdId = adid;
-        var res = await hch.Post(model, "adsimages");
-        _saving = false;
-        model = new AdImageModel();
-        _snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
-        StateHasChanged();
-        Thread.Sleep(1500);
-        _nv.NavigateTo($"biz/ads/images/{adid}");
-    }
-    private async void mediaSelected(Tuple<int, string> selectedItem)
-    {
-        model.MediaId = selectedItem.Item1;
-        SelectedImage = UIHelper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
-        StateHasChanged();
+	private bool _saving { get; set; } = false;
+	private AdImageModel model = new AdImageModel();
+	[Parameter] public int adid { get; set; }
+	public string SelectedImage { get; set; }
+	HttpClientHelper<AdImageModel> hch;
+	private async void RegisterModel()
+	{
+		hch = new HttpClientHelper<AdImageModel>(_helper.ApiUrl());
+		_saving = true;
+		hch.SetToken(await USR.GetToken());
+		model.AdId = adid;
+		var res = await hch.Post(model, "adsimages");
+		_saving = false;
+		model = new AdImageModel();
+		_snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
+		StateHasChanged();
+		Thread.Sleep(1500);
+		_nv.NavigateTo($"biz/ads/images/{adid}");
+	}
+	private async void mediaSelected(Tuple<int, string> selectedItem)
+	{
+		model.MediaId = selectedItem.Item1;
+		SelectedImage = _helper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
+		StateHasChanged();
 
-    }
+	}
 }

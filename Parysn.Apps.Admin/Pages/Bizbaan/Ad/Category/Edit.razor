@@ -1,114 +1,116 @@
 ﻿@page "/biz/adcategory/edit/{Id}"
-
+@inject IUIHelper _helper
 <PageTitle>بیزبان | ویرایش دسته بندی بیزینس </PageTitle>
 <MudContainer>
-    <MudCard>
-        <MudCardContent>
+	<MudCard>
+		<MudCardContent>
 
-            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
-                <MudText>وایرایش دسته بندی بیزینس </MudText>
-                <MudSpacer />
+			<MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+				<MudText>وایرایش دسته بندی بیزینس </MudText>
+				<MudSpacer />
 
-            </MudCardHeader>
-            <MudContainer Class="mt-3">
-                <MudForm dir="rtl">
-                    <MudGrid>
-                        <MudItem xl="6" lg="6" sm="12" md="6">
-                            <MudGrid>
-                                <MudItem xs="12" lg="12">
-                                    <MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="ParentId" Class="mud-rtl" Label="دسته بندی">
-                                        <MudSelectItem Value="0">انتخاب دسته بندی</MudSelectItem>
-                                        @foreach (var item in Categories)
-                                        {
-                                            <MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
-                                        }
-                                    </MudSelect>
-                                </MudItem>
-                                <MudItem xs="12" lg="12">
-                                    <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Title" Class="mud-rtl" T="string" Label="عنوان اصلی"></MudTextField>
-                                </MudItem>
-                                <MudItem xs="12" lg="12">
-                                    <MudColorPicker @bind-Text="Model.Color" ColorPickerView="ColorPickerView.Spectrum" ShowAlpha ShowSliders Variant="Variant.Outlined" Margin="Margin.Dense" Class="mud-rtl" T="string" Label="رنگ دسته بندی"></MudColorPicker>
-                                </MudItem>
-                                <MudItem xs="12" lg="12">
-                                    <FontPicker Icon="@Model.Image" OnIconChanged="@((string icon)=>Model.Image = icon)"></FontPicker>
-                                </MudItem>
+			</MudCardHeader>
+			<MudContainer Class="mt-3">
+				<MudForm dir="rtl">
+					<MudGrid>
+						<MudItem xl="6" lg="6" sm="12" md="6">
+							<MudGrid>
+								<MudItem xs="12" lg="12">
+									<MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="ParentId" Class="mud-rtl" Label="دسته بندی">
+										<MudSelectItem Value="0">انتخاب دسته بندی</MudSelectItem>
+										@foreach (var item in Categories)
+										{
+											<MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
+										}
+									</MudSelect>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Title" Class="mud-rtl" T="string" Label="عنوان اصلی"></MudTextField>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<MudColorPicker @bind-Text="Model.Color" ColorPickerView="ColorPickerView.Spectrum" ShowAlpha ShowSliders Variant="Variant.Outlined" Margin="Margin.Dense" Class="mud-rtl" T="string" Label="رنگ دسته بندی"></MudColorPicker>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<FontPicker Icon="@Model.Image" OnIconChanged="@((string icon)=>Model.Image = icon)"></FontPicker>
+								</MudItem>
 
-                            </MudGrid>
-                        </MudItem>
-                        <MudItem xl="6" lg="6" sm="12" md="6">
-                            <Seo Model="Model.Seo" Title="@Model.Title" OnSeoChanged="(Seo)=>{Model.Seo = Seo;StateHasChanged();}" />
-                        </MudItem>
-                    </MudGrid>
-                </MudForm>
-            </MudContainer>
-        </MudCardContent>
-        <MudCardActions>
-            <MudButton Disabled="@_saving" @onclick="Update" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
-                @if (_saving)
-                {
-                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
-                }
-                else
-                {
-                    <MudText>ذخیره</MudText>
-                }
-            </MudButton>
+							</MudGrid>
+						</MudItem>
+						<MudItem xl="6" lg="6" sm="12" md="6">
+							<Seo Model="Model.Seo" Title="@Model.Title" OnSeoChanged="(Seo)=>{Model.Seo = Seo;StateHasChanged();}" />
+						</MudItem>
+					</MudGrid>
+				</MudForm>
+			</MudContainer>
+		</MudCardContent>
+		<MudCardActions>
+			<MudButton Disabled="@_saving" @onclick="Update" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+				@if (_saving)
+				{
+					<MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+				}
+				else
+				{
+					<MudText>ذخیره</MudText>
+				}
+			</MudButton>
 
-        </MudCardActions>
-    </MudCard>
+		</MudCardActions>
+	</MudCard>
 </MudContainer>
 
 @code {
-    [Parameter]
-    public object Id { get; set; }
-    private bool _saving { get; set; } = false;
-    private AdCategoryModel Model = new AdCategoryModel();
-    HttpClientHelper<AdCategoryModel> hch = new HttpClientHelper<AdCategoryModel>(UIHelper.ApiUrl());
-    public int ParentId { get; set; } = 0;
-    List<AdCategoryModel> Categories = new List<AdCategoryModel>();
-    HttpClient _hc;
-    protected override async Task OnInitializedAsync()
-    {
-        hch.SetToken(await USR.GetToken());
-        _hc = hch.Instance();
-        GetItem();
-        await LoadCategories();
-        await base.OnInitializedAsync();
-    }
-    private async Task LoadCategories()
-    {
-        Categories = await _hc.GetFromJsonAsync<List<AdCategoryModel>>("adcategory/l1");
-        StateHasChanged();
-    }
-    private async void GetItem()
-    {
+	[Parameter]
+	public object Id { get; set; }
+	private bool _saving { get; set; } = false;
+	private AdCategoryModel Model = new AdCategoryModel();
+	HttpClientHelper<AdCategoryModel> hch;
+	public int ParentId { get; set; } = 0;
+	List<AdCategoryModel> Categories = new List<AdCategoryModel>();
+	HttpClient _hc;
+	protected override async Task OnInitializedAsync()
+	{
+		hch = new HttpClientHelper<AdCategoryModel>(_helper.ApiUrl());
 
-        var data = await hch.Post(Id, $"adcategory/GetById?Id={Id}").WaitAsync(new CancellationToken());
-        if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
-        {
-            return;
-        }
-        _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
-        Model = JsonConvert.DeserializeObject<AdCategoryModel>(data.Data.ToString());
-        Model.Id = int.Parse(Id.ToString());
-        StateHasChanged();
-        Console.WriteLine(data.Msg);
-    }
-    private async void Update()
-    {
-        _saving = true;
-        var data = await hch.Post(Model, $"adcategory/Edit");
-        _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)? Severity.Error : Severity.Success);
-        _saving = false;
-        StateHasChanged();
-        Thread.Sleep(1700);
-        _nv.NavigateTo("biz/adcategory");
-    }
-    private async void mediaSelected(Tuple<int, string> selectedItem)
-    {
-        Model.Image = UIHelper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
-        StateHasChanged();
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		GetItem();
+		await LoadCategories();
+		await base.OnInitializedAsync();
+	}
+	private async Task LoadCategories()
+	{
+		Categories = await _hc.GetFromJsonAsync<List<AdCategoryModel>>("adcategory/l1");
+		StateHasChanged();
+	}
+	private async void GetItem()
+	{
 
-    }
+		var data = await hch.Post(Id, $"adcategory/GetById?Id={Id}").WaitAsync(new CancellationToken());
+		if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
+		{
+			return;
+		}
+		_snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+		Model = JsonConvert.DeserializeObject<AdCategoryModel>(data.Data.ToString());
+		Model.Id = int.Parse(Id.ToString());
+		StateHasChanged();
+		Console.WriteLine(data.Msg);
+	}
+	private async void Update()
+	{
+		_saving = true;
+		var data = await hch.Post(Model, $"adcategory/Edit");
+		_snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+		_saving = false;
+		StateHasChanged();
+		Thread.Sleep(1700);
+		_nv.NavigateTo("biz/adcategory");
+	}
+	private async void mediaSelected(Tuple<int, string> selectedItem)
+	{
+		Model.Image = _helper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
+		StateHasChanged();
+
+	}
 }

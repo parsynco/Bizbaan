@@ -1,95 +1,96 @@
 ﻿@page "/articles/category/edit/{Id}"
-
+@inject IUIHelper _helper
 <PageTitle>بیزبان | ویرایش دسته بندی مقالات </PageTitle>
 <MudContainer>
-    <MudCard>
-        <MudCardContent>
+	<MudCard>
+		<MudCardContent>
 
-            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
-                <MudText>وایرایش دسته بندی </MudText>
-                <MudSpacer />
+			<MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+				<MudText>وایرایش دسته بندی </MudText>
+				<MudSpacer />
 
-            </MudCardHeader>
-            <MudContainer Class="mt-3">
-                <MudForm dir="rtl">
-                    <MudGrid>
+			</MudCardHeader>
+			<MudContainer Class="mt-3">
+				<MudForm dir="rtl">
+					<MudGrid>
 
-                        <MudItem xs="12" lg="6">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Title" Class="mud-rtl" T="string" Label="عنوان اصلی"></MudTextField>
-                        </MudItem>
-                        <MudItem xs="12" lg="6">
-                            @if (!string.IsNullOrEmpty(Model.Image))
-                            {
-                                <div><img style="width:3rem;height:3rem;" src="@Model.Image" /></div>
-                            }
-                            <MediaSelector OnMediaSelected="mediaSelected" Title="عکس " DisplayInline="false"></MediaSelector>
-                        </MudItem>
+						<MudItem xs="12" lg="6">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Title" Class="mud-rtl" T="string" Label="عنوان اصلی"></MudTextField>
+						</MudItem>
+						<MudItem xs="12" lg="6">
+							@if (!string.IsNullOrEmpty(Model.Image))
+							{
+								<div><img style="width:3rem;height:3rem;" src="@Model.Image" /></div>
+							}
+							<MediaSelector OnMediaSelected="mediaSelected" Title="عکس " DisplayInline="false"></MediaSelector>
+						</MudItem>
 
-                        <MudItem xs="12" lg="12">
-                            <Seo model="Model.Seo" Title="@Model.Title" OnSeoChanged="(Seo)=>{Model.Seo = Seo;StateHasChanged();}" />
-                        </MudItem>
-                    </MudGrid>
-                </MudForm>
-            </MudContainer>
-        </MudCardContent>
-        <MudCardActions>
-            <MudButton Disabled="@_saving" @onclick="Update" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
-                @if (_saving)
-                {
-                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
-                }
-                else
-                {
-                    <MudText>ذخیره</MudText>
-                }
-            </MudButton>
+						<MudItem xs="12" lg="12">
+							<Seo model="Model.Seo" Title="@Model.Title" OnSeoChanged="(Seo)=>{Model.Seo = Seo;StateHasChanged();}" />
+						</MudItem>
+					</MudGrid>
+				</MudForm>
+			</MudContainer>
+		</MudCardContent>
+		<MudCardActions>
+			<MudButton Disabled="@_saving" @onclick="Update" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+				@if (_saving)
+				{
+					<MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+				}
+				else
+				{
+					<MudText>ذخیره</MudText>
+				}
+			</MudButton>
 
-        </MudCardActions>
-    </MudCard>
+		</MudCardActions>
+	</MudCard>
 </MudContainer>
 
 @code {
-    [Parameter]
-    public object Id { get; set; }
-    private bool _saving { get; set; } = false;
-    private ArticleCategoryModel Model = new ArticleCategoryModel();
-    HttpClientHelper<ArticleCategoryModel> hch = new HttpClientHelper<ArticleCategoryModel>(UIHelper.ApiUrl());
-    protected override async Task OnInitializedAsync()
-    {
-        hch.SetToken(await USR.GetToken());
-        GetItem();
+	[Parameter]
+	public object Id { get; set; }
+	private bool _saving { get; set; } = false;
+	private ArticleCategoryModel Model = new ArticleCategoryModel();
+	HttpClientHelper<ArticleCategoryModel> hch;
+	protected override async Task OnInitializedAsync()
+	{
+		hch = new HttpClientHelper<ArticleCategoryModel>(_helper.ApiUrl());
+		hch.SetToken(await USR.GetToken());
+		GetItem();
 
-        await base.OnInitializedAsync();
-    }
-    private async void GetItem()
-    {
+		await base.OnInitializedAsync();
+	}
+	private async void GetItem()
+	{
 
-        var data = await hch.Post(Id, $"articlecat/GetById?Id={Id}").WaitAsync(new CancellationToken());
-        if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
-        {
-            return;
-        }
-        _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+		var data = await hch.Post(Id, $"articlecat/GetById?Id={Id}").WaitAsync(new CancellationToken());
+		if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
+		{
+			return;
+		}
+		_snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
 
-        Model = JsonConvert.DeserializeObject<ArticleCategoryModel>(data.Data.ToString());
-        Model.Id = int.Parse(Id.ToString());
-        StateHasChanged();
-        Console.WriteLine(data.Msg);
-    }
-    private async void Update()
-    {
-        _saving = true;
-        var data = await hch.Post(Model, $"articlecat/Edit");
-        _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)? Severity.Error : Severity.Success);
-        _saving = false;
-        StateHasChanged();
-        Thread.Sleep(1700);
-        _nv.NavigateTo("articles/category");
-    }
-    private async void mediaSelected(Tuple<int, string> selectedItem)
-    {
-        Model.Image = UIHelper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
-        StateHasChanged();
+		Model = JsonConvert.DeserializeObject<ArticleCategoryModel>(data.Data.ToString());
+		Model.Id = int.Parse(Id.ToString());
+		StateHasChanged();
+		Console.WriteLine(data.Msg);
+	}
+	private async void Update()
+	{
+		_saving = true;
+		var data = await hch.Post(Model, $"articlecat/Edit");
+		_snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+		_saving = false;
+		StateHasChanged();
+		Thread.Sleep(1700);
+		_nv.NavigateTo("articles/category");
+	}
+	private async void mediaSelected(Tuple<int, string> selectedItem)
+	{
+		Model.Image = _helper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
+		StateHasChanged();
 
-    }
+	}
 }

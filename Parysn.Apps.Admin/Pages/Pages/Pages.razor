@@ -1,89 +1,92 @@
 ﻿@page "/pages/{PageName}"
 @using Parysn.Apps.Admin.UIServices.Enums
+@inject IUIHelper _helper
 @{
-    
+
 }
 <PageTitle>بیزبان | مدیریت  صفحات</PageTitle>
 <MudContainer Class="d-flex align-center justify-center flex-column">
-    <MudPaper Elevation="1" Class="d-flex align-center pa-2" Width="100%">
-        <MudText>مدیریت صفحات - صفحه @model.Title</MudText>
-        <MudSpacer />
-        <MudFab StartIcon="fal fa-save" OnClick="RegisterModel" IconSize="Size.Small" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">
-        </MudFab>
-    </MudPaper>
-    <MudPaper Class="mt-4" Elevation="0" Width="100%">
+	<MudPaper Elevation="1" Class="d-flex align-center pa-2" Width="100%">
+		<MudText>مدیریت صفحات - صفحه @model.Title</MudText>
+		<MudSpacer />
+		<MudFab StartIcon="fal fa-save" OnClick="RegisterModel" IconSize="Size.Small" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">
+		</MudFab>
+	</MudPaper>
+	<MudPaper Class="mt-4" Elevation="0" Width="100%">
 
-        <MudGrid>
+		<MudGrid>
 
-            <MudItem sm="12" md="12" lg="6" xl="6">
-                <MudGrid Class="pa-3">
-                    <MudItem sm="12" md="12" lg="12" xl="12">
-                        <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Title" Class="mud-rtl" T="string" Label="عنوان صفحه"></MudTextField>
-                    </MudItem>
-                    <MudItem sm="12" md="12" lg="12" xl="12">
-                        <MudExRichTextEdit @ref="_editor" @bind-Value="model.Description" Placeholder="محتوا" dir="rtl">
-                        </MudExRichTextEdit>
-                    </MudItem>
-                </MudGrid>
-            </MudItem>
-            <MudItem  sm="12" md="12" lg="6" xl="6">
-                <Seo model="model.Seo" Title="@model.Title" OnSeoChanged="(Seo)=>{model.Seo = Seo;StateHasChanged();}" />
-            </MudItem>
-           
-        </MudGrid>
+			<MudItem sm="12" md="12" lg="6" xl="6">
+				<MudGrid Class="pa-3">
+					<MudItem sm="12" md="12" lg="12" xl="12">
+						<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Title" Class="mud-rtl" T="string" Label="عنوان صفحه"></MudTextField>
+					</MudItem>
+					<MudItem sm="12" md="12" lg="12" xl="12">
+						<MudExRichTextEdit @ref="_editor" @bind-Value="model.Description" Placeholder="محتوا" dir="rtl">
+						</MudExRichTextEdit>
+					</MudItem>
+				</MudGrid>
+			</MudItem>
+			<MudItem sm="12" md="12" lg="6" xl="6">
+				<Seo model="model.Seo" Title="@model.Title" OnSeoChanged="(Seo)=>{model.Seo = Seo;StateHasChanged();}" />
+			</MudItem>
 
-    </MudPaper>
+		</MudGrid>
+
+	</MudPaper>
 </MudContainer>
 @code {
-    MudExRichTextEdit _editor;
-    [Parameter]
-    public string PageName { get; set; }
+	MudExRichTextEdit _editor;
+	[Parameter]
+	public string PageName { get; set; }
 
-    [Inject] private IDialogService _dialogSrvc { get; set; }
-    private bool _saving { get; set; } = false;
-    public PagesModel model { get; set; } 
-    HttpClientHelper<PagesModel> hch = new HttpClientHelper<PagesModel>(UIHelper.ApiUrl());
-    HttpClient _hc;
-    private List<string> _events = new();
-    PagesModel[] _dataList = [];
+	[Inject] private IDialogService _dialogSrvc { get; set; }
+	private bool _saving { get; set; } = false;
+	public PagesModel model { get; set; }
+	HttpClientHelper<PagesModel> hch;
+	HttpClient _hc;
+	private List<string> _events = new();
+	PagesModel[] _dataList = [];
 
-    private async void RegisterModel()
-    {
-        _saving = true;
-        model.Name = PageName;
-        var res = await hch.Post(model, "page");
-        _saving = false;
-        _snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
-        StateHasChanged();
-        Thread.Sleep(1500);
-
-
-    }
-    protected override Task OnParametersSetAsync()
-    {
-        model = new PagesModel { Name = PageName, Seo = new SeoModel() };
-        LoadData(true);
-        return base.OnParametersSetAsync();
-    }
-    protected override async Task OnInitializedAsync()
-    {
-        hch.SetToken(await USR.GetToken());
-        _hc = hch.Instance();
-        model = new PagesModel{Name =  PageName,Seo = new SeoModel()};
-        LoadData(true);
-        await base.OnInitializedAsync();
-    }
+	private async void RegisterModel()
+	{
+		_saving = true;
+		model.Name = PageName;
+		var res = await hch.Post(model, "page");
+		_saving = false;
+		_snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
+		StateHasChanged();
+		Thread.Sleep(1500);
 
 
-    private async void LoadData(bool changed = false)
-    {
-        // _loading = true;
-        var data = await _hc.GetFromJsonAsync<PagesModel>($"page/getbyname?name={PageName}");
-        model = data != null ? data : new PagesModel { Name = PageName };
-        // _loading = false;
-        StateHasChanged();
+	}
+	protected override Task OnParametersSetAsync()
+	{
+		hch = new HttpClientHelper<PagesModel>(_helper.ApiUrl());
+		model = new PagesModel { Name = PageName, Seo = new SeoModel() };
+		LoadData(true);
+		return base.OnParametersSetAsync();
+	}
+	protected override async Task OnInitializedAsync()
+	{
+		hch = new HttpClientHelper<PagesModel>(_helper.ApiUrl());
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		model = new PagesModel { Name = PageName, Seo = new SeoModel() };
+		LoadData(true);
+		await base.OnInitializedAsync();
+	}
 
-    }
+
+	private async void LoadData(bool changed = false)
+	{
+		// _loading = true;
+		var data = await _hc.GetFromJsonAsync<PagesModel>($"page/getbyname?name={PageName}");
+		model = data != null ? data : new PagesModel { Name = PageName };
+		// _loading = false;
+		StateHasChanged();
+
+	}
 
 
 

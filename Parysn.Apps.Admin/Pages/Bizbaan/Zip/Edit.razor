@@ -1,94 +1,95 @@
 ﻿@page "/biz/zips/edit/{Id}"
-
+@inject IUIHelper _helper
 <PageTitle>بیزبان | ویرایش زیپ کد </PageTitle>
 <MudContainer>
-    <MudCard>
-        <MudCardContent>
+	<MudCard>
+		<MudCardContent>
 
-            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
-                <MudText>وایرایش زیپ کد </MudText>
-                <MudSpacer />
-            </MudCardHeader>
-            <MudContainer Class="mt-3">
-                <MudForm dir="rtl">
-                    <MudGrid>
-                        <MudItem xl="4" lg="4" sm="12" md="6">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.State" Class="mud-rtl" T="string" Label="ایالت"></MudTextField>
-                        </MudItem>
-                        <MudItem xl="4" lg="4" sm="12" md="6">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.State_Abbr" Class="mud-rtl" T="string" Label="مخفف ایالت "></MudTextField>
-                        </MudItem>
-                        <MudItem xl="4" lg="4" sm="12" md="6">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.City" Class="mud-rtl" T="string" Label="شهر  "></MudTextField>
-                        </MudItem>
-                        <MudItem xl="4" lg="4" sm="12" md="6">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.County_Area" Class="mud-rtl" T="string" Label="منطقه  "></MudTextField>
-                        </MudItem>
-                        <MudItem xl="4" lg="4" sm="12" md="6">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Zipcode" Class="mud-rtl" T="string" Label="زیپ کد  "></MudTextField>
-                        </MudItem>
-                        <MudItem xl="4" lg="4" sm="12" md="6">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Latitude" Style="direction:ltr;" T="decimal" Label=" مختصات (Lat)  "></MudTextField>
-                        </MudItem>
-                        <MudItem xl="4" lg="4" sm="12" md="6">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Longitude" Style="direction:ltr;" T="decimal" Label=" مختصات (Lng)  "></MudTextField>
-                        </MudItem>
-                    </MudGrid>
-                </MudForm>
-            </MudContainer>
-        </MudCardContent>
-        <MudCardActions>
-            <MudButton Disabled="@_saving" @onclick="Update" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
-                @if (_saving)
-                {
-                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
-                }
-                else
-                {
-                    <MudText>ذخیره</MudText>
-                }
-            </MudButton>
+			<MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+				<MudText>وایرایش زیپ کد </MudText>
+				<MudSpacer />
+			</MudCardHeader>
+			<MudContainer Class="mt-3">
+				<MudForm dir="rtl">
+					<MudGrid>
+						<MudItem xl="4" lg="4" sm="12" md="6">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.State" Class="mud-rtl" T="string" Label="ایالت"></MudTextField>
+						</MudItem>
+						<MudItem xl="4" lg="4" sm="12" md="6">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.State_Abbr" Class="mud-rtl" T="string" Label="مخفف ایالت "></MudTextField>
+						</MudItem>
+						<MudItem xl="4" lg="4" sm="12" md="6">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.City" Class="mud-rtl" T="string" Label="شهر  "></MudTextField>
+						</MudItem>
+						<MudItem xl="4" lg="4" sm="12" md="6">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.County_Area" Class="mud-rtl" T="string" Label="منطقه  "></MudTextField>
+						</MudItem>
+						<MudItem xl="4" lg="4" sm="12" md="6">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Zipcode" Class="mud-rtl" T="string" Label="زیپ کد  "></MudTextField>
+						</MudItem>
+						<MudItem xl="4" lg="4" sm="12" md="6">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Latitude" Style="direction:ltr;" T="decimal" Label=" مختصات (Lat)  "></MudTextField>
+						</MudItem>
+						<MudItem xl="4" lg="4" sm="12" md="6">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Longitude" Style="direction:ltr;" T="decimal" Label=" مختصات (Lng)  "></MudTextField>
+						</MudItem>
+					</MudGrid>
+				</MudForm>
+			</MudContainer>
+		</MudCardContent>
+		<MudCardActions>
+			<MudButton Disabled="@_saving" @onclick="Update" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+				@if (_saving)
+				{
+					<MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+				}
+				else
+				{
+					<MudText>ذخیره</MudText>
+				}
+			</MudButton>
 
-        </MudCardActions>
-    </MudCard>
+		</MudCardActions>
+	</MudCard>
 </MudContainer>
 
 @code {
-    [Parameter]
-    public object Id { get; set; }
-    private bool _saving { get; set; } = false;
-    private ZipModel Model = new ZipModel();
-    HttpClientHelper<ZipModel> hch = new HttpClientHelper<ZipModel>(UIHelper.ApiUrl());
-    HttpClient _hc;
-    protected override async Task OnInitializedAsync()
-    {
-        hch.SetToken(await USR.GetToken());
-        _hc = hch.Instance();
-        GetItem();
-        await base.OnInitializedAsync();
-    }
-    private async void GetItem()
-    {
+	[Parameter]
+	public object Id { get; set; }
+	private bool _saving { get; set; } = false;
+	private ZipModel Model = new ZipModel();
+	HttpClientHelper<ZipModel> hch;
+	HttpClient _hc;
+	protected override async Task OnInitializedAsync()
+	{
+		hch = new HttpClientHelper<ZipModel>(_helper.ApiUrl());
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		GetItem();
+		await base.OnInitializedAsync();
+	}
+	private async void GetItem()
+	{
 
-        var data = await hch.Post(Id, $"zip/GetById?Id={Id}").WaitAsync(new CancellationToken());
-        if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
-        {
-            return;
-        }
-        _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
-        Model = JsonConvert.DeserializeObject<ZipModel>(data.Data.ToString());
-        Model.Id = int.Parse(Id.ToString());
-        StateHasChanged();
-        Console.WriteLine(data.Msg);
-    }
-    private async void Update()
-    {
-        _saving = true;
-        var data = await hch.Post(Model, $"zip/Edit");
-        _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)? Severity.Error : Severity.Success);
-        _saving = false;
-        StateHasChanged();
-        Thread.Sleep(1700);
-        _nv.NavigateTo("biz/zips");
-    }
+		var data = await hch.Post(Id, $"zip/GetById?Id={Id}").WaitAsync(new CancellationToken());
+		if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
+		{
+			return;
+		}
+		_snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+		Model = JsonConvert.DeserializeObject<ZipModel>(data.Data.ToString());
+		Model.Id = int.Parse(Id.ToString());
+		StateHasChanged();
+		Console.WriteLine(data.Msg);
+	}
+	private async void Update()
+	{
+		_saving = true;
+		var data = await hch.Post(Model, $"zip/Edit");
+		_snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+		_saving = false;
+		StateHasChanged();
+		Thread.Sleep(1700);
+		_nv.NavigateTo("biz/zips");
+	}
 }

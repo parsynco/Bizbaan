@@ -1,60 +1,63 @@
 ﻿@page "/roles/add"
+@inject IUIHelper _helper
 <PageTitle>بیزبان | ایجاد  نقش</PageTitle>
 <MudContainer>
-    <MudCard>
-        <MudCardContent>
+	<MudCard>
+		<MudCardContent>
 
-            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
-                <MudText>ثبت نقش </MudText>
-                <MudSpacer />
-                <MudButton Size="Size.Small" IconSize="Size.Small" Href="/roles" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
-                    <MudText>بازگشت</MudText>
-                </MudButton>
-            </MudCardHeader>
-            <MudContainer Class="mt-3">
-                <MudForm dir="rtl">
-                    <MudGrid>
+			<MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+				<MudText>ثبت نقش </MudText>
+				<MudSpacer />
+				<MudButton Size="Size.Small" IconSize="Size.Small" Href="/roles" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
+					<MudText>بازگشت</MudText>
+				</MudButton>
+			</MudCardHeader>
+			<MudContainer Class="mt-3">
+				<MudForm dir="rtl">
+					<MudGrid>
 
-                        <MudItem xs="12" lg="12">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Title" Class="mud-rtl" T="string" Label="عنوان"></MudTextField>
-                        </MudItem>
-ٌ                    </MudGrid>
-                </MudForm>
-            </MudContainer>
+						<MudItem xs="12" lg="12">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Title" Class="mud-rtl" T="string" Label="عنوان"></MudTextField>
+						</MudItem>
+						ٌ
+					</MudGrid>
+				</MudForm>
+			</MudContainer>
 
-        </MudCardContent>
-        <MudCardActions>
-            <MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
-                @if (_saving)
-                {
-                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
-                }
-                else
-                {
-                    <MudText>ذخیره</MudText>
-                }
-            </MudButton>
+		</MudCardContent>
+		<MudCardActions>
+			<MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+				@if (_saving)
+				{
+					<MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+				}
+				else
+				{
+					<MudText>ذخیره</MudText>
+				}
+			</MudButton>
 
-        </MudCardActions>
-    </MudCard>
+		</MudCardActions>
+	</MudCard>
 </MudContainer>
 
 @code {
-    private bool _saving { get; set; } = false;
-    private RoleModel model = new RoleModel();
-    HttpClientHelper<RoleModel> hch = new HttpClientHelper<RoleModel>(UIHelper.ApiUrl());
-    private async void RegisterModel()
-    {
-        hch.SetToken(await USR.GetToken());
-        _saving = true;
-        var res = await hch.Post(model, "Role");
-        _saving = false;
-        model = new RoleModel();
-        _snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
-        StateHasChanged();
-        Thread.Sleep(1500);
-        _nv.NavigateTo("roles");
+	private bool _saving { get; set; } = false;
+	private RoleModel model = new RoleModel();
+	HttpClientHelper<RoleModel> hch;
+	private async void RegisterModel()
+	{
+		hch = new HttpClientHelper<RoleModel>(_helper.ApiUrl());
+		hch.SetToken(await USR.GetToken());
+		_saving = true;
+		var res = await hch.Post(model, "Role");
+		_saving = false;
+		model = new RoleModel();
+		_snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
+		StateHasChanged();
+		Thread.Sleep(1500);
+		_nv.NavigateTo("roles");
 
 
-    }
+	}
 }

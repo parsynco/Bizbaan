@@ -1,99 +1,101 @@
 ﻿@page "/faq/add"
+@inject IUIHelper _helper
 <PageTitle>بیزبان | ایجاد FAQ جدید</PageTitle>
 <MudContainer>
-    <MudCard>
-        <MudCardContent>
+	<MudCard>
+		<MudCardContent>
 
-            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
-                <MudText>ثبت FAQ جدید</MudText>
-                <MudSpacer />
-                <MudButton Size="Size.Small" IconSize="Size.Small" Href="/faq" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
-                    <MudText>بازگشت</MudText>
-                </MudButton>
-            </MudCardHeader>
-            <MudContainer Class="mt-3">
-                <MudForm dir="rtl">
-                    <MudGrid>
+			<MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+				<MudText>ثبت FAQ جدید</MudText>
+				<MudSpacer />
+				<MudButton Size="Size.Small" IconSize="Size.Small" Href="/faq" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
+					<MudText>بازگشت</MudText>
+				</MudButton>
+			</MudCardHeader>
+			<MudContainer Class="mt-3">
+				<MudForm dir="rtl">
+					<MudGrid>
 
-                        <MudItem xs="12" lg="6">
-                            <MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.FaqCatId" Class="mud-rtl" T="string" Label="دسته بندی">
-                                <MudSelectItem Value="0">انتخاب دسته بندی</MudSelectItem>
-                                @foreach (var item in articleCategories)
-                                {
-                                    <MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
-                                }
-                            </MudSelect>
-                        </MudItem>
-                        <MudItem xs="12" lg="6">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Question" Class="mud-rtl" T="string" Label="عنوان سوال"></MudTextField>
-                        </MudItem>
-                        <MudItem xs="12" lg="6">
-                            <MudTextField MaxLength="350" Lines="4" MaxLines="4" InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="model.Answer" T="string" Label="توضیحات (پاسخ)"></MudTextField>
-                        </MudItem>
-                        <MudItem xs="12" lg="6">
-                            @if (!string.IsNullOrEmpty(model.Image))
-                            {
-                                <div><img style="width:3rem;height:3rem;" src="@model.Image" /></div>
-                            }
-                            <MediaSelector OnMediaSelected="mediaSelected" Title="عکس " DisplayInline="false"></MediaSelector>
-                        </MudItem>
-                       
-                    </MudGrid>
-                </MudForm>
-            </MudContainer>
+						<MudItem xs="12" lg="6">
+							<MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.FaqCatId" Class="mud-rtl" T="string" Label="دسته بندی">
+								<MudSelectItem Value="0">انتخاب دسته بندی</MudSelectItem>
+								@foreach (var item in articleCategories)
+								{
+									<MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
+								}
+							</MudSelect>
+						</MudItem>
+						<MudItem xs="12" lg="6">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Question" Class="mud-rtl" T="string" Label="عنوان سوال"></MudTextField>
+						</MudItem>
+						<MudItem xs="12" lg="6">
+							<MudTextField MaxLength="350" Lines="4" MaxLines="4" InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="model.Answer" T="string" Label="توضیحات (پاسخ)"></MudTextField>
+						</MudItem>
+						<MudItem xs="12" lg="6">
+							@if (!string.IsNullOrEmpty(model.Image))
+							{
+								<div><img style="width:3rem;height:3rem;" src="@model.Image" /></div>
+							}
+							<MediaSelector OnMediaSelected="mediaSelected" Title="عکس " DisplayInline="false"></MediaSelector>
+						</MudItem>
 
-        </MudCardContent>
-        <MudCardActions>
-            <MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
-                @if (_saving)
-                {
-                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
-                }
-                else
-                {
-                    <MudText>ذخیره</MudText>
-                }
-            </MudButton>
+					</MudGrid>
+				</MudForm>
+			</MudContainer>
 
-        </MudCardActions>
-    </MudCard>
+		</MudCardContent>
+		<MudCardActions>
+			<MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+				@if (_saving)
+				{
+					<MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+				}
+				else
+				{
+					<MudText>ذخیره</MudText>
+				}
+			</MudButton>
+
+		</MudCardActions>
+	</MudCard>
 </MudContainer>
 
 @code {
-    private bool _saving { get; set; } = false;
-    private FaqModel model = new FaqModel();
-    HttpClientHelper<FaqModel> hch = new HttpClientHelper<FaqModel>(UIHelper.ApiUrl());
-    HttpClient _hc;
-    List<FaqCatModel> articleCategories = new List<FaqCatModel>();
-    protected override async Task OnInitializedAsync()
-    {
-        hch.SetToken(await USR.GetToken());
-        _hc = hch.Instance();
-        await LoadCategories();
-        await base.OnInitializedAsync();
-    }
-    private async Task LoadCategories()
-    {
-        articleCategories = await _hc.GetFromJsonAsync<List<FaqCatModel>>("FaqCat");
-        StateHasChanged();
-    }
-    private async void RegisterModel()
-    {
-        _saving = true;
-        var res = await hch.Post(model, "Faq");
-        _saving = false;
-        model = new FaqModel();
-        _snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
-        StateHasChanged();
-        Thread.Sleep(1500);
-        _nv.NavigateTo("faq/item");
+	private bool _saving { get; set; } = false;
+	private FaqModel model = new FaqModel();
+	HttpClientHelper<FaqModel> hch;
+	HttpClient _hc;
+	List<FaqCatModel> articleCategories = new List<FaqCatModel>();
+	protected override async Task OnInitializedAsync()
+	{
+		hch = new HttpClientHelper<FaqModel>(_helper.ApiUrl());
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		await LoadCategories();
+		await base.OnInitializedAsync();
+	}
+	private async Task LoadCategories()
+	{
+		articleCategories = await _hc.GetFromJsonAsync<List<FaqCatModel>>("FaqCat");
+		StateHasChanged();
+	}
+	private async void RegisterModel()
+	{
+		_saving = true;
+		var res = await hch.Post(model, "Faq");
+		_saving = false;
+		model = new FaqModel();
+		_snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
+		StateHasChanged();
+		Thread.Sleep(1500);
+		_nv.NavigateTo("faq/item");
 
 
-    }
-    private async void mediaSelected(Tuple<int, string> selectedItem)
-    {
-        model.Image = UIHelper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
-        StateHasChanged();
+	}
+	private async void mediaSelected(Tuple<int, string> selectedItem)
+	{
+		model.Image = _helper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
+		StateHasChanged();
 
-    }
+	}
 }

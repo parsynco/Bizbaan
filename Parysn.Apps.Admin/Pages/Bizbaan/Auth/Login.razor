@@ -1,5 +1,6 @@
 ﻿@page "/Login/{redirect?}"
 @inject IConfiguration _conf
+@inject IUIHelper _helper
 @using Parsyn.Apps.Company.Data.Models.Dtos.AuthDtos
 @using Parysn.Apps.Company.Service.Utiles.ShareMemmory
 @layout AuthLayout;
@@ -126,7 +127,7 @@
 
 
 @code {
-	HttpClientHelper<ResponseObject> hch = new HttpClientHelper<ResponseObject>(UIHelper.ApiUrl());
+	HttpClientHelper<ResponseObject> hch;
 	HttpClient _hc;
 	[Parameter]
 	public string? redirect { get; set; }
@@ -145,6 +146,7 @@
 	int activePanel { get; set; } = 1;
 	protected override async Task OnInitializedAsync()
 	{
+		hch = new HttpClientHelper<ResponseObject>(_helper.ApiUrl());
 		_hc = hch.Instance();
 		string otpstate = _conf["OTPSTATE"] ?? "false";
 		IsActiveOtp = bool.Parse(otpstate);

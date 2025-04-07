@@ -1,104 +1,105 @@
 ﻿@page "/permissions/edit/{Id}"
-
+@inject IUIHelper _helper
 <PageTitle>بیزبان | ویرایش دسترسی </PageTitle>
 <MudContainer>
-    <MudCard>
-        <MudCardContent>
+	<MudCard>
+		<MudCardContent>
 
-            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
-                <MudText>وایرایش دسترسی </MudText>
-                <MudSpacer />
+			<MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+				<MudText>وایرایش دسترسی </MudText>
+				<MudSpacer />
 
-            </MudCardHeader>
-            <MudContainer Class="mt-3">
-                <MudForm dir="rtl">
-                    <MudGrid>
-                        <MudItem xs="12" lg="6">
-                            <MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Parent" Class="mud-rtl" Label="Parent ">
-                                <MudSelectItem Value="0">Parent</MudSelectItem>
-                                @foreach (var item in Categories)
-                                {
-                                    <MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
-                                }
-                            </MudSelect>
-                        </MudItem>
-                        <MudItem xs="12" lg="6">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Title" Class="mud-rtl" T="string" Label="عنوان"></MudTextField>
-                        </MudItem>
-                        <MudItem xs="12" lg="6">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Url" T="string" Label="آدرس "></MudTextField>
-                        </MudItem>
+			</MudCardHeader>
+			<MudContainer Class="mt-3">
+				<MudForm dir="rtl">
+					<MudGrid>
+						<MudItem xs="12" lg="6">
+							<MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Parent" Class="mud-rtl" Label="Parent ">
+								<MudSelectItem Value="0">Parent</MudSelectItem>
+								@foreach (var item in Categories)
+								{
+									<MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
+								}
+							</MudSelect>
+						</MudItem>
+						<MudItem xs="12" lg="6">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Title" Class="mud-rtl" T="string" Label="عنوان"></MudTextField>
+						</MudItem>
+						<MudItem xs="12" lg="6">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Url" T="string" Label="آدرس "></MudTextField>
+						</MudItem>
 
-                    </MudGrid>
-                </MudForm>
-            </MudContainer>
+					</MudGrid>
+				</MudForm>
+			</MudContainer>
 
-        </MudCardContent>
-        <MudCardActions>
-            <MudButton Disabled="@_saving" @onclick="Update" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
-                @if (_saving)
-                {
-                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
-                }
-                else
-                {
-                    <MudText>ذخیره</MudText>
-                }
-            </MudButton>
+		</MudCardContent>
+		<MudCardActions>
+			<MudButton Disabled="@_saving" @onclick="Update" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+				@if (_saving)
+				{
+					<MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+				}
+				else
+				{
+					<MudText>ذخیره</MudText>
+				}
+			</MudButton>
 
-        </MudCardActions>
-    </MudCard>
+		</MudCardActions>
+	</MudCard>
 </MudContainer>
 
 @code {
-    [Parameter]
-    public object Id { get; set; }
-    private bool _saving { get; set; } = false;
-    private PermissionModel Model = new PermissionModel();
-    HttpClientHelper<PermissionModel> hch = new HttpClientHelper<PermissionModel>(UIHelper.ApiUrl());
-    List<PermissionModel> Categories = new List<PermissionModel>();
-    public int Parent { get; set; } = 0;
-    HttpClient _hc;
-    protected override async Task OnInitializedAsync()
-    {
-        hch.SetToken(await USR.GetToken());
-        _hc = hch.Instance();
-        GetItem();
-        await LoadCategories();
-        await base.OnInitializedAsync();
-    }
-    private async Task LoadCategories()
-    {
-        Categories = await _hc.GetFromJsonAsync<List<PermissionModel>>("Permission/GetLevelOne");
-        StateHasChanged();
-    }
-    private async void GetItem()
-    {
+	[Parameter]
+	public object Id { get; set; }
+	private bool _saving { get; set; } = false;
+	private PermissionModel Model = new PermissionModel();
+	HttpClientHelper<PermissionModel> hch;
+	List<PermissionModel> Categories = new List<PermissionModel>();
+	public int Parent { get; set; } = 0;
+	HttpClient _hc;
+	protected override async Task OnInitializedAsync()
+	{
+		hch = new HttpClientHelper<PermissionModel>(_helper.ApiUrl());
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		GetItem();
+		await LoadCategories();
+		await base.OnInitializedAsync();
+	}
+	private async Task LoadCategories()
+	{
+		Categories = await _hc.GetFromJsonAsync<List<PermissionModel>>("Permission/GetLevelOne");
+		StateHasChanged();
+	}
+	private async void GetItem()
+	{
 
-        var data = await hch.Post(Id, $"Permission/GetById?Id={Id}");
-        if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
-        {
-            _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+		var data = await hch.Post(Id, $"Permission/GetById?Id={Id}");
+		if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
+		{
+			_snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
 
-            return;
-        }
+			return;
+		}
 
-        Model = JsonConvert.DeserializeObject<PermissionModel>(data.Data.ToString());
-        Parent = Model.ParentId ?? 0;
-        Model.Id = int.Parse(Id.ToString());
-        StateHasChanged();
-        Console.WriteLine(data.Msg);
-    }
-    private async void Update()
-    {
-        _saving = true;
-        if (Parent != 0)
-            Model.ParentId = Parent;
-        var data = await hch.Post(Model, $"Permission/Edit");
-        _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)? Severity.Error : Severity.Success);
-        _saving = false;
-        StateHasChanged();
-        Thread.Sleep(1700);
-        _nv.NavigateTo("permissions");
-    }
+		Model = JsonConvert.DeserializeObject<PermissionModel>(data.Data.ToString());
+		Parent = Model.ParentId ?? 0;
+		Model.Id = int.Parse(Id.ToString());
+		StateHasChanged();
+		Console.WriteLine(data.Msg);
+	}
+	private async void Update()
+	{
+		_saving = true;
+		if (Parent != 0)
+			Model.ParentId = Parent;
+		var data = await hch.Post(Model, $"Permission/Edit");
+		_snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+		_saving = false;
+		StateHasChanged();
+		Thread.Sleep(1700);
+		_nv.NavigateTo("permissions");
+	}
 }

@@ -1,117 +1,119 @@
 ﻿@page "/biz/ads"
 @using System.Diagnostics
+@inject IUIHelper _helper
 
 @{
-    
+
 }
 <PageTitle>بیزبان | مدیریت   بیزینس</PageTitle>
 <MudContainer Class="d-flex align-center justify-center flex-column">
-    <MudPaper Elevation="1" Class="d-flex align-center pa-2" Width="100%">
-        <MudText>مدیریت    بیزینس </MudText>
-        <MudSpacer />
-        <MudFab StartIcon="fal fa-plus " IconSize="Size.Small" OnClick="@(()=>_nv.NavigateTo("/biz/ads/add"))" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">
-        </MudFab>
-    </MudPaper>
-    <MudPaper Class="mt-4" Elevation="0" Width="100%">
-        <MudDataGrid Loading="_loading" Context="ctx" Filterable="true" SortMode="@SortMode.Multiple" Groupable="false" Items="@_dataList" Elevation="0" Dense="false" Hover="true" Bordered="false" Striped="true" Style="overflow-x: auto;">
-            <Columns>
-              
-                <PropertyColumn Property="x => x.Category.Title" Title="عنوان دسته بندی " />
-                <PropertyColumn Property="x => x.Title" Title="عنوان اصلی " />
-                <PropertyColumn Property="x => x.IsSpecial" Title=" نوع بیزینس ">
-                    <CellTemplate>
-                        @if(context.Item.IsSpecial)
-                        {
-                            <MudChip Color="Color.Info" Style="color:#fff">ویژه</MudChip>
-                        }
-                        else
-                        {
-                            <MudChip Color="Color.Default" >عادی</MudChip>
-                        }
-                    </CellTemplate>
-                </PropertyColumn>
-                <PropertyColumn Property="x => x.ProivinceName" Title="استان " />
-                <PropertyColumn Property="x => x.CityName" Title="شهر " />
-                <PropertyColumn Property="x => x.RegionName" Title="منطقه  " />
-               
-                <PropertyColumn Property="x => x.Created_At" Title="تاریخ ایجاد">
-                    <CellTemplate>
-                        <MudText>@(((DateTime)context.Item.Created_At).ToString("yyyy/MM/dd"))</MudText>
-                    </CellTemplate>
-                </PropertyColumn>
-                <TemplateColumn CellClass="d-flex justify-end" Title="عملیات">
-                    <CellTemplate>
-                        <MudButtonGroup Size="Size.Small" Color="Color.Primary" OverrideStyles="true" Variant="Variant.Text">
-                            <MudIconButton Href="@($"/biz/ads/images/{context.Item.Id}")" title="آلبوم عکس بیزنس" Size="Size.Small" Color="Color.Info" Icon="fal fa-images" Class="TableOprButtons"></MudIconButton>
-                            <MudIconButton Href="@($"/biz/ads/edit/{context.Item.Id}")" Size="Size.Small" Color="Color.Warning" Icon="fal fa-edit" Class="TableOprButtons"></MudIconButton>
-                            <MudIconButton OnClick="(()=>OpenDialog(context.Item.Id))" Size="Size.Small" Color="Color.Error" Icon="fal fa-trash" Class="TableOprButtons"></MudIconButton>
-                        </MudButtonGroup>
-                    </CellTemplate>
-                </TemplateColumn>
-            </Columns>
-        </MudDataGrid>
+	<MudPaper Elevation="1" Class="d-flex align-center pa-2" Width="100%">
+		<MudText>مدیریت    بیزینس </MudText>
+		<MudSpacer />
+		<MudFab StartIcon="fal fa-plus " IconSize="Size.Small" OnClick="@(()=>_nv.NavigateTo("/biz/ads/add"))" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">
+		</MudFab>
+	</MudPaper>
+	<MudPaper Class="mt-4" Elevation="0" Width="100%">
+		<MudDataGrid Loading="_loading" Context="ctx" Filterable="true" SortMode="@SortMode.Multiple" Groupable="false" Items="@_dataList" Elevation="0" Dense="false" Hover="true" Bordered="false" Striped="true" Style="overflow-x: auto;">
+			<Columns>
+
+				<PropertyColumn Property="x => x.Category.Title" Title="عنوان دسته بندی " />
+				<PropertyColumn Property="x => x.Title" Title="عنوان اصلی " />
+				<PropertyColumn Property="x => x.IsSpecial" Title=" نوع بیزینس ">
+					<CellTemplate>
+						@if (context.Item.IsSpecial)
+						{
+							<MudChip Color="Color.Info" Style="color:#fff">ویژه</MudChip>
+						}
+						else
+						{
+							<MudChip Color="Color.Default">عادی</MudChip>
+						}
+					</CellTemplate>
+				</PropertyColumn>
+				<PropertyColumn Property="x => x.ProivinceName" Title="استان " />
+				<PropertyColumn Property="x => x.CityName" Title="شهر " />
+				<PropertyColumn Property="x => x.RegionName" Title="منطقه  " />
+
+				<PropertyColumn Property="x => x.Created_At" Title="تاریخ ایجاد">
+					<CellTemplate>
+						<MudText>@(((DateTime)context.Item.Created_At).ToString("yyyy/MM/dd"))</MudText>
+					</CellTemplate>
+				</PropertyColumn>
+				<TemplateColumn CellClass="d-flex justify-end" Title="عملیات">
+					<CellTemplate>
+						<MudButtonGroup Size="Size.Small" Color="Color.Primary" OverrideStyles="true" Variant="Variant.Text">
+							<MudIconButton Href="@($"/biz/ads/images/{context.Item.Id}")" title="آلبوم عکس بیزنس" Size="Size.Small" Color="Color.Info" Icon="fal fa-images" Class="TableOprButtons"></MudIconButton>
+							<MudIconButton Href="@($"/biz/ads/edit/{context.Item.Id}")" Size="Size.Small" Color="Color.Warning" Icon="fal fa-edit" Class="TableOprButtons"></MudIconButton>
+							<MudIconButton OnClick="(()=>OpenDialog(context.Item.Id))" Size="Size.Small" Color="Color.Error" Icon="fal fa-trash" Class="TableOprButtons"></MudIconButton>
+						</MudButtonGroup>
+					</CellTemplate>
+				</TemplateColumn>
+			</Columns>
+		</MudDataGrid>
 
 
-    </MudPaper>
+	</MudPaper>
 </MudContainer>
 @code {
-    [Inject] private IDialogService _dialogSrvc { get; set; }
-    HttpClientHelper<AdModel> hch = new HttpClientHelper<AdModel>(UIHelper.ApiUrl());
-    HttpClient _hc;
-    private List<string> _events = new();
-    AdModel[] _dataList = [];
-    private bool _visible;
-    private bool _loading = false;
-    private int ItemIdToDelete { get; set; } = 0;
-    private async void OpenDialog(int id)
-    {
+	[Inject] private IDialogService _dialogSrvc { get; set; }
+	HttpClientHelper<AdModel> hch;
+	HttpClient _hc;
+	private List<string> _events = new();
+	AdModel[] _dataList = [];
+	private bool _visible;
+	private bool _loading = false;
+	private int ItemIdToDelete { get; set; } = 0;
+	private async void OpenDialog(int id)
+	{
 
-        ItemIdToDelete = id;
-        var conf = await _dialogSrvc.Show<DeleteConfirm>().Result;
-        if (!conf.Canceled)
-        {
-            DeleteItem();
-        }
-    }
+		ItemIdToDelete = id;
+		var conf = await _dialogSrvc.Show<DeleteConfirm>().Result;
+		if (!conf.Canceled)
+		{
+			DeleteItem();
+		}
+	}
 
 
-    protected override async Task OnInitializedAsync()
-    {
-        hch.SetToken(await USR.GetToken());
-        _hc = hch.Instance();
-        LoadData(true);
-        await base.OnInitializedAsync();
-    }
+	protected override async Task OnInitializedAsync()
+	{
+		hch = new HttpClientHelper<AdModel>(_helper.ApiUrl());
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		LoadData(true);
+		await base.OnInitializedAsync();
+	}
 
-    private async void DeleteItem()
-    {
-        var res = await hch.Post(new { Id = ItemIdToDelete }, $"ads/Delete?Id={ItemIdToDelete}");
-        _snackbar.Add(res.Msg, (res.Status == ResponseObjectStatusEnum.Error || res.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
-        if (res.Status == ResponseObjectStatusEnum.Success)
-        {
-            _visible = false;
-            StateHasChanged();
-            LoadData();
-        }
+	private async void DeleteItem()
+	{
+		var res = await hch.Post(new { Id = ItemIdToDelete }, $"ads/Delete?Id={ItemIdToDelete}");
+		_snackbar.Add(res.Msg, (res.Status == ResponseObjectStatusEnum.Error || res.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+		if (res.Status == ResponseObjectStatusEnum.Success)
+		{
+			_visible = false;
+			StateHasChanged();
+			LoadData();
+		}
 
-    }
-    private async void LoadData(bool changed = false)
-    {
-        try
-        {
-            _loading = true;
-            var data = await _hc.GetFromJsonAsync<AdModel[]>("ads");
-            _dataList = data;
-            _loading = false;
-            StateHasChanged();
+	}
+	private async void LoadData(bool changed = false)
+	{
+		try
+		{
+			_loading = true;
+			var data = await _hc.GetFromJsonAsync<AdModel[]>("ads");
+			_dataList = data;
+			_loading = false;
+			StateHasChanged();
 
-        }
-        catch (Exception ex)
-        {
-            Debug.WriteLine(ex.Message);
-        }
+		}
+		catch (Exception ex)
+		{
+			Debug.WriteLine(ex.Message);
+		}
 
-    }
+	}
 
 
 

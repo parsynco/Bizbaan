@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Parsyn.Apps.Company.Data.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58ccd35259621806c615b9b6d5059e86a6251865")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40a0db7204017dc6a39a371c81149528adc87d22")]
 [assembly: System.Reflection.AssemblyProductAttribute("Parsyn.Apps.Company.Data.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Parsyn.Apps.Company.Data.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

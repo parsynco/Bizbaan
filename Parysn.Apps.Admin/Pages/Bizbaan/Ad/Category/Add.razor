@@ -1,106 +1,108 @@
 ﻿@page "/biz/adcategory/add"
+@inject IUIHelper _helper
 <PageTitle>بیزبان | ایجاد دسته بندی بیزینس </PageTitle>
 <MudContainer>
-    <MudCard>
-        <MudCardContent>
+	<MudCard>
+		<MudCardContent>
 
-            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
-                <MudText>ثبت دسته بندی بیزینس جدید</MudText>
-                <MudSpacer />
-                <MudButton Size="Size.Small" IconSize="Size.Small" Href="/biz/adcategory" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
-                    <MudText>بازگشت</MudText>
-                </MudButton>
-            </MudCardHeader>
-            <MudContainer Class="mt-3">
-                <MudForm dir="rtl">
-                    <MudGrid>
-                        <MudItem xl="6" lg="6" sm="12" md="6">
-                            <MudGrid>
-                                <MudItem xs="12" lg="12">
-                                    <MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="ParentId" Class="mud-rtl"  Label="دسته بندی">
-                                        <MudSelectItem Value="0">انتخاب دسته بندی</MudSelectItem>
-                                        @foreach (var item in Categories)
-                                        {
-                                            <MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
-                                        }
-                                    </MudSelect>
-                                </MudItem>
-                                <MudItem xs="12" lg="12">
-                                    <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Title" Class="mud-rtl" T="string" Label="عنوان اصلی"></MudTextField>
-                                </MudItem>
-                                <MudItem xs="12" lg="12">
-                                    <MudColorPicker @bind-Text="model.Color" ColorPickerView="ColorPickerView.Spectrum" ShowAlpha ShowSliders  Variant="Variant.Outlined" Margin="Margin.Dense" Class="mud-rtl" T="string" Label="رنگ دسته بندی"></MudColorPicker>
-                                </MudItem>
-                                <MudItem xs="12" lg="12">
-                                    <FontPicker Icon="fal fa-circle-question" OnIconChanged="@((string icon)=>model.Image = icon)"></FontPicker>
-                                </MudItem>
+			<MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+				<MudText>ثبت دسته بندی بیزینس جدید</MudText>
+				<MudSpacer />
+				<MudButton Size="Size.Small" IconSize="Size.Small" Href="/biz/adcategory" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
+					<MudText>بازگشت</MudText>
+				</MudButton>
+			</MudCardHeader>
+			<MudContainer Class="mt-3">
+				<MudForm dir="rtl">
+					<MudGrid>
+						<MudItem xl="6" lg="6" sm="12" md="6">
+							<MudGrid>
+								<MudItem xs="12" lg="12">
+									<MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="ParentId" Class="mud-rtl" Label="دسته بندی">
+										<MudSelectItem Value="0">انتخاب دسته بندی</MudSelectItem>
+										@foreach (var item in Categories)
+										{
+											<MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
+										}
+									</MudSelect>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Title" Class="mud-rtl" T="string" Label="عنوان اصلی"></MudTextField>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<MudColorPicker @bind-Text="model.Color" ColorPickerView="ColorPickerView.Spectrum" ShowAlpha ShowSliders Variant="Variant.Outlined" Margin="Margin.Dense" Class="mud-rtl" T="string" Label="رنگ دسته بندی"></MudColorPicker>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<FontPicker Icon="fal fa-circle-question" OnIconChanged="@((string icon)=>model.Image = icon)"></FontPicker>
+								</MudItem>
 
-                            </MudGrid>
-                        </MudItem>
-                        <MudItem xl="6" lg="6" sm="12" md="6">
-                            <Seo model="model.Seo" Title="@model.Title" OnSeoChanged="(Seo)=>{model.Seo = Seo;StateHasChanged();}" />
-                        </MudItem>
-                    </MudGrid>
-                </MudForm>
-            </MudContainer>
+							</MudGrid>
+						</MudItem>
+						<MudItem xl="6" lg="6" sm="12" md="6">
+							<Seo model="model.Seo" Title="@model.Title" OnSeoChanged="(Seo)=>{model.Seo = Seo;StateHasChanged();}" />
+						</MudItem>
+					</MudGrid>
+				</MudForm>
+			</MudContainer>
 
-        </MudCardContent>
-        <MudCardActions>
-            <MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
-                @if (_saving)
-                {
-                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
-                }
-                else
-                {
-                    <MudText>ذخیره</MudText>
-                }
-            </MudButton>
+		</MudCardContent>
+		<MudCardActions>
+			<MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+				@if (_saving)
+				{
+					<MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+				}
+				else
+				{
+					<MudText>ذخیره</MudText>
+				}
+			</MudButton>
 
-        </MudCardActions>
-    </MudCard>
+		</MudCardActions>
+	</MudCard>
 </MudContainer>
 
 @code {
-    private bool _saving { get; set; } = false;
-    private AdCategoryModel model = new AdCategoryModel();
-    HttpClientHelper<AdCategoryModel> hch = new HttpClientHelper<AdCategoryModel>(UIHelper.ApiUrl());
-    public int ParentId { get; set; } = 0; 
-    List<AdCategoryModel> Categories = new List<AdCategoryModel>();
-    HttpClient _hc;
-    protected override async Task OnInitializedAsync()
-    {
-        hch.SetToken(await USR.GetToken());
-        _hc = hch.Instance();
-        await LoadCategories();
-        await base.OnInitializedAsync();
-    }
-    private async void RegisterModel()
-    {
-        _saving = true;
-        if(ParentId != 0)
-        {
-            model.ParentId = ParentId;
-        }
-        var res = await hch.Post(model, "adcategory");
-        _saving = false;
-        model = new AdCategoryModel();
-        _snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
-        StateHasChanged();
-        Thread.Sleep(1500);
-        _nv.NavigateTo("biz/adcategory");
+	private bool _saving { get; set; } = false;
+	private AdCategoryModel model = new AdCategoryModel();
+	HttpClientHelper<AdCategoryModel> hch;
+	public int ParentId { get; set; } = 0;
+	List<AdCategoryModel> Categories = new List<AdCategoryModel>();
+	HttpClient _hc;
+	protected override async Task OnInitializedAsync()
+	{
+		hch = new HttpClientHelper<AdCategoryModel>(_helper.ApiUrl());
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		await LoadCategories();
+		await base.OnInitializedAsync();
+	}
+	private async void RegisterModel()
+	{
+		_saving = true;
+		if (ParentId != 0)
+		{
+			model.ParentId = ParentId;
+		}
+		var res = await hch.Post(model, "adcategory");
+		_saving = false;
+		model = new AdCategoryModel();
+		_snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
+		StateHasChanged();
+		Thread.Sleep(1500);
+		_nv.NavigateTo("biz/adcategory");
 
 
-    }
-    private async Task LoadCategories()
-    {
-        Categories = await _hc.GetFromJsonAsync<List<AdCategoryModel>>("adcategory/l1");
-        StateHasChanged();
-    }
-    private async void mediaSelected(Tuple<int, string> selectedItem)
-    {
-        model.Image = UIHelper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
-        StateHasChanged();
+	}
+	private async Task LoadCategories()
+	{
+		Categories = await _hc.GetFromJsonAsync<List<AdCategoryModel>>("adcategory/l1");
+		StateHasChanged();
+	}
+	private async void mediaSelected(Tuple<int, string> selectedItem)
+	{
+		model.Image = _helper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
+		StateHasChanged();
 
-    }
+	}
 }

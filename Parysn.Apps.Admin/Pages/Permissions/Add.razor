@@ -1,91 +1,93 @@
 ﻿@page "/permissions/add"
+@inject IUIHelper _helper
 <PageTitle>بیزبان | ایجاد دسترسی جدید</PageTitle>
 <MudContainer>
-    <MudCard>
-        <MudCardContent>
+	<MudCard>
+		<MudCardContent>
 
-            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
-                <MudText>ثبت دسترسی جدید</MudText>
-                <MudSpacer />
-                <MudButton Size="Size.Small" IconSize="Size.Small" Href="/permissions" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
-                    <MudText>بازگشت</MudText>
-                </MudButton>
-            </MudCardHeader>
-            <MudContainer Class="mt-3">
-                <MudForm dir="rtl">
-                    <MudGrid>
-                        <MudItem xs="12" lg="6">
-                            <MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Parent" Class="mud-rtl" Label="Parent ">
-                                <MudSelectItem Value="0">Parent</MudSelectItem>
-                                @foreach (var item in Categories)
-                                {
-                                    <MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
-                                }
-                            </MudSelect>
-                        </MudItem>
-                        <MudItem xs="12" lg="6">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Title" Class="mud-rtl" T="string" Label="عنوان"></MudTextField>
-                        </MudItem>
-                        <MudItem xs="12" lg="12">
-                            <MudTextField InputType="InputType.Telephone" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="model.Url" T="string" Label="آدرس"></MudTextField>
-                        </MudItem>
-                       
-                    </MudGrid>
-                </MudForm>
-            </MudContainer>
+			<MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+				<MudText>ثبت دسترسی جدید</MudText>
+				<MudSpacer />
+				<MudButton Size="Size.Small" IconSize="Size.Small" Href="/permissions" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
+					<MudText>بازگشت</MudText>
+				</MudButton>
+			</MudCardHeader>
+			<MudContainer Class="mt-3">
+				<MudForm dir="rtl">
+					<MudGrid>
+						<MudItem xs="12" lg="6">
+							<MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Parent" Class="mud-rtl" Label="Parent ">
+								<MudSelectItem Value="0">Parent</MudSelectItem>
+								@foreach (var item in Categories)
+								{
+									<MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
+								}
+							</MudSelect>
+						</MudItem>
+						<MudItem xs="12" lg="6">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Title" Class="mud-rtl" T="string" Label="عنوان"></MudTextField>
+						</MudItem>
+						<MudItem xs="12" lg="12">
+							<MudTextField InputType="InputType.Telephone" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="model.Url" T="string" Label="آدرس"></MudTextField>
+						</MudItem>
 
-        </MudCardContent>
-        <MudCardActions>
-            <MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
-                @if (_saving)
-                {
-                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
-                }
-                else
-                {
-                    <MudText>ذخیره</MudText>
-                }
-            </MudButton>
+					</MudGrid>
+				</MudForm>
+			</MudContainer>
 
-        </MudCardActions>
-    </MudCard>
+		</MudCardContent>
+		<MudCardActions>
+			<MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+				@if (_saving)
+				{
+					<MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+				}
+				else
+				{
+					<MudText>ذخیره</MudText>
+				}
+			</MudButton>
+
+		</MudCardActions>
+	</MudCard>
 </MudContainer>
 
 @code {
-    private bool _saving { get; set; } = false;
-    private PermissionModel model = new PermissionModel();
-    HttpClientHelper<PermissionModel> hch = new HttpClientHelper<PermissionModel>(UIHelper.ApiUrl());
-    List<PermissionModel> Categories = new List<PermissionModel>();
-    public int Parent { get; set; } = 0;
-    HttpClient _hc;
-    protected override async Task OnInitializedAsync()
-    {
-        hch.SetToken(await USR.GetToken());
-        _hc = hch.Instance();
-        await LoadCategories();
-        await base.OnInitializedAsync();
-    }
-    private async Task LoadCategories()
-    {
-        Categories = await _hc.GetFromJsonAsync<List<PermissionModel>>("Permission/GetLevelOne");
-        StateHasChanged();
-    }
-    private async void RegisterModel()
-    {
-        _saving = true;
-        if (Parent != 0)
-            model.ParentId = Parent;
-        var res = await hch.Post(model, "Permission");
-        _saving = false;
-        model = new PermissionModel();
-        _snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
-        StateHasChanged();
-        if (res.Status == ResponseObjectStatusEnum.Success)
-        {
-            Thread.Sleep(1500);
-            _nv.NavigateTo("permissions");
-        }
+	private bool _saving { get; set; } = false;
+	private PermissionModel model = new PermissionModel();
+	HttpClientHelper<PermissionModel> hch;
+	List<PermissionModel> Categories = new List<PermissionModel>();
+	public int Parent { get; set; } = 0;
+	HttpClient _hc;
+	protected override async Task OnInitializedAsync()
+	{
+		hch = new HttpClientHelper<PermissionModel>(_helper.ApiUrl());
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		await LoadCategories();
+		await base.OnInitializedAsync();
+	}
+	private async Task LoadCategories()
+	{
+		Categories = await _hc.GetFromJsonAsync<List<PermissionModel>>("Permission/GetLevelOne");
+		StateHasChanged();
+	}
+	private async void RegisterModel()
+	{
+		_saving = true;
+		if (Parent != 0)
+			model.ParentId = Parent;
+		var res = await hch.Post(model, "Permission");
+		_saving = false;
+		model = new PermissionModel();
+		_snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
+		StateHasChanged();
+		if (res.Status == ResponseObjectStatusEnum.Success)
+		{
+			Thread.Sleep(1500);
+			_nv.NavigateTo("permissions");
+		}
 
 
-    }
+	}
 }

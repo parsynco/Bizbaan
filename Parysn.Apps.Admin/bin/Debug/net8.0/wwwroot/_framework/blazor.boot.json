@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Parysn.Apps.Admin",
   "resources": {
-    "hash": "sha256-ZI0PYXCJK/O+XqRr0RTxD2u8grrm+y6NUuq82w7R0Vk=",
+    "hash": "sha256-9fMnRzpQSTenvNrAIbU2dvT3R+FfnV+1R0q93d5plp8=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-DTUQS6Jc6BNnS7sYYezFfaUKVmQq0/lanhQuJfygH/k="
     },
@@ -41,8 +41,6 @@
       "Mapster.dll": "sha256-cZIM617kVDaa1CDrTzCFrUGFXLRF+9urMGrW0YfDfqQ=",
       "Mapster.Core.dll": "sha256-jYHh+gsdve2iEha131dSwYUOgGMgDFQ2oNqV2qouFjs=",
       "Markdig.dll": "sha256-/zBLNTAFSwzmj9Qq3hOzX4jN+IzlZOPHCL3qEU4t8BQ=",
-      "System.Net.Http.Formatting.dll": "sha256-Yfud/Qvya2pb6KKqxiYRwANDMPrS+serESoUYSnxJdE=",
-      "System.Web.Http.dll": "sha256-+ywhazITkP5ya9uEKxQ0PbmZ03K2KTVozHeJZvvY9k0=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-ObvGGmPAIJJFll/KTHjB1ngSGTSTVMBbEodCx9IjLyQ=",
       "Microsoft.AspNetCore.Components.dll": "sha256-si45Axpt4mmMwjIvVRNvXQecgFy8lVUyTj+vwBpNTPc=",
       "Microsoft.AspNetCore.Components.Authorization.dll": "sha256-BpZKoYzJeGblvHBLsQPQDENtnbOayr3fucXvT312GgQ=",
@@ -109,10 +107,10 @@
       "MudBlazor.Markdown.dll": "sha256-6eL9fPi7IlrwF4XROmZgloTtnqKEqzak7Aew1tykYPI=",
       "MudExRichTextEditor.dll": "sha256-XaiipME9qwzr6kIOYLLVPU8ztogT0k+VetRWtoh03Xk=",
       "Newtonsoft.Json.dll": "sha256-IsZJ91/OW+fHzNqIgEc7Y072ns8z9dGritiSyvR9Wgc=",
-      "Newtonsoft.Json.Bson.dll": "sha256-88VhZtf5Apa75rA/ZDNWI8MWXtJZSCiPHzFvp03YMn8=",
       "Nextended.Blazor.dll": "sha256-PBfLO59QiWSwwsApNWKeq9rOZ0tTV/Pb4tjHNATjZjg=",
       "Nextended.Core.dll": "sha256-zjtZN9gkpxCbckERGQf8VWD/GK/pD4lujzs8lzdqmic=",
       "OneOf.dll": "sha256-nmQPlnGltl582VmxUYQoMIqQ+cGKqd6oVWYIoKo61ZU=",
+      "Serilog.dll": "sha256-U59dYMvINTXdnrsdNw1idBOQO0fwnQ7N+CpP5q2Ll54=",
       "SharpCompress.dll": "sha256-4o0fea32qDY9qXiCMZ7zymZIVR1XxaC6LlPkUf7M8R4=",
       "SixLabors.ImageSharp.dll": "sha256-4zJx/0zNRvBOkUsbtutfOuI+3Rsgw30tMmIrHBlLAbo=",
       "System.CodeDom.dll": "sha256-TTPimGqE1EYIU+K5jTobqfiqKVD3+hL/atLhWkvM/Rg=",
@@ -295,16 +293,16 @@
       "mscorlib.dll": "sha256-IK+SnG36ZowqXlMrGSO7DTw7fUyzAUCi0DguxLNsIXQ=",
       "netstandard.dll": "sha256-LMgbq5tO+BnNRiWG9d4y3TdVyaxDVhIYWNql2GOSGRA=",
       "System.Private.CoreLib.dll": "sha256-sHTOfvP2YMb0v2PIQBcyHTBaOEvda0YDT/RA5q7QndQ=",
-      "Parsyn.Apps.Company.Data.Models.dll": "sha256-LL3J9RUB6LwRqgAzLuYzaDrZa95UXRqd+dPxpTFQR4E=",
-      "Parsyn.Apps.Company.Data.Models.Dtos.dll": "sha256-srOTExajD8KCi3b2+TdfNx+JSFxiaZ3aBFkGG51KHGw=",
-      "Parsyn.Apps.Company.Service.Utiles.dll": "sha256-pgbJ3Y8UnkyLcCvELQP5DHnH9WKlHzjqf66Iavv5G4w=",
-      "Parysn.Apps.Admin.dll": "sha256-+mOM4RHpFm+w08vp9XNXDDiraSQGtzHnPOjXmhU6YXg="
+      "Parsyn.Apps.Company.Data.Models.dll": "sha256-ofOXpxsLulBLzLIa5Z+j/vON/EqbqO/jcSuu4wpMMbM=",
+      "Parsyn.Apps.Company.Data.Models.Dtos.dll": "sha256-kNIZDKzDFg/hAOR2uqDhQoenPiyKbaXeqrvj0coKYCc=",
+      "Parsyn.Apps.Company.Service.Utiles.dll": "sha256-fMOJSM+VI3YgBfktLpNALq6RyVMv/LIeQxipFaTdqq4=",
+      "Parysn.Apps.Admin.dll": "sha256-qLoLWkvXRQLhOxR3tHiv4bE92heuk4J+jQPQuu3VGPk="
     },
     "pdb": {
-      "Parsyn.Apps.Company.Data.Models.Dtos.pdb": "sha256-+EMp6tInGKDjsgriIoK/4XPnX42717o/m5763qv5u78=",
-      "Parsyn.Apps.Company.Service.Utiles.pdb": "sha256-ldddIGVTk51qu0OUbBrrFVwai/REtTVhWSZEFfddsj8=",
-      "Parsyn.Apps.Company.Data.Models.pdb": "sha256-XOL35ydKRaRoz5cAtSSYbi83mRa29gq8rSGoy6eCM6w=",
-      "Parysn.Apps.Admin.pdb": "sha256-FFzlVl87Z6CIZECI1DINzDN+vE5vWynlhNjkSE8MTTE="
+      "Parsyn.Apps.Company.Data.Models.Dtos.pdb": "sha256-IMDtEy9+RONM3xkD2qme3lXo/PKVED/FX9OGNZlYQCE=",
+      "Parsyn.Apps.Company.Service.Utiles.pdb": "sha256-1+8GxBJ4lL8crGk352WyR2ERSrrTa5oVZR9Gf35GOAk=",
+      "Parsyn.Apps.Company.Data.Models.pdb": "sha256-yzxO2MVP7XXhR64mt6vZjZ3DqulZ/KFW/Devw/+fP6Q=",
+      "Parysn.Apps.Admin.pdb": "sha256-WLbpm5bfJGjqQj+3H8Br+ur6lxUwrrBshVB5CRENsG0="
     },
     "satelliteResources": {
       "cs": {

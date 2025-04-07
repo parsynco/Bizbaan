@@ -1,83 +1,84 @@
 ﻿@page "/roles/edit/{Id}"
-
+@inject IUIHelper _helper
 <PageTitle>بیزبان | ویرایش نقش </PageTitle>
 <MudContainer>
-    <MudCard>
-        <MudCardContent>
+	<MudCard>
+		<MudCardContent>
 
-            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
-                <MudText>وایرایش نقش </MudText>
-                <MudSpacer />
+			<MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+				<MudText>وایرایش نقش </MudText>
+				<MudSpacer />
 
-            </MudCardHeader>
-            <MudContainer Class="mt-3">
-                <MudForm dir="rtl">
-                    <MudGrid>
+			</MudCardHeader>
+			<MudContainer Class="mt-3">
+				<MudForm dir="rtl">
+					<MudGrid>
 
-                        <MudItem xs="12" lg="12">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Title" Class="mud-rtl" T="string" Label="عنوان"></MudTextField>
-                        </MudItem>
+						<MudItem xs="12" lg="12">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Title" Class="mud-rtl" T="string" Label="عنوان"></MudTextField>
+						</MudItem>
 
-                    </MudGrid>
-                </MudForm>
-            </MudContainer>
+					</MudGrid>
+				</MudForm>
+			</MudContainer>
 
-        </MudCardContent>
-        <MudCardActions>
-            <MudButton Disabled="@_saving" @onclick="Update" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
-                @if (_saving)
-                {
-                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
-                }
-                else
-                {
-                    <MudText>ذخیره</MudText>
-                }
-            </MudButton>
+		</MudCardContent>
+		<MudCardActions>
+			<MudButton Disabled="@_saving" @onclick="Update" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+				@if (_saving)
+				{
+					<MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+				}
+				else
+				{
+					<MudText>ذخیره</MudText>
+				}
+			</MudButton>
 
-        </MudCardActions>
-    </MudCard>
+		</MudCardActions>
+	</MudCard>
 </MudContainer>
 
 @code {
-    [Parameter]
-    public object Id { get; set; }
-    private bool _saving { get; set; } = false;
-    private RoleModel Model = new RoleModel();
-    HttpClient _hc;
-    HttpClientHelper<RoleModel> hch = new HttpClientHelper<RoleModel>(UIHelper.ApiUrl());
+	[Parameter]
+	public object Id { get; set; }
+	private bool _saving { get; set; } = false;
+	private RoleModel Model = new RoleModel();
+	HttpClient _hc;
+	HttpClientHelper<RoleModel> hch;
 
-    protected override async Task OnInitializedAsync()
-    {
-        hch.SetToken(await USR.GetToken());
-        _hc = hch.Instance();
-        GetItem();
-        await base.OnInitializedAsync();
-    }
-    private async void GetItem()
-    {
+	protected override async Task OnInitializedAsync()
+	{
+		hch = new HttpClientHelper<RoleModel>(_helper.ApiUrl());
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		GetItem();
+		await base.OnInitializedAsync();
+	}
+	private async void GetItem()
+	{
 
-        var data = await hch.Post(Id, $"Role/GetById?Id={Id}");
-        if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
-        {
-            return;
-        }
-        _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
-        
-        Model = JsonConvert.DeserializeObject<RoleModel>(data.Data.ToString());
-        Model.Id = int.Parse(Id.ToString());
-        StateHasChanged();
-        Console.WriteLine(data.Msg);
-    }
-    private async void Update()
-    {
-        _saving = true;
-        hch.SetToken(await USR.GetToken());
-        var data = await hch.Post(Model, $"Role/Edit");
-        _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)? Severity.Error : Severity.Success);
-        _saving = false;
-        StateHasChanged();
-        Thread.Sleep(1700);
-        _nv.NavigateTo("roles");
-    }
+		var data = await hch.Post(Id, $"Role/GetById?Id={Id}");
+		if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
+		{
+			return;
+		}
+		_snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+
+		Model = JsonConvert.DeserializeObject<RoleModel>(data.Data.ToString());
+		Model.Id = int.Parse(Id.ToString());
+		StateHasChanged();
+		Console.WriteLine(data.Msg);
+	}
+	private async void Update()
+	{
+		_saving = true;
+		hch.SetToken(await USR.GetToken());
+		var data = await hch.Post(Model, $"Role/Edit");
+		_snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+		_saving = false;
+		StateHasChanged();
+		Thread.Sleep(1700);
+		_nv.NavigateTo("roles");
+	}
 }

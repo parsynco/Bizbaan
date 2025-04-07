@@ -1,152 +1,154 @@
 ﻿@using UIServices.Extensions;
+@inject IUIHelper _helper
 <MudCard Elevation="0">
-    <MudCardHeader>تنظیمات سئو @Title</MudCardHeader>
-    <MudCardContent>
-        <MudGrid>
-            <MudItem xs="12" sm="12" lg="12" xl="12">
-                <MudTextField OnKeyUp="async ()=>{await Invoke();}" Margin="Margin.Dense" @bind-Value="Model.Title" Label="عنوان صفحه" Variant="Variant.Outlined"></MudTextField>
-            </MudItem>
-            <MudItem xs="12" sm="12" lg="12" xl="12">
-                <MudGrid>
+	<MudCardHeader>تنظیمات سئو @Title</MudCardHeader>
+	<MudCardContent>
+		<MudGrid>
+			<MudItem xs="12" sm="12" lg="12" xl="12">
+				<MudTextField OnKeyUp="async ()=>{await Invoke();}" Margin="Margin.Dense" @bind-Value="Model.Title" Label="عنوان صفحه" Variant="Variant.Outlined"></MudTextField>
+			</MudItem>
+			<MudItem xs="12" sm="12" lg="12" xl="12">
+				<MudGrid>
 
-                    <MudItem xs="_checkingDuplicate ? 10 : 12" lg="_checkingDuplicate ? 10 : 12">
-                        <MudTextField OnKeyUp="(e)=>CheckDuplication(e)" OnBlur="RemoveWhiteSpaces" Style="direction:ltr;" ErrorText="آدرس وارد شده تکراری است." Error="_duplicateUrl" Margin="Margin.Dense" @bind-Value="Model.Url" Label="آدرس صفحه OG" Variant="Variant.Outlined" />
-                    </MudItem>
-                    <MudItem xs="_checkingDuplicate ? 0 : 2" lg="_checkingDuplicate ? 0 : 2" Class="align-center d-flex">
-                        @if (_checkingDuplicate)
-                        {
-                            <MudProgressCircular Color="Color.Primary" Size="Size.Small" Indeterminate="true" />
-                        }
-                    </MudItem>
-                </MudGrid>
-            </MudItem>
-            <MudItem xs="12" sm="12" lg="12" xl="12">
-                <MudTextField OnKeyUp="async ()=>{await Invoke();}" Lines="3" MaxLines="4" AutoGrow Margin="Margin.Dense" @bind-Value="Model.Description" Label="توضیحات - بصورت خلاصه و کوتاه" Variant="Variant.Outlined"></MudTextField>
-            </MudItem>
-            <MudItem xs="12" sm="12" lg="12" xl="12">
-                <MudTextField @bind-Value="Keyword" HelperText="برای اضافه کردن کلیدواژه جدید ، پس از نوشتن جمله مورد نظر کلید Enter را فشار دهید." OnKeyUp="(e)=>SetKeyWord(e)" Margin="Margin.Dense" Label="کلید واژه ها" Variant="Variant.Outlined"></MudTextField>
-                <div>
-                    @foreach (var item in Keywords)
-                    {
-                        <MudChip Size="Size.Small" OnClose="()=>RemoveKeyword(item)" T="string">@item</MudChip>
-                    }
-                </div>
-            </MudItem>
-            <MudItem xs="12" sm="12" lg="12" xl="12">
-                @if (!string.IsNullOrEmpty(Model.Image))
-                {
-                    <div><img style="width:3rem;height:3rem;" src="@Model.Image" /></div>
-                }
-                <MediaSelector OnMediaSelected="mediaSelected" Title="عکس OG" DisplayInline="false"></MediaSelector>
-            </MudItem>
-        </MudGrid>
-    </MudCardContent>
+					<MudItem xs="_checkingDuplicate ? 10 : 12" lg="_checkingDuplicate ? 10 : 12">
+						<MudTextField OnKeyUp="(e)=>CheckDuplication(e)" OnBlur="RemoveWhiteSpaces" Style="direction:ltr;" ErrorText="آدرس وارد شده تکراری است." Error="_duplicateUrl" Margin="Margin.Dense" @bind-Value="Model.Url" Label="آدرس صفحه OG" Variant="Variant.Outlined" />
+					</MudItem>
+					<MudItem xs="_checkingDuplicate ? 0 : 2" lg="_checkingDuplicate ? 0 : 2" Class="align-center d-flex">
+						@if (_checkingDuplicate)
+						{
+							<MudProgressCircular Color="Color.Primary" Size="Size.Small" Indeterminate="true" />
+						}
+					</MudItem>
+				</MudGrid>
+			</MudItem>
+			<MudItem xs="12" sm="12" lg="12" xl="12">
+				<MudTextField OnKeyUp="async ()=>{await Invoke();}" Lines="3" MaxLines="4" AutoGrow Margin="Margin.Dense" @bind-Value="Model.Description" Label="توضیحات - بصورت خلاصه و کوتاه" Variant="Variant.Outlined"></MudTextField>
+			</MudItem>
+			<MudItem xs="12" sm="12" lg="12" xl="12">
+				<MudTextField @bind-Value="Keyword" HelperText="برای اضافه کردن کلیدواژه جدید ، پس از نوشتن جمله مورد نظر کلید Enter را فشار دهید." OnKeyUp="(e)=>SetKeyWord(e)" Margin="Margin.Dense" Label="کلید واژه ها" Variant="Variant.Outlined"></MudTextField>
+				<div>
+					@foreach (var item in Keywords)
+					{
+						<MudChip Size="Size.Small" OnClose="()=>RemoveKeyword(item)" T="string">@item</MudChip>
+					}
+				</div>
+			</MudItem>
+			<MudItem xs="12" sm="12" lg="12" xl="12">
+				@if (!string.IsNullOrEmpty(Model.Image))
+				{
+					<div><img style="width:3rem;height:3rem;" src="@Model.Image" /></div>
+				}
+				<MediaSelector OnMediaSelected="mediaSelected" Title="عکس OG" DisplayInline="false"></MediaSelector>
+			</MudItem>
+		</MudGrid>
+	</MudCardContent>
 </MudCard>
 
 
 @code {
 
-    public SeoModel Model
-    {
-        get; set;
-    }
-    [Parameter]
-    public SeoModel model
-    {
-        get { return Model; }
-        set
-        {
-            if (!string.IsNullOrEmpty(value.Keywords))
-            {
-                Keywords = (value.Keywords.Split(',')).ToList();
-            }
-            if (!string.IsNullOrEmpty(value.Image))
-            {
-                Model.Image = value.Image ?? "";
-            }
+	public SeoModel Model
+	{
+		get; set;
+	}
+	[Parameter]
+	public SeoModel model
+	{
+		get { return Model; }
+		set
+		{
+			if (!string.IsNullOrEmpty(value.Keywords))
+			{
+				Keywords = (value.Keywords.Split(',')).ToList();
+			}
+			if (!string.IsNullOrEmpty(value.Image))
+			{
+				Model.Image = value.Image ?? "";
+			}
 
 
-            Model = value;
-            StateHasChanged();
-        }
-    }
-    [Parameter]
-    public string Title { get; set; }
-    public List<string> Keywords = new List<string>();
-    [Parameter]
-    public EventCallback<SeoModel> OnSeoChanged { get; set; }
-    [Parameter]
-    public bool? CheckDuplicateUrl { get; set; } = false;
-    public string Keyword = "";
-    public bool _duplicateUrl { get; set; } = false;
-    public bool _checkingDuplicate { get; set; } = false;
-    public HttpClientHelper<SeoModel> hch = new HttpClientHelper<SeoModel>(UIHelper.ApiUrl());
+			Model = value;
+			StateHasChanged();
+		}
+	}
+	[Parameter]
+	public string Title { get; set; }
+	public List<string> Keywords = new List<string>();
+	[Parameter]
+	public EventCallback<SeoModel> OnSeoChanged { get; set; }
+	[Parameter]
+	public bool? CheckDuplicateUrl { get; set; } = false;
+	public string Keyword = "";
+	public bool _duplicateUrl { get; set; } = false;
+	public bool _checkingDuplicate { get; set; } = false;
+	public HttpClientHelper<SeoModel> hch;
 
-    public async Task CheckDuplication(KeyboardEventArgs e)
-    {
-        hch.SetToken(await USR.GetToken());
-        HttpClient _hc = hch.Instance();
-        if ((bool)CheckDuplicateUrl && model.Url != null)
-        {
-            _checkingDuplicate = true;
+	public async Task CheckDuplication(KeyboardEventArgs e)
+	{
+		hch = new HttpClientHelper<SeoModel>(_helper.ApiUrl());
+		hch.SetToken(await USR.GetToken());
+		HttpClient _hc = hch.Instance();
+		if ((bool)CheckDuplicateUrl && model.Url != null)
+		{
+			_checkingDuplicate = true;
 
-            var res = await hch.Post(new { url = Model.Url.RmvWhiteSpace() }, $"seo/Check?url={Model.Url.RmvWhiteSpace()}");
-            if (res.Status == ResponseObjectStatusEnum.Success)
-            {
-                if (bool.Parse(res?.Data?.ToString()))
-                {
-                    _snackbar.Add("آدرس تکراری می باشد", Severity.Error);
+			var res = await hch.Post(new { url = Model.Url.RmvWhiteSpace() }, $"seo/Check?url={Model.Url.RmvWhiteSpace()}");
+			if (res.Status == ResponseObjectStatusEnum.Success)
+			{
+				if (bool.Parse(res?.Data?.ToString()))
+				{
+					_snackbar.Add("آدرس تکراری می باشد", Severity.Error);
 
-                    _duplicateUrl = true;
-                }
-                else
-                {
-                    _duplicateUrl = false;
-                }
-            }
-            _checkingDuplicate = false;
-        }
-    }
-    public async Task SetKeyWord(KeyboardEventArgs e)
-    {
-        if (e.Code == "Enter" || e.Code == "NumpadEnter" || e.Code == "Tab")
-        {
-            if (!string.IsNullOrWhiteSpace(Keyword) && !string.IsNullOrEmpty(Keyword))
-            {
-                Keywords.Add(Keyword);
-                Model.Keywords = string.Join(',', Keywords);
-                Keyword = "";
-                await Invoke();
-            }
-        }
-        await Invoke();
-    }
-    public void RemoveKeyword(string key)
-    {
-        Keywords.Remove(key);
-        Model.Keywords = string.Join(',', Keywords);
-    }
-    private async void mediaSelected(Tuple<int, string> selectedItem)
-    {
-        Model.Image = UIHelper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
-        StateHasChanged();
-        await Invoke();
-    }
-    private async Task Invoke()
-    {
-        if (!string.IsNullOrEmpty(Model.Url) && !string.IsNullOrWhiteSpace(Model.Url))
-        {
-            Model.Url = model.Url.RmvWhiteSpace();
-        }
-        await OnSeoChanged.InvokeAsync(Model);
-    }
-    public async Task RemoveWhiteSpaces()
-    {
-        if (!string.IsNullOrEmpty(Model.Url) && !string.IsNullOrWhiteSpace(Model.Url))
-        {
-            Model.Url = model.Url.RmvWhiteSpace();
-        }
-        await OnSeoChanged.InvokeAsync(Model);
-    }
+					_duplicateUrl = true;
+				}
+				else
+				{
+					_duplicateUrl = false;
+				}
+			}
+			_checkingDuplicate = false;
+		}
+	}
+	public async Task SetKeyWord(KeyboardEventArgs e)
+	{
+		if (e.Code == "Enter" || e.Code == "NumpadEnter" || e.Code == "Tab")
+		{
+			if (!string.IsNullOrWhiteSpace(Keyword) && !string.IsNullOrEmpty(Keyword))
+			{
+				Keywords.Add(Keyword);
+				Model.Keywords = string.Join(',', Keywords);
+				Keyword = "";
+				await Invoke();
+			}
+		}
+		await Invoke();
+	}
+	public void RemoveKeyword(string key)
+	{
+		Keywords.Remove(key);
+		Model.Keywords = string.Join(',', Keywords);
+	}
+	private async void mediaSelected(Tuple<int, string> selectedItem)
+	{
+		Model.Image = _helper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
+		StateHasChanged();
+		await Invoke();
+	}
+	private async Task Invoke()
+	{
+		if (!string.IsNullOrEmpty(Model.Url) && !string.IsNullOrWhiteSpace(Model.Url))
+		{
+			Model.Url = model.Url.RmvWhiteSpace();
+		}
+		await OnSeoChanged.InvokeAsync(Model);
+	}
+	public async Task RemoveWhiteSpaces()
+	{
+		if (!string.IsNullOrEmpty(Model.Url) && !string.IsNullOrWhiteSpace(Model.Url))
+		{
+			Model.Url = model.Url.RmvWhiteSpace();
+		}
+		await OnSeoChanged.InvokeAsync(Model);
+	}
 
 }

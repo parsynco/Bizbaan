@@ -1,126 +1,128 @@
 ﻿@page "/articles/article/edit/{Id}"
 @using MudExRichTextEditor
-
+@inject IUIHelper _helper
 <PageTitle>بیزبان | ویرایش مقاله </PageTitle>
 <MudContainer>
-    <MudCard>
-        <MudCardContent>
+	<MudCard>
+		<MudCardContent>
 
-            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
-                <MudText>وایرایش مقاله </MudText>
-                <MudSpacer />
+			<MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+				<MudText>وایرایش مقاله </MudText>
+				<MudSpacer />
 
-            </MudCardHeader>
-            <MudContainer Class="mt-3">
-                <MudForm dir="rtl">
-                    <MudGrid>
-                        <MudItem xs="12" lg="6">
-                            <MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.CategoryId" Class="mud-rtl" T="string" Label="دسته بندی">
-                                <MudSelectItem Value="0">انتخاب دسته بندی</MudSelectItem>
-                                @foreach (var item in articleCategories)
-                                {
-                                    <MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
-                                }
-                            </MudSelect>
-                        </MudItem>
-                        <MudItem xs="12" lg="6">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Title" Class="mud-rtl" T="string" Label="عنوان اصلی"></MudTextField>
-                        </MudItem>
+			</MudCardHeader>
+			<MudContainer Class="mt-3">
+				<MudForm dir="rtl">
+					<MudGrid>
+						<MudItem xs="12" lg="6">
+							<MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.CategoryId" Class="mud-rtl" T="string" Label="دسته بندی">
+								<MudSelectItem Value="0">انتخاب دسته بندی</MudSelectItem>
+								@foreach (var item in articleCategories)
+								{
+									<MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
+								}
+							</MudSelect>
+						</MudItem>
+						<MudItem xs="12" lg="6">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Title" Class="mud-rtl" T="string" Label="عنوان اصلی"></MudTextField>
+						</MudItem>
 
-                        <MudItem xs="12" lg="6">
-                            @if (!string.IsNullOrEmpty(Model.Image))
-                            {
-                                <div><img style="width:3rem;height:3rem;" src="@Model.Image" /></div>
-                            }
-                            <MediaSelector OnMediaSelected="mediaSelected" Title="عکس مقاله" DisplayInline="false"></MediaSelector>
-                        </MudItem>
-                        <MudItem xs="12" lg="6">
-                            <MudTextField MaxLength="350" Lines="4" MaxLines="4" InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="Model.ShortDescription" T="string" Label="توضیحات - کوتاه"></MudTextField>
-                        </MudItem>
+						<MudItem xs="12" lg="6">
+							@if (!string.IsNullOrEmpty(Model.Image))
+							{
+								<div><img style="width:3rem;height:3rem;" src="@Model.Image" /></div>
+							}
+							<MediaSelector OnMediaSelected="mediaSelected" Title="عکس مقاله" DisplayInline="false"></MediaSelector>
+						</MudItem>
+						<MudItem xs="12" lg="6">
+							<MudTextField MaxLength="350" Lines="4" MaxLines="4" InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="Model.ShortDescription" T="string" Label="توضیحات - کوتاه"></MudTextField>
+						</MudItem>
 
-                        <MudItem xs="12" lg="12">
-                            <MudExRichTextEdit Immediate @ref="_editor" @bind-Value="Model.Description" Placeholder="محتوا" dir="rtl">
-                                @Model.Description
-                            </MudExRichTextEdit>
-                        </MudItem>
-                        <MudItem xs="12" lg="12">
-                            <Seo model="Model.Seo" Title="@Model.Title" OnSeoChanged="(Seo)=>{Model.Seo = Seo;StateHasChanged();}" />
-                        </MudItem>
+						<MudItem xs="12" lg="12">
+							<MudExRichTextEdit Immediate @ref="_editor" @bind-Value="Model.Description" Placeholder="محتوا" dir="rtl">
+								@Model.Description
+							</MudExRichTextEdit>
+						</MudItem>
+						<MudItem xs="12" lg="12">
+							<Seo model="Model.Seo" Title="@Model.Title" OnSeoChanged="(Seo)=>{Model.Seo = Seo;StateHasChanged();}" />
+						</MudItem>
 
-                    </MudGrid>
-                </MudForm>
-            </MudContainer>
+					</MudGrid>
+				</MudForm>
+			</MudContainer>
 
-        </MudCardContent>
-        <MudCardActions>
-            <MudButton Disabled="@_saving" @onclick="Update" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
-                @if (_saving)
-                {
-                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
-                }
-                else
-                {
-                    <MudText>ذخیره</MudText>
-                }
-            </MudButton>
+		</MudCardContent>
+		<MudCardActions>
+			<MudButton Disabled="@_saving" @onclick="Update" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+				@if (_saving)
+				{
+					<MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+				}
+				else
+				{
+					<MudText>ذخیره</MudText>
+				}
+			</MudButton>
 
-        </MudCardActions>
-    </MudCard>
+		</MudCardActions>
+	</MudCard>
 </MudContainer>
 
 @code {
-    MudExRichTextEdit _editor;
-    [Parameter]
-    public object Id { get; set; }
-    private bool _saving { get; set; } = false;
-    private ArticleModel Model = new ArticleModel();
-    HttpClientHelper<ArticleModel> hch = new HttpClientHelper<ArticleModel>(UIHelper.ApiUrl());
-    List<ArticleCategoryModel> articleCategories = new List<ArticleCategoryModel>();
-    HttpClient _hc;
-    protected override async Task OnInitializedAsync()
-    {
-        hch.SetToken(await USR.GetToken());
-        _hc = hch.Instance();
-        await LoadCategories();
-        await base.OnInitializedAsync();
-    }
+	MudExRichTextEdit _editor;
+	[Parameter]
+	public object Id { get; set; }
+	private bool _saving { get; set; } = false;
+	private ArticleModel Model = new ArticleModel();
+	HttpClientHelper<ArticleModel> hch;
+	List<ArticleCategoryModel> articleCategories = new List<ArticleCategoryModel>();
+	HttpClient _hc;
+	protected override async Task OnInitializedAsync()
+	{
+		hch = new HttpClientHelper<ArticleModel>(_helper.ApiUrl());
 
-    private async Task LoadCategories()
-    {
-        articleCategories = await _hc.GetFromJsonAsync<List<ArticleCategoryModel>>("ArticleCat");
-        StateHasChanged();
-        GetItem();
-    }
-    private async void GetItem()
-    {
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		await LoadCategories();
+		await base.OnInitializedAsync();
+	}
 
-        var data = await hch.Post(Id, $"Article/GetById?Id={Id}").WaitAsync(new CancellationToken());
-        if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
-        {
-            return;
-        }
-        _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+	private async Task LoadCategories()
+	{
+		articleCategories = await _hc.GetFromJsonAsync<List<ArticleCategoryModel>>("ArticleCat");
+		StateHasChanged();
+		GetItem();
+	}
+	private async void GetItem()
+	{
 
-        Model = JsonConvert.DeserializeObject<ArticleModel>(data.Data.ToString());
-        Model.Id = int.Parse(Id.ToString());
-        await _editor.SetHtml(Model.Description);
-        StateHasChanged();
-        Console.WriteLine(data.Msg);
-    }
-    private async void mediaSelected(Tuple<int, string> selectedItem)
-    {
-        Model.Image = UIHelper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
-        StateHasChanged();
+		var data = await hch.Post(Id, $"Article/GetById?Id={Id}").WaitAsync(new CancellationToken());
+		if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
+		{
+			return;
+		}
+		_snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
 
-    }
-    private async void Update()
-    {
-        _saving = true;
-        var data = await hch.Post(Model, $"Article/Edit");
-        _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
-        _saving = false;
-        StateHasChanged();
-        Thread.Sleep(1700);
-        _nv.NavigateTo("Articles/Article");
-    }
+		Model = JsonConvert.DeserializeObject<ArticleModel>(data.Data.ToString());
+		Model.Id = int.Parse(Id.ToString());
+		await _editor.SetHtml(Model.Description);
+		StateHasChanged();
+		Console.WriteLine(data.Msg);
+	}
+	private async void mediaSelected(Tuple<int, string> selectedItem)
+	{
+		Model.Image = _helper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
+		StateHasChanged();
+
+	}
+	private async void Update()
+	{
+		_saving = true;
+		var data = await hch.Post(Model, $"Article/Edit");
+		_snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+		_saving = false;
+		StateHasChanged();
+		Thread.Sleep(1700);
+		_nv.NavigateTo("Articles/Article");
+	}
 }

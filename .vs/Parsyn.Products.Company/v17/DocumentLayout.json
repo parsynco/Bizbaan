@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF186B2-A562-4457-BAA6-0944EE0E8806}|Parysn.Apps.Admin\\Parysn.Apps.Admin.csproj|g:\\hosein\\net8 proejects\\parsyn.bizbaan\\parysn.apps.admin\\pages\\base\\landingpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BF186B2-A562-4457-BAA6-0944EE0E8806}|Parysn.Apps.Admin\\Parysn.Apps.Admin.csproj|solutionrelative:parysn.apps.admin\\pages\\base\\landingpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF186B2-A562-4457-BAA6-0944EE0E8806}|Parysn.Apps.Admin\\Parysn.Apps.Admin.csproj|g:\\hosein\\net8 proejects\\parsyn.bizbaan\\parysn.apps.admin\\pages\\articlecat\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BF186B2-A562-4457-BAA6-0944EE0E8806}|Parysn.Apps.Admin\\Parysn.Apps.Admin.csproj|solutionrelative:parysn.apps.admin\\pages\\articlecat\\edit.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF186B2-A562-4457-BAA6-0944EE0E8806}|Parysn.Apps.Admin\\Parysn.Apps.Admin.csproj|g:\\hosein\\net8 proejects\\parsyn.bizbaan\\parysn.apps.admin\\pages\\article\\add.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BF186B2-A562-4457-BAA6-0944EE0E8806}|Parysn.Apps.Admin\\Parysn.Apps.Admin.csproj|solutionrelative:parysn.apps.admin\\pages\\article\\add.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BF186B2-A562-4457-BAA6-0944EE0E8806}|Parysn.Apps.Admin\\Parysn.Apps.Admin.csproj|g:\\hosein\\net8 proejects\\parsyn.bizbaan\\parysn.apps.admin\\components\\media\\mediaupload.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3BF186B2-A562-4457-BAA6-0944EE0E8806}|Parysn.Apps.Admin\\Parysn.Apps.Admin.csproj|solutionrelative:parysn.apps.admin\\components\\media\\mediaupload.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Landingpage.razor",
+              "DocumentMoniker": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parysn.Apps.Admin\\Pages\\Base\\Landingpage.razor",
+              "RelativeDocumentMoniker": "Parysn.Apps.Admin\\Pages\\Base\\Landingpage.razor",
+              "ToolTip": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parysn.Apps.Admin\\Pages\\Base\\Landingpage.razor",
+              "RelativeToolTip": "Parysn.Apps.Admin\\Pages\\Base\\Landingpage.razor",
+              "ViewState": "AgIAAAwCAAAAAAAAAAAqwAoCAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T12:51:53.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.razor",
+              "DocumentMoniker": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parysn.Apps.Admin\\Pages\\ArticleCat\\Edit.razor",
+              "RelativeDocumentMoniker": "Parysn.Apps.Admin\\Pages\\ArticleCat\\Edit.razor",
+              "ToolTip": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parysn.Apps.Admin\\Pages\\ArticleCat\\Edit.razor",
+              "RelativeToolTip": "Parysn.Apps.Admin\\Pages\\ArticleCat\\Edit.razor",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAqwFsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T12:51:13.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Add.razor",
+              "DocumentMoniker": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parysn.Apps.Admin\\Pages\\Article\\Add.razor",
+              "RelativeDocumentMoniker": "Parysn.Apps.Admin\\Pages\\Article\\Add.razor",
+              "ToolTip": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parysn.Apps.Admin\\Pages\\Article\\Add.razor",
+              "RelativeToolTip": "Parysn.Apps.Admin\\Pages\\Article\\Add.razor",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAqwGoAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T12:49:58.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MediaUpload.razor",
+              "DocumentMoniker": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parysn.Apps.Admin\\Components\\Media\\MediaUpload.razor",
+              "RelativeDocumentMoniker": "Parysn.Apps.Admin\\Components\\Media\\MediaUpload.razor",
+              "ToolTip": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parysn.Apps.Admin\\Components\\Media\\MediaUpload.razor",
+              "RelativeToolTip": "Parysn.Apps.Admin\\Components\\Media\\MediaUpload.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T12:49:39.331Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,90 +1,92 @@
 ﻿@page "/faq/item"
+@inject IUIHelper _helper
 @{
-    
+
 }
 <PageTitle>بیزبان | مدیریت  FAQ</PageTitle>
 <MudContainer Class="d-flex align-center justify-center flex-column">
-    <MudPaper Elevation="1" Class="d-flex align-center pa-2" Width="100%">
-        <MudText>مدیریت FAQ</MudText>
-        <MudSpacer />
-        <MudFab StartIcon="fal fa-plus " IconSize="Size.Small" Href="/Faq/add" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">
-        </MudFab>
-    </MudPaper>
-    <MudPaper Class="mt-4" Elevation="0" Width="100%">
-        <MudDataGrid Loading="_loading" Context="ctx" Filterable="true" SortMode="@SortMode.Multiple" Groupable="false" Items="@_dataList" Elevation="0" Dense="false" Hover="true" Bordered="false" Striped="true" Style="overflow-x: auto;">
-            <Columns>
-                <PropertyColumn Property="x => x.FaqCat.Title" Title="دسته بندی " />
-                <PropertyColumn Property="x => x.Question" Title="سوال " />
-                <PropertyColumn Property="x => x.Answer" Title="پاسخ" />
-                <PropertyColumn Property="x => x.Created_At" Title="تاریخ ایجاد">
-                    <CellTemplate>
-                        <MudText>@(((DateTime)context.Item.Created_At).ToString("yyyy/MM/dd"))</MudText>
-                    </CellTemplate>
-                </PropertyColumn>
-                <TemplateColumn CellClass="d-flex justify-end" Title="عملیات">
-                    <CellTemplate>
-                        <MudButtonGroup Size="Size.Small" Color="Color.Primary" OverrideStyles="true" Variant="Variant.Text">
-                            <MudIconButton Href="@($"/faq/edit/{context.Item.Id}")" Size="Size.Small" Color="Color.Warning" Icon="fal fa-edit" Class="TableOprButtons"></MudIconButton>
-                            <MudIconButton OnClick="(()=>OpenDialog(context.Item.Id))" Size="Size.Small" Color="Color.Error" Icon="fal fa-trash" Class="TableOprButtons"></MudIconButton>
-                        </MudButtonGroup>
-                    </CellTemplate>
-                </TemplateColumn>
-            </Columns>
-        </MudDataGrid>
+	<MudPaper Elevation="1" Class="d-flex align-center pa-2" Width="100%">
+		<MudText>مدیریت FAQ</MudText>
+		<MudSpacer />
+		<MudFab StartIcon="fal fa-plus " IconSize="Size.Small" Href="/Faq/add" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">
+		</MudFab>
+	</MudPaper>
+	<MudPaper Class="mt-4" Elevation="0" Width="100%">
+		<MudDataGrid Loading="_loading" Context="ctx" Filterable="true" SortMode="@SortMode.Multiple" Groupable="false" Items="@_dataList" Elevation="0" Dense="false" Hover="true" Bordered="false" Striped="true" Style="overflow-x: auto;">
+			<Columns>
+				<PropertyColumn Property="x => x.FaqCat.Title" Title="دسته بندی " />
+				<PropertyColumn Property="x => x.Question" Title="سوال " />
+				<PropertyColumn Property="x => x.Answer" Title="پاسخ" />
+				<PropertyColumn Property="x => x.Created_At" Title="تاریخ ایجاد">
+					<CellTemplate>
+						<MudText>@(((DateTime)context.Item.Created_At).ToString("yyyy/MM/dd"))</MudText>
+					</CellTemplate>
+				</PropertyColumn>
+				<TemplateColumn CellClass="d-flex justify-end" Title="عملیات">
+					<CellTemplate>
+						<MudButtonGroup Size="Size.Small" Color="Color.Primary" OverrideStyles="true" Variant="Variant.Text">
+							<MudIconButton Href="@($"/faq/edit/{context.Item.Id}")" Size="Size.Small" Color="Color.Warning" Icon="fal fa-edit" Class="TableOprButtons"></MudIconButton>
+							<MudIconButton OnClick="(()=>OpenDialog(context.Item.Id))" Size="Size.Small" Color="Color.Error" Icon="fal fa-trash" Class="TableOprButtons"></MudIconButton>
+						</MudButtonGroup>
+					</CellTemplate>
+				</TemplateColumn>
+			</Columns>
+		</MudDataGrid>
 
 
-    </MudPaper>
+	</MudPaper>
 </MudContainer>
 @code {
-    [Inject] private IDialogService _dialogSrvc { get; set; }
-    HttpClientHelper<FaqModel> hch = new HttpClientHelper<FaqModel>(UIHelper.ApiUrl());
-    HttpClient _hc;
-    private List<string> _events = new();
-    FaqModel[] _dataList = [];
-    private bool _visible;
-    private bool _loading = false;
-    private int ItemIdToDelete { get; set; } = 0;
-    private async void OpenDialog(int id)
-    {
+	[Inject] private IDialogService _dialogSrvc { get; set; }
+	HttpClientHelper<FaqModel> hch;
+	HttpClient _hc;
+	private List<string> _events = new();
+	FaqModel[] _dataList = [];
+	private bool _visible;
+	private bool _loading = false;
+	private int ItemIdToDelete { get; set; } = 0;
+	private async void OpenDialog(int id)
+	{
 
-        ItemIdToDelete = id;
-        var conf = await _dialogSrvc.Show<DeleteConfirm>().Result;
-        if(!conf.Canceled)
-        {
-            DeleteItem();
-        }
-    }
+		ItemIdToDelete = id;
+		var conf = await _dialogSrvc.Show<DeleteConfirm>().Result;
+		if (!conf.Canceled)
+		{
+			DeleteItem();
+		}
+	}
 
 
-    protected override async Task OnInitializedAsync()
-    {
-        hch.SetToken(await USR.GetToken());
-        _hc = hch.Instance();
-        LoadData(true);
-        await base.OnInitializedAsync();
-    }
+	protected override async Task OnInitializedAsync()
+	{
+		hch = new HttpClientHelper<FaqModel>(_helper.ApiUrl());
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		LoadData(true);
+		await base.OnInitializedAsync();
+	}
 
-    private async void DeleteItem()
-    {
-        var res = await hch.Post(new { Id = ItemIdToDelete }, $"faq/Delete?Id={ItemIdToDelete}");
-        _snackbar.Add(res.Msg, (res.Status == ResponseObjectStatusEnum.Error || res.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
-        if (res.Status == ResponseObjectStatusEnum.Success)
-        {
-            _visible = false;
-            StateHasChanged();
-            LoadData();
-        }
+	private async void DeleteItem()
+	{
+		var res = await hch.Post(new { Id = ItemIdToDelete }, $"faq/Delete?Id={ItemIdToDelete}");
+		_snackbar.Add(res.Msg, (res.Status == ResponseObjectStatusEnum.Error || res.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+		if (res.Status == ResponseObjectStatusEnum.Success)
+		{
+			_visible = false;
+			StateHasChanged();
+			LoadData();
+		}
 
-    }
-    private async void LoadData(bool changed = false)
-    {
-        _loading = true;
-        var data = await _hc.GetFromJsonAsync<FaqModel[]>("faq");
-        _dataList = data;
-        _loading = false;
-        StateHasChanged();
+	}
+	private async void LoadData(bool changed = false)
+	{
+		_loading = true;
+		var data = await _hc.GetFromJsonAsync<FaqModel[]>("faq");
+		_dataList = data;
+		_loading = false;
+		StateHasChanged();
 
-    }
+	}
 
 
 

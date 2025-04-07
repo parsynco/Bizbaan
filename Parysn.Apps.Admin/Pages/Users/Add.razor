@@ -1,102 +1,104 @@
 ﻿@page "/user/add"
+@inject IUIHelper _helper
 <PageTitle>بیزبان | ایجاد کاربر جدید</PageTitle>
 <MudContainer>
-    <MudCard>
-        <MudCardContent>
+	<MudCard>
+		<MudCardContent>
 
-            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
-                <MudText>ثبت کاربر جدید</MudText>
-                <MudSpacer />
-                <MudButton Size="Size.Small" IconSize="Size.Small" Href="/users" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
-                    <MudText>بازگشت</MudText>
-                </MudButton>
-            </MudCardHeader>
-            <MudContainer Class="mt-3">
-                <MudForm dir="rtl">
-                    <MudGrid>
+			<MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+				<MudText>ثبت کاربر جدید</MudText>
+				<MudSpacer />
+				<MudButton Size="Size.Small" IconSize="Size.Small" Href="/users" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
+					<MudText>بازگشت</MudText>
+				</MudButton>
+			</MudCardHeader>
+			<MudContainer Class="mt-3">
+				<MudForm dir="rtl">
+					<MudGrid>
 
-                        <MudItem xs="12" lg="4">
-                            <MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.RoleId" Class="mud-rtl"  Label=" نقش">
-                                <MudSelectItem Value="0">انتخاب  </MudSelectItem>
-                                @foreach (var item in Roles)
-                                {
-                                    <MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
-                                }
-                            </MudSelect>
-                        </MudItem>
-                        <MudItem xs="12" lg="4">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Name" Class="mud-rtl" T="string" Label="نام"></MudTextField>
-                        </MudItem>
-                        <MudItem xs="12" lg="4">
-                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Family" T="string" Label="نام خانوادگی"></MudTextField>
-                        </MudItem>
-                        <MudItem xs="12" lg="6">
-                            <MudTextField InputType="InputType.Telephone" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="model.Phone" T="string" Label="تلفن"></MudTextField>
-                        </MudItem>
-                        <MudItem xs="12" lg="6">
-                            <MudTextField autocomplete="off" InputType="InputType.Email" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="model.Email" T="string" Label="پست الکترونیکی"></MudTextField>
-                        </MudItem>
-                        <MudItem xs="12" lg="6">
-                            <MudTextField autocomplete="off" InputType="InputType.Password" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="model.Password" T="string" Label="رمز عبور"></MudTextField>
-                        </MudItem>
-                        <MudItem xs="12" lg="6">
-                            <MudTextField autocomplete="off" InputType="InputType.Password" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="model.ConfirmPassword" T="string" Label="تکرار رمز عبور"></MudTextField>
-                        </MudItem>
-                    </MudGrid>
-                </MudForm>
-            </MudContainer>
+						<MudItem xs="12" lg="4">
+							<MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.RoleId" Class="mud-rtl" Label=" نقش">
+								<MudSelectItem Value="0">انتخاب  </MudSelectItem>
+								@foreach (var item in Roles)
+								{
+									<MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
+								}
+							</MudSelect>
+						</MudItem>
+						<MudItem xs="12" lg="4">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Name" Class="mud-rtl" T="string" Label="نام"></MudTextField>
+						</MudItem>
+						<MudItem xs="12" lg="4">
+							<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Family" T="string" Label="نام خانوادگی"></MudTextField>
+						</MudItem>
+						<MudItem xs="12" lg="6">
+							<MudTextField InputType="InputType.Telephone" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="model.Phone" T="string" Label="تلفن"></MudTextField>
+						</MudItem>
+						<MudItem xs="12" lg="6">
+							<MudTextField autocomplete="off" InputType="InputType.Email" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="model.Email" T="string" Label="پست الکترونیکی"></MudTextField>
+						</MudItem>
+						<MudItem xs="12" lg="6">
+							<MudTextField autocomplete="off" InputType="InputType.Password" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="model.Password" T="string" Label="رمز عبور"></MudTextField>
+						</MudItem>
+						<MudItem xs="12" lg="6">
+							<MudTextField autocomplete="off" InputType="InputType.Password" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="model.ConfirmPassword" T="string" Label="تکرار رمز عبور"></MudTextField>
+						</MudItem>
+					</MudGrid>
+				</MudForm>
+			</MudContainer>
 
-        </MudCardContent>
-        <MudCardActions>
-            <MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
-                @if (_saving)
-                {
-                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
-                }
-                else
-                {
-                    <MudText>ذخیره</MudText>
-                }
-            </MudButton>
+		</MudCardContent>
+		<MudCardActions>
+			<MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+				@if (_saving)
+				{
+					<MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+				}
+				else
+				{
+					<MudText>ذخیره</MudText>
+				}
+			</MudButton>
 
-        </MudCardActions>
-    </MudCard>
+		</MudCardActions>
+	</MudCard>
 </MudContainer>
 
 @code {
-    private bool _saving { get; set; } = false;
-    private UserDto model = new UserDto();
-    HttpClient _hc;
-    HttpClientHelper<UserDto> hch = new HttpClientHelper<UserDto>(UIHelper.ApiUrl());
-    List<RoleModel> Roles = new List<RoleModel>();
-    protected override async Task OnInitializedAsync()
-    {
-        hch.SetToken(await USR.GetToken());
-        _hc = hch.Instance();
-        await LoadRoles();
-        await base.OnInitializedAsync();
-    }
-    private async Task LoadRoles()
-    {
-        Roles = await _hc.GetFromJsonAsync<List<RoleModel>>("Role");
-        StateHasChanged();
-    }
-    private async void RegisterModel()
-    {
-        _saving = true;
-        if(model.Password != model.ConfirmPassword)
-        {
-            _snackbar.Add("رمز عبور با تکرار آن یکسان نیست.",Severity.Error);
-            return;
-        }
-        var res = await hch.Post(model, "User");
-        _saving = false;
-        model = new UserDto();
-        _snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
-        StateHasChanged();
-        Thread.Sleep(1500);
-        _nv.NavigateTo("Users");
+	private bool _saving { get; set; } = false;
+	private UserDto model = new UserDto();
+	HttpClient _hc;
+	HttpClientHelper<UserDto> hch;
+	List<RoleModel> Roles = new List<RoleModel>();
+	protected override async Task OnInitializedAsync()
+	{
+		hch = new HttpClientHelper<UserDto>(_helper.ApiUrl());
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		await LoadRoles();
+		await base.OnInitializedAsync();
+	}
+	private async Task LoadRoles()
+	{
+		Roles = await _hc.GetFromJsonAsync<List<RoleModel>>("Role");
+		StateHasChanged();
+	}
+	private async void RegisterModel()
+	{
+		_saving = true;
+		if (model.Password != model.ConfirmPassword)
+		{
+			_snackbar.Add("رمز عبور با تکرار آن یکسان نیست.", Severity.Error);
+			return;
+		}
+		var res = await hch.Post(model, "User");
+		_saving = false;
+		model = new UserDto();
+		_snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
+		StateHasChanged();
+		Thread.Sleep(1500);
+		_nv.NavigateTo("Users");
 
 
-    }
+	}
 }

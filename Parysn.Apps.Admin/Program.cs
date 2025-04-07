@@ -35,8 +35,9 @@ internal class Program
         builder.Services.AddAuthorizationCore();
         builder.Services.AddScoped<IBlazorDbFactory, BlazorDbFactory>();
         builder.Services.AddScoped<InMemeoryStorage>();
+        builder.Services.AddScoped<IUIHelper, UIHelper>();
         builder.Services.AddScoped<IUserObject, UserObject>();
-        builder.Services.AddScoped<HttpClient>(sp => new HttpClient { BaseAddress = new Uri(UIHelper.BaseUrl) });
+        builder.Services.AddScoped<HttpClient>(sp => new HttpClient { BaseAddress = new Uri(builder.Configuration["API_URL"]) });
         builder.RootComponents.Add<App>("#app");
         builder.RootComponents.Add<HeadOutlet>("head::after");
         builder.Services.AddBlazorDB(options =>

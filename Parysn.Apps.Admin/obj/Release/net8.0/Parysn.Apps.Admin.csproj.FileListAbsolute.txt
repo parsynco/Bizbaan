@@ -132,7 +132,6 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\www
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\MudBlazor.Markdown.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\MudExRichTextEditor.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\netstandard.dll
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\Newtonsoft.Json.Bson.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\Newtonsoft.Json.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\Nextended.Blazor.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\Nextended.Core.dll
@@ -230,7 +229,6 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\www
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Memory.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Net.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Net.Http.dll
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Net.Http.Formatting.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Net.Http.Json.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Net.HttpListener.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Net.Mail.dll
@@ -320,7 +318,6 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\www
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Transactions.Local.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.ValueTuple.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Web.dll
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Web.Http.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Web.HttpUtility.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Windows.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Xml.dll
@@ -362,7 +359,6 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\www
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Core.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Reflection.DispatchProxy.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Http.Abstractions.dll.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Net.Http.Formatting.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Diagnostics.StackTrace.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\K4os.Compression.LZ4.Streams.dll.gz
@@ -458,7 +454,6 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\www
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Net.Requests.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\Microsoft.Net.Http.Headers.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Security.Cryptography.Cng.dll.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\Newtonsoft.Json.Bson.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\MudExRichTextEditor.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Runtime.Loader.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\Mono.TextTemplating.dll.gz
@@ -581,7 +576,6 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\www
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Numerics.Vectors.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Web.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.IO.MemoryMappedFiles.dll.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Web.Http.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Diagnostics.TraceSource.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\Microsoft.Extensions.Logging.Abstractions.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\System.Threading.Timer.dll.gz
@@ -728,8 +722,6 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\Sev
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\Mapster.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\Mapster.Core.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\Markdig.dll
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\System.Net.Http.Formatting.dll
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\System.Web.Http.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\Microsoft.AspNetCore.Authorization.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\Microsoft.AspNetCore.Components.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\Microsoft.AspNetCore.Components.Authorization.dll
@@ -796,7 +788,6 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\Mud
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\MudBlazor.Markdown.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\MudExRichTextEditor.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\Newtonsoft.Json.dll
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\Newtonsoft.Json.Bson.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\Nextended.Blazor.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\Nextended.Core.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\OneOf.dll
@@ -1087,8 +1078,6 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\com
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\vig3kggn3h-r9z8x24j7y.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\r7xdotnv91-nzzxyq4g65.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\2z8xjj5vqy-dp3xes88qu.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\1cm6efhych-dx7tijr4mv.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\pk1u4ypu7y-npmsbo0ukh.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\w7uqtwq6rd-p8cdo96gwu.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\ak13beupf4-2jiekq4wfd.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\1fpj6f4jry-iyepae577y.gz
@@ -1155,7 +1144,6 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\com
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\ekxmurgmcc-jxi5y797hs.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\c8udneu6w4-nf7w69eowh.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\x6wq2n1qrq-a56zs13vug.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\bzatwd9jlo-twnwdbgbjd.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\nisz91a0jp-cqxg6dkaxq.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\4jripjo976-m3vrqh7pi5.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\qqxzwgr108-uc1rh50xhz.gz
@@ -1403,15 +1391,6 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\com
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\odbvj135v4-tptq2av103.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\mvlfzkgvzk-lfu7j35m59.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\ri67voq9oq-oyz0vx2fzb.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\2pt1wdpc1a-keza6jd6fm.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\qkmejqbyfm-amulv70uhe.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\4k6yscweek-pe9dbfeo9y.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\la0pc0jwsh-051cge5ww1.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\6ulszn60tu-e82eefiuw6.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\7cd7xix2rg-v88kdy863e.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\r7jz04frpn-n7b9rwcujn.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\w74k43wd2q-d5e8safgch.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\4dszgf0g4o-eqi77koklg.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\staticwebassets.build.json
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\staticwebassets.development.json
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\staticwebassets.build.endpoints.json
@@ -1427,3 +1406,16 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\Par
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\refint\Parysn.Apps.Admin.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\Parysn.Apps.Admin.pdb
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\ref\Parysn.Apps.Admin.dll
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\Serilog.dll
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\wwwroot\_framework\Serilog.dll.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\Serilog.dll
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\laxr1u7ck1-13ghhtnl0y.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\2pt1wdpc1a-7j0yidenud.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\qkmejqbyfm-s2a33fr6iu.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\4k6yscweek-7n2qqn8x0d.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\la0pc0jwsh-ktkdnaxyhy.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\6ulszn60tu-52buf6cj3e.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\7cd7xix2rg-svhboq9rt4.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\r7jz04frpn-kpotbdfn1q.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\w74k43wd2q-1060u0irir.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Release\net8.0\compressed\4dszgf0g4o-g81sabmd6l.gz

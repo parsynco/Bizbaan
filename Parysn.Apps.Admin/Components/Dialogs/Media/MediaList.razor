@@ -1,5 +1,6 @@
 ﻿@using Parsyn.Apps.Company.Data.Models.Entity.Config
 @inject IUserObject USR
+@inject IUIHelper _helper
 <MudDialog dir="rtl" Class="mud-rtl">
 	<DialogContent>
 
@@ -37,7 +38,7 @@
 						<MudCardHeader Class="pa-1 d-flex align-center justify-center">
 							@item.Name
 						</MudCardHeader>
-						<MudCardMedia Title="@item.MediaTitle" Image="@(UIHelper.ApiUrl()+$"fm/dn/{item.Id}/OS")">
+						<MudCardMedia Title="@item.MediaTitle" Image="@(_helper.ApiUrl()+$"fm/dn/{item.Id}/OS")">
 
 						</MudCardMedia>
 						<MudCardActions>
@@ -74,7 +75,7 @@
 	public bool UploadNewFile { get; set; } = false;
 	MediaDto[] _dataList = [];
 	private bool _loading = false;
-	HttpClientHelper<MediaDto> hch = new HttpClientHelper<MediaDto>(UIHelper.ApiUrl());
+	HttpClientHelper<MediaDto> hch;
 	HttpClient _hc;
 	private bool ShowSizeSelector { get; set; } = false;
 	private int SelectedItemId { get; set; }
@@ -117,6 +118,7 @@
 	}
 	protected override async Task OnInitializedAsync()
 	{
+		hch = new HttpClientHelper<MediaDto>(_helper.ApiUrl());
 		hch.SetToken(await USR.GetToken());
 		_hc = hch.Instance();
 		await LoadCategories();

@@ -1,196 +1,197 @@
 ﻿@page "/roles"
-
+@inject IUIHelper _helper
 @{
-    
+
 }
 <PageTitle>بیزبان | مدیریت نقش</PageTitle>
 <MudContainer Class="d-flex align-center justify-center flex-column">
-    <MudPaper Elevation="1" Class="d-flex align-center pa-2" Width="100%">
-        <MudText>مدیریت نقش </MudText>
-        <MudSpacer />
-        <MudFab StartIcon="fal fa-plus " IconSize="Size.Small" Href="/roles/add" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">
-        </MudFab>
-    </MudPaper>
-    <MudPaper Class="mt-4" Elevation="0" Width="100%">
-        <MudDataGrid Loading="_loading" Context="ctx" Filterable="true" SortMode="@SortMode.Multiple" Groupable="false" Items="@_dataList" Elevation="0" Dense="false" Hover="true" Bordered="false" Striped="true" Style="overflow-x: auto;">
-            <Columns>
-                <PropertyColumn Property="x => x.Title" Title="عنوان" />
-                <PropertyColumn Property="x => x.Created_At" Title="تاریخ ایجاد">
-                    <CellTemplate>
-                        <MudText>@(((DateTime)context.Item.Created_At).ToString("yyyy/MM/dd"))</MudText>
-                    </CellTemplate>
-                </PropertyColumn>
-                <TemplateColumn CellClass="d-flex justify-end" Title="عملیات">
-                    <CellTemplate>
-                        <MudButtonGroup Size="Size.Small" Color="Color.Primary" OverrideStyles="true" Variant="Variant.Text">
-                            <MudIconButton OnClick="(()=>ShowPermDialog(context.Item))" Size="Size.Small" Color="Color.Info" Icon="fal fa-project-diagram" Class="TableOprButtons"></MudIconButton>
-                            <MudIconButton Href="@($"/roles/edit/{context.Item.Id}")" Size="Size.Small" Color="Color.Warning" Icon="fal fa-edit" Class="TableOprButtons"></MudIconButton>
-                            <MudIconButton OnClick="(()=>OpenDialog(context.Item.Id))" Size="Size.Small" Color="Color.Error" Icon="fal fa-trash" Class="TableOprButtons"></MudIconButton>
-                        </MudButtonGroup>
+	<MudPaper Elevation="1" Class="d-flex align-center pa-2" Width="100%">
+		<MudText>مدیریت نقش </MudText>
+		<MudSpacer />
+		<MudFab StartIcon="fal fa-plus " IconSize="Size.Small" Href="/roles/add" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">
+		</MudFab>
+	</MudPaper>
+	<MudPaper Class="mt-4" Elevation="0" Width="100%">
+		<MudDataGrid Loading="_loading" Context="ctx" Filterable="true" SortMode="@SortMode.Multiple" Groupable="false" Items="@_dataList" Elevation="0" Dense="false" Hover="true" Bordered="false" Striped="true" Style="overflow-x: auto;">
+			<Columns>
+				<PropertyColumn Property="x => x.Title" Title="عنوان" />
+				<PropertyColumn Property="x => x.Created_At" Title="تاریخ ایجاد">
+					<CellTemplate>
+						<MudText>@(((DateTime)context.Item.Created_At).ToString("yyyy/MM/dd"))</MudText>
+					</CellTemplate>
+				</PropertyColumn>
+				<TemplateColumn CellClass="d-flex justify-end" Title="عملیات">
+					<CellTemplate>
+						<MudButtonGroup Size="Size.Small" Color="Color.Primary" OverrideStyles="true" Variant="Variant.Text">
+							<MudIconButton OnClick="(()=>ShowPermDialog(context.Item))" Size="Size.Small" Color="Color.Info" Icon="fal fa-project-diagram" Class="TableOprButtons"></MudIconButton>
+							<MudIconButton Href="@($"/roles/edit/{context.Item.Id}")" Size="Size.Small" Color="Color.Warning" Icon="fal fa-edit" Class="TableOprButtons"></MudIconButton>
+							<MudIconButton OnClick="(()=>OpenDialog(context.Item.Id))" Size="Size.Small" Color="Color.Error" Icon="fal fa-trash" Class="TableOprButtons"></MudIconButton>
+						</MudButtonGroup>
 
-                    </CellTemplate>
-                </TemplateColumn>
-            </Columns>
-        </MudDataGrid>
+					</CellTemplate>
+				</TemplateColumn>
+			</Columns>
+		</MudDataGrid>
 
 
-    </MudPaper>
-    <MudDialog Visible="_permToRoleDialog">
-        <DialogContent>
-            <MudCard Elevation="0">
-                <MudCardHeader>
-                    <small>Assign Permissions to Role - TreeView friendly</small>
-                    <MudSpacer />
-                    <MudButton Color="Color.Info" OnClick="(()=>_permToRoleDialog = false)" Variant="Variant.Text" EndIcon="fal fa-times" IconSize="Size.Medium"></MudButton>
-                </MudCardHeader>
-                <MudCardContent>
-                    <MudTreeView @bind-SelectedValues="SelectedPermission" Width="100%" CheckBoxColor="Color.Info" Hover AutoSelectParent TriState T="int" SelectionMode="SelectionMode.MultiSelection">
-                        @if (PermissionList != null && PermissionList.Length > 0)
-                        {
-                            @foreach (var item in PermissionList)
-                            {
-                                <MudTreeViewItem Text="@item.Title" Value="@item.Id">
-                                    @if (item.Childs != null && item.Childs.Any())
-                                    {
-                                        @foreach (var child in item.Childs)
-                                        {
-                                            <MudTreeViewItem Text="@child.Title" Value="@child.Id"></MudTreeViewItem>
-                                        }
-                                    }
-                                </MudTreeViewItem>
-                            }
-                        }
-                    </MudTreeView>
-                </MudCardContent>
-                <MudCardActions>
-                    <MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
-                        @if (_saving)
-                        {
-                            <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
-                        }
-                        else
-                        {
-                            <MudText>ذخیره</MudText>
-                        }
-                    </MudButton>
-                </MudCardActions>
-            </MudCard>
-        </DialogContent>
+	</MudPaper>
+	<MudDialog Visible="_permToRoleDialog">
+		<DialogContent>
+			<MudCard Elevation="0">
+				<MudCardHeader>
+					<small>Assign Permissions to Role - TreeView friendly</small>
+					<MudSpacer />
+					<MudButton Color="Color.Info" OnClick="(()=>_permToRoleDialog = false)" Variant="Variant.Text" EndIcon="fal fa-times" IconSize="Size.Medium"></MudButton>
+				</MudCardHeader>
+				<MudCardContent>
+					<MudTreeView @bind-SelectedValues="SelectedPermission" Width="100%" CheckBoxColor="Color.Info" Hover AutoSelectParent TriState T="int" SelectionMode="SelectionMode.MultiSelection">
+						@if (PermissionList != null && PermissionList.Length > 0)
+						{
+							@foreach (var item in PermissionList)
+							{
+								<MudTreeViewItem Text="@item.Title" Value="@item.Id">
+									@if (item.Childs != null && item.Childs.Any())
+									{
+										@foreach (var child in item.Childs)
+										{
+											<MudTreeViewItem Text="@child.Title" Value="@child.Id"></MudTreeViewItem>
+										}
+									}
+								</MudTreeViewItem>
+							}
+						}
+					</MudTreeView>
+				</MudCardContent>
+				<MudCardActions>
+					<MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+						@if (_saving)
+						{
+							<MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+						}
+						else
+						{
+							<MudText>ذخیره</MudText>
+						}
+					</MudButton>
+				</MudCardActions>
+			</MudCard>
+		</DialogContent>
 
-    </MudDialog>
+	</MudDialog>
 </MudContainer>
 @code {
-    [Inject] private IDialogService _dialogSrvc { get; set; }
-    HttpClientHelper<RoleModel> hch = new HttpClientHelper<RoleModel>(UIHelper.ApiUrl());
-    HttpClient _hc;
-    private List<string> _events = new();
-    RoleModel[] _dataList = [];
-    private bool _visible;
-    private bool _loading = false;
-    private int ItemIdToDelete { get; set; } = 0;
-    /****Set permission to role dialog optionality****/
-    public IReadOnlyCollection<int> SelectedPermission = [];
-    private PermissionModel[]? PermissionList { get; set; }
-    public bool _permToRoleDialog { get; set; } = false;
-    public bool _saving { get; set; } = false;
-    public List<RolePermissionModel> FinalList { get; set; }
-    public DialogOptions _permToRoleDlgOptions = new DialogOptions()
-        {
-            BackdropClick = true,
-            CloseButton = false,
-            MaxWidth = MaxWidth.Large
-        };
-    public int SelectedRoleId { get; set; } = 0;
-    public void ShowPermDialog(RoleModel item)
-    {
-        SelectedRoleId = item.Id;
-        if (item.Permissions is not null && item.Permissions.Count > 0)
-        {
-            SelectedPermission = item.Permissions.Select(x => (int)x.PermissionId).ToList();
-        }
-        _permToRoleDialog = true;
-        LoadPermissions();
-        StateHasChanged();
-    }
-    private async void LoadPermissions()
-    {
-        // if (PermissionList is null || PermissionList.Length < 1)
-        // {
-        // _loading = true;
-        hch.SetToken(await USR.GetToken());
-        var data = await _hc.GetFromJsonAsync<PermissionModel[]>("Permission/GetTreeView");
-        PermissionList = data;
-        // _loading = false;
-        StateHasChanged();
-        // }
+	[Inject] private IDialogService _dialogSrvc { get; set; }
+	HttpClientHelper<RoleModel> hch;
+	HttpClient _hc;
+	private List<string> _events = new();
+	RoleModel[] _dataList = [];
+	private bool _visible;
+	private bool _loading = false;
+	private int ItemIdToDelete { get; set; } = 0;
+	/****Set permission to role dialog optionality****/
+	public IReadOnlyCollection<int> SelectedPermission = [];
+	private PermissionModel[]? PermissionList { get; set; }
+	public bool _permToRoleDialog { get; set; } = false;
+	public bool _saving { get; set; } = false;
+	public List<RolePermissionModel> FinalList { get; set; }
+	public DialogOptions _permToRoleDlgOptions = new DialogOptions()
+		{
+			BackdropClick = true,
+			CloseButton = false,
+			MaxWidth = MaxWidth.Large
+		};
+	public int SelectedRoleId { get; set; } = 0;
+	public void ShowPermDialog(RoleModel item)
+	{
+		SelectedRoleId = item.Id;
+		if (item.Permissions is not null && item.Permissions.Count > 0)
+		{
+			SelectedPermission = item.Permissions.Select(x => (int)x.PermissionId).ToList();
+		}
+		_permToRoleDialog = true;
+		LoadPermissions();
+		StateHasChanged();
+	}
+	private async void LoadPermissions()
+	{
+		// if (PermissionList is null || PermissionList.Length < 1)
+		// {
+		// _loading = true;
+		hch.SetToken(await USR.GetToken());
+		var data = await _hc.GetFromJsonAsync<PermissionModel[]>("Permission/GetTreeView");
+		PermissionList = data;
+		// _loading = false;
+		StateHasChanged();
+		// }
 
-    }
+	}
 
-    private async void RegisterModel()
-    {
-        _saving = true;
-        hch.SetToken(await USR.GetToken());
-        FinalList = new List<RolePermissionModel>();
-        foreach (var item in SelectedPermission)
-        {
-            FinalList.Add(new()
-                {
-                    RoleId = SelectedRoleId,
-                    PermissionId = item
-                });
-        }
-        var res = await hch.Post(FinalList, "Role/UpdatePermissions");
-        _saving = false;
-        _snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
-        StateHasChanged();
-        Thread.Sleep(1500);
-        // _nv.NavigateTo("roles");
-
-
-    }
-    /*************************************************/
-
-    private async void OpenDialog(int id)
-    {
-
-        ItemIdToDelete = id;
-        var conf = await _dialogSrvc.Show<DeleteConfirm>().Result;
-        if (!conf.Canceled)
-        {
-            DeleteItem();
-        }
-    }
+	private async void RegisterModel()
+	{
+		_saving = true;
+		hch.SetToken(await USR.GetToken());
+		FinalList = new List<RolePermissionModel>();
+		foreach (var item in SelectedPermission)
+		{
+			FinalList.Add(new()
+				{
+					RoleId = SelectedRoleId,
+					PermissionId = item
+				});
+		}
+		var res = await hch.Post(FinalList, "Role/UpdatePermissions");
+		_saving = false;
+		_snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
+		StateHasChanged();
+		Thread.Sleep(1500);
+		// _nv.NavigateTo("roles");
 
 
-    protected override async Task OnInitializedAsync()
-    {
-        hch.SetToken(await USR.GetToken());
-        _hc = hch.Instance();
-        LoadData(true);
-        await base.OnInitializedAsync();
-    }
+	}
+	/*************************************************/
 
-    private async void DeleteItem()
-    {
-        var res = await hch.Post(new { Id = ItemIdToDelete }, $"Role/Delete?Id={ItemIdToDelete}");
-        _snackbar.Add(res.Msg, (res.Status == ResponseObjectStatusEnum.Error || res.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
-        if (res.Status == ResponseObjectStatusEnum.Success)
-        {
-            _visible = false;
-            StateHasChanged();
-            LoadData();
-        }
+	private async void OpenDialog(int id)
+	{
 
-    }
-    private async void LoadData(bool changed = false)
-    {
-        _loading = true;
-        var data = await _hc.GetFromJsonAsync<RoleModel[]>("Role");
-        _dataList = data;
-        _loading = false;
-        StateHasChanged();
+		ItemIdToDelete = id;
+		var conf = await _dialogSrvc.Show<DeleteConfirm>().Result;
+		if (!conf.Canceled)
+		{
+			DeleteItem();
+		}
+	}
 
-    }
+
+	protected override async Task OnInitializedAsync()
+	{
+		hch = new HttpClientHelper<RoleModel>(_helper.ApiUrl());
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		LoadData(true);
+		await base.OnInitializedAsync();
+	}
+
+	private async void DeleteItem()
+	{
+		var res = await hch.Post(new { Id = ItemIdToDelete }, $"Role/Delete?Id={ItemIdToDelete}");
+		_snackbar.Add(res.Msg, (res.Status == ResponseObjectStatusEnum.Error || res.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+		if (res.Status == ResponseObjectStatusEnum.Success)
+		{
+			_visible = false;
+			StateHasChanged();
+			LoadData();
+		}
+
+	}
+	private async void LoadData(bool changed = false)
+	{
+		_loading = true;
+		var data = await _hc.GetFromJsonAsync<RoleModel[]>("Role");
+		_dataList = data;
+		_loading = false;
+		StateHasChanged();
+
+	}
 
 
 
