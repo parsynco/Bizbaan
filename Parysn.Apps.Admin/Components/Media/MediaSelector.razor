@@ -1,0 +1,63 @@
+﻿
+
+<MudPaper Elevation="0" dir="rtl" Class="border pa-2" Style="width:100% !important">
+    <MudGrid>
+
+        @if (DisplayInline)
+        {
+            <MudItem xs="12" sm="12" md="12" lg="12" xl="12">
+                <MudText Align="Align.Center">@Title</MudText>
+            </MudItem>
+            <MudItem xs="12" sm="4" md="3" lg="3" xl="3">
+                <MudImage>
+
+                </MudImage>
+            </MudItem>
+            <MudItem xs="12" sm="8" md="9" lg="9" xl="9">
+                <MudButton FullWidth><MudIcon Icon="@($"fal fa-{ButtonIcon}")"></MudIcon>@ButtonText</MudButton>
+                <MudAlert Severity="Severity.Normal">Selected File name</MudAlert>
+            </MudItem>
+
+        }
+        else
+        {
+            <MudItem xs="12" sm="12" md="12" lg="12" xl="12">
+                <MudText dir="rtl">@Title</MudText>
+            </MudItem>
+            <MudItem xs="12" sm="12" md="12" lg="12" xl="12">
+                <MudButtonGroup FullWidth Color="Color.Primary" OverrideStyles="false">
+                    <MudButton DropShadow=" false" OnClick="MediaSelectionOpen" Color="Color.Secondary" Variant="Variant.Filled" IconColor="Color.Surface"><MudIcon Icon="@($"fal fa-{ButtonIcon}")"></MudIcon></MudButton>
+                    <MudButton Color="Color.Primary" FullWidth Variant="Variant.Outlined" Disabled><MudText Style="font-weight:bolder !important" dir="rtl" Class="custom-font">@SelectedFileName</MudText></MudButton>
+                </MudButtonGroup>
+            </MudItem>
+        }
+    </MudGrid>
+</MudPaper>
+
+@code {
+    [Parameter]
+    public bool DisplayInline { get; set; } = false;
+    [Parameter]
+    public string? ButtonText { get; set; } = "";
+    [Parameter]
+    public string? ButtonIcon { get; set; } = "paperclip";
+    [Parameter]
+    public string? Title { get; set; } = "انتخاب فایل";
+    //
+    private string SelectedFileName { get; set; } = "فایل انتخاب نشده است.";
+
+    [Parameter] 
+    public EventCallback<Tuple<int,string>> OnMediaSelected{ get; set; }
+
+    private async void MediaSelectionOpen()
+    {
+        var res = await (await Dialog.ShowAsync<MediaList>(Title, new DialogOptions { FullScreen = true, CloseButton = true })).Result;
+        if (!res.Canceled)
+        {
+            SelectedFileName = "فایل انتخاب شده است";
+            var result = (Tuple<int, string>)res.Data ?? null;
+            StateHasChanged();
+            await OnMediaSelected.InvokeAsync(result);
+        }
+    }
+}

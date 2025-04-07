@@ -1,0 +1,539 @@
+﻿@page "/base/landing_page"
+@using Parsyn.Apps.Company.Data.Models.Dtos.Base.IndexSections
+@using Parsyn.Apps.Company.Data.Models.Entity
+
+<PageTitle>بیزبان | سئو صفحه اصلی</PageTitle>
+<MudContainer Class="d-flex align-center justify-center flex-column pb-4 py-4">
+    <MudPaper Elevation="1" Class="d-flex align-center pa-2" Width="100%">
+        <MudText>مدیریت  سئو صفحه اصلی</MudText>
+        <MudSpacer />
+    </MudPaper>
+    <MudPaper Class="mt-4" Elevation="0" Width="100%">
+        <MudGrid>
+            <MudItem xl="12" lg="12" md="12" sm="12" xs="12">
+                <MudCard Elevation="1">
+                    <MudCardHeader>
+                        <MudText Typo="Typo.h6">سکشن (<b>2</b>)</MudText>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudGrid>
+                            <MudItem xs="12" sm="12" xl="5" lg="5">
+                                @if (!string.IsNullOrEmpty(sec2Dto.Image))
+                                {
+                                    <div><img style="width:3rem;height:3rem;" src="@sec2Dto.Image" /></div>
+                                }
+                                <MediaSelector OnMediaSelected="mediaSelected" Title="عکس " DisplayInline="false"></MediaSelector>
+                            </MudItem>
+                            <MudItem xs="12" sm="12" xl="7" lg="7">
+                                <MudTextField MaxLength="500" Lines="5" MaxLines="5" InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="sec2Dto.Description" T="string" Label="توضیحات - کوتاه"></MudTextField>
+
+                            </MudItem>
+                            <MudItem xs="12" sm="12" xl="12" lg="12">
+                                <MudGrid>
+                                    <MudItem sm="12" md="12" lg="3" xl="3" xxl="3">
+                                        <MudGrid>
+                                            <MudItem xl="12" lg="12" md="12" sm="12" xs="12">
+                                                <FontPicker Icon="@sec2Dto.Collections[0].Icon" OnIconChanged="@((string icon)=>sec2Dto.Collections[0].Icon = icon)"></FontPicker>
+                                            </MudItem>
+                                            <MudItem xl="12" lg="12" md="12" sm="12" xs="12">
+                                                <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="sec2Dto.Collections[0].Title" Class="mud-rtl" T="string" Label="عنوان "></MudTextField>
+                                            </MudItem>
+                                        </MudGrid>
+                                    </MudItem>
+                                    <MudItem sm="12" md="12" lg="3" xl="3" xxl="3">
+                                        <MudGrid>
+                                            <MudItem xl="12" lg="12" md="12" sm="12" xs="12">
+                                                <FontPicker Icon="@sec2Dto.Collections[1].Icon" OnIconChanged="@((string icon)=>sec2Dto.Collections[1].Icon = icon)"></FontPicker>
+                                            </MudItem>
+                                            <MudItem xl="12" lg="12" md="12" sm="12" xs="12">
+                                                <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="sec2Dto.Collections[1].Title" Class="mud-rtl" T="string" Label="عنوان "></MudTextField>
+                                            </MudItem>
+                                        </MudGrid>
+                                    </MudItem>
+                                    <MudItem sm="12" md="12" lg="3" xl="3" xxl="3">
+                                        <MudGrid>
+                                            <MudItem xl="12" lg="12" md="12" sm="12" xs="12">
+                                                <FontPicker Icon="@sec2Dto.Collections[2].Icon" OnIconChanged="@((string icon)=>sec2Dto.Collections[2].Icon = icon)"></FontPicker>
+                                            </MudItem>
+                                            <MudItem xl="12" lg="12" md="12" sm="12" xs="12">
+                                                <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="sec2Dto.Collections[2].Title" Class="mud-rtl" T="string" Label="عنوان "></MudTextField>
+                                            </MudItem>
+                                        </MudGrid>
+                                    </MudItem>
+                                    <MudItem sm="12" md="12" lg="3" xl="3" xxl="3">
+                                        <MudGrid>
+                                            <MudItem xl="12" lg="12" md="12" sm="12" xs="12">
+                                                <FontPicker Icon="@sec2Dto.Collections[3].Icon" OnIconChanged="@((string icon)=>sec2Dto.Collections[3].Icon = icon)"></FontPicker>
+                                            </MudItem>
+                                            <MudItem xl="12" lg="12" md="12" sm="12" xs="12">
+                                                <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="sec2Dto.Collections[3].Title" Class="mud-rtl" T="string" Label="عنوان "></MudTextField>
+                                            </MudItem>
+                                        </MudGrid>
+                                    </MudItem>
+                                </MudGrid>
+                            </MudItem>
+                        </MudGrid>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Disabled="@_saving" OnClick="@(()=>SaveSection(sec2Dto,"S2"))" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Medium" FullWidth>
+                            @if (_saving)
+                            {
+                                <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+                            }
+                            else
+                            {
+                                <MudText>بروزرسانی</MudText>
+                            }
+                        </MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+            <MudItem xl="12" lg="12" md="12" sm="12" xs="12">
+                <MudCard Elevation="1">
+                    <MudCardHeader>
+                        <MudText Typo="Typo.h6">سکشن (<b>4</b>)</MudText>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudGrid>
+                            <MudItem xs="12" sm="12" xl="5" lg="5">
+                                @if (!string.IsNullOrEmpty(sec4Dto.Image))
+                                {
+                                    <div><img style="width:3rem;height:3rem;" src="@sec4Dto.Image" /></div>
+                                }
+                                <MediaSelector OnMediaSelected="mediaSelectedsec4" Title="عکس " DisplayInline="false"></MediaSelector>
+                            </MudItem>
+                            <MudItem xs="12" sm="12" xl="7" lg="7">
+                                <MudTextField MaxLength="500" Lines="5" MaxLines="5" InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="sec4Dto.Description" T="string" Label="توضیحات - کوتاه"></MudTextField>
+                            </MudItem>
+                        </MudGrid>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Disabled="@_saving" OnClick="@(()=>SaveSection(sec4Dto,"S4"))" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Medium" FullWidth>
+                            @if (_saving)
+                            {
+                                <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+                            }
+                            else
+                            {
+                                <MudText>بروزرسانی</MudText>
+                            }
+                        </MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+            <MudItem xl="12" lg="12" md="12" sm="12" xs="12">
+                <MudCard Elevation="1">
+                    <MudCardHeader>
+                        <MudText Typo="Typo.h6">سکشن (<b>5</b>)</MudText>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudGrid>
+                            <MudItem xs="12" sm="12" xl="4" lg="4">
+                                @if (!string.IsNullOrEmpty(sec5Dto.Image))
+                                {
+                                    <div><img style="width:3rem;height:3rem;" src="@sec5Dto.Image" /></div>
+                                }
+                                <MediaSelector OnMediaSelected="mediaSelectedsec5" Title="عکس " DisplayInline="false"></MediaSelector>
+                            </MudItem>
+                            <MudItem xs="12" sm="12" xl="4" lg="4">
+                                <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="sec5Dto.Description" T="string" Label="توضیحات - کوتاه"></MudTextField>
+                            </MudItem>
+                            <MudItem xs="12" sm="12" xl="4" lg="4">
+                                <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="sec5Dto.ButtonTitle" T="string" Label="عنوان ویژه"></MudTextField>
+                            </MudItem>
+                        </MudGrid>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Disabled="@_saving" OnClick="@(()=>SaveSection(sec5Dto,"S5"))" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Medium" FullWidth>
+                            @if (_saving)
+                            {
+                                <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+                            }
+                            else
+                            {
+                                <MudText>بروزرسانی</MudText>
+                            }
+                        </MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+            <MudItem xl="6" lg="6" md="12" sm="12" xs="12">
+                <MudCard Elevation="1">
+                    <MudCardHeader>
+                        <MudText Typo="Typo.h6">سکشن (<b>لینک های فوتر</b>)</MudText>
+                        <MudSpacer/>
+                        <MudIconButton OnClick="@(()=>AddEditLinkDlg = true)" Size="Size.Medium" Color="Color.Primary" Icon="fal fa-plus"></MudIconButton>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudGrid>
+                            <MudItem xs="12" sm="12" xl="12" lg="12">
+                                <MudDataGrid Context="ctx" Filterable="true" SortMode="@SortMode.Multiple" Groupable="false" Items="Links" Elevation="0" Dense="false" Hover="true" Bordered="false" Striped="true" Style="overflow-x: auto;">
+                                    <Columns>
+                                        <PropertyColumn Property="x => x.Title" Title="عنوان " />
+
+                                        <PropertyColumn Property="x=> x.Url" >
+                                            <CellTemplate>
+                                                <MudText Style="direction:ltr;">@(context.Item.Url)</MudText>
+                                            </CellTemplate>
+                                        </PropertyColumn>
+                                        <TemplateColumn CellClass="d-flex justify-end" Title="عملیات">
+                                            <CellTemplate>
+                                                <MudButtonGroup Size="Size.Small" Color="Color.Primary" OverrideStyles="true" Variant="Variant.Text">
+                                                    <MudIconButton OnClick="@(()=>EditLink(context.Item))" Size="Size.Small" Color="Color.Warning" Icon="fal fa-edit" Class="TableOprButtons"></MudIconButton>
+                                                    <MudIconButton OnClick="@(()=>RemoveLink(context.Item.Id))" Size="Size.Small" Color="Color.Error" Icon="fal fa-trash" Class="TableOprButtons"></MudIconButton>
+                                                </MudButtonGroup>
+                                            </CellTemplate>
+                                        </TemplateColumn>
+                                    </Columns>
+                                </MudDataGrid>
+                            </MudItem>
+                        </MudGrid>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Disabled="@_saving" OnClick="@(()=>SaveSection(Links,"FooterLink"))" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Medium" FullWidth>
+                            @if (_saving)
+                            {
+                                <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+                            }
+                            else
+                            {
+                                <MudText>بروزرسانی</MudText>
+                            }
+                        </MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+            <MudItem xl="6" lg="6" md="12" sm="12" xs="12">
+                <MudCard Elevation="1">
+                    <MudCardHeader>
+                        <MudText Typo="Typo.h6">سکشن (<b> سوشیال فوتر</b>)</MudText>
+                        <MudSpacer />
+                        <MudIconButton OnClick="@(()=>AddEditSocialDlg = true)" Size="Size.Medium" Color="Color.Primary" Icon="fal fa-plus"></MudIconButton>
+                    </MudCardHeader>
+                    <MudCardContent>
+                        <MudGrid>
+                            <MudItem xs="12" sm="12" xl="12" lg="12">
+                                <MudDataGrid Context="ctx" Filterable="true" SortMode="@SortMode.Multiple" Groupable="false" Items="Socials" Elevation="0" Dense="false" Hover="true" Bordered="false" Striped="true" Style="overflow-x: auto;">
+                                    <Columns>
+
+                                        <PropertyColumn Property="x => x.Title" Title="عنوان " />
+                                        <PropertyColumn Property="x=> x.Icon">
+                                            <CellTemplate>
+                                                <MudIcon Icon="@context.Item.Icon"></MudIcon>
+                                            </CellTemplate>
+                                        </PropertyColumn>
+                                        <PropertyColumn Property="x=> x.Url">
+                                            <CellTemplate>
+                                                <MudText Style="direction:ltr;">@(context.Item.Url)</MudText>
+                                            </CellTemplate>
+                                        </PropertyColumn>
+                                        
+                                        <TemplateColumn CellClass="d-flex justify-end" Title="عملیات">
+                                            <CellTemplate>
+                                                <MudButtonGroup Size="Size.Small" Color="Color.Primary" OverrideStyles="true" Variant="Variant.Text">
+                                                    <MudIconButton OnClick="@(()=>EditSocial(context.Item))" Size="Size.Small" Color="Color.Warning" Icon="fal fa-edit" Class="TableOprButtons"></MudIconButton>
+                                                    <MudIconButton OnClick="@(()=>RemoveSocial(context.Item.Id))" Size="Size.Small" Color="Color.Error" Icon="fal fa-trash" Class="TableOprButtons"></MudIconButton>
+                                                </MudButtonGroup>
+                                            </CellTemplate>
+                                        </TemplateColumn>
+                                    </Columns>
+                                </MudDataGrid>
+                            </MudItem>
+                        </MudGrid>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Disabled="@_saving" OnClick="@(()=>SaveSection(Socials,"FooterSocial"))" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Medium" FullWidth>
+                            @if (_saving)
+                            {
+                                <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+                            }
+                            else
+                            {
+                                <MudText>بروزرسانی</MudText>
+                            }
+                        </MudButton>
+                    </MudCardActions>
+                </MudCard>
+            </MudItem>
+
+            <MudItem Class="IndexSeoSetting" xl="12" lg="12" md="12" sm="12" xs="12">
+                <MudGrid>
+                    <MudItem xs="12" sm="12" lg="12" xl="12">
+                        <Seo model="indexSeo" OnSeoChanged="(seo)=>{indexSeo = seo;}" Title="صفحه اصلی" />
+                    </MudItem>
+                    <MudItem xs="12" sm="12" lg="12" xl="12">
+                        <MudButton Disabled="@_saving" OnClick="@(()=>Save())" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Medium" FullWidth>
+                            @if (_saving)
+                            {
+                                <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+                            }
+                            else
+                            {
+                                <MudText>بروزرسانی</MudText>
+                            }
+                        </MudButton>
+                    </MudItem>
+                </MudGrid>
+            </MudItem>
+        </MudGrid>
+    </MudPaper>
+    <MudDialog Visible="AddEditLinkDlg" Options="dlOptions">
+        <DialogContent>
+            <MudCard Elevation="0">
+                <MudCardHeader>
+                    <MudIconButton OnClick="@(()=>AddEditLinkDlg = false)" Size="Size.Small" Icon="fal fa-times"></MudIconButton>
+                    <MudSpacer />
+                    <MudText>ایجاد / ویرایش لینک</MudText>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudGrid>
+                        <MudItem xs="12" sm="12" lg="12" xl="12">
+                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="InMemoryItemLink.Title" Class="mud-rtl" T="string" Label="عنوان "></MudTextField>
+                        </MudItem>
+                        <MudItem xs="12" sm="12" lg="12" xl="12">
+                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="InMemoryItemLink.Url" Style="direction:ltr;" T="string" Label="URL "></MudTextField>
+                        </MudItem>
+                    </MudGrid>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Class="custom-font" OnClick="AddOrUpdateLink" StartIcon="fal fa-check" Color="Color.Primary" Size="Size.Medium" IconSize="Size.Medium">
+                        ذخیره
+                    </MudButton>
+                </MudCardActions>
+            </MudCard>
+        </DialogContent>
+    </MudDialog>
+    <MudDialog Visible="AddEditSocialDlg" Options="dlOptions">
+        <DialogContent>
+            <MudCard Elevation="0">
+                <MudCardHeader>
+                    <MudIconButton OnClick="@(()=>AddEditSocialDlg = false)" Size="Size.Small" Icon="fal fa-times"></MudIconButton>
+                    <MudSpacer />
+                    <MudText>ایجاد / ویرایش سوشیال مدیا</MudText>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudGrid>
+                        <MudItem xs="12" sm="12" lg="12" xl="12">
+                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="InMemoryItemSocial.Title" Class="mud-rtl" T="string" Label="عنوان "></MudTextField>
+                        </MudItem>
+                        <MudItem xs="12" sm="12" lg="12" xl="12">
+                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="InMemoryItemSocial.Url" Style="direction:ltr;" T="string" Label="URL "></MudTextField>
+                        </MudItem>
+                        <MudItem xs="12" sm="12" lg="12" xl="12">
+                            <FontPicker Icon="fal fa-circle-question" OnIconChanged="@((string icon)=>InMemoryItemSocial.Icon = icon)"></FontPicker>
+                        </MudItem>
+                    </MudGrid>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Class="custom-font" OnClick="AddOrUpdateSocial" StartIcon="fal fa-check" Color="Color.Primary" Size="Size.Medium" IconSize="Size.Medium">
+                        ذخیره
+                    </MudButton>
+                </MudCardActions>
+            </MudCard>
+        </DialogContent>
+    </MudDialog>
+</MudContainer>
+
+
+@code {
+    private bool _saving = false;
+    HttpClientHelper<SeoModel> hch = new HttpClientHelper<SeoModel>(UIHelper.ApiUrl());
+    DialogOptions dlOptions = new DialogOptions() { MaxWidth=MaxWidth.Large};
+    public Sec2Dto sec2Dto = new Sec2Dto();
+    public Sec4Dto sec4Dto = new Sec4Dto();
+    public Sec5Dto sec5Dto = new Sec5Dto();
+    public bool AddEditLinkDlg { get; set; } = false;
+    public bool AddEditSocialDlg { get; set; } = false;
+    public List<FooterLinks> Links { get; set; } = new List<FooterLinks>();
+    public List<FooterSocial> Socials { get; set; } = new List<FooterSocial>();
+    public SeoModel indexSeo = new SeoModel();
+    /*FOOTER LINK OPTIONS*/
+    public FooterLinks InMemoryItemLink{ get; set; } = new FooterLinks();
+    public bool InEditingLink { get; set; } = false;
+    public void AddOrUpdateLink()
+    {
+        if(InEditingLink)
+        {
+            var fnd = Links.FirstOrDefault(x=>x.Id == InMemoryItemLink.Id);
+            fnd.Title = InMemoryItemLink.Title;
+            fnd.Url = InMemoryItemLink.Url;
+        }
+        else
+        {
+            InMemoryItemLink.Id = Guid.NewGuid();
+            Links.Add(InMemoryItemLink);
+        }
+        InMemoryItemLink = new FooterLinks();
+        AddEditLinkDlg = false;
+    }
+    public void RemoveLink(Guid id)
+    {
+        Links.Remove(Links.FirstOrDefault(x=>x.Id == id));
+        StateHasChanged();
+
+    }
+    public void EditLink(FooterLinks flink)
+    {
+        InMemoryItemLink = flink;
+        InEditingLink = true;
+        AddEditLinkDlg = true;
+    }
+    private async Task GetFooterLinks()
+    {
+
+        var data = await hch.Post("FooterLink", $"Index/GetFooterLinks?Key=FooterLink").WaitAsync(new CancellationToken());
+        if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
+        {
+            return;
+        }
+        // _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+
+        Links = JsonConvert.DeserializeObject<List<FooterLinks>>(data.Data.ToString());
+        StateHasChanged();
+    }
+
+    /*END FOOTER LINK ITEMS*/
+    /*FOOTER SOCIAL*/
+    public FooterSocial InMemoryItemSocial { get; set; } = new FooterSocial();
+    public bool InEditingSocial { get; set; } = false;
+    public void AddOrUpdateSocial()
+    {
+        if (InEditingSocial)
+        {
+            var fnd = Socials.FirstOrDefault(x => x.Id == InMemoryItemSocial.Id);
+            fnd.Title = InMemoryItemSocial.Title;
+            fnd.Url = InMemoryItemSocial.Url;
+            fnd.Icon = InMemoryItemSocial.Icon;
+        }
+        else
+        {
+            InMemoryItemSocial.Id = Guid.NewGuid();
+            Socials.Add(InMemoryItemSocial);
+        }
+        InMemoryItemSocial = new FooterSocial();
+        AddEditSocialDlg = false;
+    }
+    public void RemoveSocial(Guid id)
+    {
+        Socials.Remove(Socials.FirstOrDefault(x => x.Id == id));
+        StateHasChanged();
+
+    }
+    public void EditSocial(FooterSocial flink)
+    {
+        InMemoryItemSocial = flink;
+        InEditingSocial = true;
+        AddEditSocialDlg = true;
+    }
+    private async Task GetFooterSocials()
+    {
+
+        var data = await hch.Post("FooterSocial", $"Index/GetSocials?Key=FooterSocial").WaitAsync(new CancellationToken());
+        if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
+        {
+            return;
+        }
+        // _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+
+        Socials = JsonConvert.DeserializeObject<List<FooterSocial>>(data.Data.ToString());
+        StateHasChanged();
+    }
+    /*END FOOTER SOCIAL*/
+    private async Task GetItemSec2()
+    {
+
+        var data = await hch.Post("S2", $"Index/GetSec2?Key=S2").WaitAsync(new CancellationToken());
+        if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
+        {
+            return;
+        }
+        // _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+
+        sec2Dto = JsonConvert.DeserializeObject<Sec2Dto>(data.Data.ToString());
+        StateHasChanged();
+    }
+    private async Task GetItemSec4()
+    {
+
+        var data = await hch.Post("S4", $"Index/GetSec2?Key=S4").WaitAsync(new CancellationToken());
+        if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
+        {
+            return;
+        }
+        // _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+
+        sec4Dto = JsonConvert.DeserializeObject<Sec4Dto>(data.Data.ToString());
+        StateHasChanged();
+    }
+    private async Task GetItemSec5()
+    {
+
+        var data = await hch.Post("S5", $"Index/GetSec2?Key=S5").WaitAsync(new CancellationToken());
+        if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
+        {
+            return;
+        }
+        // _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+
+        sec5Dto = JsonConvert.DeserializeObject<Sec5Dto>(data.Data.ToString());
+        StateHasChanged();
+    }
+    public async Task SaveSection(object obj, string key)
+    {
+        var data = JsonConvert.SerializeObject(obj);
+        var result = await hch.Post(new OptionsModel() { Key = key, Value = data }, "Index/UpdateOption");
+        UIHelper.HandleResponse(result, _snackbar);
+    }
+    public async Task Save()
+    {
+        indexSeo.EntityId = 1;
+        var result = await hch.Post(indexSeo, "Index");
+        UIHelper.HandleResponse(result, _snackbar);
+    }
+    private async void mediaSelected(Tuple<int, string> selectedItem)
+    {
+        sec2Dto.Image = UIHelper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
+        StateHasChanged();
+
+    }
+    private async void mediaSelectedsec4(Tuple<int, string> selectedItem)
+    {
+        sec4Dto.Image = UIHelper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
+        StateHasChanged();
+
+    }
+    private async void mediaSelectedsec5(Tuple<int, string> selectedItem)
+    {
+        sec5Dto.Image = UIHelper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
+        StateHasChanged();
+
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        sec2Dto.Collections = new List<Sec2Dto_sub>() { new(), new(), new(), new() };
+        hch.SetToken(await USR.GetToken());
+        await Get();
+        await GetItemSec2();
+        await GetItemSec4();
+        await GetItemSec5();
+        await GetFooterLinks();
+        await base.OnInitializedAsync();
+    }
+    public async Task Get()
+    {
+        try
+        {
+            indexSeo.EntityId = 1;
+            var result = await hch.Post(new SeoModel { EntityId = 1 }, "Index/GetByEntityId");
+            if (UIHelper.HandleResponse(result, _snackbar) == ResponseObjectStatusEnum.Success)
+            {
+                indexSeo = JsonConvert.DeserializeObject<SeoModel>(result.Data.ToString());
+                StateHasChanged();
+            }
+        }
+        catch
+        {
+
+        }
+    }
+}

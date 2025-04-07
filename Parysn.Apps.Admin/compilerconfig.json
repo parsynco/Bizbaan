@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "wwwroot/assets/styles/custom.css",
+    "inputFile": "wwwroot/assets/styles/custom.scss"
+  },
+  {
+    "outputFile": "wwwroot/assets/styles/auth.css",
+    "inputFile": "wwwroot/assets/styles/auth.scss"
+  }
+]

@@ -1,0 +1,130 @@
+﻿@using Parsyn.Apps.Company.Data.Models.Dtos.Base.IndexSections
+@using Parsyn.Apps.Company.Services
+@inject IOptionIface _options
+@{
+    var links = (List<FooterLinks>)(await _options.GetAs<List<FooterLinks>>("FooterLink")).Data;
+    var Socials = (List<FooterSocial>)(await _options.GetAs<List<FooterSocial>>("FooterSocial")).Data;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بیزبان | @ViewData["Title"]</title>
+    <link rel="stylesheet" type="text/css" href="/assets/biz/css/index.css" />
+    <link rel="icon" type="image/png" href="/assets/biz/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/biz/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/biz/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/biz/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Bizbaan" />
+    @* <link rel="manifest" href="/assets/biz/favicon/site.webmanifest" /> *@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Righteous&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=678513dc8d50b9001ab3b32f&product=inline-share-buttons&source=platform" async="async"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeGQOAqAAAAAIRbkRcc2DHs5h9R7KxegkDb5w4F"></script>
+    <link rel="manifest" href="/assets/biz/pwa/manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register('/assets/biz/pwa/service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registered');
+                  }).catch(function(err) {
+                    console.log('ServiceWorker error: ', err);
+                  });
+            })
+        }
+    </script>
+    <link rel="canonical" href="https://bizbaan.com" />
+    <meta name="author" content="Bizbaan Inc." />
+    <meta name="robots" content="index, follow" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJNB2DCYTR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KJNB2DCYTR');
+    </script>
+    @await RenderSectionAsync("Seo", required: false)
+</head>
+
+<body>
+    <main class="main-container">
+        <header data-aos="fade-up" class="header">
+            <div class="header-menu-holder">
+                <a class="header-menu-link" href="/">خانه</a>
+                <a class="header-menu-link" href="/blog/breaking-news">وبلاگ</a>
+                <a class="header-menu-link" href="/about">درباره ما</a>
+            </div>
+        </header>
+        @RenderBody()
+        <section data-aos="fade-up" class="footer">
+            <div data-aos="fade-up" class="footer-row1">
+                <h2>بیزبان</h2>
+            </div>
+            <div class="footer-row2">
+                <div data-aos="fade-up" class="footer-column">
+                    <p>درباره بیزبان</p>
+                    <div>
+                        <span>تلفن : </span>
+                        <a class="bold-300" href="tel:88846090">88846090</a>
+                    </div>
+                    <div>
+                        <span>پشتیبانی واتساپ : </span>
+                        <a class="bold-300" href="tel:09108301260">09108301260</a>
+                    </div>
+                    <div>
+                        <a class="bold-300" href="/blog"> وبلاگ</a>
+                    </div>
+                    <div>
+                        <a class="bold-300" href="/about">درباره ما</a>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="footer-column">
+                    <p>لینک های مفید</p>
+                    <div class="center-links">
+                        @foreach (var item in links)
+                        {
+                            <a href="@item.Url">@item.Title</a>
+                        }
+                    </div>
+
+                </div>
+            </div>
+            <div data-aos="fade-up" class="footer-row3">
+                <div class="footer-r3-r1">
+                    @foreach (var item in Socials)
+                    {
+                        <div><a href="@item.Url"><i class="@item.Icon"></i></a></div>
+                    }
+                </div>
+            </div>
+            <div class="footer-row4">
+                <p> تمامی حقوق این سامانه برای <a href="/"> بیزبان </a> محفوظ است  </p>
+                <p>Developed By <a style="font-weight:bolder" href="https://parsyn.com"> Parsyn </a> </p>
+            </div>
+        </section>
+
+    </main>
+
+    <script type="text/javascript" src="./assets/biz/js/jquery/jq.3.x.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.3/rangeslider.min.js">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./assets/biz/libs/swiper/swiper.js"></script>
+    <script src="/assets/biz/libs/RangeSlider/jquery.range.tooltip.js"></script>
+    <script src="/assets/biz/libs/RangeSlider/jquery.range.js"></script>
+    <script src="/assets/biz/libs/ScrollAnimation/scrol.anim.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script type="text/javascript" src="./assets/biz/js/rang/script.js"></script>
+    <script type="text/javascript" src="./assets/biz/js/script.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>
+

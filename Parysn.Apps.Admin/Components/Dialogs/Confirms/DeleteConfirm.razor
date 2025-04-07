@@ -1,0 +1,38 @@
+﻿<MudDialog Options="_dialogOptions">
+    <TitleContent>
+        <MudToolBar Dense Style="direction:rtl;" Class="mud-rtl d-flex align-center justify-center">
+            <div class="mud-theme-error custom rounded-circle">
+
+                <MudIcon Icon="fal fa-trash" Color="Color.Error" />
+            </div>
+
+        </MudToolBar>
+    </TitleContent>
+    <DialogContent>
+
+        <MudText Class="custom-font" Typo="Typo.body2" Style="direction:rtl">آیتم انتخابی حذف می گردد.ادامه میدهید؟</MudText>
+    </DialogContent>
+    <DialogActions>
+        <MudButton Class="custom-font" OnClick="(()=>Choose(false))">لغو</MudButton>
+        <MudButton Class="custom-font" OnClick="(()=>Choose(true))" Color="@Color.Error" Variant="Variant.Filled">بله</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter]
+    private MudDialogInstance innerDialog { get; set; }
+    private readonly DialogOptions _dialogOptions = new() { FullWidth = false, MaxWidth = MaxWidth.Small };
+
+    private void Choose(bool state)
+    {
+        if(state)
+        {
+            innerDialog.Close(DialogResult.Ok(state));
+        }
+        else
+        {
+            innerDialog.Close(DialogResult.Cancel());
+        }
+    }
+
+}

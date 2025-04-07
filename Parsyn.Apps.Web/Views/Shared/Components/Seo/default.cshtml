@@ -1,0 +1,14 @@
+﻿@using Parsyn.Apps.Company.Data.Models.Entity.Base
+@model SeoModel
+@{
+    SeoModel mdl = Model;
+}
+<meta name="description" content="@mdl.Description" />
+<meta name="keywords" content="@mdl.Keywords" />
+<meta property="og:title" content="@mdl.Title" />
+<meta property="og:description" content="@mdl.Description" />
+<meta property="og:image" content="@mdl.Image" />
+<meta property="og:url" content="@mdl.Url" />
+<meta property="twitter:card" content="@mdl.Url" />
+<meta property="og:site_name" content="Bizbaan" />
+<meta property="twitter:image:alt" content="@mdl.Title" />

@@ -1,0 +1,434 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parysn.Apps.Admin\\Parysn.Apps.Admin.csproj": {}
+  },
+  "projects": {
+    "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models.Dtos\\Parsyn.Apps.Company.Data.Models.Dtos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models.Dtos\\Parsyn.Apps.Company.Data.Models.Dtos.csproj",
+        "projectName": "Parsyn.Apps.Company.Data.Models.Dtos",
+        "projectPath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models.Dtos\\Parsyn.Apps.Company.Data.Models.Dtos.csproj",
+        "packagesPath": "C:\\Users\\Hosein\\.nuget\\packages\\",
+        "outputPath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models.Dtos\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Hosein\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models\\Parsyn.Apps.Company.Data.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models\\Parsyn.Apps.Company.Data.Models.csproj",
+        "projectName": "Parsyn.Apps.Company.Data.Models",
+        "projectPath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models\\Parsyn.Apps.Company.Data.Models.csproj",
+        "packagesPath": "C:\\Users\\Hosein\\.nuget\\packages\\",
+        "outputPath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Hosein\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models.Dtos\\Parsyn.Apps.Company.Data.Models.Dtos.csproj": {
+                "projectPath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models.Dtos\\Parsyn.Apps.Company.Data.Models.Dtos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Service.Utiles\\Parsyn.Apps.Company.Service.Utiles.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Service.Utiles\\Parsyn.Apps.Company.Service.Utiles.csproj",
+        "projectName": "Parsyn.Apps.Company.Service.Utiles",
+        "projectPath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Service.Utiles\\Parsyn.Apps.Company.Service.Utiles.csproj",
+        "packagesPath": "C:\\Users\\Hosein\\.nuget\\packages\\",
+        "outputPath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Service.Utiles\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Hosein\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models.Dtos\\Parsyn.Apps.Company.Data.Models.Dtos.csproj": {
+                "projectPath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models.Dtos\\Parsyn.Apps.Company.Data.Models.Dtos.csproj"
+              },
+              "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models\\Parsyn.Apps.Company.Data.Models.csproj": {
+                "projectPath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models\\Parsyn.Apps.Company.Data.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "EasyCompressor": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "EasyCompressor.LZ4": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "EasyCompressor.LZMA": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "LazZiya.ImageResize": {
+              "target": "Package",
+              "version": "[4.1.4, )"
+            },
+            "Microsoft.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Metadata": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "MimeTypeMapOfficial": {
+              "target": "Package",
+              "version": "[1.0.17, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parysn.Apps.Admin\\Parysn.Apps.Admin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parysn.Apps.Admin\\Parysn.Apps.Admin.csproj",
+        "projectName": "Parysn.Apps.Admin",
+        "projectPath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parysn.Apps.Admin\\Parysn.Apps.Admin.csproj",
+        "packagesPath": "C:\\Users\\Hosein\\.nuget\\packages\\",
+        "outputPath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parysn.Apps.Admin\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Hosein\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models.Dtos\\Parsyn.Apps.Company.Data.Models.Dtos.csproj": {
+                "projectPath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models.Dtos\\Parsyn.Apps.Company.Data.Models.Dtos.csproj"
+              },
+              "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Service.Utiles\\Parsyn.Apps.Company.Service.Utiles.csproj": {
+                "projectPath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Service.Utiles\\Parsyn.Apps.Company.Service.Utiles.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "BlazorIndexedDB": {
+              "target": "Package",
+              "version": "[0.3.1, )"
+            },
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "Blazored.SessionStorage": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "FisSst.BlazorMaps": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.14, )",
+              "autoReferenced": true
+            },
+            "Microsoft.NET.Sdk.WebAssembly.Pack": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.3, )",
+              "autoReferenced": true
+            },
+            "MudBlazor": {
+              "target": "Package",
+              "version": "[7.5.0, )"
+            },
+            "MudExRichTextEditor": {
+              "target": "Package",
+              "version": "[1.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

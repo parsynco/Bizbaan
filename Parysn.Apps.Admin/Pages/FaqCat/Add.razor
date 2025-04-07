@@ -1,0 +1,77 @@
+﻿@page "/faq/category/add"
+<PageTitle>بیزبان | ایجاد دسته بندی FAQ </PageTitle>
+<MudContainer>
+    <MudCard>
+        <MudCardContent>
+
+            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+                <MudText>ثبت دسته بندی جدید</MudText>
+                <MudSpacer />
+                <MudButton Size="Size.Small" IconSize="Size.Small" Href="/faq/category" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
+                    <MudText>بازگشت</MudText>
+                </MudButton>
+            </MudCardHeader>
+            <MudContainer Class="mt-3">
+                <MudForm dir="rtl">
+                    <MudGrid>
+
+                        <MudItem xs="12" lg="6">
+                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Title" Class="mud-rtl" T="string" Label="عنوان اصلی"></MudTextField>
+                        </MudItem>
+                        <MudItem xs="12" lg="6">
+                            @if (!string.IsNullOrEmpty(model.Image))
+                            {
+                                <div><img style="width:3rem;height:3rem;" src="@model.Image" /></div>
+                            }
+                            <MediaSelector OnMediaSelected="mediaSelected" Title="عکس " DisplayInline="false"></MediaSelector>
+                        </MudItem>
+
+                        <MudItem xs="12" lg="12">
+                            <Seo model="model.Seo" Title="@model.Title" OnSeoChanged="(Seo)=>{model.Seo = Seo;StateHasChanged();}" />
+                        </MudItem>
+                    </MudGrid>
+                </MudForm>
+            </MudContainer>
+
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+                @if (_saving)
+                {
+                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+                }
+                else
+                {
+                    <MudText>ذخیره</MudText>
+                }
+            </MudButton>
+
+        </MudCardActions>
+    </MudCard>
+</MudContainer>
+
+@code {
+    private bool _saving { get; set; } = false;
+    private FaqCatModel model = new FaqCatModel();
+    HttpClientHelper<FaqCatModel> hch = new HttpClientHelper<FaqCatModel>(UIHelper.ApiUrl());
+    private async void RegisterModel()
+    {
+        _saving = true;
+        hch.SetToken(await USR.GetToken());
+        var res = await hch.Post(model, "faqcat");
+        _saving = false;
+        model = new FaqCatModel();
+        _snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
+        StateHasChanged();
+        Thread.Sleep(1500);
+        _nv.NavigateTo("faq/category");
+
+
+    }
+    private async void mediaSelected(Tuple<int, string> selectedItem)
+    {
+        model.Image = UIHelper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
+        StateHasChanged();
+
+    }
+}

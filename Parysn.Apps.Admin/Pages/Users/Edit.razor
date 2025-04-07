@@ -1,0 +1,106 @@
+﻿@page "/user/edit/{Id}"
+
+<PageTitle>بیزبان | ویرایش کاربر </PageTitle>
+<MudContainer>
+    <MudCard>
+        <MudCardContent>
+
+            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+                <MudText>وایرایش کاربر </MudText>
+                <MudSpacer />
+
+            </MudCardHeader>
+            <MudContainer Class="mt-3">
+                <MudForm dir="rtl">
+                    <MudGrid>
+                        <MudItem xs="12" lg="4">
+                            <MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.RoleId" Class="mud-rtl" Label=" نقش">
+                                <MudSelectItem Value="0">انتخاب  </MudSelectItem>
+                                @foreach (var item in Roles)
+                                {
+                                    <MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
+                                }
+                            </MudSelect>
+                        </MudItem>
+                        <MudItem xs="12" lg="4">
+                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Name" Class="mud-rtl" T="string" Label="نام"></MudTextField>
+                        </MudItem>
+                        <MudItem xs="12" lg="4">
+                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Family" T="string" Label="نام خانوادگی"></MudTextField>
+                        </MudItem>
+                        <MudItem xs="12" lg="6">
+                            <MudTextField InputType="InputType.Telephone" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="Model.Phone" T="string" Label="تلفن"></MudTextField>
+                        </MudItem>
+                        <MudItem xs="12" lg="6">
+                            <MudTextField InputType="InputType.Email" Variant="Variant.Outlined" Margin="Margin.Dense" dir="ltr" @bind-Value="Model.Email" T="string" Label="پست الکترونیکی"></MudTextField>
+                        </MudItem>
+
+                    </MudGrid>
+                </MudForm>
+            </MudContainer>
+
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton Disabled="@_saving" @onclick="Update" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+                @if (_saving)
+                {
+                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+                }
+                else
+                {
+                    <MudText>ذخیره</MudText>
+                }
+            </MudButton>
+
+        </MudCardActions>
+    </MudCard>
+</MudContainer>
+
+@code {
+    [Parameter]
+    public object Id { get; set; }
+    private bool _saving { get; set; } = false;
+    private UserDto Model = new UserDto();
+    HttpClient _hc;
+    HttpClientHelper<UserDto> hch = new HttpClientHelper<UserDto>(UIHelper.ApiUrl());
+    List<RoleModel> Roles = new List<RoleModel>();
+    protected override async Task OnInitializedAsync()
+    {
+        hch.SetToken(await USR.GetToken());
+        _hc = hch.Instance();
+        GetItem();
+        await LoadRoles();
+        await base.OnInitializedAsync();
+    }
+    private async Task LoadRoles()
+    {
+        Roles = await _hc.GetFromJsonAsync<List<RoleModel>>("Role");
+        StateHasChanged();
+    }
+
+    private async void GetItem()
+    {
+
+        var data = await hch.Post(Id, $"User/GetById?Id={Id}");
+        if (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)
+        {
+            return;
+        }
+        _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+        
+        Model = JsonConvert.DeserializeObject<UserDto>(data.Data.ToString());
+        Model.Id = int.Parse(Id.ToString());
+        StateHasChanged();
+        Console.WriteLine(data.Msg);
+    }
+    private async void Update()
+    {
+        _saving = true;
+        var data = await hch.Post(Model, $"User/Edit");
+        _snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException)? Severity.Error : Severity.Success);
+        _saving = false;
+        StateHasChanged();
+        Thread.Sleep(1700);
+        _nv.NavigateTo("Users");
+    }
+}

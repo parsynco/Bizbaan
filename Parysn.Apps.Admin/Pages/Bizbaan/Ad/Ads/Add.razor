@@ -1,0 +1,292 @@
+﻿@page "/biz/ads/add"
+@using System.Diagnostics
+@inject IJSRuntime jsRuntime
+@inject IConfiguration _conf
+<PageTitle>بیزبان | ایجاد  بیزینس </PageTitle>
+<MudContainer>
+	<MudCard>
+		<MudCardContent>
+
+			<MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+				<MudText>ثبت  بیزینس جدید</MudText>
+				<MudSpacer />
+				<MudButton Size="Size.Small" IconSize="Size.Small" Href="/biz/ads" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
+					<MudText>بازگشت</MudText>
+				</MudButton>
+			</MudCardHeader>
+			<MudContainer Class="mt-3">
+				<MudForm dir="rtl">
+					<MudGrid>
+						<MudItem xl="6" lg="6" sm="12" md="6">
+							<MudGrid>
+								<MudItem xs="12" lg="12">
+									<MudAutocomplete ToStringFunc="DisplayCategory"
+													 T="AdCategoryModel"
+													 Label="انتخاب دسته بندی"
+													 @bind-Value="model.Category"
+													 SearchFunc="SearchCategory"
+													 Variant="Variant.Outlined"
+													 ShowProgressIndicator="true"
+													 ProgressIndicatorColor="Color.Primary">
+										<ProgressIndicatorInPopoverTemplate>
+											<MudList T="string" ReadOnly>
+												<MudListItem>
+													Loading...
+												</MudListItem>
+											</MudList>
+										</ProgressIndicatorInPopoverTemplate>
+									</MudAutocomplete>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<div class="custom-autocomplete">
+										<div class="custom-autocomplete-field">
+											<MudIcon Icon="@Icons.Material.Outlined.Search"></MudIcon>
+											<input type="hidden" value="@model.ZipId" />
+											<input type="text" value="@SearchBoxContent" @onfocus="@( () =>{activeSearch=true;StateHasChanged();} )" @onblur="@( () => {activeSearch=false;StateHasChanged();} )" @oninput="SearchZip" @onchange="SearchZip" />
+										</div>
+										<div class="custom-autocomplete-result @(activeSearch ? "active":"")">
+											@foreach (var item in Zips)
+											{
+												<a href="javascript:void(0);" @onclick="@(()=>{SearchBoxContent = item.Zipcode;model.ZipId = item.Id;activeSearch=false;StateHasChanged();})">@(item.Zipcode + $"({item.State_Abbr})")</a>
+											}
+										</div>
+									</div>
+
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<MudTextField InputType="InputType.Text"
+												  Variant="Variant.Outlined"
+												  Margin="Margin.Dense"
+												  @bind-Value="model.Title"
+												  Class="mud-rtl"
+												  T="string"
+												  Label="عنوان اصلی"></MudTextField>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<MudTextField InputType="InputType.Text"
+												  Variant="Variant.Outlined"
+												  Margin="Margin.Dense"
+												  @bind-Value="model.TitleEn"
+												  Style="direction:ltr !important"
+												  T="string"
+												  Label="عنوان انگلیسی"></MudTextField>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<MudTextField InputType="InputType.Text"
+												  Variant="Variant.Outlined"
+												  Margin="Margin.Dense"
+												  @bind-Value="model.Phone"
+												  Style="direction:ltr !important"
+												  T="string"
+												  Label="تلفن">
+									</MudTextField>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<MudTextField InputType="InputType.Text"
+												  Variant="Variant.Outlined"
+												  Margin="Margin.Dense"
+												  @bind-Value="model.Telephone"
+												  Style="direction:ltr !important"
+												  T="string"
+												  Label="تلفن ثابت">
+									</MudTextField>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<MudTextField InputType="InputType.Text"
+												  Variant="Variant.Outlined"
+												  Margin="Margin.Dense"
+												  @bind-Value="model.Email"
+												  Style="direction:ltr !important"
+												  T="string"
+												  Label=" پست الکترونیکی">
+									</MudTextField>
+								</MudItem>
+
+								<MudItem xs="12" lg="12">
+									<MudGrid>
+										<MudItem xs="12" sm="12" lg="12" xl="12">
+											<MudTextField MaxLength="120"
+														  Lines="2"
+														  MaxLines="3"
+														  InputType="InputType.Text"
+														  Variant="Variant.Outlined"
+														  Margin="Margin.Dense"
+														  Style="direction:ltr !important"
+														  @bind-Value="model.Address"
+														  T="string"
+														  Label="آدرس"></MudTextField>
+										</MudItem>
+										<MudItem xs="12" sm="12" lg="12" xl="12">
+											<MudButton OnClick="AddressToLatlng" Variant="Variant.Filled" Color="Color.Info" Size="Size.Small" FullWidth>
+												<MudIcon Size="Size.Small" Icon="fal fa-map" Style="margin-left:1rem"></MudIcon> تبدیل آدرس
+											</MudButton>
+										</MudItem>
+									</MudGrid>
+									<MudTextField InputType="InputType.Text"
+												  Variant="Variant.Outlined"
+												  Margin="Margin.Dense"
+												  @bind-Value="model.Lat"
+												  T="string"
+												  id="lat"
+												  Style="direction:ltr !important"
+												  Label="Lat "></MudTextField>
+									<MudTextField InputType="InputType.Text"
+												  Variant="Variant.Outlined"
+												  Margin="Margin.Dense"
+												  @bind-Value="model.Lng"
+												  T="string"
+												  id="lng"
+												  Style="direction:ltr !important"
+												  Label="Lon "></MudTextField>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<div id="biz-map" style="width:100%;height:400px;"></div>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<MudExRichTextEdit @ref="_editor" @bind-Value="model.Description" Placeholder="توضیحات" dir="rtl">
+									</MudExRichTextEdit>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									@if (!string.IsNullOrEmpty(model.Logo))
+									{
+										<div><img style="width:3rem;height:3rem;" src="@model.Logo" /></div>
+									}
+									<MediaSelector OnMediaSelected="mediaSelected" Title="لوگو " DisplayInline="false"></MediaSelector>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<MudSwitch @bind-Value="model.IsSpecial" Color="Color.Primary">نوع بیزینس : @(model.IsSpecial ? "ویژه" : "عادی")</MudSwitch>
+								</MudItem>
+
+							</MudGrid>
+						</MudItem>
+						<MudItem xl="6" lg="6" sm="12" md="6">
+							<Seo CheckDuplicateUrl="true" model="model.Seo" Title="@model.Title" OnSeoChanged="(Seo)=>{model.Seo = Seo;StateHasChanged();}" />
+						</MudItem>
+					</MudGrid>
+				</MudForm>
+			</MudContainer>
+
+		</MudCardContent>
+		<MudCardActions>
+			<MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+				@if (_saving)
+				{
+					<MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+				}
+				else
+				{
+					<MudText>ذخیره</MudText>
+				}
+			</MudButton>
+
+		</MudCardActions>
+	</MudCard>
+</MudContainer>
+
+@code {
+	MudExRichTextEdit _editor;
+	public bool activeSearch { get; set; } = false;
+	private bool _saving { get; set; } = false;
+	private static AdModel model = new AdModel();
+	HttpClientHelper<AdModel> hch = new HttpClientHelper<AdModel>(UIHelper.ApiUrl());
+	public int ParentId { get; set; } = 0;
+	List<AdCategoryModel> Categories = new List<AdCategoryModel>();
+	List<ZipModel> Zips = new List<ZipModel>();
+	HttpClient _hc;
+	private string GEOPIFY_APIKEY { get; set; } = "";
+	public string SearchBoxContent = "";
+	protected override async Task OnParametersSetAsync() => await jsRuntime.InvokeVoidAsync("ActiveMap", new { mode = false });
+	protected override async Task OnInitializedAsync()
+	{
+		GEOPIFY_APIKEY = _conf["GEOPIFY_APIKEY"];
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		await LoadCategories();
+		await LoadZips();
+		await base.OnInitializedAsync();
+	}
+	private async void RegisterModel()
+	{
+		_saving = true;
+		// model.RegionId = model.Region.Id;
+		model.CategoryId = model.Category.Id;
+		// model.Region = null;
+		model.Category = null;
+		var res = await hch.Post(model, "ads");
+		_saving = false;
+		model = new AdModel();
+		_snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
+		StateHasChanged();
+		Thread.Sleep(1500);
+		_nv.NavigateTo("biz/ads");
+
+
+	}
+	private Func<AdCategoryModel, string?> DisplayCategory = item => item is null ? null : item.Title;
+	private async Task<IEnumerable<AdCategoryModel>> SearchCategory(string value, CancellationToken token)
+	{
+		if (string.IsNullOrEmpty(value))
+			return Categories;
+		return Categories.Where(x => x.Title.Contains(value, StringComparison.InvariantCultureIgnoreCase));
+	}
+	public async Task AddressToLatlng()
+	{
+		GeoapifyClientService client = new GeoapifyClientService(GEOPIFY_APIKEY);
+		try
+		{
+			// Make the geocoding request
+			Root result = await client.GeocodeAddressAsync(model.Address);
+
+			// Output some details from the response
+			if (result.Results.Count > 0)
+			{
+				var firstResult = result.Results[0];
+				model.Lat = result.Results[0].Lat.ToString();
+				model.Lng = result.Results[0].Lon.ToString();
+				await jsRuntime.InvokeVoidAsync("AddMarker", new { lat = result.Results[0].Lat, lng = result.Results[0].Lon });
+				StateHasChanged();
+
+			}
+			else
+			{
+				Debug.WriteLine("No results found.");
+			}
+		}
+		catch (Exception ex)
+		{
+			Debug.WriteLine($"Error: {ex.Message}");
+		}
+	}
+	public async Task SearchZip(ChangeEventArgs e)
+	{
+
+		if (!string.IsNullOrEmpty(e.Value.ToString()) && e.Value.ToString().Length > 1)
+			Zips = await _hc.GetFromJsonAsync<List<ZipModel>>($"Zip?q=" + e.Value.ToString());
+	}
+	private async Task LoadCategories()
+	{
+		Categories = await _hc.GetFromJsonAsync<List<AdCategoryModel>>("adcategory/l2");
+		StateHasChanged();
+	}
+	private async Task LoadZips()
+	{
+		Zips = await _hc.GetFromJsonAsync<List<ZipModel>>("Zip");
+		StateHasChanged();
+	}
+	private async void mediaSelected(Tuple<int, string> selectedItem)
+	{
+		model.Logo = UIHelper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
+		StateHasChanged();
+
+	}
+	[JSInvokable]
+	public static void SetLat(string lat)
+	{
+		model.Lat = lat;
+	}
+	[JSInvokable]
+	public static void SetLng(string lng)
+	{
+		model.Lng = lng;
+	}
+}

@@ -1,0 +1,147 @@
+﻿
+@using Parsyn.Apps.Web.Models.Blog
+@model BlogIndexViewModel
+@inject IPageIface _page;
+@{
+
+
+    var pg = _page.IncludeDependencies().FirstOrDefault(x => x.Name == "Blog");
+    ViewData["Title"] = pg?.Seo?.Title;
+}
+@section Seo {
+
+    @await Component.InvokeAsync("Seo", new SeoInjectModel()
+{
+    Seo = pg.Seo
+})
+}
+<div class="page-container">
+    <div class="page-title-content">
+        <h1 class="page-title-text">
+            @pg?.Seo?.Title
+        </h1>
+        <div class="page-bread-crumb">
+            <div class="page-bread-crumb-items">
+                <a href="/"><i class="fal fa-home"></i></a>
+                <a href="/blog">@pg?.Seo?.Title</a>
+            </div>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="page-content-raw">
+           
+            <div class="blog-container">
+                <div class="blog-decription">
+                    @Html.Raw(@pg.Description)
+                </div>
+                <div class="blog-category">
+                    <div class="blog-category-search">
+                        <div class="blog-category-section-title">
+                            جسجو در بلاگ
+                        </div>
+                        <form class="blog-category-search-object" method="get" enctype="multipart/form-data" href="/blog">
+                            <input type="text" name="q" id="srchInput" placeholder="جستجو..." />
+                            @if (Model.SelectedCategory != 0)
+                            {
+                                <input type="hidden" name="cat" value="@Model.SelectedCategory" />
+                            }
+                            <button type="submit"><i class="fal fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="blog-category-category-list">
+                        <div class="blog-category-section-title">
+                            دسته ها
+                        </div>
+                        <div class="blog-category-category-items-holder">
+                            @if (Model.ArticlesCategories != null && Model.ArticlesCategories.Count > 0)
+                            {
+                                @foreach (var item in Model.ArticlesCategories)
+                                {
+                                    <a href="/blog?cat=@item.Id&title=@item.Seo.Url" title="@item.Seo.Title" class="blog-category-category-item @(item.Id == Model.SelectedCategory ? "active":"")">
+                                        <i class="fal fa-chevron-left"></i>
+                                        <h6 class="blog-category-category-item-title">@item.Title</h6>
+                                        <span class="blog-category-category-item-childcount">@(item.Articles?.Count ?? 0)</span>
+                                    </a>
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="blog-category-breaking-news">
+                        <div class="blog-category-section-title">
+                            آخرین اخبار
+                        </div>
+                        <div class="blog-category-breaking-news-items-holder">
+                            @if (Model.BreakingNews != null && Model.BreakingNews.Count() > 0)
+                            {
+                                
+                                @foreach (var breaking in Model.BreakingNews?.Take(3)?.ToList())
+                                {
+                                    <a href="/blog/news/@breaking.Id/@breaking.Seo.Url" class="blog-category-breaking-news-item">
+                                        <div class="blog-category-breaking-news-item-image">
+                                            <img src="@breaking.Image" alt="@breaking.Title" title="@breaking.Title" />
+                                        </div>
+                                        <div class="blog-category-breaking-news-item-title">
+                                            @breaking.Title
+                                        </div>
+                                        <div class="blog-category-breaking-news-item-date">
+                                            @breaking.Created_At.ToString("dd MMMM yyyy")
+                                        </div>
+                                    </a>
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="blog-category-subscription">
+                    </div>
+
+                </div>
+                <div class="blog-content">
+                    <div class="blog-content-list-holder">
+                        <div class="blog-content-list">
+                            @if (Model.Articles != null && Model.Articles.Count() > 0)
+                            {
+                                
+                                foreach (var item in Model.Articles)
+                                {
+                                    <div class="blog-content-list-item">
+                                        <div class="blog-content-list-item-image">
+                                            <img src="@item.Image" alt="@item.Title" title="@item.Title" />
+                                            <div class="blog-content-list-item-date-holder">
+                                                <span class="year">
+                                                    @item.Created_At.ToString("yy")
+                                                </span>
+                                                <span class="monthdate">
+                                                    @item.Created_At.ToString("dd MMM ")
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="blog-content-list-item-description">
+                                            <div class="blog-content-description-title">
+                                                <h3><a href="/blog/news/@item.Id/@item.Seo.Url">@item.Title</a></h3>
+                                            </div>
+                                            <div class="blog-content-description-usercomments">
+                                                <span><i class="fal fa-user"></i></span>
+                                                <span><i class="fal fa-comment"></i></span>
+                                            </div>
+                                            <div class="blog-content-description-short">
+                                                @item.ShortDescription
+                                            </div>
+                                            <div class="blog-content-description-morebtn">
+                                                <a href="/blog/news/@item.Id/@item.Seo.Url"><i class="fal fa-chevron-left"></i>بیشتر</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+
+                        </div>
+                        <div class="blog-list-pagination">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

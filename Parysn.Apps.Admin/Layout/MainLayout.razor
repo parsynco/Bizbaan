@@ -1,0 +1,105 @@
+﻿@inject IUserObject USR
+
+@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+
+<component type="@typeof(Microsoft.AspNetCore.Components.Web.HeadOutlet)" render-mode="ServerPrerendered" />
+<MudThemeProvider Theme="@_theme"/>
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudRTLProvider RightToLeft="true" Class="default-background-color">
+    <MudLayout Class="custom-full-height default-background-color">
+        <AppBar  />
+        <Sidebar />
+        <MudMainContent Class="pt-18 px-16 default-background-color">
+            <MudContainer Class="mt-18 default-background-color">
+                @Body
+            </MudContainer>
+        </MudMainContent>
+    </MudLayout>
+</MudRTLProvider>
+
+@code {
+    private bool _isDarkMode = false;
+    private MudTheme? _theme = null;
+
+
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        _theme = new()
+            {
+                PaletteLight = _lightPalette,
+                PaletteDark = _darkPalette,
+                LayoutProperties = new LayoutProperties()
+
+            };
+    }
+    protected override async Task OnParametersSetAsync()
+    {
+        if(!await USR.IsAuthenticated())
+        {
+            _nv.NavigateTo("/login");
+        }
+        // var myUrl = NavigationManager.Uri.Replace(NavigationManager.BaseUri, "").UrlToCrumbs();
+         await base.OnParametersSetAsync();
+        // base.OnParametersSet();
+
+    }
+
+
+    private void DarkModeToggle()
+    {
+        _isDarkMode = !_isDarkMode;
+    }
+
+    private readonly PaletteLight _lightPalette = new()
+        {
+            Black = "#110e2d",
+            AppbarText = "#424242",
+            AppbarBackground = "#fff",
+            DrawerBackground = "#fff",
+            GrayLight = "#fff",
+            GrayLighter = "#fff",
+            BackgroundGray = Colors.Gray.Lighten5,
+        };
+
+    private readonly PaletteDark _darkPalette = new()
+        {
+            Primary = "rgb(123, 83 ,158)",
+            Surface = "#1e1e2d",
+            Background = Colors.Gray.Darken4,
+            BackgroundGray = Colors.Gray.Darken4,
+            AppbarText = "#92929f",
+            AppbarBackground = Colors.Gray.Darken3,
+            DrawerBackground = Colors.Gray.Darken3,
+            ActionDefault = "#74718e",
+            ActionDisabled = "#9999994d",
+            ActionDisabledBackground = "#605f6d4d",
+            TextPrimary = "#b2b0bf",
+            TextSecondary = "#92929f",
+            TextDisabled = "#ffffff33",
+            DrawerIcon = "#92929f",
+            DrawerText = "#92929f",
+            GrayLight = "#2a2833",
+            GrayLighter = "#1e1e2d",
+            Info = "#4a86ff",
+            Success = "#3dcb6c",
+            Warning = "#ffb545",
+            Error = "#ff3f5f",
+            LinesDefault = "#33323e",
+            TableLines = "#33323e",
+            Divider = "#292838",
+            OverlayLight = "#1e1e2d80",
+        };
+
+    public string DarkLightModeButtonIcon => _isDarkMode switch
+    {
+        true => "fal fa-sun",
+        false => "fas fa-moon",
+    };
+}

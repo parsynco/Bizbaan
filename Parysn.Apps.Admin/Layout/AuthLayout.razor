@@ -1,0 +1,16 @@
+﻿@inherits LayoutComponentBase
+<component type="@typeof(Microsoft.AspNetCore.Components.Web.HeadOutlet)" render-mode="ServerPrerendered" />
+<MudThemeProvider />
+<MudSnackbarProvider />
+<MudRTLProvider RightToLeft="true" Class="default-background-color">
+    <MudLayout Class="custom-full-height auth-bg">
+        <MudMainContent Style="padding:0 !important;">
+            <MudContainer>
+                @Body
+            </MudContainer>
+        </MudMainContent>
+    </MudLayout>
+</MudRTLProvider>
+@code {
+
+}

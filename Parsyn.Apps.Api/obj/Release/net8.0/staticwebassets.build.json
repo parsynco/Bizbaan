@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "NL/W3mkjZ+VPlQbTHwkhZ1Tvk0yYjuzs9Z+R94pwTOk=",
+  "Source": "Parsyn.Apps.Api",
+  "BasePath": "_content/Parsyn.Apps.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

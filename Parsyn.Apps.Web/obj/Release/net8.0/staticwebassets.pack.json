@@ -1,0 +1,1541 @@
+{
+  "Files": [
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\Parsyn.Apps.Web.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Parsyn.Apps.Web.n3rep78q1h.bundle.scp.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\blog.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\blog.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\blog.css.map",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\blog.css.map"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\blog.min.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\blog.min.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\blog.sass",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\blog.sass"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\const\\_colors.scss",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\const\\_colors.scss"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\index.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\index.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\index.css.map",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\index.css.map"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\index.min.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\index.min.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\index.scss",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\index.scss"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\rangeslider.scss",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\rangeslider.scss"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_mobile.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\responsive\\_mobile.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_mobile.min.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\responsive\\_mobile.min.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_mobile.scss",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\responsive\\_mobile.scss"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_tablet.scss",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\responsive\\_tablet.scss"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\modal.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\responsive\\modal.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\modal.css.map",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\responsive\\modal.css.map"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\modal.scss",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\responsive\\modal.scss"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\favicon\\apple-touch-icon.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\favicon\\apple-touch-icon.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\favicon\\favicon-96x96.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\favicon\\favicon-96x96.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\favicon\\favicon.ico",
+      "PackagePath": "staticwebassets\\assets\\biz\\favicon\\favicon.ico"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\favicon\\favicon.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\favicon\\favicon.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\favicon\\site.webmanifest",
+      "PackagePath": "staticwebassets\\assets\\biz\\favicon\\site.webmanifest"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\favicon\\web-app-manifest-192x192.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\favicon\\web-app-manifest-192x192.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\favicon\\web-app-manifest-512x512.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\favicon\\web-app-manifest-512x512.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\all.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\all.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\brands.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\brands.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\duotone.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\duotone.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\fontawesome.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\light.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\light.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\regular.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\regular.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\sharp-light.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\sharp-light.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\sharp-regular.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\sharp-regular.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\sharp-solid.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\sharp-solid.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\sharp-thin.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\sharp-thin.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\solid.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\solid.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\svg-with-js.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\svg-with-js.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\thin.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\thin.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\v4-font-face.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\v4-font-face.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\v4-shims.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\v4-shims.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\css\\v5-font-face.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\css\\v5-font-face.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\js\\all.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\js\\all.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\js\\brands.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\js\\brands.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\js\\conflict-detection.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\js\\conflict-detection.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\js\\duotone.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\js\\duotone.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\js\\fontawesome.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\js\\fontawesome.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\js\\light.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\js\\light.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\js\\regular.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\js\\regular.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\js\\sharp-light.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\js\\sharp-light.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\js\\sharp-regular.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\js\\sharp-regular.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\js\\sharp-solid.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\js\\sharp-solid.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\js\\sharp-thin.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\js\\sharp-thin.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\js\\solid.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\js\\solid.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\js\\thin.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\js\\thin.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\js\\v4-shims.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\js\\v4-shims.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\sprites\\brands.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\sprites\\brands.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\sprites\\duotone.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\sprites\\duotone.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\sprites\\light.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\sprites\\light.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\sprites\\regular.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\sprites\\regular.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\sprites\\sharp-light.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\sprites\\sharp-light.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\sprites\\sharp-regular.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\sprites\\sharp-regular.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\sprites\\sharp-solid.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\sprites\\sharp-solid.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\sprites\\sharp-thin.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\sprites\\sharp-thin.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\sprites\\solid.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\sprites\\solid.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\sprites\\thin.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\sprites\\thin.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-duotone-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-duotone-900.ttf"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-duotone-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-duotone-900.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-light-300.ttf",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-light-300.ttf"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-light-300.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-light-300.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-light-300.ttf",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-light-300.ttf"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-light-300.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-light-300.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-regular-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-regular-400.ttf"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-regular-400.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-solid-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-solid-900.ttf"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-solid-900.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-thin-100.ttf",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-thin-100.ttf"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-thin-100.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-sharp-thin-100.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-thin-100.ttf",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-thin-100.ttf"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-thin-100.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-thin-100.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-icons\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-black.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-black.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-blackitalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-blackitalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-bold.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-bold.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-bolditalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-bolditalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-demibold.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-demibold.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-demibolditalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-demibolditalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-extrabold.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-extrabold.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-extrabolditalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-extrabolditalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-extralight.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-extralight.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-extralightitalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-extralightitalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-black.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-black.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-blackitalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-blackitalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-bold.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-bold.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-bolditalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-bolditalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-demibold.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-demibold.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-demibolditalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-demibolditalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-extrabold.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-extrabold.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-extrabolditalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-extrabolditalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-extralight.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-extralight.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-extralightitalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-extralightitalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-light.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-light.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-lightitalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-lightitalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-medium.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-medium.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-mediumitalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-mediumitalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-regular.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-regular.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-regularitalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-regularitalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-thin.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-thin.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-thinitalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-thinitalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-ultrabold.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-ultrabold.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-ultrabolditalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-fanum-ultrabolditalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-light.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-light.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-lightitalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-lightitalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-medium.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-medium.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-mediumitalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-mediumitalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-regular.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-regular.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-regularitalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-regularitalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-thin.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-thin.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-thinitalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-thinitalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-ultrabold.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-ultrabold.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-ultrabolditalic.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\eot\\dana-ultrabolditalic.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-black.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-black.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-blackitalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-blackitalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-bold.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-bold.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-bolditalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-bolditalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-demibold.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-demibold.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-demibolditalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-demibolditalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-extrabold.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-extrabold.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-extrabolditalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-extrabolditalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-extralight.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-extralight.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-extralightitalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-extralightitalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-black.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-black.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-blackitalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-blackitalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-bold.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-bold.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-bolditalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-bolditalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-demibold.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-demibold.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-demibolditalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-demibolditalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-extrabold.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-extrabold.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-extrabolditalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-extrabolditalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-extralight.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-extralight.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-extralightitalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-extralightitalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-light.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-light.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-lightitalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-lightitalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-medium.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-medium.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-mediumitalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-mediumitalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-regular.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-regular.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-regularitalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-regularitalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-thin.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-thin.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-thinitalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-thinitalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-ultrabold.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-ultrabold.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-ultrabolditalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-fanum-ultrabolditalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-light.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-light.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-lightitalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-lightitalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-medium.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-medium.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-mediumitalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-mediumitalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-regular.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-regular.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-regularitalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-regularitalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-thin.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-thin.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-thinitalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-thinitalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-ultrabold.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-ultrabold.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-ultrabolditalic.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff2\\dana-ultrabolditalic.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-black.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-black.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-blackitalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-blackitalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-bold.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-bold.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-bolditalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-bolditalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-demibold.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-demibold.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-demibolditalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-demibolditalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-extrabold.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-extrabold.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-extrabolditalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-extrabolditalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-extralight.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-extralight.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-extralightitalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-extralightitalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-black.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-black.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-blackitalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-blackitalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-bold.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-bold.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-bolditalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-bolditalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-demibold.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-demibold.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-demibolditalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-demibolditalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-extrabold.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-extrabold.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-extrabolditalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-extrabolditalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-extralight.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-extralight.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-extralightitalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-extralightitalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-light.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-light.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-lightitalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-lightitalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-medium.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-medium.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-mediumitalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-mediumitalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-regular.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-regular.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-regularitalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-regularitalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-thin.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-thin.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-thinitalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-thinitalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-ultrabold.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-ultrabold.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-ultrabolditalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-fanum-ultrabolditalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-light.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-light.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-lightitalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-lightitalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-medium.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-medium.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-mediumitalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-mediumitalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-regular.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-regular.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-regularitalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-regularitalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-thin.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-thin.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-thinitalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-thinitalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-ultrabold.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-ultrabold.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-ultrabolditalic.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Dana\\2.2\\woff\\dana-ultrabolditalic.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Rastin\\DigiRastinPlusRectangle.eot",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Rastin\\DigiRastinPlusRectangle.eot"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Rastin\\DigiRastinPlusRectangle.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Rastin\\DigiRastinPlusRectangle.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Rastin\\DigiRastinPlusRectangle.ttf",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Rastin\\DigiRastinPlusRectangle.ttf"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Rastin\\DigiRastinPlusRectangle.woff",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Rastin\\DigiRastinPlusRectangle.woff"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Rastin\\DigiRastinPlusRectangle.woff2",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Rastin\\DigiRastinPlusRectangle.woff2"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\Rastin\\rastin.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\Rastin\\rastin.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\custom.fonts.dana.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\custom.fonts.dana.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\custom.fonts.dana.min.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\custom.fonts.dana.min.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\fonts\\font-typo\\custom.fonts.dana.scss",
+      "PackagePath": "staticwebassets\\assets\\biz\\fonts\\font-typo\\custom.fonts.dana.scss"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\bg\\cbw.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\bg\\cbw.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\bg\\texture.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\bg\\texture.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\copyright\\copyright1.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\copyright\\copyright1.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\copyright\\copyright2.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\copyright\\copyright2.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\book.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\book.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\building.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\building.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\heart.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\heart.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\home.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\home.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\left.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\left.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\leftyellow.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\leftyellow.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\loading.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\loading.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\location.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\location.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\pinkheart.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\pinkheart.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\printer.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\printer.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\right.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\right.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\rightyellow.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\rightyellow.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\search.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\search.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\search2.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\search2.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\telegram.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\telegram.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\toleft.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\toleft.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\icon\\toright.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\icon\\toright.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\logo\\logo-big.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\logo\\logo-big.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\logo\\logo-primary.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\logo\\logo-primary.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\logo\\logo-white.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\logo\\logo-white.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\logo\\logo-yellow.svg",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\logo\\logo-yellow.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\logo\\logo2.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\logo\\logo2.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\person\\person1.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\person\\person1.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\person\\person2.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\person\\person2.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\img\\person\\person3.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\img\\person\\person3.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\js\\jquery\\jq.3.x.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\js\\jquery\\jq.3.x.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\js\\rang\\script.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\js\\rang\\script.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\js\\script.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\js\\script.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\libs\\RangeSlider\\jquery.range.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\libs\\RangeSlider\\jquery.range.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\libs\\RangeSlider\\jquery.range.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\libs\\RangeSlider\\jquery.range.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\libs\\RangeSlider\\jquery.range.tooltip.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\libs\\RangeSlider\\jquery.range.tooltip.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\libs\\ScrollAnimation\\scrol.anim.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\libs\\ScrollAnimation\\scrol.anim.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\libs\\ScrollAnimation\\scrol.anim.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\libs\\ScrollAnimation\\scrol.anim.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\libs\\jquery\\jq.3.x.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\libs\\jquery\\jq.3.x.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\libs\\swiper\\swiper.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\libs\\swiper\\swiper.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\libs\\swiper\\swiper.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\libs\\swiper\\swiper.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\pwa\\icons\\120x120.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\pwa\\icons\\120x120.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\pwa\\icons\\128x128.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\pwa\\icons\\128x128.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\pwa\\icons\\144x144.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\pwa\\icons\\144x144.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\pwa\\icons\\152x152.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\pwa\\icons\\152x152.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\pwa\\icons\\16x16.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\pwa\\icons\\16x16.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\pwa\\icons\\180x180.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\pwa\\icons\\180x180.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\pwa\\icons\\192x192.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\pwa\\icons\\192x192.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\pwa\\icons\\32x32.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\pwa\\icons\\32x32.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\pwa\\icons\\384x384.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\pwa\\icons\\384x384.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\pwa\\icons\\512x512.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\pwa\\icons\\512x512.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\pwa\\icons\\72x72.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\pwa\\icons\\72x72.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\pwa\\icons\\96x96.png",
+      "PackagePath": "staticwebassets\\assets\\biz\\pwa\\icons\\96x96.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\pwa\\manifest.json",
+      "PackagePath": "staticwebassets\\assets\\biz\\pwa\\manifest.json"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\pwa\\readme.txt",
+      "PackagePath": "staticwebassets\\assets\\biz\\pwa\\readme.txt"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\pwa\\service-worker.js",
+      "PackagePath": "staticwebassets\\assets\\biz\\pwa\\service-worker.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\favicon\\apple-touch-icon.png",
+      "PackagePath": "staticwebassets\\assets\\favicon\\apple-touch-icon.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\favicon\\favicon-96x96.png",
+      "PackagePath": "staticwebassets\\assets\\favicon\\favicon-96x96.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\favicon\\favicon.ico",
+      "PackagePath": "staticwebassets\\assets\\favicon\\favicon.ico"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\favicon\\favicon.svg",
+      "PackagePath": "staticwebassets\\assets\\favicon\\favicon.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\favicon\\site.webmanifest",
+      "PackagePath": "staticwebassets\\assets\\favicon\\site.webmanifest"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\favicon\\web-app-manifest-192x192.png",
+      "PackagePath": "staticwebassets\\assets\\favicon\\web-app-manifest-192x192.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\favicon\\web-app-manifest-512x512.png",
+      "PackagePath": "staticwebassets\\assets\\favicon\\web-app-manifest-512x512.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\bg\\btn-bg-secondary.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\btn-bg-secondary.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\bg\\btn-bg.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\btn-bg.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\bg\\certificate.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\certificate.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\bg\\ffflux.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\ffflux.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\bg\\first-section-waved.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\first-section-waved.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\bg\\header-bg.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\header-bg.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\bg\\isa-structure.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\isa-structure.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\bg\\mac.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\mac.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\bg\\qqquad.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\qqquad.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\bg\\random-stroke-bg.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\random-stroke-bg.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\bg\\rnd.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\rnd.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\bg\\section-splitter.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\section-splitter.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\bg\\vertical-bg.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\vertical-bg.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\bg\\wave-haikei.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\wave-haikei.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\bg\\wawe.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\bg\\wawe.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\brands\\ayandeh.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\brands\\ayandeh.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\brands\\day.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\brands\\day.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\brands\\oracle-db.png",
+      "PackagePath": "staticwebassets\\assets\\img\\brands\\oracle-db.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\brands\\postbank.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\brands\\postbank.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\card\\134.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\card\\134.jpg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\card\\agile.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\card\\agile.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\card\\api.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\card\\api.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\card\\dynamic-code.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\card\\dynamic-code.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\card\\fin.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\card\\fin.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\certs\\ershad.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\certs\\ershad.jpg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\ico\\api.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\ico\\api.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\ico\\custom.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\ico\\custom.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\ico\\dash.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\ico\\dash.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\ico\\faq.png",
+      "PackagePath": "staticwebassets\\assets\\img\\ico\\faq.png"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\ico\\fs-search.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\ico\\fs-search.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\ico\\update.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\ico\\update.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\ico\\web.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\ico\\web.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\logo-small.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo-small.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\img\\logo.svg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo.svg"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\js\\carousel.js",
+      "PackagePath": "staticwebassets\\assets\\js\\carousel.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\js\\cert-carousel.js",
+      "PackagePath": "staticwebassets\\assets\\js\\cert-carousel.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\js\\components\\circular-carousel\\js.js",
+      "PackagePath": "staticwebassets\\assets\\js\\components\\circular-carousel\\js.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\js\\components\\circular-carousel\\style.css",
+      "PackagePath": "staticwebassets\\assets\\js\\components\\circular-carousel\\style.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\js\\lib\\Gliderjs\\glider.css",
+      "PackagePath": "staticwebassets\\assets\\js\\lib\\Gliderjs\\glider.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\js\\lib\\Gliderjs\\glider.js",
+      "PackagePath": "staticwebassets\\assets\\js\\lib\\Gliderjs\\glider.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\js\\lib\\Gliderjs\\main.css",
+      "PackagePath": "staticwebassets\\assets\\js\\lib\\Gliderjs\\main.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\js\\lib\\animejs\\js.js",
+      "PackagePath": "staticwebassets\\assets\\js\\lib\\animejs\\js.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\js\\lib\\jquery\\jq.3.x.js",
+      "PackagePath": "staticwebassets\\assets\\js\\lib\\jquery\\jq.3.x.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\js\\lib\\lottie\\dotLottie.js",
+      "PackagePath": "staticwebassets\\assets\\js\\lib\\lottie\\dotLottie.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\js\\lib\\lottie\\player.js",
+      "PackagePath": "staticwebassets\\assets\\js\\lib\\lottie\\player.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\js\\lib\\swiper\\swiper.css",
+      "PackagePath": "staticwebassets\\assets\\js\\lib\\swiper\\swiper.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\js\\lib\\swiper\\swiper.js",
+      "PackagePath": "staticwebassets\\assets\\js\\lib\\swiper\\swiper.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\js\\script.js",
+      "PackagePath": "staticwebassets\\assets\\js\\script.js"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\json\\animated-charts.json",
+      "PackagePath": "staticwebassets\\assets\\json\\animated-charts.json"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\json\\comp.json",
+      "PackagePath": "staticwebassets\\assets\\json\\comp.json"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\json\\men.lottie",
+      "PackagePath": "staticwebassets\\assets\\json\\men.lottie"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\json\\technical.json",
+      "PackagePath": "staticwebassets\\assets\\json\\technical.json"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\css\\carousel.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\css\\carousel.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\css\\custom-scrollbar.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\css\\custom-scrollbar.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\css\\hexagon-anim.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\css\\hexagon-anim.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\Responsive\\_desktop.sass",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\Responsive\\_desktop.sass"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\Responsive\\_laptop.sass",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\Responsive\\_laptop.sass"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\Responsive\\_mobile.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\Responsive\\_mobile.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\Responsive\\_mobile.min.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\Responsive\\_mobile.min.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\Responsive\\_mobile.sass",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\Responsive\\_mobile.sass"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\Responsive\\_tablet.sass",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\Responsive\\_tablet.sass"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\_import.sass",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\_import.sass"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\animation.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\animation.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\blog.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\blog.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\blog.css.map",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\blog.css.map"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\blog.min.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\blog.min.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\blog.sass",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\blog.sass"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\colors.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\colors.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\colors.css.map",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\colors.css.map"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\colors.sass",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\colors.sass"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\defined-styles\\h-btn.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\defined-styles\\h-btn.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\defined-styles\\h-btn.css.map",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\defined-styles\\h-btn.css.map"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\defined-styles\\h-btn.scss",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\defined-styles\\h-btn.scss"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\fonts.dana.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\fonts.dana.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\fonts.dana.css.map",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\fonts.dana.css.map"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\fonts.dana.scss",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\fonts.dana.scss"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\global-styles.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\global-styles.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\global-styles.css.map",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\global-styles.css.map"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\global-styles.sass",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\global-styles.sass"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\hh.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\hh.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\hh.css.map",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\hh.css.map"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\hh.scss",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\hh.scss"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\index.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\index.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\index.css.map",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\index.css.map"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\index.min.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\index.min.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\index.sass",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\index.sass"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\landing.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\landing.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\landing.css.map",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\landing.css.map"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\landing.sass",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\landing.sass"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\responsive.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\responsive.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\responsive.css.map",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\responsive.css.map"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\responsive.sass",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\responsive.sass"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\simple.carousel.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\simple.carousel.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\simple.carousel.css.map",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\simple.carousel.css.map"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\simple.carousel.scss",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\simple.carousel.scss"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\variables.css",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\variables.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\variables.css.map",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\variables.css.map"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\styles\\sass\\variables.sass",
+      "PackagePath": "staticwebassets\\assets\\styles\\sass\\variables.sass"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\video\\features.mp4",
+      "PackagePath": "staticwebassets\\assets\\video\\features.mp4"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\sitemap.xml",
+      "PackagePath": "staticwebassets\\sitemap.xml"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.Parsyn.Apps.Web.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.Parsyn.Apps.Web.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.Parsyn.Apps.Web.props",
+      "PackagePath": "build\\Parsyn.Apps.Web.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Parsyn.Apps.Web.props",
+      "PackagePath": "buildMultiTargeting\\Parsyn.Apps.Web.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.Parsyn.Apps.Web.props",
+      "PackagePath": "buildTransitive\\Parsyn.Apps.Web.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

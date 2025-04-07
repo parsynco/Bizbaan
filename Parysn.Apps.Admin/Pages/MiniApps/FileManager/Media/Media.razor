@@ -1,0 +1,113 @@
+﻿@page "/apps/filemanager/media"
+
+<PageTitle>
+    بیزبان | مدیریت چندرسانه ای
+</PageTitle>
+
+<MudContainer Class="d-flex align-center justify-center flex-column">
+    <MudPaper Elevation="1" Class="d-flex align-center pa-2" Width="100%">
+        <MudText>مدیریت چندرسانه ای</MudText>
+        <MudSpacer />
+        <MudFab StartIcon="fal fa-plus " IconSize="Size.Small" Href="/apps/filemanager/media/add" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">
+        </MudFab>
+    </MudPaper>
+
+    <MudPaper Class="mt-4 pa-4" Elevation="0" Width="100%">
+
+        <MudGrid>
+            <MudItem xs="12" sm="12" md="12" lg="12" xl="12">
+                <MudPaper Elevation="0">
+                    <MudAlert NoIcon dir="rtl" Class="mud-rtl" Elevation="0" Severity="Severity.Normal" Dense ContentAlignment="HorizontalAlignment.Right">
+                        <div class="d-flex align-center" style="width:100%">
+                            <div class="custom-round-btn-width-icon" style="--custom-round-btn-bg:@(Colors.Pink.Lighten5)">
+                                <MudIcon Icon="fal fa-filter" Size="Size.Small" Color="Color.Secondary"></MudIcon>
+                            </div>
+                            <MudText Typo="Typo.subtitle1" Class="custom-font">فیلتر</MudText>
+                        </div>
+                        <MudGrid>
+                            <MudItem>
+
+                            </MudItem>
+                        </MudGrid>
+                    </MudAlert>
+
+                </MudPaper>
+            </MudItem>
+
+            @foreach (var item in _dataList)
+            {
+                <MudItem xs="12" sm="6" md="4" lg="3" xl="2">
+                    <MudCard>
+                        <MudCardHeader Class="pa-1 d-flex align-center justify-center">
+                            @item.Name
+                        </MudCardHeader>
+                        <MudCardMedia Title="@item.MediaTitle" Image="@(UIHelper.ApiUrl()+$"fm/dn/{item.Id}/THUMB")">
+
+                        </MudCardMedia>
+                        <MudCardActions>
+                            <MudButton OnClick="(()=>OpenDialog(item.Id))" FullWidth StartIcon="fal fa-trash" Color="Color.Error" Variant="Variant.Text" Size="Size.Small" Class="custom-font" IconSize="Size.Small">
+                                حذف
+                            </MudButton>
+                        </MudCardActions>
+                    </MudCard>
+                </MudItem>
+            }
+        </MudGrid>
+    </MudPaper>
+</MudContainer>
+@code {
+    [Inject] private IDialogService _dialogSrvc { get; set; }
+    HttpClientHelper<MediaDto> hch = new HttpClientHelper<MediaDto>(UIHelper.ApiUrl());
+    HttpClient _hc;
+    private List<string> _events = new();
+    MediaDto[] _dataList = [];
+    private bool _visible;
+    private bool _loading = false;
+    private readonly DialogOptions _dialogOptions = new() { FullWidth = false, MaxWidth = MaxWidth.Small };
+    private int ItemIdToDelete { get; set; } = 0;
+    private async void OpenDialog(int id)
+    {
+
+        ItemIdToDelete = id;
+        var conf = await _dialogSrvc.Show<DeleteConfirm>().Result;
+        if (!conf.Canceled)
+        {
+            DeleteItem();
+        }
+    }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        hch.SetToken(await USR.GetToken());
+        _hc = hch.Instance();
+        LoadData(true);
+        await base.OnInitializedAsync();
+    }
+    private async void DeleteItem()
+    {
+        var res = await hch.Post(new { Id = ItemIdToDelete }, $"fm/Delete?Id={ItemIdToDelete}");
+        _snackbar.Add(res.Msg, (res.Status == ResponseObjectStatusEnum.Error || res.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+        if (res.Status == ResponseObjectStatusEnum.Success)
+        {
+            _visible = false;
+            StateHasChanged();
+            LoadData();
+        }
+
+    }
+
+    private async void LoadData(bool changed = false)
+    {
+        _loading = true;
+        var data = await _hc.GetFromJsonAsync<MediaDto[]>("fm");
+        _dataList = data;
+        _loading = false;
+        StateHasChanged();
+
+    }
+
+
+
+}
+

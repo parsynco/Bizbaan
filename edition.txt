@@ -1,0 +1,20 @@
+-Confirm password not check when user added
+-Autocomplete off when adding user
+-Edit Role not work
+-Order menus
+-Remove contact us
+-Media manager
+-Add category for media [add search by title]
+-Change AParat to Youtube
+-Preload site
+-Remove zipcode
+-Openstreet
+-Upload-In-Selection-Media
+-Detail LTR
+-check business image slider size() - dont scroll if size not filled
+-Add-Image slider in add business - add button - not autoplay
+---------------------------
+-notif to info@bizbaan.com contactus , newsletter
+-Bulk email send - ip to nearby zip code
+---------------------------
+

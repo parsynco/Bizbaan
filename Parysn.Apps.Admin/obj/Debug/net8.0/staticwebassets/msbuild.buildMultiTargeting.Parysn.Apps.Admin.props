@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Parysn.Apps.Admin.props" />
+</Project>

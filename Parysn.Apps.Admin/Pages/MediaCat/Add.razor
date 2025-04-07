@@ -1,0 +1,61 @@
+﻿@page "/mediacat/add"
+@using Parsyn.Apps.Company.Data.Models.Entity.Config
+<PageTitle>بیزبان | ایجاد  دسته بندی چندرسانه</PageTitle>
+<MudContainer>
+    <MudCard>
+        <MudCardContent>
+
+            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+                <MudText>ثبت دسته بندی چند رسانه </MudText>
+                <MudSpacer />
+                <MudButton Size="Size.Small" IconSize="Size.Small" Href="/mediacat" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
+                    <MudText>بازگشت</MudText>
+                </MudButton>
+            </MudCardHeader>
+            <MudContainer Class="mt-3">
+                <MudForm dir="rtl">
+                    <MudGrid>
+
+                        <MudItem xs="12" lg="12">
+                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Title" Class="mud-rtl" T="string" Label="عنوان"></MudTextField>
+                        </MudItem>
+                        ٌ                    </MudGrid>
+                </MudForm>
+            </MudContainer>
+
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+                @if (_saving)
+                {
+                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+                }
+                else
+                {
+                    <MudText>ذخیره</MudText>
+                }
+            </MudButton>
+
+        </MudCardActions>
+    </MudCard>
+</MudContainer>
+
+@code {
+    private bool _saving { get; set; } = false;
+    private MediaCatModel model = new MediaCatModel();
+    HttpClientHelper<MediaCatModel> hch = new HttpClientHelper<MediaCatModel>(UIHelper.ApiUrl());
+    private async void RegisterModel()
+    {
+        hch.SetToken(await USR.GetToken());
+        _saving = true;
+        var res = await hch.Post(model, "MediaCat");
+        _saving = false;
+        model = new MediaCatModel();
+        _snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
+        StateHasChanged();
+        Thread.Sleep(1500);
+        _nv.NavigateTo("mediacat");
+
+
+    }
+}

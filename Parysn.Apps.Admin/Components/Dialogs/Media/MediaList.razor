@@ -1,0 +1,154 @@
+﻿@using Parsyn.Apps.Company.Data.Models.Entity.Config
+@inject IUserObject USR
+<MudDialog dir="rtl" Class="mud-rtl">
+	<DialogContent>
+
+		<MudGrid>
+			<MudItem xs="12" sm="12" md="12" lg="12" xl="12">
+				<MudGrid>
+					<MudItem xs="12" sm="12" md="5" lg="5" xl="5">
+						<MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="SelectedCatId" Class="mud-rtl" T="string" Label="دسته بندی">
+							<MudSelectItem Value="0">انتخاب دسته بندی</MudSelectItem>
+							@foreach (var item in mediaCats)
+							{
+								<MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
+							}
+						</MudSelect>
+					</MudItem>
+					<MudItem xs="12" sm="12" md="5" lg="5" xl="5">
+						<MudTextField T="string" @bind-Value="SearchTitle" Label="عنوان  " Class="mud-rtl" Margin="Margin.Dense" Variant="Variant.Outlined" />
+					</MudItem>
+					<MudItem xs="12" sm="12" md="2" lg="2" xl="2">
+						<MudButton @onclick="LoadItems" Variant="Variant.Outlined" Color="Color.Primary">
+
+							<MudText>جستجو</MudText>
+
+						</MudButton>
+						<MudButton OnClick="()=>{UploadNewFile = true;}" Variant="Variant.Outlined" StartIcon="fal fa-upload" Color="Color.Secondary" Class="custom-font">
+							آپلود
+						</MudButton>
+					</MudItem>
+				</MudGrid>
+			</MudItem>
+			@foreach (var item in _dataList)
+			{
+				<MudItem xs="12" sm="6" md="4" lg="3" xl="2">
+					<MudCard>
+						<MudCardHeader Class="pa-1 d-flex align-center justify-center">
+							@item.Name
+						</MudCardHeader>
+						<MudCardMedia Title="@item.MediaTitle" Image="@(UIHelper.ApiUrl()+$"fm/dn/{item.Id}/OS")">
+
+						</MudCardMedia>
+						<MudCardActions>
+							<MudButton OnClick="(()=>{MediaSizes(item.Id);})" FullWidth StartIcon="fal fa-check" Color="Color.Success" Class="custom-font">
+								انتخاب
+							</MudButton>
+
+						</MudCardActions>
+					</MudCard>
+				</MudItem>
+			}
+		</MudGrid>
+		<MudDialog Visible="UploadNewFile" Options="_innerDlgOptions">
+			<DialogActions>
+				<MudIconButton OnClick="async ()=>{UploadNewFile = false;await LoadCategories();}" Icon="fal fa-times" Color="Color.Error" Variant="Variant.Outlined"></MudIconButton>
+			</DialogActions>
+			<DialogContent>
+				<MediaUpload RedirectAfterUpload="false" />
+			</DialogContent>
+		</MudDialog>
+	</DialogContent>
+</MudDialog>
+
+@code {
+	[CascadingParameter]
+	private MudDialogInstance MudDialog { get; set; }
+	private DialogOptions _innerDlgOptions = new DialogOptions()
+		{
+			FullScreen = true,
+			FullWidth = true,
+			CloseButton = true,
+			CloseOnEscapeKey = true
+		};
+	public bool UploadNewFile { get; set; } = false;
+	MediaDto[] _dataList = [];
+	private bool _loading = false;
+	HttpClientHelper<MediaDto> hch = new HttpClientHelper<MediaDto>(UIHelper.ApiUrl());
+	HttpClient _hc;
+	private bool ShowSizeSelector { get; set; } = false;
+	private int SelectedItemId { get; set; }
+	private Tuple<int, string> Selected { get; set; }
+	public List<MediaCatModel> mediaCats = [];
+	public int SelectedCatId { get; set; }
+	public string SearchTitle { get; set; }
+	private async Task LoadCategories()
+	{
+
+		List<string> items = [];
+		if (SelectedCatId != null)
+		{
+			items.Add($"Cat={SelectedCatId}");
+		}
+		if (!string.IsNullOrEmpty(SearchTitle))
+		{
+			items.Add($"Title={SearchTitle}");
+		}
+		var url = $"MediaCat";
+		mediaCats = await _hc.GetFromJsonAsync<List<MediaCatModel>>(url);
+		StateHasChanged();
+	}
+	private async Task LoadItems()
+	{
+
+		List<string> items = [];
+		if (SelectedCatId != null)
+		{
+			items.Add($"Cat={SelectedCatId}");
+		}
+		if (!string.IsNullOrEmpty(SearchTitle))
+		{
+			items.Add($"Title={SearchTitle}");
+		}
+		var url = $"fm{((items.Any()) ? $"?{string.Join('&', items)}" : "")}";
+		var data = await _hc.GetFromJsonAsync<MediaDto[]>(url);
+		_dataList = data;
+		StateHasChanged();
+	}
+	protected override async Task OnInitializedAsync()
+	{
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		await LoadCategories();
+		LoadData(true);
+		await base.OnInitializedAsync();
+	}
+	private async void Search()
+	{
+
+	}
+	private async void LoadData(bool changed = false)
+	{
+		_loading = true;
+		var data = await _hc.GetFromJsonAsync<MediaDto[]>("fm");
+		_dataList = data;
+		_loading = false;
+		StateHasChanged();
+
+	}
+	private async void MediaSizes(int mediaId)
+	{
+		// MudDialog.Close(DialogResult.Ok(mediaId));
+		SelectedItemId = mediaId;
+		DialogParameters keyValues = new DialogParameters();
+		keyValues.Add("SelectedItemId", SelectedItemId);
+		var res = await (await Dialog.ShowAsync<MediaSizeSelector>("انتخاب سایز", keyValues, new DialogOptions { FullScreen = true, CloseButton = true })).Result;
+		if (!res.Canceled)
+		{
+			Selected = (Tuple<int, string>)res.Data;
+		}
+		StateHasChanged();
+		MudDialog.Close(DialogResult.Ok(Selected));
+	}
+
+}

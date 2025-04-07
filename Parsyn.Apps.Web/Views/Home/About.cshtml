@@ -1,0 +1,78 @@
+﻿@using Parsyn.Apps.Company.Data.Models.Entity.Forms
+@inject IPageIface _page;
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+    var pg = _page.IncludeDependencies().FirstOrDefault(x => x.Name == "About");
+    ViewData["Title"] = pg?.Seo?.Title;
+}
+@section Seo {
+
+    @await Component.InvokeAsync("Seo", new SeoInjectModel()
+{
+    Seo = pg.Seo
+})
+}
+<div class="page-container">
+    <div class="page-title-content">
+        <h1 class="page-title-text">
+            @pg?.Seo?.Title
+        </h1>
+        <div class="page-bread-crumb">
+            <div class="page-bread-crumb-items">
+                <a href="/"><i class="fal fa-home"></i></a>
+                <a href="/about">@pg?.Seo?.Title</a>
+            </div>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="page-content-raw column-base">
+            <div class="page-content-column column-left">
+                @Html.Raw(@pg.Description)
+            </div>
+            <div class="page-content-column column-right">
+                <h3 class="contact-form-title">
+                    تماس با ما
+                </h3>
+                <form method="post" enctype="multipart/form-data" href="/about" class="form-content">
+                    <div class="form-content-col">
+                        <label for="Name" class="form-input-label">نام و نام خانوادگی</label>
+                        <input type="text" id="Name" name="Name" class="form-input" />
+                    </div>
+                    <div class="form-content-col">
+                        <label for="Phone" class="form-input-label">تلفن</label>
+                        <input type="text" id="Phone" name="Phone" class="form-input" />
+                    </div>
+                    <div class="form-content-col">
+                        <label for="Title" class="form-input-label">عنوان پیام</label>
+                        <input type="text" id="Title" name="Title" class="form-input" />
+                    </div>
+                    <div class="form-content-col">
+                        <label for="Type" class="form-input-label">موضوع</label>
+                        <select type="text" id="Type" class="form-input" name="Type">
+                            <option value="@FormType.Support">پشتیبانی</option>
+                            <option value="@FormType.Criticism">انتقاد</option>
+                            <option value="@FormType.Suggest">پیشنهاد</option>
+                            <option value="@FormType.Complaint">شکایت</option>
+                        </select>
+                    </div>
+                    <div class="form-content-col full-width">
+                        <label for="Description" class="form-input-label">متن پیغام</label>
+                        <textarea id="Description" name="Description" class="form-input large-input"></textarea>
+                    </div>
+                    <div class="form-content-col full-width">
+                        <button type="submit" class="form-submit">ارسال</button>
+                    </div>
+                    @if (ViewData.Any(x => x.Key == "Response") && string.IsNullOrEmpty(ViewData["Response"].ToString()))
+                    {
+                        <div class="form-content-col full-width">
+                            @ViewData["Response"].ToString()
+                        </div>
+                    }
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@{
+}

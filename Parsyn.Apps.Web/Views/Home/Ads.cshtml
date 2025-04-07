@@ -1,0 +1,262 @@
+﻿@using Parsyn.Apps.Company.Data.Models.Entity.Bizbaan.Ad
+@model AdModel
+@{
+    UrlHelper _urlhelper = new UrlHelper();
+    ViewData["Title"] = Model?.Title;
+}
+@section Seo {
+
+    @await Component.InvokeAsync("Seo", new SeoInjectModel()
+{
+    Seo = Model.Seo
+})
+}
+<div class="ads-detail-container onMobile">
+    <div class="ads-share-modal" id="ads-modal">
+        <div class="ads-ahre-modal-header">
+            <span>به اشتراک بگذارید</span>
+            <a onclick="ToggleModal('ads-modal')" href="javascript:void(0)"><i class="fal fa-times"></i></a>
+        </div>
+        <div class="ads-ahre-modal-content">
+            <div class="sharethis-inline-share-buttons"></div>
+        </div>
+    </div>
+    <div class="ads-bread-crumb">
+        <a href="/"><i class="fal fa-home"></i></a>
+        <a href="javascript:void(0)">@Model.Category.Parent.Title</a> 
+        <a href="javascript:void(0)">@Model.Category.Title</a>
+    </div>
+    <div class="main-detail">
+        <div class="detail-img">
+            <img src="@Model.Logo" title="@Model.Title" alt="@Model.Title" />
+        </div>
+        <div class="detials-name">
+            <h1>@Model.TitleEn</h1>
+            <h5>@Model.Title</h5>
+        </div>
+    </div>
+    <div class="details-tab">
+        <div class="details-tab-call">
+            <i class="fal fa-phone"></i>
+            <span class="tab-title">اطلاعات تماس</span>
+        </div>
+        <a href="javascript:void(0)" onclick="ToggleModal('ads-modal')" class="details-tab-share">
+            <i class="fal fa-share"></i>
+            <span class="tab-title">اشتراک گذاری</span>
+        </a>
+    </div>
+    <div class="details-section-info">
+        <div class="details-section-title">
+            اطلاعات تماس
+        </div>
+        <div class="details-section-description">
+            <div class="details-section-row ltr-dir">
+                <div class="details-row-title bolder">
+                    <i class="fal fa-location-arrow"></i>
+                    <span>Address :</span>
+                </div>
+                <div class="details-row-description">
+                    @Model.Address, @Model.Zip.City, @Model.Zip.State_Abbr @Model.Zip.Zipcode
+                </div>
+            </div>
+            <div class="details-section-row ltr-dir">
+                <div class="details-row-title bolder">
+                    <i class="fal fa-mobile"></i>
+                    <span>Mobile :</span>
+                </div>
+                <div class="details-row-description ">
+                    @Model.Phone
+                </div>
+            </div>
+            <div class="details-section-row ltr-dir">
+                <div class="details-row-title bolder">
+                    <i class="fal fa-phone"></i>
+                    <span>Telephone :</span>
+                </div>
+                <div class="details-row-description ">
+                    @Model.Telephone
+                </div>
+            </div>
+            <div class="details-section-row ltr-dir">
+                <div class="details-row-title bolder">
+                    <i class="fal fa-envelope"></i>
+                    <span>Email :</span>
+                </div>
+                <div class="details-row-description">
+                    @Model.Email
+                </div>
+            </div>
+        </div>
+    </div>
+    @if(!string.IsNullOrEmpty(Model.Description))
+    {
+        <div class="details-section-info">
+            <div class="details-section-title">
+                درباره بیزنس
+            </div>
+            <div class="details-section-description">
+                @Html.Raw(Model.Description)
+            </div>
+        </div>
+
+    }
+    @if (Model.Images != null && Model.Images.Any())
+    {
+        <div class="details-section-info">
+            <div class="details-section-title">
+                تصاویر
+            </div>
+            <div class="details-section-description">
+                <div class="ads-image-slider-holder">
+                    <div class="ads-image-slider swiper">
+                        <div class="ads-image-wrapper swiper-wrapper">
+                            @foreach (var item in Model.Images)
+                            {
+                                <div class="swiper-slide ads-image-slide">
+                                    <img src="@(_urlhelper.ApiUrl())fm/dn/@item.MediaId/OS" />
+                                </div>
+                            }
+                        </div>
+                        <a href="javascript:void(0);" class="ads-img-right"><i class="fal fa-chevron-right"></i></a>
+                        <a href="javascript:void(0);" class="ads-img-left"><i class="fal fa-chevron-left"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <div class="details-section-info">
+        <div class="details-section-title">
+            بیزینس روی نقشه
+        </div>
+        <div class="details-section-description">
+            <div class="details-section-row">
+                <iframe src="https://maps.google.com/maps?q=@(Model.Lat),@(Model.Lng)&hl=es;z=14&amp;output=embed"></iframe>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="page-container nonMobile">
+    <div class="page-title-content">
+        <h1 class="page-title-text ltr-dir">
+            @(Model.TitleEn+@$" ( {Model.Title} )")
+        </h1>
+        <div class="page-bread-crumb">
+            <div class="page-bread-crumb-items">
+                <a href="/"><i class="fal fa-home"></i></a>
+                <a href="javascript:void(0)">@Model.Category.Parent.Title</a> 
+                <a href="javascript:void(0)">@Model.Category.Title</a>
+            </div>
+        </div>
+    </div>
+    <div class="page-content">
+       
+
+        <div class="row-business-detail ltr-dir">
+            <div class="column-detail">
+                <div class="column-detail-img">
+                    <img src="@Model.Logo" title="@Model.Title" alt="@Model.Title" />
+                </div>
+                <div class="column-detail-name">
+                    <h1>@Model.TitleEn</h1>
+                    <h5 class="decorated-persian">@Model.Title</h5>
+                </div>
+                <div class="column-detail-region">
+                    <span>@Model.ProivinceName</span>
+                    <strong style="padding-left:.2rem;padding-right:.2rem"> , </strong>
+                    <span>@Model.CityName</span>
+                </div>
+                <div class="column-detail-share-btns sharethis-inline-share-buttons">
+                </div>
+            </div>
+            <div class="column-contact">
+               <div class="contact-rows">
+                    <div class="column-contact-section-row">
+                        <div class="column-contact-row-title">
+                            <i class="fal fa-location-arrow"></i>
+                            <span class="bolder">Address :</span>
+                        </div>
+                        <div class="column-contact-row-description">
+                            @Model.Address, @Model.Zip.City, @Model.Zip.State_Abbr @Model.Zip.Zipcode
+                        </div>
+                    </div>
+                    <div class="column-contact-section-row">
+                        <div class="column-contact-row-title">
+                            <i class="fal fa-mobile"></i>
+                            <span class="bolder">Mobile :</span>
+                        </div>
+                        <div class="column-contact-row-description ltr">
+                            @Model.Phone
+                        </div>
+                    </div>
+                    <div class="column-contact-section-row">
+                        <div class="column-contact-row-title">
+                            <i class="fal fa-phone"></i>
+                            <span class="bolder">Telephone :</span>
+                        </div>
+                        <div class="column-contact-row-description ltr">
+                            @Model.Telephone
+                        </div>
+                    </div>
+                    <div class="column-contact-section-row">
+                        <div class="column-contact-row-title">
+                            <i class="fal fa-envelope"></i>
+                            <span class="bolder">Email :</span>
+                        </div>
+                        <div class="column-contact-row-description ltr">
+                            @Model.Email
+                        </div>
+                    </div>
+               </div>
+                <div class="column-map">
+                    <iframe src="https://maps.google.com/maps?q=@(Model.Lat),@(Model.Lng)&hl=es;z=14&amp;output=embed"></iframe>
+                </div>
+            </div>
+            
+        </div>
+       <div class="groupped-iformation-section">
+            <div class="row-business-detail">
+            <div class="row-business-section-info">
+                <div class="row-business-section-title">
+                    درباره بیزینس
+                </div>
+                <div class="row-business-section-description">
+                    <div class="scrolled-description">
+                        @Html.Raw(Model.Description)
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            @if (Model.Images != null && Model.Images.Any())
+            {
+            <div class="row-business-detail">
+                <div class="row-business-section-info">
+                    <div class="row-business-section-title">
+                        تصاویر
+                    </div>
+                    <div class="row-business-section-description">
+                        <div class="row-business-image-slider-holder">
+                            <div class="row-business-image-slider swiper">
+                                <div class="row-business-image-wrapper swiper-wrapper">
+                                    @foreach (var item in Model.Images)
+                                    {
+                                        <div class="swiper-slide row-business-image-slide">
+                                            <img src="@(_urlhelper.ApiUrl())fm/dn/@item.MediaId/OS" />
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                                <a href="javascript:void(0);" class="ads-img-right"><i class="fal fa-chevron-right"></i></a>
+                                <a href="javascript:void(0);" class="ads-img-left"><i class="fal fa-chevron-left"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+       
+           </div>
+       
+    </div>
+</div>

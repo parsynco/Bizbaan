@@ -1,0 +1,47 @@
+﻿@inject NavigationManager _nv
+@inject IUserObject USR
+<Router AppAssembly="@typeof(App).Assembly">
+    
+    <Found Context="routeData">
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <PageTitle>خطا 404</PageTitle>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <div class="error-container text">
+                <div>خطا</div>
+                <h1>404</h1>
+                <hr>
+                <div>صفحه مورد نظر یافت نشد</div>
+            </div>
+
+        </LayoutView>
+    </NotFound>
+</Router>
+@code{
+    public List<string> Permissions{ get; set; }
+    protected override async void OnInitialized()
+    {
+        Permissions = await USR.GetPermissionsFlat();
+        Permissions.Add("/login");
+        Permissions.Add("/");
+        Permissions.Add("/404");
+        _nv.LocationChanged += LocationChanged;
+        base.OnInitialized();
+    }
+    void LocationChanged(object sender, LocationChangedEventArgs e)
+    {
+        // string navigationMethod = e.IsNavigationIntercepted ? "HTML" : "code";
+        // var splittedLocation = e.Location.Split("/");
+        // int[] rm = [0,1,2]; 
+        // splittedLocation = splittedLocation.Where((source, index) => !rm.Contains(index) ).ToArray();
+        // string finalUrl = $"/{string.Join('/',splittedLocation)}";
+        // if(!Permissions.Contains(finalUrl))
+        // {
+        //     _nv.NavigateTo("/404");
+        // }
+        // System.Diagnostics.Debug.WriteLine($"Notified of navigation via {navigationMethod} to {e.Location}");
+    }
+}
+@* <HeadOutlet @rendermode="new InteractiveServerRenderMode(prerender: false)" /> *@

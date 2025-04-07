@@ -1,0 +1,45 @@
+﻿
+<MudDrawer @bind-Open="@_drawerOpen" Elevation="0" Class="ma-2 rounded  custom-sidebar">
+    <MudDrawerHeader Class="d-flex justify-center  " Dense="true">
+        <MudPaper Elevation="0" Class="d-flex justify-center align-center">
+           <b style="font-weight:bolder;font-size:1.2em">بیزبان</b>
+        </MudPaper> 
+    </MudDrawerHeader>
+    <MudNavMenu Bordered="true">
+        @foreach (var item in Permissions.OrderBy(x=>x.Sort).ToList())
+        {
+            if (item.Childs is null || item.Childs.Count < 1)
+            {
+                <MudNavLink  OnClick="@(()=>_nv.NavigateTo(item.Url))">
+                    <MudText><MudIcon Size="Size.Small" Icon="fal fa-chevron-left" IconColor="@Color.Info"></MudIcon> @item.Title</MudText>
+                </MudNavLink>
+            }
+            else
+            {
+                <MudNavGroup Title="@item.Title">
+                    @foreach (var child in item.Childs.OrderBy(x => x.Sort).ToList())
+                    {
+                        <MudNavLink  OnClick="@(()=>_nv.NavigateTo(child.Url))">
+                            <MudText><MudIcon Size="Size.Small" Icon="fal fa-chevron-left" IconColor="@Color.Info"></MudIcon> @child.Title</MudText>
+                        </MudNavLink>
+                    }
+                </MudNavGroup>
+            }
+        }
+    </MudNavMenu>
+</MudDrawer>
+
+@code {
+    private bool _drawerOpen = true;
+    private List<PermissionDto> Permissions = new List<PermissionDto>();
+    protected override async Task OnInitializedAsync()
+    {
+        Permissions = await USR.GetPermissions();
+        StateHasChanged();
+        await base.OnInitializedAsync();
+    }
+    private void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}

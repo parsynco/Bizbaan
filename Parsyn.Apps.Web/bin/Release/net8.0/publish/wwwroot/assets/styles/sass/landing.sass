@@ -1,0 +1,436 @@
+@import ./_import
+
+body,html
+    padding: 0
+    margin: 0
+    direction: rtl
+    font-family: DanaL
+    overflow-x: hidden
+
+*
+    box-sizing: border-box
+
+body
+    background: var(--parsyn-primary-light)
+    background: -moz-linear-gradient(216deg, var(--parsyn-primary-light), var(--parsyn-primary-dark))
+    background: -webkit-linear-gradient(216deg, var(--parsyn-primary-light), var(--parsyn-primary-dark))
+    background: linear-gradient(216deg, var(--parsyn-primary-light), var(--parsyn-primary-dark))
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--parsyn-primary-light)",endColorstr="var(--parsyn-primary-dark)",GradientType=1)
+    width: 100vw
+    height: 100vh
+.main-container
+    position: relative
+    width: 100%
+    height: 100%
+    background-image: url(../../img/bg/vertical-bg.svg)
+    background-repeat: no-repeat
+    background-position: right
+    &.fluid
+        padding-left: 5rem
+        padding-right: 5rem
+    & .main-header
+        width: 100%
+        height: 4rem
+        background: transparent
+        position: relative
+        top: 1rem
+        display: flex
+        align-items: center
+        justify-content: center
+        padding-left: .5rem
+        padding-right: .5rem
+        & .header-logo
+            width: 35%
+            height: 100%
+            display: flex
+            align-items: center
+            & .header-logo-link
+                text-decoration: none
+                color: var(--parsyn-white)
+                & img
+                    width: 6rem
+                    height: 100%
+
+        & .header-navbar
+            width: 45%
+            height: 100%
+            & .header-navbar-root
+                display: flex
+                align-items: center
+                justify-content: space-evenly
+                list-style: none
+                width: 100%
+                position: relative
+                margin: 0 !important
+                height: 100%
+                & .header-navbar-link-container
+                    height: 100%
+                    display: flex
+                    align-items: center
+                    & .header-navbar-link
+                        text-decoration: none
+                        color: var(--parsyn-white)
+                        display: flex
+                        height: auto
+
+        & .header-important-oprs
+            height: 100%
+            width: 20%
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            & .header-search-btn,& .header-oprs-btn
+                display: flex
+                align-items: center
+                justify-content: center
+            & .header-oprs-btn
+                text-decoration: none
+                color: var(--parsyn-white)
+                padding: .5rem
+                padding-left: 1.5rem !important
+                padding-right: 1.5rem !important
+                margin-right: .8rem
+                border-radius: 2rem
+                background: rgb(255,218,163)
+                background: -moz-linear-gradient(180deg, rgba(255,218,163,1) 0%, rgba(255,136,0,1) 100%)
+                background: -webkit-linear-gradient(180deg, rgba(255,218,163,1) 0%, rgba(255,136,0,1) 100%)
+                background: linear-gradient(180deg, rgba(255,218,163,1) 0%, rgba(255,136,0,1) 100%)
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffdaa3",endColorstr="#ff8800",GradientType=1)
+            & .header-search-btn
+                text-decoration: none
+                padding: 1rem
+                text-decoration: none
+                color: var(--parsyn-white)
+                font-size: 1.2em
+    & .main-content
+        position: relative
+        top: 2rem
+        min-height: calc(100% - 8rem)
+        height: auto
+        padding: 1rem
+        & .section-present
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding-bottom: 4rem
+            & .column-img
+                width: 43%
+                min-height: 80dvh
+                //background-image: url(../../img/bg/isa-structure.svg)
+                background-position: left
+                background-repeat: no-repeat
+                background-size: contain
+                display: flex
+                align-items: center
+                justify-content: center
+                & .spinner-repeat
+                    width: 28rem
+                    height: 28rem
+                    border-radius: 5rem
+                    background-color: #494254
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    position: relative
+                    overflow: hidden
+                    & .big-circle
+                        width: 31rem
+                        height: 31rem
+                        border: .3rem solid #0c031c
+                        border-radius: 50%
+                        position: absolute
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        background-color: #383244
+                    & .medium-circle
+                        width: 26rem
+                        height: 26rem
+                        border: .3rem solid #0c031c
+                        border-radius: 50%
+                        background-color: #1f1928
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                    & .small-circle
+                        width: 21rem
+                        height: 21rem
+                        border: .3rem solid #0c031c
+                        border-radius: 50%
+                        background-image: linear-gradient(to right,#da852e,#e7c194)
+
+            & .column-content
+                width: 56%
+                padding-right: 2rem
+                min-height: 80dvh
+                display: flex
+                flex-direction: column
+                color: var(--parsyn-white)
+                & .section-present-main-title
+                    font-size: 3em
+                    line-height: 7rem
+                    & .bold-light
+                        color: orange
+                .section-present-description
+                    padding-bottom: 2rem
+                    padding-top: 1rem
+                    text-align: justify
+                    line-height: 2rem
+                & .section-present-feature
+                    display: flex
+                    gap: 2rem
+                    justify-content: space-around
+                    & i
+                        color: orange
+                        margin-left: .5rem
+                & .section-present-communicate-btns
+                    margin-top: 3.5rem
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    height: 3rem
+                    & span
+                        width: 60%
+                        display: flex
+                        align-items: center
+                    & .section-present-communicate-btn
+                        display: flex
+                        height: 100%
+                        border-radius: 2rem
+                        border: .2rem solid orange
+                        align-items: center
+                        justify-content: center
+                        text-decoration: none
+                        color: #fff
+                        padding-left: 1rem
+                        padding-right: 1rem
+        & .more-btn
+            display: flex
+            padding: .3rem
+            min-width: 6rem
+            background-color: transparent
+            border: .01rem solid var(--parsyn-primary-light)
+            border-radius: .5rem
+            align-items: center
+            text-decoration: none
+            color: var(--parsyn-secondary-dark)
+            &.has-end-icon
+                justify-content: space-between
+                padding-left: .6rem !important
+                padding-right: .6rem !important
+        & .section-feature-details
+            height: 100vh
+            width: 100%
+            position: relative
+            background: #fff
+            display: flex
+            align-items: center
+            justify-content: space-between
+            & .section-feature-bg
+                background-image: url(../../img/bg/wawe.svg)
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+                width: calc(100% + 16rem)
+                height: 100vh
+                position: absolute
+                right: -8rem
+                z-index: 1111111111
+                display: flex
+                align-items: center
+                justify-content: space-between
+                padding-right: 8rem
+                padding-left: 8rem
+                & .player
+                    width: 20rem
+                    height: 20rem
+                & .feature-detail-image
+                    width: 25%
+                    height: 100%
+                    display: flex
+                    align-items: center
+                    flex-direction: column
+                    padding-top: 20vh
+                    & .detail-image-h4
+                        font-size: 1.5em
+                        color: var(--parsyn-primary-light)
+
+                & .feature-detail-content
+                    width: 70%
+                    height: 100%
+                    display: flex
+                    align-items: center
+            &::after
+                background: #fff
+                position: absolute
+                width: 8rem
+                top: 0
+                height: 100%
+                left: -8rem
+                content: ''
+            &::before
+                background: #fff
+                position: absolute
+                width: 8rem
+                top: 0
+                height: 100%
+                right: -8rem
+                content: ''
+        & .section-certificates
+            display: flex
+            min-height: 18rem
+            height: auto
+            width: 100%
+            position: relative
+            & .absolute-layout
+                display: flex
+                width: calc(100% + 16rem)
+                height: 100%
+                position: absolute
+                right: -8rem
+                top: 0
+                flex-direction: column
+                align-items: center
+                padding-right: 8rem
+                padding-left: 8rem
+                gap: 0rem
+                border-top: 1rem solid transparent
+                border-image: url(../../img/bg/wave-haikei.svg)
+                border-image-slice: 100
+                background-color: var(--parsyn-primary-light)
+                & .section-certificate-header
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 100%
+                    height: 30%
+                    flex-direction: column
+                    & img
+                        width: 10rem
+                    & h4
+                        padding-top: 0 !important
+                        margin-top: 0 !important
+                        color: var(--parsyn-white)
+        & .video-viral
+            display: flex
+            min-height: 50rem
+            height: auto
+            width: 100%
+            position: relative
+            & .absolute-layout
+                display: flex
+                width: calc(100% + 16rem)
+                height: 100%
+                position: absolute
+                right: -8rem
+                top: 0
+                background: var(--parsyn-white)
+                & video
+                    width: 100%
+                    height: 100%
+                & .absolute-layout-overly
+                    width: 100%
+                    height: 100%
+                    display: flex
+                    background-color: rgba(0,0,0,0.5)
+                    filter: blur(.01rem)
+                    position: absolute
+        & .section-technical-info
+            position: relative
+            min-height: 35rem
+            
+            & .absolute-layout-overly
+                display: flex
+                background-color: transparent
+                background-image: url(../../img/bg/ffflux.svg)
+                background-size: cover
+                background-position: center
+                background-repeat: no-repeat
+                filter: blur(.01rem)
+                width: calc(100% + 16rem)
+                height: 100%
+                position: absolute
+                display: flex
+                align-items: center
+                justify-content: space-evenly
+                right: -8rem
+                top: 0
+                border-top: 1rem solid transparent
+                -o-border-image: url(../../img/bg/wave-haikei.svg)
+                border-image: url(../../img/bg/wave-haikei.svg)
+                border-image-slice: 100
+                flex-wrap: wrap
+                padding-bottom: 2rem
+                & .section-technical-info-title
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    color: #fff
+                    padding-bottom: .8rem
+                    padding-top: .8rem
+                // & .technical-icon
+                //     display: flex
+                //     align-items: center
+                //     justify-content: center
+                //     width: 10.5rem
+                //     height: 10.5rem
+                //     background: var(--parsyn-white)
+                //     border-radius: 50%
+                //     padding: .5rem
+                //     position: relative
+                //     right: calc(50% - 5.25rem)
+                //     top: calc(50% - 5.25rem)
+                //     box-shadow: 0 0 0 1.2rem rgba(255, 255, 255,.3)
+                & .technichal-sub
+                    display: flex
+                    align-items: center
+                    justify-content: flex-start
+                    gap: .8rem
+                    background: rgb(0,0,0)
+                    background: -moz-linear-gradient(242deg, rgba(0,0,0,0.41220238095238093) 0%, rgba(28, 0, 74,0.07886904761904767) 100%)
+                    background: -webkit-linear-gradient(242deg, rgba(0,0,0,0.41220238095238093) 0%, rgba(28,0,74,0.07886904761904767) 100%)
+                    background: linear-gradient(242deg, rgba(0,0,0,0.41220238095238093) 0%, rgba(28,0,74,0.07886904761904767) 100%)
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#27005b",endColorstr="#7900b4",GradientType=1)
+                    height: 80%
+                    width: calc(100% / 5.5)
+                    padding: 1.5rem
+                    border-radius: 0.5rem
+                    position: relative
+                    flex-direction: column
+                    & div
+                        min-width: 10.5rem
+                        min-height: 10.5rem
+                        border-radius: 50%
+                        padding: .5rem
+                        border: .3rem solid  #e0dcdc78
+                        background-size: cover
+                        background-color: rgba(255, 255, 255,.3)
+                    & h4
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        color: orange
+                        min-height: 1rem
+                        padding: .2rem
+                        font-weight: bold
+                        margin: 0
+                    & h6
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        color: #fff
+                        min-height: 1rem
+                        padding: .01rem
+                        margin: 0
+                        font-weight: lighter
+                        text-align: justify
+                        line-height: 1.2rem
+                    & .oracle-db
+                        background-image: url(../../img/brands/oracle-db.png)
+                    & .dynamic-code
+                        background-image: url(../../img/card/dynamic-code.svg)
+                    & .agile
+                        background-image: url(../../img/card/agile.svg)
+                    & .api
+                        background-image: url(../../img/card/api.svg)

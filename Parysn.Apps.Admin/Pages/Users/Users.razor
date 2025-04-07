@@ -1,0 +1,216 @@
+﻿@page "/users"
+@using Parsyn.Apps.Company.Data.Models.Dtos.AuthDtos
+@{
+    
+}
+<PageTitle>بیزبان | مدیریت کاربران</PageTitle>
+<MudContainer Class="d-flex align-center justify-center flex-column">
+    <MudPaper Elevation="1" Class="d-flex align-center pa-2" Width="100%">
+        <MudText>مدیریت کاربران سایت</MudText>
+        <MudSpacer />
+        <MudFab StartIcon="fal fa-plus " IconSize="Size.Small" Href="/user/add" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small">
+        </MudFab>
+    </MudPaper>
+    <MudPaper Class="mt-4" Elevation="0" Width="100%">
+        <MudDataGrid Loading="_loading" Context="ctx" Filterable="true" SortMode="@SortMode.Multiple" Groupable="false" Items="@_dataList" Elevation="0" Dense="false" Hover="true" Bordered="false" Striped="true" Style="overflow-x: auto;">
+            <Columns>
+                <PropertyColumn Property="x => x.RoleTitle" Title="نقش" />
+                <PropertyColumn Property="x => x.Name" Title="نام" />
+                <PropertyColumn Property="x => x.Family" Title="نام خانوادگی" />
+                <PropertyColumn Property="x => x.Phone" Title="تلفن" />
+                <PropertyColumn Property="x => x.Email" Title="پست الکترونیکی" />
+                <PropertyColumn Property="x => x.IsDisabled" Title="وضعیت دسترسی">
+                    <CellTemplate>
+                        <MudChip Disabled="_disabling" OnClick="(()=>ToggleDisabled(context.Item.Id))" Color="@(context.Item.IsDisabled ? Color.Error : Color.Info)">
+                            @if (!_disabling)
+                            {
+                                @(!context.Item.IsDisabled ? "مجاز" : "مسدود")
+                            }
+                            else
+                            {
+                                <MudProgressCircular Color="Color.Default" Indeterminate></MudProgressCircular>
+                            }
+                        </MudChip>
+                    </CellTemplate>
+                </PropertyColumn>
+                <PropertyColumn Property="x => x.IsBanned" Title="وضعیت حساب">
+                    <CellTemplate>
+                        <MudChip Disabled="_banning" OnClick="(()=>ToggleBanned(context.Item.Id))" Color="@(context.Item.IsBanned ? Color.Error : Color.Info)">
+                            @if (!_banning)
+                            {
+                                @(!context.Item.IsBanned ? "فعال" : "غیرفعال")
+                            }
+                            else
+                            {
+                                <MudProgressCircular Color="Color.Default" Indeterminate></MudProgressCircular>
+                            }
+                        </MudChip>
+                    </CellTemplate>
+                </PropertyColumn>
+                <PropertyColumn Property="x => x.Created_At" Title="تاریخ ایجاد">
+                    <CellTemplate>
+                        <MudText>@(((DateTime)context.Item.Created_At).ToString("yyyy/MM/dd"))</MudText>
+                    </CellTemplate>
+                </PropertyColumn>
+                <TemplateColumn CellClass="d-flex justify-end" Title="عملیات">
+                    <CellTemplate>
+                        <MudButtonGroup Size="Size.Small" Color="Color.Primary" OverrideStyles="true" Variant="Variant.Text">
+                            <MudIconButton OnClick="(()=>OpenChangePwdDialog(context.Item.Id))" Size="Size.Small" Color="Color.Warning" Icon="fal fa-lock" Class="TableOprButtons"></MudIconButton>
+                            <MudIconButton Href="@($"/user/edit/{context.Item.Id}")" Size="Size.Small" Color="Color.Warning" Icon="fal fa-edit" Class="TableOprButtons"></MudIconButton>
+                            <MudIconButton OnClick="(()=>OpenDialog(context.Item.Id))" Size="Size.Small" Color="Color.Error" Icon="fal fa-trash" Class="TableOprButtons"></MudIconButton>
+
+
+                        </MudButtonGroup>
+
+                    </CellTemplate>
+                </TemplateColumn>
+            </Columns>
+        </MudDataGrid>
+
+
+    </MudPaper>
+    <MudDialog Visible="ChangePwdDialog" Options="DialogOptions">
+        <DialogContent>
+            <MudCard Elevation="0">
+                <MudCardHeader>
+                    <b>Change user password</b>
+                    <MudSpacer />
+                    <MudButton Color="Color.Info" OnClick="(()=>ChangePwdDialog = false)" Variant="Variant.Text" EndIcon="fal fa-times" IconSize="Size.Medium"></MudButton>
+                </MudCardHeader>
+                <MudCardContent>
+                    <MudForm>
+                        <MudGrid>
+                            <MudItem xs="12" lg="12">
+                                <MudTextField Required InputType="InputType.Text" Variant="Variant.Outlined" Style="direction:ltr" Margin="Margin.Dense" @bind-Value="pwdDto.NewPwd" Class="mud-rtl" T="string" Label="رمز عبور جدید"></MudTextField>
+                            </MudItem>
+                            <MudItem xs="12" lg="12">
+                                <MudTextField Required InputType="InputType.Text" Variant="Variant.Outlined" Style="direction:ltr" Margin="Margin.Dense" @bind-Value="pwdDto.Confirm" Class="mud-rtl" T="string" Label="تکرار رمز عبور "></MudTextField>
+                            </MudItem>
+                            <MudItem xs="12" lg="12">
+                                <MudButton Disabled="@_saving" @onclick="UpdatePassword" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+                                    @if (_saving)
+                                    {
+                                        <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+                                    }
+                                    else
+                                    {
+                                        <MudText>ذخیره</MudText>
+                                    }
+                                </MudButton>
+                            </MudItem>
+                        </MudGrid>
+                    </MudForm>
+                </MudCardContent>
+            </MudCard>
+        </DialogContent>
+    </MudDialog>
+</MudContainer>
+@code {
+    [Inject] private IDialogService _dialogSrvc { get; set; }
+    HttpClientHelper<UserDto> hch = new HttpClientHelper<UserDto>(UIHelper.ApiUrl());
+    HttpClient _hc;
+    public bool _disabling { get; set; } = false;
+    public bool _banning { get; set; } = false;
+    private List<string> _events = new();
+    UserDto[] _dataList = [];
+    private bool _visible;
+    private bool _loading = false;
+    private int ItemIdToDelete { get; set; } = 0;
+    private bool ChangePwdDialog { get; set; } = false;
+    private ResetPwdDto pwdDto { get; set; } = new();
+    public bool _saving { get; set; } = false;
+    public DialogOptions DialogOptions = new DialogOptions()
+        {
+            BackdropClick = true,
+            CloseButton = false,
+            MaxWidth = MaxWidth.Large
+        };
+    private async void UpdatePassword()
+    {
+        hch.SetToken(await USR.GetToken());
+        _saving = true;
+        var res = await hch.Post(pwdDto, "User/ResetPwd");
+        _saving = false;
+        pwdDto = new ResetPwdDto();
+        _snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
+        StateHasChanged();
+        Thread.Sleep(1500);
+        ChangePwdDialog = false;
+    }
+    private void OpenChangePwdDialog(int id)
+    {
+        pwdDto.Id = id;
+        ChangePwdDialog = true;
+    }
+    private async void ToggleDisabled(int id)
+    {
+        _disabling = true;
+        var res = await hch.Post(new { Id = ItemIdToDelete }, $"User/Disable?Id={id}");
+        _snackbar.Add(res.Msg, (res.Status == ResponseObjectStatusEnum.Error || res.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+        if (res.Status == ResponseObjectStatusEnum.Success)
+        {
+            _visible = false;
+            StateHasChanged();
+            LoadData();
+        }
+        _disabling = false;
+    }
+    private async void ToggleBanned(int id)
+    {
+        _banning = true;
+        var res = await hch.Post(new { Id = ItemIdToDelete }, $"User/Bann?Id={id}");
+        _snackbar.Add(res.Msg, (res.Status == ResponseObjectStatusEnum.Error || res.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+        if (res.Status == ResponseObjectStatusEnum.Success)
+        {
+            _visible = false;
+            StateHasChanged();
+            LoadData();
+        }
+        _banning = false;
+
+    }
+    private async void OpenDialog(int id)
+    {
+
+        ItemIdToDelete = id;
+        var conf = await _dialogSrvc.Show<DeleteConfirm>().Result;
+        if (!conf.Canceled)
+        {
+            DeleteItem();
+        }
+    }
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        hch.SetToken(await USR.GetToken());
+        _hc = hch.Instance();
+        LoadData(true);
+        await base.OnInitializedAsync();
+    }
+
+    private async void DeleteItem()
+    {
+        var res = await hch.Post(new { Id = ItemIdToDelete }, $"User/Delete?Id={ItemIdToDelete}");
+        _snackbar.Add(res.Msg, (res.Status == ResponseObjectStatusEnum.Error || res.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
+        if (res.Status == ResponseObjectStatusEnum.Success)
+        {
+            _visible = false;
+            StateHasChanged();
+            LoadData();
+        }
+
+    }
+    private async void LoadData(bool changed = false)
+    {
+        _loading = true;
+        var data = await _hc.GetFromJsonAsync<UserDto[]>("User");
+        _dataList = data;
+        _loading = false;
+        StateHasChanged();
+
+    }
+
+
+
+}

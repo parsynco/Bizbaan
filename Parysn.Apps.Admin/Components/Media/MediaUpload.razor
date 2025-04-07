@@ -1,0 +1,235 @@
+﻿@using Parsyn.Apps.Company.Data.Models.Dtos.Catalog
+@using System.Diagnostics
+@using Parsyn.Apps.Company.Data.Models.Dtos.UIDtos
+@using Parsyn.Apps.Company.Data.Models.Entity.Config
+@using Parsyn.Apps.Company.Service.Utiles.Enums
+@using Parysn.Apps.Admin.Components.Dialogs.Media
+@inject IJSRuntime jsRuntime
+<MudCard>
+	<MudCardContent>
+
+		<MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+			<MudText>آپلود چندرسانه ای</MudText>
+			<MudSpacer />
+			<MudButton Size="Size.Small" IconSize="Size.Small" Href="/apps/filemanager/media" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
+				<MudText>بازگشت</MudText>
+			</MudButton>
+		</MudCardHeader>
+		<MudContainer Class="mt-3">
+			<MudGrid>
+				<MudItem lg="7" xl="7" md="8" sm="12">
+					@if (model.MediaFileType == ValidMimeTypes.UIMediaType.Photo.ToString())
+					{
+						<MudStack Style="width: 100%">
+							<div class="d-flex align-center justify-center my-3">
+								<MudSwitch @bind-Value="AutoResizeImage" Color="Color.Primary" T="bool" Label="تولید اتوماتیک سایز های استاندارد برای عکس"></MudSwitch>
+							</div>
+							<MudFileUpload T="IBrowserFile"
+										   Accept="@(".jpg,.jpeg,.png,.webp")"
+										   OnFilesChanged="FileSelected"
+										   Hidden="@false"
+										   InputClass="absolute mud-width-full mud-height-full overflow-hidden z-10"
+										   InputStyle="opacity:0"
+										   tabindex="-1">
+
+								<ActivatorContent>
+									<MudPaper Height="300px" Class="pa-2 d-flex align-items-center justify-content-center border-dashed relative" Outlined="true">
+										<MudText Style="width:100%;height:100%" Class="d-flex align-center justify-center">فایل را بکشید یا کلیک کنید</MudText>
+										<MudImage Src="@tempImageShow" Style="width:100%;height:100%;top:0;right:0" Class="absolute" />
+
+									</MudPaper>
+
+								</ActivatorContent>
+
+							</MudFileUpload>
+							@if (_fileSelected)
+							{
+								<div class="d-flex align-center justify-center my-3">
+									<MudButton FullWidth OnClick="UploadFile" Class="custom-font" Variant="Variant.Outlined" Color="Color.Primary" EndIcon="fal fa-upload">آپلود</MudButton>
+								</div>
+								<MudText Color="Color.Error">
+									برای انتخاب مجدد عکس ، بر روی عکس انتخابی کلیک کنید.
+								</MudText>
+							}
+
+
+						</MudStack>
+
+					}
+					else
+					{
+						<MudTextField T="string" InputType="InputType.Text" @bind-Value="model.OrginalFilePath" Label="آیدی ویدئو در سرویس Youtube" HelperText="آیدی ویدئو : پس از آپلود ویدئو در سرویس اشتراک ویدئو Youtube ، یک آیدی به ویدئو آپلود شده شما تعلق میگیرد ، با وارد کردن آیدی ویدئو مورد نظر در صورت صحیح بودن ویدئو را در کادر زیر خواهید دید." Class="mud-ltr" Margin="Margin.Dense" Variant="Variant.Outlined" />
+						<MudStack Class="mt-3">
+							<youtube-video width="640"
+										   height="360"
+										   src="@($"https://www.youtube.com/watch?v={model.OrginalFilePath}")"
+										   autoplay
+										   controls />
+
+						</MudStack>
+					}
+
+				</MudItem>
+				<MudItem lg="5" xl="5" md="4" sm="12">
+					<MudForm>
+						<MudGrid>
+							<MudItem Class="d-flex align-center" xs="12" lg="5" xl="5">
+								<MudInputLabel>نوع چندرسانه :</MudInputLabel>
+							</MudItem>
+							<MudItem xs="12" lg="7" xl="7">
+								<MudToggleGroup ValuesChanged="ChangeMediaType" Size="Size.Small" T="string" SelectionMode="SelectionMode.SingleSelection" @bind-Value="model.MediaFileType" Color="Color.Primary" CheckMark FixedContent>
+									<MudToggleItem Value="@(ValidMimeTypes.UIMediaType.Video.ToString())" Text="ویدئو" />
+									<MudToggleItem Value="@(ValidMimeTypes.UIMediaType.Photo.ToString())" Text="عکس" />
+								</MudToggleGroup>
+							</MudItem>
+							<MudItem>
+								<MudSelect T="int" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.CatId" Class="mud-rtl" Label="دسته بندی">
+									<MudSelectItem Value="0">انتخاب دسته بندی</MudSelectItem>
+									@foreach (var item in mediaCats)
+									{
+										<MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
+									}
+								</MudSelect>
+							</MudItem>
+							<MudItem>
+								<MudTextField T="string" @bind-Value="model.Name" Label="نام چندرسانه ای " HelperText="از این فیلد برای ایجاد سایت مپ برای چندرسانه ای استفاده میگردد.سعی کنید از کلیدواژه مرتبط با چندرسانه استفاده کنید." Class="mud-rtl" Margin="Margin.Dense" Variant="Variant.Outlined" />
+							</MudItem>
+							@if (model.MediaFileType == ValidMimeTypes.UIMediaType.Photo.ToString())
+							{
+								<MudItem>
+									<MudTextField T="string" Disabled="@(!_fileUploaded)" @bind-Value="model.AltText" Label="عنوان جایگزین عکس" HelperText="محتوای داخل این فیلد زمانی که چندرسانه به هر دلیلی در دسترس نباشد ، نشان داده خواهد شد." Class="mud-rtl" Margin="Margin.Dense" Variant="Variant.Outlined" />
+								</MudItem>
+
+								<MudItem>
+									<MudTextField T="string" Disabled="@(!_fileUploaded)" @bind-Value="model.MediaTitle" Label="عنوان کوتاه " HelperText="یک متن کوتاه به عنوان موضوع عکس در این فیلد بنویسید.زمانی که چندرسانه در صفحه نمایش داده میشود با ورود موس روی عکس محتوای این فیلد نمایش داده خواهد شد." Class="mud-rtl" Margin="Margin.Dense" Variant="Variant.Outlined" />
+								</MudItem>
+							}
+							else
+							{
+								<MudItem xs="12" md="12" lg="12" xl="12">
+									<MediaSelector OnMediaSelected="mediaSelected" Title="انتخاب فایل عکس برای پستر ویدئو" DisplayInline="false"></MediaSelector>
+								</MudItem>
+							}
+						</MudGrid>
+					</MudForm>
+				</MudItem>
+			</MudGrid>
+		</MudContainer>
+
+	</MudCardContent>
+	<MudCardActions>
+		<MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+			@if (_saving)
+			{
+				<MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+			}
+			else
+			{
+				<MudText>ذخیره</MudText>
+			}
+		</MudButton>
+
+	</MudCardActions>
+</MudCard>
+
+@code {
+	[Parameter]
+	public bool RedirectAfterUpload { get; set; } = true;
+	private bool _saving { get; set; } = false;
+	private MediaDto model = new MediaDto();
+	private bool _fileSelected { get; set; } = false;
+	private bool _fileUploaded { get; set; } = false;
+	public bool AutoResizeImage { get; set; } = false;
+	public UploadFileDto _uploadObj { get; set; } = new();
+	private IBrowserFile? SelectedFile { get; set; }
+	private string VideoPoster { get; set; }
+	public string tempImageShow = "data:image/jpeg;base64,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";
+	HttpClientHelper<MediaDto> hch = new HttpClientHelper<MediaDto>(UIHelper.ApiUrl());
+	HttpClient _hc;
+	public List<MediaCatModel> mediaCats = [];
+	protected override async Task OnParametersSetAsync() => await jsRuntime.InvokeVoidAsync("InitVideo");
+	protected override async Task OnInitializedAsync()
+	{
+		hch.SetToken(await USR.GetToken());
+		_hc = hch.Instance();
+		await LoadCategories();
+		await base.OnInitializedAsync();
+	}
+	private async Task LoadCategories()
+	{
+		mediaCats = await _hc.GetFromJsonAsync<List<MediaCatModel>>("MediaCat");
+		StateHasChanged();
+	}
+	private async void RegisterModel()
+	{
+		_saving = true;
+		hch.SetToken(await USR.GetToken());
+		var res = await hch.Post(model, "fm");
+		_saving = false;
+		_snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
+		StateHasChanged();
+		// model = new Media();
+
+		//
+		Thread.Sleep(1500);
+		if (RedirectAfterUpload)
+			_nv.NavigateTo("/apps/filemanager/media");
+		else
+		{
+			model = new MediaDto();
+			StateHasChanged();
+		}
+
+	}
+	private void ChangeMediaType()
+	{
+		StateHasChanged();
+	}
+	private async void UploadFile()
+	{
+		_uploadObj.AutoResize = AutoResizeImage;
+		_uploadObj.IsImage = model.MediaFileType == ValidMimeTypes.UIMediaType.Photo.ToString();
+		hch.SetToken(await USR.GetToken());
+		var result = await hch.Post(_uploadObj, "fm/UploadSingle");
+		if (UIHelper.HandleResponse(result, _snackbar) == ResponseObjectStatusEnum.Success)
+		{
+			var obj = JsonConvert.DeserializeObject<Parsyn.Apps.Company.Data.Models.Dtos.Catalog.JsonFileSize>(result.Data.ToString());
+			model.JsonFileSize = JsonConvert.SerializeObject(obj);
+			_fileUploaded = true;
+			model.OrginalFilePath = obj.OrginalSize;
+			StateHasChanged();
+		}
+		Console.WriteLine(JsonConvert.SerializeObject(result));
+	}
+	private async void FileSelected(InputFileChangeEventArgs e)
+	{
+		var file = e.File;
+		if (file is not null)
+		{
+			SelectedFile = file;
+			var type = file.ContentType;
+
+			tempImageShow = await PopulateImageFromStream(file);
+			_fileSelected = true;
+			StateHasChanged();
+			Console.WriteLine(tempImageShow);
+		}
+	}
+	private async Task<string> PopulateImageFromStream(IBrowserFile file)
+	{
+		MemoryStream ms = new MemoryStream();
+		await file.OpenReadStream(file.Size).CopyToAsync(ms);
+		byte[] byteArray = ms.ToArray();
+		var b64String = Convert.ToBase64String(byteArray);
+		_uploadObj.Content = byteArray;
+		_uploadObj.FileType = file.ContentType;
+		_uploadObj.FileName = file.Name;
+		return "data:image/jpeg;base64," + b64String;
+	}
+	private async void mediaSelected(Tuple<int, string> selectedItem)
+	{
+		model.Poster = UIHelper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";
+		StateHasChanged();
+	}
+
+}

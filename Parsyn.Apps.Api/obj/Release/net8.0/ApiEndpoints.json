@@ -1,0 +1,1133 @@
+[
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdCategoryController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/AdCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "Category GET ALL"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdCategoryController",
+    "Method": "Add",
+    "RelativePath": "api/admin/AdCategory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Bizbaan.Ad.AdCategoryModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdCategoryController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/AdCategory/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdCategoryController",
+    "Method": "Edit",
+    "RelativePath": "api/admin/AdCategory/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Bizbaan.Ad.AdCategoryModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdCategoryController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/AdCategory/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdCategoryController",
+    "Method": "GetAllL1",
+    "RelativePath": "api/admin/AdCategory/l1",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "Category GET ALL L1"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdCategoryController",
+    "Method": "GetAllL2",
+    "RelativePath": "api/admin/AdCategory/l2",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "Category GET ALL L2"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdsController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/Ads",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "Ads GET ALL"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdsController",
+    "Method": "Add",
+    "RelativePath": "api/admin/Ads",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Bizbaan.Ad.AdModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdsController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/Ads/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdsController",
+    "Method": "Edit",
+    "RelativePath": "api/admin/Ads/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Bizbaan.Ad.AdModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdsController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/Ads/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdsImagesController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/AdsImages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "AdsImages GET ALL"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdsImagesController",
+    "Method": "Add",
+    "RelativePath": "api/admin/AdsImages",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Bizbaan.Ad.AdImageModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdsImagesController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/AdsImages/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdsImagesController",
+    "Method": "Edit",
+    "RelativePath": "api/admin/AdsImages/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Bizbaan.Ad.AdImageModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdsImagesController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/AdsImages/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ArticleController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/Article",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "ARTICLE  GET ALL"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ArticleController",
+    "Method": "Add",
+    "RelativePath": "api/admin/Article",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Landing.ArticleModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ArticleController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/Article/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ArticleController",
+    "Method": "Edit",
+    "RelativePath": "api/admin/Article/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Landing.ArticleModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ArticleController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/Article/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ArticleCatController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/ArticleCat",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "ARTICLE CAT GET ALL"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ArticleCatController",
+    "Method": "Add",
+    "RelativePath": "api/admin/ArticleCat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Landing.ArticleCategoryModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ArticleCatController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/ArticleCat/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ArticleCatController",
+    "Method": "Edit",
+    "RelativePath": "api/admin/ArticleCat/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Landing.ArticleCategoryModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ArticleCatController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/ArticleCat/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Auth.AuthController",
+    "Method": "Signin",
+    "RelativePath": "api/admin/Auth",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Parsyn.Apps.Company.Data.Models.Dtos.AuthDtos.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.FaqController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/Faq",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "FAQ GET ALL"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.FaqController",
+    "Method": "Add",
+    "RelativePath": "api/admin/Faq",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Landing.FaqModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.FaqController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/Faq/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.FaqController",
+    "Method": "Edit",
+    "RelativePath": "api/admin/Faq/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Landing.FaqModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.FaqController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/Faq/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.FaqCatController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/FaqCat",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "FAQCATEGORY GET ALL"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.FaqCatController",
+    "Method": "Add",
+    "RelativePath": "api/admin/FaqCat",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Landing.FaqCatModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.FaqCatController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/FaqCat/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.FaqCatController",
+    "Method": "Edit",
+    "RelativePath": "api/admin/FaqCat/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Landing.FaqCatModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.FaqCatController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/FaqCat/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Media.FileManagerController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/fm",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Media.FileManagerController",
+    "Method": "SaveMedia",
+    "RelativePath": "api/admin/fm",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Parsyn.Apps.Company.Data.Models.Dtos.Catalog.MediaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Media.FileManagerController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/fm/delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Media.FileManagerController",
+    "Method": "GetImage",
+    "RelativePath": "api/admin/fm/dn/{id}/{size}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "size",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Media.FileManagerController",
+    "Method": "UploadSnigle",
+    "RelativePath": "api/admin/fm/UploadSingle",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ufd",
+        "Type": "Parsyn.Apps.Company.Data.Models.Dtos.UIDtos.UploadFileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Index.IndexController",
+    "Method": "UpdateSeo",
+    "RelativePath": "api/admin/Index",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seo",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Base.SeoModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Index.IndexController",
+    "Method": "GetSeo",
+    "RelativePath": "api/admin/Index/GetByEntityId",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "seo",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Base.SeoModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.PageController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/Page",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "PAGES GET ALL"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.PageController",
+    "Method": "Add",
+    "RelativePath": "api/admin/Page",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Landing.PagesModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.PageController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/Page/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.PageController",
+    "Method": "Edit",
+    "RelativePath": "api/admin/Page/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Landing.PagesModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.PageController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/Page/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.PageController",
+    "Method": "GetByName",
+    "RelativePath": "api/admin/Page/GetByName",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.PermissionController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/Permission",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "PERMISSIONS GET ALL"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.PermissionController",
+    "Method": "Add",
+    "RelativePath": "api/admin/Permission",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.User.PermissionModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.PermissionController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/Permission/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.PermissionController",
+    "Method": "Edit",
+    "RelativePath": "api/admin/Permission/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.User.PermissionModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.PermissionController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/Permission/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.PermissionController",
+    "Method": "GetLevelOne",
+    "RelativePath": "api/admin/Permission/GetLevelOne",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "PERMISSIONS GET NO PARENTS"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.RoleController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/Role",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "ROLE GET ALL"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.RoleController",
+    "Method": "Add",
+    "RelativePath": "api/admin/Role",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.User.RoleModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.RoleController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/Role/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.RoleController",
+    "Method": "Edit",
+    "RelativePath": "api/admin/Role/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.User.RoleModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.RoleController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/Role/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.SeoController",
+    "Method": "Check",
+    "RelativePath": "api/admin/Seo/Check",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "url",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.UserController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/User",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "ADMIN USER GETALL"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.UserController",
+    "Method": "Add",
+    "RelativePath": "api/admin/User",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Dtos.UserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.UserController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/User/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.UserController",
+    "Method": "Edit",
+    "RelativePath": "api/admin/User/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Dtos.UserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.UserController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/User/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ZipController",
+    "Method": "GetAll",
+    "RelativePath": "api/admin/Zip",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "q",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "ZIPCODE GET ALL"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ZipController",
+    "Method": "Add",
+    "RelativePath": "api/admin/Zip",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Bizbaan.Location.ZipModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ZipController",
+    "Method": "Delete",
+    "RelativePath": "api/admin/Zip/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ZipController",
+    "Method": "Edit",
+    "RelativePath": "api/admin/Zip/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Parsyn.Apps.Company.Data.Models.Entity.Bizbaan.Location.ZipModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ZipController",
+    "Method": "GetById",
+    "RelativePath": "api/admin/Zip/GetById",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ZipController",
+    "Method": "Paged",
+    "RelativePath": "api/admin/Zip/paged/{page}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "ZIPCODE GET ALL FILTERED"
+  },
+  {
+    "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.ZipController",
+    "Method": "Pages",
+    "RelativePath": "api/admin/Zip/pages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "ZIPCODE GET PAGE COUNT"
+  }
+]

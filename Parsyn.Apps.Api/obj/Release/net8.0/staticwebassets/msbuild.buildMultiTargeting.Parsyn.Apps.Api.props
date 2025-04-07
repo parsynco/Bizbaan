@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Parsyn.Apps.Api.props" />
+</Project>

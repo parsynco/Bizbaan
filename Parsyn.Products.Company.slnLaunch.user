@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Parysn.Apps.Admin\\Parysn.Apps.Admin.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Parsyn.Apps.Api\\Parsyn.Apps.Api.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

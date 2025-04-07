@@ -1,0 +1,464 @@
+﻿@using Parsyn.Apps.Company.Services.Interfaces.Bizbaan
+@using Parsyn.Apps.Web.Helpers
+@model IndexSectionModel?
+@inject IAdCategoryIface adcategory
+@inject IAdIface ads
+@{
+    ViewData["Title"] = "صفحه نخست";
+
+    var mainCategories = adcategory.GetLevelOne();
+    var nestedCategory = adcategory.GetHierichal();
+    var newsetAds = ads.GetNewest().ToArray();
+    int resultCount = newsetAds is null ? 0 : newsetAds.Count();
+    // var regedRegions = ads.GetRegisteredRegions();
+    var specialAds = ads.FilterByAdType(true);
+
+    UrlHelper _url = new UrlHelper();
+    bool firstItemSelected = false;
+
+}
+@section Seo {
+
+    @await Component.InvokeAsync("Seo", new SeoInjectModel()
+{
+    SeoId = 15
+})
+}
+<section class="main-section">
+    <div class="top-logo-big">
+        <h2>بیزبان</h2>
+        <h5>بیزبان، میزبان صمیمی بیزینس ها</h5>
+    </div>
+    <div class="fluid-search-section nonMobile">
+        <div class="fluid-search-categories">
+            <div class="mdl-main-container">
+                <header class="mdl-header">
+                    <h1>
+                        همه دسته بندی ها
+                    </h1>
+                </header>
+                <div class="mdl-content">
+                    <div class="mdl-main-content">
+                        <div class="mdl-main-section">
+                            @foreach (var item in nestedCategory)
+                            {
+                                <section class="mdl-section mdl-section-l1" id="mdlsection@(item.Id)" style="border-color:@item.Color !important">
+                                    <div onclick="Toggle('mdlsection@(item.Id)','l1')" class="mdl-list-header parent" onMouseOver="this.style.backgroundColor='@item.Color';" onMouseOut="this.style.backgroundColor='transparent'">
+                                        <div class="mdl-box-icon">
+                                            <i style="color:@item.Color" class="@(item.Image) cat-icon"></i>
+                                        </div>
+                                        <div class="mdl-box-text">
+                                            <h3 class="parent-title">
+                                                @item.Title
+                                            </h3>
+                                        </div>
+                                        <div class="mdl-icon2" onclick="Toggle('mdlsection@(item.Id)','l1')">
+                                            <i class="nested-l1 fal fa-chevron-left"></i>
+                                        </div>
+                                    </div>
+                                    <div class="expandable-panel l1">
+                                        @if (item.Childs != null && item.Childs.Any())
+                                        {
+                                            @foreach (var itemL2 in item.Childs)
+                                            {
+                                                var id = "";
+                                                if (!firstItemSelected)
+                                                {
+                                                    id = "firstItemToSelect";
+                                                    firstItemSelected = false;
+                                                }
+                                                <section class="mdl-section mdl-section-l3" style="border-color:transparent !important">
+                                                    <a onMouseOver="this.style.color='@item.Color !important';" 
+                                                    onMouseOut="this.style.color='rgb(64 ,64, 64)'" 
+                                                    href="javascript:void(0)" 
+                                                    data-itemid="@itemL2.Id" 
+                                                    id="@id" 
+                                                    onclick="SetCategoryOnDesktop(@itemL2.Id,'@(itemL2.Title)')" 
+                                                    style="border-color:transparent !important" 
+                                                    class="mdl-section">
+                                                        <div class="mdl-list-header">
+                                                            <div class="mdl-box-text">
+                                                                <h3 style="color: rgb(64,64, 64)" onMouseOver="this.style.color='@item.Color';" onMouseOut="this.style.color='rgb(64 ,64, 64)'">
+                                                                    @itemL2.Title
+                                                                </h3>
+                                                            </div>
+
+                                                        </div>
+                                                    </a>
+                                                </section>
+                                            }
+                                        }
+                                    </div>
+                                </section>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="fluid-search-options">
+            <header class="mdl-header">
+                <h1>
+                    جستجوی سریع بیزینس
+                </h1>
+            </header>
+            <div class="mdl-content-form">
+                <input id="CATIDD" type="hidden" placeholder="category id" />
+                <input id="ADTITLED" type="text" placeholder="بیزینس" onkeypress="DisableTitleIgnoring();" />
+                <div class="grouped-input">
+                    <input id="REGIOND" type="text" class="ltr-dir" onkeypress="return isNumberKey(event)" placeholder="Zipcode" />
+                    <span onclick="GetGeoLocation();">
+                        <i class="fal fa-location-arrow"></i>
+                    </span>
+                </div>
+                <div class="mile-slider">
+                    <div class="mile-slider-title">
+                        تعیین شعاع جستجو بر حسب مایل در اطراف زیپ کد تعریف شده در بالا : 
+                    </div>
+                    <input type="range"
+                           class="rangeslider"
+                           name="participants"
+                           step="5"
+                           min="5"
+                           max="50"
+                           value="5" id="REGIOND">
+
+                </div>
+                <div onclick="searchAdDesktop()" class="search-btn-holder">
+                    <i class="fal fa-search"></i>
+                    <span>جستجو</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="fluid-search-options-section">
+            <div class="fluid-search-result-filter">
+                <div class="filters-holder ltr-dir">
+                    <i class="fal fa-filter"></i>
+                    <span>Filter results </span>
+                    <div class="filters">
+                    </div>
+
+                </div>
+            </div>
+            <div class="fluid-search-result ltr-dir">
+                <div class="search-result-loading" id="res-loading">
+                    <img src="./assets/biz/img/icon/loading.svg" alt="loading" title="loading" />
+                </div>
+                <div class="fluid-search-items" id="desktop-search-result">
+
+                    @if (resultCount > 0)
+                    {
+                        @foreach (var item in newsetAds)
+                        {
+
+                            <a href="/@item.Seo.Url" class="result-item">
+                                <div class="result-item-img-holder">
+                                    <img src="@item.Logo" title="@item.Title" />
+                                </div>
+                                <div class="result-item-description-holder">
+
+                                    <h4 class="result-item-title-fa">@item.Title</h4>
+                                    <div class="result-item-subtitle">@item.Category.Title</div>
+                                    <div class="result-item-subtitle1">@item.CityName , @item.ProivinceName</div>
+                                </div>
+                                <h4 class="result-item-title">@item.TitleEn</h4>
+                            </a>
+                        }
+                    }
+                    @if (resultCount < 4 && !IsMobileDevice())
+                    {
+                        @for (int i = 0; i < (4 - resultCount); i++)
+                        {
+                            <a href="javascript:void(0)" class="result-item empty">
+                                نتیجه جستجو
+                            </a>
+                        }
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div data-aos="fade-up" class="row2-mainsection onMobile">
+        <div class="r2-ms-iconright">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="top-slider-holder swiper">
+            <input type="hidden" id="CATID" />
+            <div class="top-slider-wrapper swiper-wrapper">
+                @if (mainCategories != null && mainCategories.Any())
+                {
+                    @foreach (var item in mainCategories)
+                    {
+                        <div data-aos="fade-up" data-itemid="@item.Id" class="r2-ms-box1 top-slider-item swiper-slide" style="border-color:@item.Color !important">
+                            <h3>
+                                @item.Title
+                            </h3>
+                            <div class="r2-ms-box2" style="border-color:@item.Color !important">
+                                <i class="@item.Image" style="color:@item.Color" title="@item.Seo.Title"></i>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+        <div class="r2-ms-iconleft">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+    </div>
+    <div class="row3-mainsection onMobile">
+        <a href="javascript:void(0)" id="showModal">
+            همه دسته بندی ها
+        </a>
+    </div>
+    <div class="row4-mainsection onMobile">
+        <input id="ADTITLE" type="text" placeholder="بیزینس" />
+        <div class="r4-search"></div>
+
+    </div>
+    <div class="row5-mainsection onMobile">
+        <div class="grouped-input">
+            <input id="REGION" type="text" class="ltr-dir region" placeholder="Zip code , State" />
+            <button onclick="GetGeoLocation();" class="get-user-location"><i class="fal fa-location-arrow"></i></button>
+        </div>
+        <div class="srchButton" onclick="SearchAd();">
+            <img src="./assets/biz/img/icon/search2.png" />
+        </div>
+        <div class="mile-slider">
+            <div class="mile-slider-title">
+                تعیین شعاع جستجو بر حسب مایل در اطراف زیپ کد تعریف شده در بالا :
+            </div>
+            <input type="range"
+                   class="rangeslider"
+                   name="participants"
+                   step="5"
+                   min="5"
+                   max="50"
+                   value="5" id="REGIOND">
+
+        </div>
+    </div>
+    <div class="row6-main-box onMobile" id="searchResult">
+    </div>
+</section>
+<section data-aos="fade-up" class="page2">
+    <div class="page2-row1">
+        <img src="@Model.Sec2.Image" />
+        <h3 class="kalameh-font big-text">جستجو و دسترسی به بانک مشاغل</h3>
+        <p class="text-passive-l2">
+            @Model.Sec2.Description
+        </p>
+        <div class="page2-row2">
+            <section>
+                <div data-aos="fade-up">
+                    <span class="@Model.Sec2.Collections[0].Icon"></span>
+                    <p>
+                        @Model.Sec2.Collections[0].Title
+                    </p>
+                </div>
+                <div data-aos="fade-up">
+                    <span class="@Model.Sec2.Collections[1].Icon"></span>
+                    <p>
+                        @Model.Sec2.Collections[1].Title
+                    </p>
+                </div>
+            </section>
+            <section>
+                <div data-aos="fade-up">
+                    <span class="@Model.Sec2.Collections[2].Icon"></span>
+                    <p>
+                        @Model.Sec2.Collections[2].Title
+                    </p>
+                </div>
+                <div>
+                    <span class="@Model.Sec2.Collections[3].Icon"></span>
+                    <p>
+                        @Model.Sec2.Collections[3].Title
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+<section data-aos="fade-up" class="page3">
+    <p class="kalameh-font big-text">
+        چه بیزینس هایی بیشتر جستجو شدند؟
+    </p>
+    <section class="page3-main-box">
+        @if (newsetAds != null && newsetAds.Count() > 3)
+        {
+            <section>
+                <a href="/@(newsetAds[0].Seo.Url)" class="p3-box1">
+                    <img src="@newsetAds[0].Logo" title="@newsetAds[0].Title" />
+                    <div class="overly">
+                        <span>@newsetAds[0].Title</span>
+                        @* <span>@newsetAds[0].Region.Title</span> *@
+                    </div>
+                </a>
+                <a href="/@(newsetAds[1].Seo.Url)" class="p3-box2">
+                    <img src="@newsetAds[1].Logo" title="@newsetAds[1].Title" />
+                    <div class="overly">
+                        <span>@newsetAds[1].Title</span>
+                        @* <span>@newsetAds[1].Region.Title</span> *@
+                    </div>
+                </a>
+            </section>
+            <section>
+                <a href="/@(newsetAds[2].Seo.Url)" class="p3-box2">
+                    <img src="@newsetAds[2].Logo" title="@newsetAds[2].Title" />
+                    <div class="overly">
+                        <span>@newsetAds[2].Title</span>
+                        @* <span>@newsetAds[2].Region.Title</span> *@
+                    </div>
+                </a>
+                <a href="/@(newsetAds[3].Seo.Url)" class="p3-box1">
+                    <img src="@newsetAds[3].Logo" title="@newsetAds[3].Title" />
+                    <div class="overly">
+                        <span>@newsetAds[3].Title</span>
+                        @* <span>@newsetAds[3].Region.Title</span> *@
+                    </div>
+                </a>
+
+            </section>
+        }
+
+    </section>
+</section>
+<section data-aos="fade-up" class="page5">
+    <section>
+        <img src="@Model.Sec4.Image" />
+        <p>
+            @Model.Sec4.Description
+        </p>
+        <div>
+            <input require id="subscribe" type="email" placeholder="Email" />
+            <a href="javascript:Subscribe();">Subscribe</a>
+        </div>
+    </section>
+</section>
+<section data-aos="fade-up" class="page6">
+    <section>
+        <div class="page4-row1">
+            <h2>
+                @Model.Sec5.Description
+            </h2>
+            <span class="tagged">
+                @Model.Sec5.ButtonTitle
+            </span>
+        </div>
+        <div class="page4-row2">
+            @foreach (var item in specialAds)
+            {
+                <a data-aos="fade-up" href="/@(item.Seo.Url)" title="@item.Seo.Title" class="special-box">
+                    <div class="special-box-img-holder">
+                        <img src="@item.Logo" title="@item.Title" alt="@item.Title" />
+                    </div>
+                    <div class="special-box-content">
+
+                        <h6 class="special-box-subtitle">
+                            @item.Title
+                        </h6>
+                        <p class="special-box-description">
+                            <span class="special-box-desc-address">@item.CityName , @item.ProivinceName</span>
+
+                        </p>
+                    </div>
+                    <h4 class="special-box-title">
+                        @item.TitleEn
+                    </h4>
+                </a>
+
+            }
+            @if (specialAds.Count < 6 && !IsMobileDevice())
+            {
+                @for (int i = 0; i < (6 - specialAds.Count); i++)
+                {
+                    <a href="javascript:void(0)" title="Its your time!" class="special-box empty">
+                        محل بیزنس شما
+                    </a>
+                }
+            }
+        </div>
+    </section>
+</section>
+
+<div class="modal-category onMobile" id="mdl-category">
+    <div class="mdl-main-container">
+        <header class="mdl-header">
+            <h1>
+                همه دسته بندی ها
+            </h1>
+            <i id="closeModel" class="fal fa-times"></i>
+        </header>
+        <div class="mdl-content">
+            <div class="mdl-main-content">
+                <div class="mdl-main-section">
+                    @foreach (var item in nestedCategory)
+                    {
+                        <section class="mdl-section mdl-section-l1" id="mdlsection@(item.Id)" style="border-color:@item.Color !important">
+                            <div class="mdl-list-header" onclick="Toggle('mdlsection@(item.Id)','l1')" class="mdl-list-header parent" onMouseOver="this.style.backgroundColor='@item.Color';" onMouseOut="this.style.backgroundColor='transparent'">
+                                <div class="mdl-box-icon">
+                                    <i style="color:@item.Color" class="@(item.Image) cat-icon"></i>
+                                </div>
+                                <div class="mdl-box-text">
+                                    <h3 class="parent-title">
+                                        @item.Title
+                                    </h3>
+                                </div>
+                                <div class="mdl-icon2" onclick="Toggle('mdlsection@(item.Id)','l1')">
+                                    <i class="nested-l1 fal fa-chevron-left"></i>
+                                </div>
+                            </div>
+                            <div class="expandable-panel l1">
+                                @if (item.Childs != null && item.Childs.Any())
+                                {
+                                    @foreach (var itemL2 in item.Childs)
+                                    {
+                                        <section class="mdl-section mdl-section-l3" style="border-color:transparent !important">
+                                            <a href="javascript:void(0)"
+                                               onclick="SetCategoryAndCloseModal(@itemL2.Id,'@(itemL2.Title)')"
+                                               style="border-color:transparent !important"
+                                               class="mdl-section"
+                                               onMouseOver="this.style.color='@item.Color !important';"
+                                               onMouseOut="this.style.color='rgb(64 ,64, 64)'"
+                                               data-itemid="@itemL2.Id">
+                                                <div class="mdl-list-header">
+
+                                                    <div class="mdl-box-text">
+                                                        <h3 style="color:rgb(64,64,64)" onMouseOver="this.style.color='@item.Color';" onMouseOut="this.style.color='rgb(64 ,64, 64)'">
+                                                            @itemL2.Title
+                                                        </h3>
+                                                    </div>
+
+                                                </div>
+                                            </a>
+                                        </section>
+                                    }
+                                }
+                            </div>
+                        </section>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@functions {
+    private bool IsMobileDevice()
+    {
+        var userAgent = Context.Request.Headers["User-Agent"].ToString();
+        var mobileKeywords = new[] { "android", "iphone", "ipod", "ipad", "windows phone", "mobile" };
+
+        foreach (var keyword in mobileKeywords)
+        {
+            if (userAgent.IndexOf(keyword, StringComparison.OrdinalIgnoreCase) >= 0)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+}

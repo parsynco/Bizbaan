@@ -1,0 +1,80 @@
+﻿<MudDialog dir="rtl" Class="mud-rtl" Options="new DialogOptions(){FullScreen = true,CloseButton=true}" >
+    <DialogContent>
+        <MudGrid Style="gap:.5rem">
+            <MudItem Style="position:relative" xs="12" sm="6" md="4" lg="2" xl="2">
+                <MudImage Style="width:100% !important" Src="@(UIHelper.ApiUrl()+$"fm/dn/{SelectedItemId}/OS")"></MudImage>
+                <MudOverlay DarkBackground Absolute AutoClose="false" Visible>
+                    <MudText Typo="Typo.subtitle1" Class="text-white custom-font">سایز اورجینال</MudText>
+                    <MudButton OnClick="@(()=>{MediaSelected(SelectedItemId,"OS");})" FullWidth StartIcon="fal fa-check" Color="Color.Warning" Variant="Variant.Outlined" Size="Size.Small" Class="custom-font" IconSize="Size.Small">
+                        انتخاب
+                    </MudButton>
+                </MudOverlay>
+            </MudItem>
+            <MudItem Style="position:relative" xs="12" sm="6" md="4" lg="2" xl="2">
+                <MudImage Style="width:100% !important" Src="@(UIHelper.ApiUrl()+$"fm/dn/{SelectedItemId}/AR11")"></MudImage>
+                <MudOverlay DarkBackground Absolute AutoClose="false" Visible>
+                    <MudText Typo="Typo.subtitle1" Class="text-white custom-font">سایز 1:1</MudText>
+                    <MudButton OnClick="@(()=>{MediaSelected(SelectedItemId,"AR11");})" FullWidth StartIcon="fal fa-check" Color="Color.Warning" Variant="Variant.Outlined" Size="Size.Small" Class="custom-font" IconSize="Size.Small">
+                        انتخاب
+                    </MudButton>
+                </MudOverlay>
+            </MudItem>
+            <MudItem Style="position:relative" xs="12" sm="6" md="4" lg="2" xl="2">
+                <MudImage Style="width:100% !important" Src="@(UIHelper.ApiUrl()+$"fm/dn/{SelectedItemId}/AR169SMALL")"></MudImage>
+                <MudOverlay DarkBackground Absolute AutoClose="false" Visible>
+                    <MudText Typo="Typo.subtitle1" Class="text-white custom-font">سایز 16:9 کوچک</MudText>
+                    <MudButton OnClick="@(()=>{MediaSelected(SelectedItemId,"AR169SMALL");})" FullWidth StartIcon="fal fa-check" Color="Color.Warning" Variant="Variant.Outlined" Size="Size.Small" Class="custom-font" IconSize="Size.Small">
+                        انتخاب
+                    </MudButton>
+                </MudOverlay>
+            </MudItem>
+            <MudItem Style="position:relative" xs="12" sm="6" md="4" lg="2" xl="2">
+                <MudImage Style="width:100% !important" Src="@(UIHelper.ApiUrl()+$"fm/dn/{SelectedItemId}/AR169BIG")"></MudImage>
+                <MudOverlay DarkBackground Absolute AutoClose="false" Visible>
+                    <MudText Typo="Typo.subtitle1" Class="text-white custom-font">سایز 16:9 بزرگ</MudText>
+                    <MudButton OnClick="@(()=>{MediaSelected(SelectedItemId,"AR169BIG");})" FullWidth StartIcon="fal fa-check" Color="Color.Warning" Variant="Variant.Outlined" Size="Size.Small" Class="custom-font" IconSize="Size.Small">
+                        انتخاب
+                    </MudButton>
+                </MudOverlay>
+            </MudItem>
+            <MudItem Style="position:relative" xs="12" sm="6" md="4" lg="2" xl="2">
+                <MudImage Style="width:100% !important" Src="@(UIHelper.ApiUrl()+$"fm/dn/{SelectedItemId}/AR43")"></MudImage>
+                <MudOverlay DarkBackground Absolute AutoClose="false" Visible>
+                    <MudText Typo="Typo.subtitle1" Class="text-white custom-font">سایز 4:3</MudText>
+                    <MudButton OnClick="@(()=>{MediaSelected(SelectedItemId,"AR43");})" FullWidth StartIcon="fal fa-check" Color="Color.Warning" Variant="Variant.Outlined" Size="Size.Small" Class="custom-font" IconSize="Size.Small">
+                        انتخاب
+                    </MudButton>
+                </MudOverlay>
+            </MudItem>
+            <MudItem Style="position:relative" xs="12" sm="6" md="4" lg="2" xl="2">
+                <MudImage Style="width:100% !important" Src="@(UIHelper.ApiUrl()+$"fm/dn/{SelectedItemId}/THUMB")"></MudImage>
+                <MudOverlay DarkBackground Absolute AutoClose="false" Visible>
+                    <MudText Typo="Typo.subtitle1" Class="text-white custom-font">سایز تامبنایل</MudText>
+                    <MudButton OnClick="@(()=>{MediaSelected(SelectedItemId,"THUMB");})" FullWidth StartIcon="fal fa-check" Color="Color.Warning" Variant="Variant.Outlined" Size="Size.Small" Class="custom-font" IconSize="Size.Small">
+                        انتخاب
+                    </MudButton>
+                </MudOverlay>
+            </MudItem>
+            <MudItem Style="position:relative" xs="12" sm="6" md="4" lg="2" xl="2">
+                <MudImage Style="width:100% !important" Src="@(UIHelper.ApiUrl()+$"fm/dn/{SelectedItemId}/OG")"></MudImage>
+                <MudOverlay DarkBackground Absolute AutoClose="false" Visible>
+                    <MudText Typo="Typo.subtitle1" Class="text-white custom-font">سایز OG</MudText>
+                    <MudButton OnClick="@(()=>{MediaSelected(SelectedItemId,"OG");})" FullWidth StartIcon="fal fa-check" Color="Color.Warning" Variant="Variant.Outlined" Size="Size.Small" Class="custom-font" IconSize="Size.Small">
+                        انتخاب
+                    </MudButton>
+                </MudOverlay>
+            </MudItem>
+        </MudGrid>
+    </DialogContent>
+</MudDialog>
+
+
+@code {
+    [CascadingParameter]
+    private MudDialogInstance innerDialog { get; set; }
+    [Parameter][Required]public int SelectedItemId{ get; set; }
+    private void MediaSelected(int item,string size)
+    {
+        innerDialog.Close(DialogResult.Ok(new Tuple<int, string>(item, size)));
+    }
+}

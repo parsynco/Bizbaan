@@ -1,0 +1,30 @@
+﻿[
+  {
+    "outputFile": "wwwroot/assets/styles/sass/index.css",
+    "inputFile": "wwwroot/assets/styles/sass/index.sass"
+  },
+  {
+    "outputFile": "wwwroot/assets/styles/sass/Responsive/_mobile.css",
+    "inputFile": "wwwroot/assets/styles/sass/Responsive/_mobile.sass"
+  },
+  {
+    "outputFile": "wwwroot/assets/styles/sass/blog.css",
+    "inputFile": "wwwroot/assets/styles/sass/blog.sass"
+  },
+  {
+    "outputFile": "wwwroot/assets/biz/css/index.css",
+    "inputFile": "wwwroot/assets/biz/css/index.scss"
+  },
+  {
+    "outputFile": "wwwroot/assets/biz/css/blog.css",
+    "inputFile": "wwwroot/assets/biz/css/blog.sass"
+  },
+  {
+    "outputFile": "wwwroot/assets/biz/fonts/font-typo/custom.fonts.dana.css",
+    "inputFile": "wwwroot/assets/biz/fonts/font-typo/custom.fonts.dana.scss"
+  },
+  {
+    "outputFile": "wwwroot/assets/biz/css/responsive/_mobile.css",
+    "inputFile": "wwwroot/assets/biz/css/responsive/_mobile.scss"
+  }
+]

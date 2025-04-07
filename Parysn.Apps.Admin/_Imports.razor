@@ -1,0 +1,41 @@
+﻿@using System.Net.Http
+@using System.Net.Http.Json
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.AspNetCore.Components.WebAssembly.Http
+@using Microsoft.JSInterop
+@using Parysn.Apps.Admin
+@using Parysn.Apps.Admin.Layout
+@using Parsyn.App.Admin.UIServices
+@using Parysn.Apps.Admin.Components.Sections
+@using Parsyn.Apps.Company.Data.Models.Dtos
+@using System.ComponentModel.DataAnnotations
+@using Parsyn.Apps.Company.Service.Utiles.Generators.ResponseGenerator.MapperObjects
+@using Parsyn.Apps.Company.Service.Utiles.Helpers
+@using Parsyn.Apps.Company.Data.Models.Dtos.Catalog
+@using Parysn.Apps.Admin.UIServices
+@using Parysn.Apps.Admin.Components.Media
+@using Parysn.Apps.Admin.Components.Dialogs.Media
+@using Parysn.Apps.Admin.Components.Dialogs.Confirms
+@using Parsyn.Apps.Company.Data.Models
+@using Parsyn.Apps.Company.Data.Models.Entity.Base
+@using Parysn.Apps.Admin.Components.Tools
+@using Parsyn.Apps.Company.Data.Models.Entity.Landing
+@using MudExRichTextEditor
+@using Newtonsoft.Json
+@using Mapster
+@using Parsyn.Apps.Company.Data.Models.Entity.Bizbaan.Location
+@using Parsyn.Apps.Company.Data.Models.Entity.Bizbaan.Ad
+@using Parysn.Apps.Admin.UIServices.Auth
+@using Parysn.Apps.Company.Service.Utiles.ShareMemmory
+@using Parsyn.Apps.Company.Data.Models.Entity.User
+@using Parsyn.Apps.Company.Data.Models.Dtos.AuthDtos
+@using BlazorDB
+@inject ISnackbar _snackbar
+@inject IUserObject USR
+@inject NavigationManager _nv
+@using MudBlazor
+@using MudBlazor.Services
+@inject IDialogService Dialog

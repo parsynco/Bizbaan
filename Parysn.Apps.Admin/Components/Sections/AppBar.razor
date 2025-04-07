@@ -1,0 +1,128 @@
+﻿@inject IUserObject USR
+<MudAppBar Fixed="true" Elevation="0" Class="custom-appbar-width rounded default-config mt-2 ml-2 p-0">
+    <MudText Typo="Typo.h6">
+        داشبورد
+    </MudText>
+
+    <MudSpacer />
+
+    <div class="appbar-search">
+        <input type="search" placeholder="جستجو" />
+
+    </div>
+
+    <MudIconButton Class="appbar-btn-bg-color ms-4" Size="Size.Small" Icon="fal fa-bell" />
+    <MudMenu Class="ms-2">
+        <ActivatorContent>
+            <MudChip T="string" Size="Size.Medium" Class="appbar-btn-bg-color" IconColor="Color.Primary">
+                <AvatarContent>
+                    <MudAvatar Class="appbar-btn-bg-color"> @(FirstChar)</MudAvatar>
+                </AvatarContent>
+                <ChildContent>
+                    <MudPaper Elevation="0" Style="background-color:transparent" Class="d-flex flex-row align-center justify-space-between">
+                        <MudText> @(Username)</MudText>
+                        <MudIcon Class="appbar_cheep_chevron_icon_custom_size" Size="Size.Small" Icon="fal fa-chevron-left"></MudIcon>
+                    </MudPaper>
+                </ChildContent>
+            </MudChip>
+        </ActivatorContent>
+        <ChildContent>
+            <MudMenuItem OnClick="@((_)=>ShowChangePwdDialog = true)" dir="rtl" Class="mud-rtl">تغییر رمز عبور</MudMenuItem>
+            <MudMenuItem OnClick="Logout" dir="rtl" Class="mud-rtl">خروج</MudMenuItem>
+        </ChildContent>
+    </MudMenu>
+    <MudDialog Visible="ShowChangePwdDialog" Options="_permToRoleDlgOptions">
+        <TitleContent>
+            <MudPaper Elevation="0" Class="d-flex flex-row-reverse align-items-center">
+                <b class="d-flex align-items-center" style="justify-content: center; align-items: center; flex: 0 0 auto;">  تغییر رمز عبور</b>
+                <MudSpacer />
+                <MudIconButton OnClick="@((_)=>ShowChangePwdDialog = false)" Icon="fal fa-times" Color="Color.Error" Variant="Variant.Text" Size="Size.Medium" />
+            </MudPaper>
+        </TitleContent>
+        <DialogContent>
+            <MudPaper Elevation="0">
+                <MudCard Elevation="0">
+                    <MudGrid>
+                        <MudItem xs="12" sm="12" lg="12" xl="12">
+                            <MudTextField Required RequiredError="این فیلد الزامی است" InputType="InputType.Password" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.OldPwd" Style="direction:ltr" T="string" Label="رمز عبور قدیمی"></MudTextField>
+                        </MudItem>
+                        <MudItem xs="12" sm="12" lg="12" xl="12">
+                            <MudTextField Required RequiredError="این فیلد الزامی است" InputType="InputType.Password" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.NewPwd" Style="direction:ltr" T="string" Label="رمز عبور جدید"></MudTextField>
+                        </MudItem>
+                        <MudItem xs="12" sm="12" lg="12" xl="12">
+                            <MudTextField Required RequiredError="این فیلد الزامی است" InputType="InputType.Password" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Confirm" Style="direction:ltr" T="string" Label="تکرار رمز عبور "></MudTextField>
+                        </MudItem>
+                        <MudItem xs="12" sm="12" lg="12" xl="12" Class="py-2">
+                            <MudButton @onclick="UpdatePassword" FullWidth Disabled="@_saving" Variant="Variant.Outlined" Color="Color.Primary">
+                                @if (_saving)
+                                {
+                                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+                                }
+                                else
+                                {
+                                    <MudText>ذخیره</MudText>
+                                }
+                            </MudButton>
+                        </MudItem>
+                    </MudGrid>
+                </MudCard>
+            </MudPaper>
+        </DialogContent>
+    </MudDialog>
+</MudAppBar>
+@code {
+    public string FirstChar { get; set; } = "";
+    public string Username { get; set; } = "";
+    public bool ShowChangePwdDialog { get; set; } = false;
+    public bool _saving { get; set; } = false;
+    public ResetPwdDto model { get; set; } = new();
+    HttpClientHelper<UserDto> hch = new HttpClientHelper<UserDto>(UIHelper.ApiUrl());
+    HttpClient _hc;
+    public DialogOptions _permToRoleDlgOptions = new DialogOptions()
+        {
+            BackdropClick = true,
+            CloseButton = false,
+            MaxWidth = MaxWidth.Large
+        };
+    private async void UpdatePassword()
+    {
+        if (string.IsNullOrEmpty(model.OldPwd) || string.IsNullOrEmpty(model.NewPwd) || string.IsNullOrEmpty(model.Confirm))
+        {
+            _snackbar.Add("Please fill required fields.",Severity.Error);
+            return;
+        }
+        hch.SetToken(await USR.GetToken());
+        _saving = true;
+        var res = await hch.Post(model, "User/ResetPwd");
+        _saving = false;
+        model = new ResetPwdDto();
+        _snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
+        StateHasChanged();
+        if(res.Status == ResponseObjectStatusEnum.Success)
+        {
+            Thread.Sleep(1500);
+            ShowChangePwdDialog = false;
+        }
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        await AvatarFirstChar();
+        Username = await USR.GetUserName();
+        await base.OnInitializedAsync();
+    }
+    public async Task Logout()
+    {
+        USR.RemoveItem();
+        _nv.NavigateTo("/login");
+    }
+    public async Task AvatarFirstChar()
+    {
+        var un = await USR.GetUserName();
+        if (!string.IsNullOrEmpty(un))
+        {
+            FirstChar = un[0].ToString();
+            StateHasChanged();
+        }
+
+    }
+}

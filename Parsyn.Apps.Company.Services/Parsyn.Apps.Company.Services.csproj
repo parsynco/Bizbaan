@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.12" />
+    <PackageReference Include="Serilog" Version="4.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Parsyn.Apps.Company.Data.Models.Dtos\Parsyn.Apps.Company.Data.Models.Dtos.csproj" />
+    <ProjectReference Include="..\Parsyn.Apps.Company.Data.Models\Parsyn.Apps.Company.Data.Models.csproj" />
+    <ProjectReference Include="..\Parsyn.Apps.Company.Data\Parsyn.Apps.Company.Data.csproj" />
+    <ProjectReference Include="..\Parsyn.Apps.Company.Service.Utiles\Parsyn.Apps.Company.Service.Utiles.csproj" />
+  </ItemGroup>
+
+</Project>

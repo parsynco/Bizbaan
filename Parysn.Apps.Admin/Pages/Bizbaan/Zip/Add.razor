@@ -1,0 +1,84 @@
+﻿@page "/biz/zips/add"
+<PageTitle>بیزبان | ایجاد زیپ کد </PageTitle>
+<MudContainer>
+    <MudCard>
+        <MudCardContent>
+
+            <MudCardHeader Style="@($"background-color:{Colors.Gray.Lighten4}")" dir="rtl" Dense Elevation="1">
+                <MudText>ثبت زیپ جدید</MudText>
+                <MudSpacer />
+                <MudButton Size="Size.Small" IconSize="Size.Small" Href="/biz/zips" Variant="Variant.Text" Class="custom-font" EndIcon="fal fa-chevron-left">
+                    <MudText>بازگشت</MudText>
+                </MudButton>
+            </MudCardHeader>
+            <MudContainer Class="mt-3">
+                <MudForm dir="rtl">
+                    <MudGrid>
+                        <MudItem xl="4" lg="4" sm="12" md="6">
+                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.State" Class="mud-rtl" T="string" Label="ایالت"></MudTextField>
+                        </MudItem>
+                        <MudItem xl="4" lg="4" sm="12" md="6">
+                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.State_Abbr" Class="mud-rtl" T="string" Label="مخفف ایالت "></MudTextField>
+                        </MudItem>
+                        <MudItem xl="4" lg="4" sm="12" md="6">
+                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.City" Class="mud-rtl" T="string" Label="شهر  "></MudTextField>
+                        </MudItem>
+                        <MudItem xl="4" lg="4" sm="12" md="6">
+                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.County_Area" Class="mud-rtl" T="string" Label="منطقه  "></MudTextField>
+                        </MudItem>
+                        <MudItem xl="4" lg="4" sm="12" md="6">
+                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Zipcode" Class="mud-rtl" T="string" Label="زیپ کد  "></MudTextField>
+                        </MudItem>
+                        <MudItem xl="4" lg="4" sm="12" md="6">
+                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Latitude" Class="mud-rtl" T="decimal" Label=" مختصات (Lat)  "></MudTextField>
+                        </MudItem>
+                        <MudItem xl="4" lg="4" sm="12" md="6">
+                            <MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="model.Longitude" Class="mud-rtl" T="decimal" Label=" مختصات (Lng)  "></MudTextField>
+                        </MudItem>
+                    </MudGrid>
+                </MudForm>
+            </MudContainer>
+
+        </MudCardContent>
+        <MudCardActions>
+            <MudButton Disabled="@_saving" @onclick="RegisterModel" Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Small">
+                @if (_saving)
+                {
+                    <MudProgressCircular Size="Size.Small" Color="@Color.Primary" Indeterminate="true" />
+                }
+                else
+                {
+                    <MudText>ذخیره</MudText>
+                }
+            </MudButton>
+
+        </MudCardActions>
+    </MudCard>
+</MudContainer>
+
+@code {
+    private bool _saving { get; set; } = false;
+    private ZipModel model = new ZipModel();
+    HttpClientHelper<AdCategoryModel> hch = new HttpClientHelper<AdCategoryModel>(UIHelper.ApiUrl());
+    HttpClient _hc;
+    protected override async Task OnInitializedAsync()
+    {
+        hch.SetToken(await USR.GetToken());
+        _hc = hch.Instance();
+        await base.OnInitializedAsync();
+    }
+    private async void RegisterModel()
+    {
+        _saving = true;
+        var res = await hch.Post(model, "zip");
+        _saving = false;
+        model = new ZipModel();
+        _snackbar.Add(res.Msg, res.Status == ResponseObjectStatusEnum.Error ? Severity.Error : Severity.Success);
+        StateHasChanged();
+        Thread.Sleep(1500);
+        _nv.NavigateTo("biz/zips");
+
+
+    }
+
+}

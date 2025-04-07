@@ -1,0 +1,79 @@
+﻿@page "/base/KeyFeatures"
+@{
+    
+}
+<PageTitle>بیزبان | ویژگی های کلیدی</PageTitle>
+<MudContainer Class="d-flex align-center justify-center flex-column">
+    <MudPaper Elevation="1" Class="d-flex align-center pa-2" Width="100%">
+        <MudText>مدیریت  ویژگی های کلیدی</MudText>
+        <MudSpacer />
+        <MudFab Disabled="_saving" StartIcon="fal fa-save" IconSize="Size.Small" OnClick="()=>Save()" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small"/>
+        @* </MudFab> *@
+    </MudPaper>
+    <MudPaper Class="mt-4" Elevation="0" Width="100%">
+        <MudGrid>
+            <MudItem  xl="12" lg="12" md="12" sm="12" xs="12">
+                <MudDataGrid T="IndexCirclesModels" Items="Data" Dense Bordered EditMode="DataGridEditMode.Form" EditTrigger="DataGridEditTrigger.Manual">
+                    <Columns>
+                        <PropertyColumn Property="x=>x.Content" Title="عنوان"/>
+                        <PropertyColumn Property="x=>x.Created_At" Editable="false" Title="تاریخ ایجاد">
+                            <CellTemplate>
+                                <MudText>@(((DateTime)context.Item.Created_At).ToString("yyyy/MM/dd"))</MudText>
+                            </CellTemplate>
+                        </PropertyColumn>
+                        <TemplateColumn CellClass="d-flex justify-end">
+                            <CellTemplate>
+                                <MudIconButton Size="@Size.Small" Icon="@Icons.Material.Outlined.Edit" OnClick="()=>{EditItem = context.Item;_visibleEditDlg = true;}" />
+                                <MudDialog @bind-Visible="_visibleEditDlg" Options="_dialogOptions">
+                                    <TitleContent>
+                                        <MudIcon @onclick="()=>{_visibleEditDlg = false;}" Icon="fal fa-times" Class="mr-3" />
+                                        <MudSpacer/>
+                                        <MudText Typo="Typo.h6" dir="rtl">
+                                            ویرایش ویژگی
+                                        </MudText>
+                                    </TitleContent>
+                                    <DialogContent>
+                                        <MudTextField Margin="Margin.Dense" Variant="Variant.Outlined" @bind-Value="EditItem.Content" Class="mt-3" />
+                                    </DialogContent>
+                                    <DialogActions>
+                                        <MudFab StartIcon="fal fa-save" IconSize="Size.Small" OnClick="()=>{_visibleEditDlg = false;EditedItems.Add(EditItem);_saving = false; }" Variant="Variant.Filled" Color="Color.Primary" Size="Size.Small"/>
+                                    </DialogActions>
+                                </MudDialog>
+                            </CellTemplate>
+                        </TemplateColumn>
+                    </Columns>
+               </MudDataGrid>
+            </MudItem>
+        </MudGrid>
+    </MudPaper>
+</MudContainer>
+
+
+@code {
+    private bool _saving = true;
+    private bool _visibleEditDlg = false;
+    private IndexCirclesModels EditItem = new();
+    HttpClientHelper<IndexCirclesModels>
+    hch = new HttpClientHelper<IndexCirclesModels>(UIHelper.ApiUrl());
+    public List<IndexCirclesModels> Data = new();
+    public List<IndexCirclesModels> EditedItems = new();
+    HttpClient _hc;
+    private readonly DialogOptions _dialogOptions = new() { FullWidth = true };
+    public async Task Save()
+    {
+        var result = await hch.Post(EditedItems, "KeyFeatures");
+        UIHelper.HandleResponse(result, _snackbar);
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        hch.SetToken(await USR.GetToken());
+        _hc = hch.Instance();
+         await Get();
+        await base.OnInitializedAsync();
+    }
+    public async Task Get()
+    {
+        Data =(await _hc.GetFromJsonAsync<IndexCirclesModels[]>("KeyFeatures")).ToList();
+        StateHasChanged();
+    }
+}

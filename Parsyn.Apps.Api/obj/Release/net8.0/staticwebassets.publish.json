@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "U3SYB1twodfL37vvuPEJUfMLVb3LptUMJL88YO4xjaI=",
+  "Source": "Parsyn.Apps.Api",
+  "BasePath": "_content/Parsyn.Apps.Api",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
