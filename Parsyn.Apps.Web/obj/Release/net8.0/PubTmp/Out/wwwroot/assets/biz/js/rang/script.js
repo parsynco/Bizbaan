@@ -13,6 +13,7 @@ $element
     .rangeslider({
         polyfill: false,
         onInit: function () {
+
             $handle = $('.rangeslider__handle', this.$range);
             updateHandle($handle[0], this.value);
             updateState($handle[0], this.value);
@@ -25,7 +26,8 @@ $element
 
 // Update the value inside the slider handle
 function updateHandle(el, val) {
-    el.textContent = val;
+    el.textContent = val.toString();
+
 }
 
 // Check if the slider state has changed
@@ -59,6 +61,11 @@ function updateState(el, val) {
     $(".rangeslider__fill").removeClass("js-med");
     $(".rangeslider__fill").removeClass("js-high");
     $(".rangeslider__fill").addClass("js-" + currentState.name);
+
+    $(".rangeslider__handle").removeClass("js-low");
+    $(".rangeslider__handle").removeClass("js-med");
+    $(".rangeslider__handle").removeClass("js-high");
+    $(".rangeslider__handle").addClass("js-" + currentState.name);
     // Update tooltip
     //$tooltip.html(currentState.tooltip);
 }

@@ -1,0 +1,21 @@
+﻿@font-face {
+  font-family: DanaR;
+  src: url("../font-typo/Dana/2.2/eot/dana-fanum-regular.eot");
+  src: url("../font-typo/Dana/2.2/eot/dana-fanum-regular.eot?#iefix") format("embedded-opentype"), url("../font-typo/Dana/2.2/woff2/dana-fanum-regular.woff2") format("woff2"), url("../font-typo/Dana/2.2/woff/dana-fanum-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: DanaB;
+  src: url("../font-typo/Dana/2.2/eot/dana-fanum-bold.eot");
+  src: url("../font-typo/Dana/2.2/eot/dana-fanum-bold.eot?#iefix") format("embedded-opentype"), url("../font-typo/Dana/2.2/woff2/dana-fanum-bold.woff2") format("woff2"), url("../font-typo/Dana/2.2/woff/dana-fanum-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: DanaL;
+  src: url("../font-typo/Dana/2.2/eot/dana-fanum-light.eot");
+  src: url("../font-typo/Dana/2.2/eot/dana-fanum-light.eot?#iefix") format("embedded-opentype"), url("../font-typo/Dana/2.2/woff2/dana-fanum-light.woff2") format("woff2"), url("../font-typo/Dana/2.2/woff/dana-fanum-light.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}

@@ -16,5 +16,6 @@ namespace Parsyn.Apps.Company.Services.Interfaces.Bizbaan
         List<AdCategoryModel> GetLevelTwo();
         List<AdCategoryModel> GetHierichal();
         AdCategoryModel GetInclude(int id);
+        AdCategoryModel GetIncludeOnlySeo(int id);
     }
 }

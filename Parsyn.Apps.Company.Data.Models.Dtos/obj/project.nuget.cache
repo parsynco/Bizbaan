@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "r9THTRnMp1Q=",
+  "dgSpecHash": "HxvPj2z/vk4=",
   "success": true,
   "projectFilePath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Data.Models.Dtos\\Parsyn.Apps.Company.Data.Models.Dtos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hosein\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\Hosein\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
-    "C:\\Users\\Hosein\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.14\\microsoft.net.illink.tasks.8.0.14.nupkg.sha512",
     "C:\\Users\\Hosein\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
   ],
   "logs": []

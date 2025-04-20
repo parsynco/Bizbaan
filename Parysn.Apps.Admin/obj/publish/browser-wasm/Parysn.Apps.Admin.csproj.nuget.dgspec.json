@@ -394,6 +394,10 @@
               "target": "Package",
               "version": "[7.4.0, )"
             },
+            "Microsoft.AspNetCore.Components.Analyzers": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
             "Microsoft.AspNetCore.Components.Authorization": {
               "target": "Package",
               "version": "[8.0.12, )"

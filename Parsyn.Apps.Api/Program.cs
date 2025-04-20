@@ -71,6 +71,7 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<ITemplateEngine, TemplateEngine>();
 builder.Services.AddScoped<IMediaCatIface, MediaCatService>();
 builder.Services.AddDbContext<PDBContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddScoped<DbContext, PDBContext>();
 //builder.Services.AddDbContext<PDBContext>();
 
 builder.Services.AddControllers();

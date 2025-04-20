@@ -1,0 +1,306 @@
+﻿@import "./custom.fonts.dana";
+@import "./auth.scss";
+
+:root {
+    --mud-typography-body1-family: "DanaL",'Roboto' !important;
+    --mud-typography-body1-size: .8rem !important;
+}
+
+#map {
+    width: 100% !important;
+    height: 20rem !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto',DanaL !important;
+}
+
+.custom-font {
+    font-family: 'Roboto',DanaL !important;
+}
+
+body, html {
+    font-family: 'Roboto',DanaL;
+    background-color: #16132a !important;
+}
+
+.default-config {
+    background-color: #fff !important;
+    color: black !important;
+}
+
+.default-background-color {
+    background-color: #e7e9f5 !important;
+}
+
+.appbar-btn-bg-color {
+    background-color: #f3f5fd !important;
+}
+
+.mud-nav-item {
+    & .mud-icon-size-small {
+        font-size: 0.5rem !important;
+    }
+}
+
+.custom-appbar-width {
+    max-width: calc(100% - 16.55rem);
+    width: calc(100% - 16.55rem) !important;
+}
+
+.custom-full-height {
+    min-height: 100dvh;
+
+    &.Dark {
+        & .mud-navmenu.mud-navmenu-default .mud-nav-link.active:not(.mud-nav-link-disabled) {
+            color: #FAFAFA !important;
+        }
+    }
+
+    &.Light {
+        & .mud-navmenu.mud-navmenu-default .mud-nav-link.active:not(.mud-nav-link-disabled) {
+            color: #4527A0 !important;
+            background-color: rgba(0,0,0,0) !important;
+        }
+    }
+}
+
+*:not(.fal) {
+    font-family: 'Roboto',DanaL !important;
+}
+
+* {
+    font-family: 'Roboto',DanaL;
+    transition: background-color .1s cubic-bezier(1, 0.48, 0, 0.96);
+}
+
+.appbar_cheep_chevron_icon_custom_size {
+    font-size: .8rem !important;
+    padding-right: 0.4rem !important;
+}
+
+.custom-sidebar {
+    @extend .default-config;
+    max-height: 98dvh !important;
+    width: 15rem !important;
+}
+
+.appbar-search {
+    width: 15rem;
+    height: 50%;
+
+    & input {
+        width: 100%;
+        height: 100%;
+        border-radius: 2rem;
+        border: .1rem solid #edeef3;
+        padding-right: .6rem;
+        background-color: #f3f5fd;
+
+        &:focus {
+            border-color: #dcdee5;
+            outline: none !important;
+        }
+    }
+}
+
+.TableOprButtons {
+    font-size: 1.1rem !important;
+
+    & .mud-icon-root {
+        font-size: 1.1rem !important;
+    }
+}
+
+.rounded-circle {
+    &.custom {
+        border-radius: 50% !important;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: radial-gradient(rgba(244, 67, 54, .1), rgba(244, 67, 54, .1), rgba(244, 67, 54, .2)) !important;
+        background-color: transparent !important;
+    }
+}
+
+/*** ISA Animation ****/
+.svg-holder {
+    & svg {
+        font-family: 'Russo One', sans-serif;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        & text {
+            text-transform: uppercase;
+            animation: stroke 5s infinite alternate;
+            stroke-width: 2;
+            stroke: #365fa0;
+            font-size: 140px;
+        }
+
+        @keyframes stroke {
+            0% {
+                fill: transparent;
+                stroke: rgb(246 241 255);
+                stroke-dashoffset: 25%;
+                stroke-dasharray: 0 50%;
+                stroke-width: 2;
+            }
+
+            70% {
+                fill: transparent;
+                stroke: rgb(246 241 255);
+            }
+
+            80% {
+                fill: transparent;
+                stroke: rgb(246 241 255);
+                stroke-width: 3;
+            }
+
+            100% {
+                fill: /*rgba(72,138,204,1)*/ #fff;
+                stroke: #fff;
+                stroke-dashoffset: -25%;
+                stroke-dasharray: 50% 0;
+                stroke-width: 0;
+            }
+        }
+    }
+}
+
+.custom-round-btn-width-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-color: var(--custom-round-btn-bg);
+    border: .2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem;
+    margin-left: 0.7rem;
+}
+
+
+.mud-input-helper-text {
+    & div {
+        text-align: right;
+        direction: rtl;
+    }
+}
+
+.mud-dialog .mud-dialog-title .mud-button-close {
+    right: unset !important;
+    left: 8px !important;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.mud-input > input.mud-input-root, div.mud-input-slot.mud-input-root, .mud-input > textarea.mud-input-root {
+    font-family: 'Roboto',DanaL !important;
+}
+
+.ql-editor {
+    font-family: 'Roboto',DanaL !important;
+}
+
+
+
+/*****************404 design*/
+.error-container {
+    color: #fff;
+    text-align: center;
+    background-image: linear-gradient(to top, #2e1753, #1f1746, #131537, #0d1028, #050819);
+    width: 100%;
+    height: 100%;
+    padding: 14rem;
+    font-size: 2.1em;
+}
+
+
+
+.custom-autocomplete {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    position: relative;
+
+    & .custom-autocomplete-field {
+        background: transparent;
+        width: 100%;
+        padding: .2rem !important;
+        height: 3.5rem;
+        border-radius: .3rem;
+        border: .015rem solid #bdbdbd;
+
+        & .mud-icon-root {
+            position: absolute;
+            left: 1rem;
+            top: 30%;
+        }
+
+        & input {
+            width: 100%;
+            height: 100%;
+            border-radius: 0.1rem;
+            border: none;
+            outline: none;
+            padding-left: 5rem;
+            text-align: left;
+            direction: ltr;
+        }
+    }
+
+    & .custom-autocomplete-result {
+        position: absolute;
+        top: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: #fff;
+        max-height: 20rem;
+        overflow-y: scroll;
+        z-index: 1;
+        gap: .5rem;
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        box-shadow: 0rem 0.1rem 0.1rem 0rem rgba(0, 0, 0, .5);
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: all .3s ease-in-out;
+        min-height: 3rem;
+        direction: ltr;
+
+        &.active {
+            transform: scaleY(1) !important;
+            transition: all .3s ease-in-out;
+        }
+
+        & a {
+            width: 100%;
+            padding: .3rem;
+            text-align: left;
+            direction: ltr;
+
+            &:hover {
+                color: var(--mud-palette-primary-darken);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.business-icon-over-map {
+    height: 69px;
+    width: 47px;
+    background-image: url(https://api.geoapify.com/v1/icon/?type=awesome&color=red&scaleFactor=2&size=x-large&icon=search-location&apiKey=c9373ff3b73344a1a9286c06746bc93f);
+    background-size: contain;
+    cursor: pointer;
+}

@@ -500,7 +500,7 @@
   }
   .main-container .main-section {
     width: 100vw;
-    height: 101vh;
+    height: 107vh;
     background-image: url("/assets/biz/img/bg/texture.png");
     background-repeat: repeat;
     background-position: top;
@@ -747,6 +747,7 @@
     border-radius: 0.3rem;
     border: 0.015rem solid var(--parsyn-primary);
     height: 5rem;
+    object-fit: contain;
   }
   .main-container .main-section .row6-main-box .row6-mainsection .box-title {
     color: var(--parsyn-primary);
@@ -1237,7 +1238,7 @@
     height: 6rem;
     border-radius: 0.2rem;
     border: 0.015rem solid var(--parsyn-primary);
-    object-fit: cover;
+    object-fit: contain;
   }
   .main-container .page6 section .page4-row2 .special-box a.tagged.special-box-tag {
     position: absolute;

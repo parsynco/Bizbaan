@@ -20,12 +20,21 @@
 						<MudItem xl="6" lg="6" sm="12" md="6">
 							<MudGrid>
 								<MudItem xs="12" lg="12">
+									<MudSelect T="int" Margin="Margin.Dense" Variant="Variant.Outlined" Label="انتخاب دسته بندی اصلی" ValueChanged="LoadCategoriesL2">
+										@foreach (var item in CategoriesL1)
+										{
+											<MudSelectItem Value="item.Id">@item.Title</MudSelectItem>
+										}
+									</MudSelect>
+								</MudItem>
+								<MudItem xs="12" lg="12">
 									<MudAutocomplete ToStringFunc="DisplayCategory"
 													 T="AdCategoryModel"
 													 Label="انتخاب دسته بندی"
 													 @bind-Value="model.Category"
 													 SearchFunc="SearchCategory"
 													 Variant="Variant.Outlined"
+													 Margin="Margin.Dense"
 													 ShowProgressIndicator="true"
 													 ProgressIndicatorColor="Color.Primary">
 										<ProgressIndicatorInPopoverTemplate>
@@ -38,6 +47,7 @@
 									</MudAutocomplete>
 								</MudItem>
 								<MudItem xs="12" lg="12">
+									<lable style="width: 100%; text-align: left; display: block;">Zipcode</lable>
 									<div class="custom-autocomplete">
 										<div class="custom-autocomplete-field">
 											<MudIcon Icon="@Icons.Material.Outlined.Search"></MudIcon>
@@ -72,6 +82,16 @@
 												  Label="عنوان انگلیسی"></MudTextField>
 								</MudItem>
 								<MudItem xs="12" lg="12">
+									<MudTextField InputType="InputType.Number"
+												  Variant="Variant.Outlined"
+												  Margin="Margin.Dense"
+												  @bind-Value="model.Sort"
+												  Style="direction:ltr !important"
+												  T="int"
+												  Label="اولویت">
+									</MudTextField>
+								</MudItem>
+								<MudItem xs="12" lg="12">
 									<MudTextField InputType="InputType.Text"
 												  Variant="Variant.Outlined"
 												  Margin="Margin.Dense"
@@ -87,6 +107,16 @@
 												  @bind-Value="model.Telephone"
 												  Style="direction:ltr !important" T="string"
 												  Label="تلفن ثابت">
+									</MudTextField>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<MudTextField InputType="InputType.Text"
+												  Variant="Variant.Outlined"
+												  Margin="Margin.Dense"
+												  @bind-Value="model.Fax"
+												  Style="direction:ltr !important"
+												  T="string"
+												  Label=" فکس">
 									</MudTextField>
 								</MudItem>
 								<MudItem xs="12" lg="12">
@@ -131,7 +161,11 @@
 									<div id="biz-map" style="width:100%;height:400px;"></div>
 								</MudItem>
 								<MudItem xs="12" lg="12">
-									<MudExRichTextEdit @ref="_editor" @bind-Value="model.Description" Placeholder="توضیحات" dir="rtl">
+									<MudExRichTextEdit @ref="_editor" @bind-Value="model.Description" Placeholder="توضیحات - فارسی" dir="rtl">
+									</MudExRichTextEdit>
+								</MudItem>
+								<MudItem xs="12" lg="12">
+									<MudExRichTextEdit @ref="_editoren" @bind-Value="model.DescriptionEn" Placeholder="توضیحات - انگلیسی" dir="ltr">
 									</MudExRichTextEdit>
 								</MudItem>
 								<MudItem xs="12" lg="12">
@@ -172,6 +206,7 @@
 
 @code {
 	MudExRichTextEdit _editor;
+	MudExRichTextEdit _editoren;
 	[Parameter]
 	public object Id { get; set; }
 	public bool activeSearch { get; set; } = false;
@@ -179,6 +214,8 @@
 	private bool _saving { get; set; } = false;
 	private static AdModel model = new AdModel();
 	HttpClientHelper<AdModel> hch;
+	public int MainCategory { get; set; }
+	List<AdCategoryModel> CategoriesL1 = new List<AdCategoryModel>();
 	List<AdCategoryModel> Categories = new List<AdCategoryModel>();
 	List<ZipModel> Zips = new List<ZipModel>();
 	HttpClient _hc;
@@ -241,9 +278,11 @@
 
 		_snackbar.Add(data.Msg, (data.Status == ResponseObjectStatusEnum.Error || data.Status == ResponseObjectStatusEnum.UnhandeledException) ? Severity.Error : Severity.Success);
 		model = JsonConvert.DeserializeObject<AdModel>(data.Data.ToString());
+		await LoadCategoriesL2((int)model.Category.ParentId);
 		model.Id = int.Parse(Id.ToString());
 		SearchBoxContent = model.Zip.Zipcode;
 		await _editor.SetHtml(model.Description);
+		await _editoren.SetHtml(model.DescriptionEn);
 		await jsRuntime.InvokeVoidAsync("AddMarker", new { lat = model.Lat, lng = model.Lng });
 		StateHasChanged();
 
@@ -271,22 +310,18 @@
 			return Categories;
 		return Categories.Where(x => x.Title.Contains(value, StringComparison.InvariantCultureIgnoreCase));
 	}
-	// private async Task<IEnumerable<RegionModel>> SearchRegion(string value, CancellationToken token)
-	// {
-	//     if (string.IsNullOrEmpty(value))
-	//         return Regions;
-	//     return Regions.Where(x => x.Title.Contains(value, StringComparison.InvariantCultureIgnoreCase));
-	// }
+
 	private async Task LoadCategories()
 	{
-		Categories = await _hc.GetFromJsonAsync<List<AdCategoryModel>>("adcategory/l2");
+		CategoriesL1 = await _hc.GetFromJsonAsync<List<AdCategoryModel>>("adcategory/l1");
 		StateHasChanged();
 	}
-	// private async Task LoadRegions()
-	// {
-	//     Regions = await _hc.GetFromJsonAsync<List<RegionModel>>("region");
-	//     StateHasChanged();
-	// }
+	private async Task LoadCategoriesL2(int val)
+	{
+		Categories = await _hc.GetFromJsonAsync<List<AdCategoryModel>>("adcategory/l2/" + val);
+		StateHasChanged();
+	}
+
 	private async void mediaSelected(Tuple<int, string> selectedItem)
 	{
 		model.Logo = _helper.ApiUrl() + $"fm/dn/{selectedItem.Item1}/{selectedItem.Item2}";

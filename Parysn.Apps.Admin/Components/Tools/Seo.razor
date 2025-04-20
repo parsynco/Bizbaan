@@ -5,13 +5,13 @@
 	<MudCardContent>
 		<MudGrid>
 			<MudItem xs="12" sm="12" lg="12" xl="12">
-				<MudTextField OnKeyUp="async ()=>{await Invoke();}" Margin="Margin.Dense" @bind-Value="Model.Title" Label="عنوان صفحه" Variant="Variant.Outlined"></MudTextField>
+				<MudTextField HelperText="عنوان صفحه در قسمت تب مرورگر نمایش داده میشود" OnKeyUp="async ()=>{await Invoke();}" Margin="Margin.Dense" @bind-Value="Model.Title" Label="عنوان صفحه" Variant="Variant.Outlined"></MudTextField>
 			</MudItem>
 			<MudItem xs="12" sm="12" lg="12" xl="12">
 				<MudGrid>
 
 					<MudItem xs="_checkingDuplicate ? 10 : 12" lg="_checkingDuplicate ? 10 : 12">
-						<MudTextField OnKeyUp="(e)=>CheckDuplication(e)" OnBlur="RemoveWhiteSpaces" Style="direction:ltr;" ErrorText="آدرس وارد شده تکراری است." Error="_duplicateUrl" Margin="Margin.Dense" @bind-Value="Model.Url" Label="آدرس صفحه OG" Variant="Variant.Outlined" />
+						<MudTextField HelperText="آدرس صفحه OG به عنوان آدرس صفحه در مروگر استفاده میشود" OnKeyUp="(e)=>CheckDuplication(e)" OnBlur="RemoveWhiteSpaces" Style="direction:ltr;" ErrorText="آدرس وارد شده تکراری است." Error="_duplicateUrl" Margin="Margin.Dense" @bind-Value="Model.Url" Label="آدرس صفحه OG" Variant="Variant.Outlined" />
 					</MudItem>
 					<MudItem xs="_checkingDuplicate ? 0 : 2" lg="_checkingDuplicate ? 0 : 2" Class="align-center d-flex">
 						@if (_checkingDuplicate)
@@ -22,7 +22,7 @@
 				</MudGrid>
 			</MudItem>
 			<MudItem xs="12" sm="12" lg="12" xl="12">
-				<MudTextField OnKeyUp="async ()=>{await Invoke();}" Lines="3" MaxLines="4" AutoGrow Margin="Margin.Dense" @bind-Value="Model.Description" Label="توضیحات - بصورت خلاصه و کوتاه" Variant="Variant.Outlined"></MudTextField>
+				<MudTextField HelperText="مفدار این فیلد در قسمت نتایح گوگل به صورت توضیح کوتاه درمورد صفحه نماش داده میشود" OnKeyUp="async ()=>{await Invoke();}" Lines="3" MaxLines="4" AutoGrow Margin="Margin.Dense" @bind-Value="Model.Description" Label="توضیحات - بصورت خلاصه و کوتاه" Variant="Variant.Outlined"></MudTextField>
 			</MudItem>
 			<MudItem xs="12" sm="12" lg="12" xl="12">
 				<MudTextField @bind-Value="Keyword" HelperText="برای اضافه کردن کلیدواژه جدید ، پس از نوشتن جمله مورد نظر کلید Enter را فشار دهید." OnKeyUp="(e)=>SetKeyWord(e)" Margin="Margin.Dense" Label="کلید واژه ها" Variant="Variant.Outlined"></MudTextField>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yarLjkjEDoWevxNUhAC5LbkLN31Mfh8SWpzwm6YaIm8=",
+  "Hash": "7bwz+aLYnM96WO9VIvdLzaCw+clZGMvJ0OeZ0oNL8rA=",
   "Source": "Parsyn.Apps.Web",
   "BasePath": "_content/Parsyn.Apps.Web",
   "Mode": "Default",
@@ -178,8 +178,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "a6f4qfjzga",
-      "Integrity": "LvQ5fBMd+X/ysP8MLLiyKDEUry3valpwR5DMOCiK7Pg=",
+      "Fingerprint": "6330qvfvpd",
+      "Integrity": "ovUMlSncbx5WduzLuDmzHsC/EBwI78BawBdX6iTsDlE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\biz\\css\\index.css"
@@ -220,8 +220,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "yf4dyd3koo",
-      "Integrity": "QsICbB2a5DrEfNBkY8sIH0TtFN5UXWcg3k+A8VD6ivk=",
+      "Fingerprint": "uhmsx10iwf",
+      "Integrity": "HroWltBSig++JGRk40bNtV5GlZcALEnyxycRaaAd9is=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\biz\\css\\index.min.css"
@@ -241,8 +241,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6qpfqjmvcq",
-      "Integrity": "/tUIN2zx3HhrbuWXF3XdM4/K4i2fVqnQvqoIlQO1UUY=",
+      "Fingerprint": "deljlr721x",
+      "Integrity": "FWSywAgGVaQD+0RDIrhe0sL6X64a97NTjK2y4m72rhs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\biz\\css\\index.scss"
@@ -262,8 +262,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "dmnbgdgivx",
-      "Integrity": "q8/eqS4UpbfRieK0cyqNu0SYXEgtNAVFvCyH36VDLaA=",
+      "Fingerprint": "rpu26q7r0l",
+      "Integrity": "AVqxDc+DW9ecrZ1xebpV0gBxY9gJYcw2n8u6Yz4SZws=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\biz\\css\\rangeslider.scss"
@@ -283,8 +283,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7ij1wm0gr7",
-      "Integrity": "Aa+1vCdKcWylZRS5VRsefmbcXJYOZUzc+6bSWo3Zm+I=",
+      "Fingerprint": "n5cbnefmfc",
+      "Integrity": "S/H0pe2DQSQUKXRVhnZNfMKZ6xNzDxYScbjw6F9ZD+0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\biz\\css\\responsive\\_mobile.css"
@@ -304,8 +304,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "yd0m5xid8i",
-      "Integrity": "dlQnO5TvzUV4JGy+4HqhV8izrtBJZymewvcBmFma5Tw=",
+      "Fingerprint": "ci50emkir8",
+      "Integrity": "HD4WwyOtcxXcu1gjxOzn1PRBRujWqX74+dUzMcYsUxg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\biz\\css\\responsive\\_mobile.min.css"
@@ -325,11 +325,53 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "96dgx8tp8b",
-      "Integrity": "T2h0CdvnmpOyghuDAnQM27l+N4nqt0wwPEvwSHB6Cng=",
+      "Fingerprint": "3cbnonvjbd",
+      "Integrity": "3eIieXHG3D+zVgF8qaCAkZRqgtVxNBAp7xtSktnw6a0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\biz\\css\\responsive\\_mobile.scss"
+    },
+    {
+      "Identity": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_tablet.css",
+      "SourceId": "Parsyn.Apps.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\",
+      "BasePath": "_content/Parsyn.Apps.Web",
+      "RelativePath": "assets/biz/css/responsive/_tablet#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3kn5ey8jup",
+      "Integrity": "fSNSuxnzy/SWfQ/47B2KOtrMjRMqAGEeibR6T3yowjQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\biz\\css\\responsive\\_tablet.css"
+    },
+    {
+      "Identity": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_tablet.min.css",
+      "SourceId": "Parsyn.Apps.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\",
+      "BasePath": "_content/Parsyn.Apps.Web",
+      "RelativePath": "assets/biz/css/responsive/_tablet.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4avu14w3tz",
+      "Integrity": "JBUwGf22f6a3wYxiDQfZ1faAMeZXT0BktwLVVdLcIZQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\biz\\css\\responsive\\_tablet.min.css"
     },
     {
       "Identity": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_tablet.scss",
@@ -346,8 +388,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "g3n6ru2gll",
-      "Integrity": "lPKsX+4jWR6+75OULlhAs1g6PGbABo/C946GgLpvY64=",
+      "Fingerprint": "yh7384wz3b",
+      "Integrity": "tqAtTNWkZq9guBGIWcnvlnLUNz797tgnwb20L9q87Xs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\biz\\css\\responsive\\_tablet.scss"
@@ -5218,8 +5260,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "rng2hsf91s",
-      "Integrity": "KW4NTmoa1rzgEe2d3WTRiHl1LF7Rweqw57sHDj170so=",
+      "Fingerprint": "ixanqop42m",
+      "Integrity": "6h56M9sbhl6GVWUzdhM/RrsAZfmScU5axuMeJg8qI/c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\biz\\js\\rang\\script.js"
@@ -5239,8 +5281,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9ibnboeege",
-      "Integrity": "/7qz+XKca4DEApLKtV0rjakPAuIxiI9OvyKYkBCjqfk=",
+      "Fingerprint": "fquzlfyvuf",
+      "Integrity": "Vzfn8NBf3j9ZrJ8pG5+y1RErAQqizT+VmnFy3LHEwbw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\biz\\js\\script.js"
@@ -8409,52 +8451,7 @@
       ]
     },
     {
-      "Route": "assets/biz/css/index.6qpfqjmvcq.scss",
-      "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\index.scss",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "71149"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/octet-stream"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/tUIN2zx3HhrbuWXF3XdM4/K4i2fVqnQvqoIlQO1UUY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 09:23:37 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6qpfqjmvcq"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/biz/css/index.scss"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/tUIN2zx3HhrbuWXF3XdM4/K4i2fVqnQvqoIlQO1UUY="
-        }
-      ]
-    },
-    {
-      "Route": "assets/biz/css/index.a6f4qfjzga.css",
+      "Route": "assets/biz/css/index.6330qvfvpd.css",
       "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\index.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -8464,7 +8461,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "148921"
+          "Value": "151433"
         },
         {
           "Name": "Content-Type",
@@ -8472,11 +8469,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LvQ5fBMd+X/ysP8MLLiyKDEUry3valpwR5DMOCiK7Pg=\""
+          "Value": "\"ovUMlSncbx5WduzLuDmzHsC/EBwI78BawBdX6iTsDlE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 09:35:20 GMT"
+          "Value": "Sun, 20 Apr 2025 19:30:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8486,7 +8483,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "a6f4qfjzga"
+          "Value": "6330qvfvpd"
         },
         {
           "Name": "label",
@@ -8494,7 +8491,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-LvQ5fBMd+X/ysP8MLLiyKDEUry3valpwR5DMOCiK7Pg="
+          "Value": "sha256-ovUMlSncbx5WduzLuDmzHsC/EBwI78BawBdX6iTsDlE="
         }
       ]
     },
@@ -8509,7 +8506,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "148921"
+          "Value": "151433"
         },
         {
           "Name": "Content-Type",
@@ -8517,11 +8514,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"LvQ5fBMd+X/ysP8MLLiyKDEUry3valpwR5DMOCiK7Pg=\""
+          "Value": "\"ovUMlSncbx5WduzLuDmzHsC/EBwI78BawBdX6iTsDlE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 09:35:20 GMT"
+          "Value": "Sun, 20 Apr 2025 19:30:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8531,7 +8528,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-LvQ5fBMd+X/ysP8MLLiyKDEUry3valpwR5DMOCiK7Pg="
+          "Value": "sha256-ovUMlSncbx5WduzLuDmzHsC/EBwI78BawBdX6iTsDlE="
         }
       ]
     },
@@ -8618,6 +8615,51 @@
       ]
     },
     {
+      "Route": "assets/biz/css/index.deljlr721x.scss",
+      "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\index.scss",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73185"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FWSywAgGVaQD+0RDIrhe0sL6X64a97NTjK2y4m72rhs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 19:11:18 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "deljlr721x"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/biz/css/index.scss"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FWSywAgGVaQD+0RDIrhe0sL6X64a97NTjK2y4m72rhs="
+        }
+      ]
+    },
+    {
       "Route": "assets/biz/css/index.min.css",
       "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\index.min.css",
       "Selectors": [],
@@ -8628,7 +8670,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "120688"
+          "Value": "122706"
         },
         {
           "Name": "Content-Type",
@@ -8636,11 +8678,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QsICbB2a5DrEfNBkY8sIH0TtFN5UXWcg3k+A8VD6ivk=\""
+          "Value": "\"HroWltBSig++JGRk40bNtV5GlZcALEnyxycRaaAd9is=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 09:35:21 GMT"
+          "Value": "Sun, 20 Apr 2025 19:30:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8650,12 +8692,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-QsICbB2a5DrEfNBkY8sIH0TtFN5UXWcg3k+A8VD6ivk="
+          "Value": "sha256-HroWltBSig++JGRk40bNtV5GlZcALEnyxycRaaAd9is="
         }
       ]
     },
     {
-      "Route": "assets/biz/css/index.min.yf4dyd3koo.css",
+      "Route": "assets/biz/css/index.min.uhmsx10iwf.css",
       "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\index.min.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -8665,7 +8707,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "120688"
+          "Value": "122706"
         },
         {
           "Name": "Content-Type",
@@ -8673,11 +8715,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"QsICbB2a5DrEfNBkY8sIH0TtFN5UXWcg3k+A8VD6ivk=\""
+          "Value": "\"HroWltBSig++JGRk40bNtV5GlZcALEnyxycRaaAd9is=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 09:35:21 GMT"
+          "Value": "Sun, 20 Apr 2025 19:30:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8687,7 +8729,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "yf4dyd3koo"
+          "Value": "uhmsx10iwf"
         },
         {
           "Name": "label",
@@ -8695,7 +8737,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-QsICbB2a5DrEfNBkY8sIH0TtFN5UXWcg3k+A8VD6ivk="
+          "Value": "sha256-HroWltBSig++JGRk40bNtV5GlZcALEnyxycRaaAd9is="
         }
       ]
     },
@@ -8710,7 +8752,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "71149"
+          "Value": "73185"
         },
         {
           "Name": "Content-Type",
@@ -8718,11 +8760,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/tUIN2zx3HhrbuWXF3XdM4/K4i2fVqnQvqoIlQO1UUY=\""
+          "Value": "\"FWSywAgGVaQD+0RDIrhe0sL6X64a97NTjK2y4m72rhs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 09:23:37 GMT"
+          "Value": "Sun, 20 Apr 2025 19:11:18 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8732,12 +8774,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/tUIN2zx3HhrbuWXF3XdM4/K4i2fVqnQvqoIlQO1UUY="
+          "Value": "sha256-FWSywAgGVaQD+0RDIrhe0sL6X64a97NTjK2y4m72rhs="
         }
       ]
     },
     {
-      "Route": "assets/biz/css/rangeslider.dmnbgdgivx.scss",
+      "Route": "assets/biz/css/rangeslider.rpu26q7r0l.scss",
       "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\rangeslider.scss",
       "Selectors": [],
       "ResponseHeaders": [
@@ -8747,7 +8789,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3119"
+          "Value": "3118"
         },
         {
           "Name": "Content-Type",
@@ -8755,11 +8797,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"q8/eqS4UpbfRieK0cyqNu0SYXEgtNAVFvCyH36VDLaA=\""
+          "Value": "\"AVqxDc+DW9ecrZ1xebpV0gBxY9gJYcw2n8u6Yz4SZws=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 16:53:00 GMT"
+          "Value": "Wed, 16 Apr 2025 09:06:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8769,7 +8811,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dmnbgdgivx"
+          "Value": "rpu26q7r0l"
         },
         {
           "Name": "label",
@@ -8777,7 +8819,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-q8/eqS4UpbfRieK0cyqNu0SYXEgtNAVFvCyH36VDLaA="
+          "Value": "sha256-AVqxDc+DW9ecrZ1xebpV0gBxY9gJYcw2n8u6Yz4SZws="
         }
       ]
     },
@@ -8792,7 +8834,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3119"
+          "Value": "3118"
         },
         {
           "Name": "Content-Type",
@@ -8800,11 +8842,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"q8/eqS4UpbfRieK0cyqNu0SYXEgtNAVFvCyH36VDLaA=\""
+          "Value": "\"AVqxDc+DW9ecrZ1xebpV0gBxY9gJYcw2n8u6Yz4SZws=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 16:53:00 GMT"
+          "Value": "Wed, 16 Apr 2025 09:06:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8814,57 +8856,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-q8/eqS4UpbfRieK0cyqNu0SYXEgtNAVFvCyH36VDLaA="
+          "Value": "sha256-AVqxDc+DW9ecrZ1xebpV0gBxY9gJYcw2n8u6Yz4SZws="
         }
       ]
     },
     {
-      "Route": "assets/biz/css/responsive/_mobile.7ij1wm0gr7.css",
-      "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_mobile.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "43455"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Aa+1vCdKcWylZRS5VRsefmbcXJYOZUzc+6bSWo3Zm+I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 09:35:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7ij1wm0gr7"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/biz/css/responsive/_mobile.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Aa+1vCdKcWylZRS5VRsefmbcXJYOZUzc+6bSWo3Zm+I="
-        }
-      ]
-    },
-    {
-      "Route": "assets/biz/css/responsive/_mobile.96dgx8tp8b.scss",
+      "Route": "assets/biz/css/responsive/_mobile.3cbnonvjbd.scss",
       "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_mobile.scss",
       "Selectors": [],
       "ResponseHeaders": [
@@ -8874,7 +8871,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "60124"
+          "Value": "60182"
         },
         {
           "Name": "Content-Type",
@@ -8882,11 +8879,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"T2h0CdvnmpOyghuDAnQM27l+N4nqt0wwPEvwSHB6Cng=\""
+          "Value": "\"3eIieXHG3D+zVgF8qaCAkZRqgtVxNBAp7xtSktnw6a0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 09:35:18 GMT"
+          "Value": "Thu, 17 Apr 2025 05:59:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8896,7 +8893,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "96dgx8tp8b"
+          "Value": "3cbnonvjbd"
         },
         {
           "Name": "label",
@@ -8904,7 +8901,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-T2h0CdvnmpOyghuDAnQM27l+N4nqt0wwPEvwSHB6Cng="
+          "Value": "sha256-3eIieXHG3D+zVgF8qaCAkZRqgtVxNBAp7xtSktnw6a0="
         }
       ]
     },
@@ -8919,7 +8916,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "43455"
+          "Value": "43482"
         },
         {
           "Name": "Content-Type",
@@ -8927,11 +8924,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Aa+1vCdKcWylZRS5VRsefmbcXJYOZUzc+6bSWo3Zm+I=\""
+          "Value": "\"S/H0pe2DQSQUKXRVhnZNfMKZ6xNzDxYScbjw6F9ZD+0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 09:35:18 GMT"
+          "Value": "Thu, 17 Apr 2025 05:59:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8941,7 +8938,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Aa+1vCdKcWylZRS5VRsefmbcXJYOZUzc+6bSWo3Zm+I="
+          "Value": "sha256-S/H0pe2DQSQUKXRVhnZNfMKZ6xNzDxYScbjw6F9ZD+0="
+        }
+      ]
+    },
+    {
+      "Route": "assets/biz/css/responsive/_mobile.min.ci50emkir8.css",
+      "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_mobile.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34412"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HD4WwyOtcxXcu1gjxOzn1PRBRujWqX74+dUzMcYsUxg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 17 Apr 2025 05:59:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ci50emkir8"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/biz/css/responsive/_mobile.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HD4WwyOtcxXcu1gjxOzn1PRBRujWqX74+dUzMcYsUxg="
         }
       ]
     },
@@ -8956,7 +8998,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "34391"
+          "Value": "34412"
         },
         {
           "Name": "Content-Type",
@@ -8964,11 +9006,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dlQnO5TvzUV4JGy+4HqhV8izrtBJZymewvcBmFma5Tw=\""
+          "Value": "\"HD4WwyOtcxXcu1gjxOzn1PRBRujWqX74+dUzMcYsUxg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 09:35:18 GMT"
+          "Value": "Thu, 17 Apr 2025 05:59:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8978,13 +9020,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dlQnO5TvzUV4JGy+4HqhV8izrtBJZymewvcBmFma5Tw="
+          "Value": "sha256-HD4WwyOtcxXcu1gjxOzn1PRBRujWqX74+dUzMcYsUxg="
         }
       ]
     },
     {
-      "Route": "assets/biz/css/responsive/_mobile.min.yd0m5xid8i.css",
-      "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_mobile.min.css",
+      "Route": "assets/biz/css/responsive/_mobile.n5cbnefmfc.css",
+      "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_mobile.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8993,7 +9035,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "34391"
+          "Value": "43482"
         },
         {
           "Name": "Content-Type",
@@ -9001,11 +9043,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dlQnO5TvzUV4JGy+4HqhV8izrtBJZymewvcBmFma5Tw=\""
+          "Value": "\"S/H0pe2DQSQUKXRVhnZNfMKZ6xNzDxYScbjw6F9ZD+0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 09:35:18 GMT"
+          "Value": "Thu, 17 Apr 2025 05:59:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9015,15 +9057,15 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "yd0m5xid8i"
+          "Value": "n5cbnefmfc"
         },
         {
           "Name": "label",
-          "Value": "assets/biz/css/responsive/_mobile.min.css"
+          "Value": "assets/biz/css/responsive/_mobile.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-dlQnO5TvzUV4JGy+4HqhV8izrtBJZymewvcBmFma5Tw="
+          "Value": "sha256-S/H0pe2DQSQUKXRVhnZNfMKZ6xNzDxYScbjw6F9ZD+0="
         }
       ]
     },
@@ -9038,7 +9080,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "60124"
+          "Value": "60182"
         },
         {
           "Name": "Content-Type",
@@ -9046,11 +9088,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"T2h0CdvnmpOyghuDAnQM27l+N4nqt0wwPEvwSHB6Cng=\""
+          "Value": "\"3eIieXHG3D+zVgF8qaCAkZRqgtVxNBAp7xtSktnw6a0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 14 Mar 2025 09:35:18 GMT"
+          "Value": "Thu, 17 Apr 2025 05:59:37 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9060,13 +9102,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-T2h0CdvnmpOyghuDAnQM27l+N4nqt0wwPEvwSHB6Cng="
+          "Value": "sha256-3eIieXHG3D+zVgF8qaCAkZRqgtVxNBAp7xtSktnw6a0="
         }
       ]
     },
     {
-      "Route": "assets/biz/css/responsive/_tablet.g3n6ru2gll.scss",
-      "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_tablet.scss",
+      "Route": "assets/biz/css/responsive/_tablet.3kn5ey8jup.css",
+      "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_tablet.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9075,19 +9117,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "62915"
+          "Value": "47693"
         },
         {
           "Name": "Content-Type",
-          "Value": "application/octet-stream"
+          "Value": "text/css"
         },
         {
           "Name": "ETag",
-          "Value": "\"lPKsX+4jWR6+75OULlhAs1g6PGbABo/C946GgLpvY64=\""
+          "Value": "\"fSNSuxnzy/SWfQ/47B2KOtrMjRMqAGEeibR6T3yowjQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Mar 2025 15:14:25 GMT"
+          "Value": "Sun, 20 Apr 2025 19:30:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9097,15 +9139,134 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "g3n6ru2gll"
+          "Value": "3kn5ey8jup"
         },
         {
           "Name": "label",
-          "Value": "assets/biz/css/responsive/_tablet.scss"
+          "Value": "assets/biz/css/responsive/_tablet.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-lPKsX+4jWR6+75OULlhAs1g6PGbABo/C946GgLpvY64="
+          "Value": "sha256-fSNSuxnzy/SWfQ/47B2KOtrMjRMqAGEeibR6T3yowjQ="
+        }
+      ]
+    },
+    {
+      "Route": "assets/biz/css/responsive/_tablet.css",
+      "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_tablet.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "47693"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fSNSuxnzy/SWfQ/47B2KOtrMjRMqAGEeibR6T3yowjQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 19:30:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fSNSuxnzy/SWfQ/47B2KOtrMjRMqAGEeibR6T3yowjQ="
+        }
+      ]
+    },
+    {
+      "Route": "assets/biz/css/responsive/_tablet.min.4avu14w3tz.css",
+      "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_tablet.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38749"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JBUwGf22f6a3wYxiDQfZ1faAMeZXT0BktwLVVdLcIZQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 19:30:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4avu14w3tz"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/biz/css/responsive/_tablet.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-JBUwGf22f6a3wYxiDQfZ1faAMeZXT0BktwLVVdLcIZQ="
+        }
+      ]
+    },
+    {
+      "Route": "assets/biz/css/responsive/_tablet.min.css",
+      "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_tablet.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38749"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"JBUwGf22f6a3wYxiDQfZ1faAMeZXT0BktwLVVdLcIZQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 19:30:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-JBUwGf22f6a3wYxiDQfZ1faAMeZXT0BktwLVVdLcIZQ="
         }
       ]
     },
@@ -9120,7 +9281,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "62915"
+          "Value": "64107"
         },
         {
           "Name": "Content-Type",
@@ -9128,11 +9289,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"lPKsX+4jWR6+75OULlhAs1g6PGbABo/C946GgLpvY64=\""
+          "Value": "\"tqAtTNWkZq9guBGIWcnvlnLUNz797tgnwb20L9q87Xs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 01 Mar 2025 15:14:25 GMT"
+          "Value": "Sun, 20 Apr 2025 19:30:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9142,7 +9303,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-lPKsX+4jWR6+75OULlhAs1g6PGbABo/C946GgLpvY64="
+          "Value": "sha256-tqAtTNWkZq9guBGIWcnvlnLUNz797tgnwb20L9q87Xs="
+        }
+      ]
+    },
+    {
+      "Route": "assets/biz/css/responsive/_tablet.yh7384wz3b.scss",
+      "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_tablet.scss",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "64107"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tqAtTNWkZq9guBGIWcnvlnLUNz797tgnwb20L9q87Xs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 20 Apr 2025 19:30:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yh7384wz3b"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/biz/css/responsive/_tablet.scss"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tqAtTNWkZq9guBGIWcnvlnLUNz797tgnwb20L9q87Xs="
         }
       ]
     },
@@ -28089,6 +28295,51 @@
       ]
     },
     {
+      "Route": "assets/biz/js/rang/script.ixanqop42m.js",
+      "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\js\\rang\\script.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2506"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6h56M9sbhl6GVWUzdhM/RrsAZfmScU5axuMeJg8qI/c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 16 Apr 2025 10:14:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ixanqop42m"
+        },
+        {
+          "Name": "label",
+          "Value": "assets/biz/js/rang/script.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6h56M9sbhl6GVWUzdhM/RrsAZfmScU5axuMeJg8qI/c="
+        }
+      ]
+    },
+    {
       "Route": "assets/biz/js/rang/script.js",
       "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\js\\rang\\script.js",
       "Selectors": [],
@@ -28099,7 +28350,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2265"
+          "Value": "2506"
         },
         {
           "Name": "Content-Type",
@@ -28107,11 +28358,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"KW4NTmoa1rzgEe2d3WTRiHl1LF7Rweqw57sHDj170so=\""
+          "Value": "\"6h56M9sbhl6GVWUzdhM/RrsAZfmScU5axuMeJg8qI/c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 16:34:32 GMT"
+          "Value": "Wed, 16 Apr 2025 10:14:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -28121,57 +28372,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-KW4NTmoa1rzgEe2d3WTRiHl1LF7Rweqw57sHDj170so="
+          "Value": "sha256-6h56M9sbhl6GVWUzdhM/RrsAZfmScU5axuMeJg8qI/c="
         }
       ]
     },
     {
-      "Route": "assets/biz/js/rang/script.rng2hsf91s.js",
-      "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\js\\rang\\script.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2265"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"KW4NTmoa1rzgEe2d3WTRiHl1LF7Rweqw57sHDj170so=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Feb 2025 16:34:32 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "rng2hsf91s"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/biz/js/rang/script.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-KW4NTmoa1rzgEe2d3WTRiHl1LF7Rweqw57sHDj170so="
-        }
-      ]
-    },
-    {
-      "Route": "assets/biz/js/script.9ibnboeege.js",
+      "Route": "assets/biz/js/script.fquzlfyvuf.js",
       "AssetFile": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\js\\script.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -28181,7 +28387,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11875"
+          "Value": "12221"
         },
         {
           "Name": "Content-Type",
@@ -28189,11 +28395,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/7qz+XKca4DEApLKtV0rjakPAuIxiI9OvyKYkBCjqfk=\""
+          "Value": "\"Vzfn8NBf3j9ZrJ8pG5+y1RErAQqizT+VmnFy3LHEwbw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 16 Mar 2025 17:51:03 GMT"
+          "Value": "Sun, 20 Apr 2025 11:47:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -28203,7 +28409,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "9ibnboeege"
+          "Value": "fquzlfyvuf"
         },
         {
           "Name": "label",
@@ -28211,7 +28417,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-/7qz+XKca4DEApLKtV0rjakPAuIxiI9OvyKYkBCjqfk="
+          "Value": "sha256-Vzfn8NBf3j9ZrJ8pG5+y1RErAQqizT+VmnFy3LHEwbw="
         }
       ]
     },
@@ -28226,7 +28432,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11875"
+          "Value": "12221"
         },
         {
           "Name": "Content-Type",
@@ -28234,11 +28440,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/7qz+XKca4DEApLKtV0rjakPAuIxiI9OvyKYkBCjqfk=\""
+          "Value": "\"Vzfn8NBf3j9ZrJ8pG5+y1RErAQqizT+VmnFy3LHEwbw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 16 Mar 2025 17:51:03 GMT"
+          "Value": "Sun, 20 Apr 2025 11:47:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -28248,7 +28454,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/7qz+XKca4DEApLKtV0rjakPAuIxiI9OvyKYkBCjqfk="
+          "Value": "sha256-Vzfn8NBf3j9ZrJ8pG5+y1RErAQqizT+VmnFy3LHEwbw="
         }
       ]
     },
@@ -38935,7 +39141,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 06 Feb 2025 19:14:09 GMT"
+          "Value": "Sun, 20 Apr 2025 19:45:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -38972,7 +39178,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 06 Feb 2025 19:14:09 GMT"
+          "Value": "Sun, 20 Apr 2025 19:45:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -39017,7 +39223,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 06 Feb 2025 19:14:09 GMT"
+          "Value": "Sun, 20 Apr 2025 19:45:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -39062,7 +39268,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 06 Feb 2025 19:14:09 GMT"
+          "Value": "Sun, 20 Apr 2025 19:45:29 GMT"
         },
         {
           "Name": "Cache-Control",

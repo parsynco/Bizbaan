@@ -26,5 +26,9 @@
   {
     "outputFile": "wwwroot/assets/biz/css/responsive/_mobile.css",
     "inputFile": "wwwroot/assets/biz/css/responsive/_mobile.scss"
+  },
+  {
+    "outputFile": "wwwroot/assets/biz/css/responsive/_tablet.css",
+    "inputFile": "wwwroot/assets/biz/css/responsive/_tablet.scss"
   }
 ]

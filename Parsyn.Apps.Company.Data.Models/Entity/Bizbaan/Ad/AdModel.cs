@@ -11,17 +11,17 @@ namespace Parsyn.Apps.Company.Data.Models.Entity.Bizbaan.Ad
 {
     public class AdModel : BaseModel
     {
-        public int CategoryId {  get; set; }
+        public int CategoryId { get; set; }
         [ForeignKey(nameof(CategoryId))]
         public AdCategoryModel? Category { get; set; }
-        public int ZipId {  get; set; }
+        public int ZipId { get; set; }
         [ForeignKey(nameof(ZipId))]
         public virtual ZipModel? Zip { get; set; }
         public virtual ICollection<AdImageModel>? Images { get; set; }
         public SeoModel? Seo { get; set; } = new SeoModel();
         /***********/
-        public string? RegionName { get { return Zip?.County_Area; }  }
-        public string? CityName { get { return Zip?.City; }  }
+        public string? RegionName { get { return Zip?.County_Area; } }
+        public string? CityName { get { return Zip?.City; } }
         public string? ProivinceName { get { return Zip?.State; } }
         public string? ProvinceAbbr { get { return Zip?.State_Abbr; } }
         /***********/
@@ -30,15 +30,18 @@ namespace Parsyn.Apps.Company.Data.Models.Entity.Bizbaan.Ad
         public string? TitleEn { get; set; }
         public string? Logo { get; set; }
         public string? Description { get; set; }
+        public string? DescriptionEn { get; set; }
         public string? Phone { get; set; }
         public string? Telephone { get; set; }
+        public string? Fax { get; set; }
         public string? ZipCode { get; set; }
         public string? Email { get; set; }
         public string? Address { get; set; }
         public string? Lat { get; set; }
         public string? Lng { get; set; }
         public string? EmbedMapAddress { get; set; }
-       
+        public int Sort { get; set; } = 0;
+
 
     }
 }

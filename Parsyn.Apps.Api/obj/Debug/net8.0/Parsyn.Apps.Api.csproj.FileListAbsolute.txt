@@ -147,8 +147,6 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\LazZiya
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\SevenZip.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\Mapster.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\Mapster.Core.dll
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\System.Net.Http.Formatting.dll
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\System.Web.Http.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
@@ -192,7 +190,6 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\Microso
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\MimeTypes.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\Newtonsoft.Json.dll
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\Serilog.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\Serilog.AspNetCore.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Api\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll

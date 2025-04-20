@@ -47,12 +47,23 @@
         }
       }
     },
-    "/api/admin/AdCategory/l2": {
+    "/api/admin/AdCategory/l2/{mc}": {
       "get": {
         "tags": [
           "AdCategory"
         ],
         "operationId": "Category GET ALL L2",
+        "parameters": [
+          {
+            "name": "mc",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -2325,6 +2336,10 @@
             "type": "string",
             "nullable": true
           },
+          "sort": {
+            "type": "integer",
+            "format": "int32"
+          },
           "seo": {
             "$ref": "#/components/schemas/SeoModel"
           },
@@ -2463,11 +2478,19 @@
             "type": "string",
             "nullable": true
           },
+          "descriptionEn": {
+            "type": "string",
+            "nullable": true
+          },
           "phone": {
             "type": "string",
             "nullable": true
           },
           "telephone": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
             "type": "string",
             "nullable": true
           },
@@ -2494,6 +2517,10 @@
           "embedMapAddress": {
             "type": "string",
             "nullable": true
+          },
+          "sort": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

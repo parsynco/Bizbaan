@@ -118,6 +118,9 @@ namespace Parsyn.Apps.Company.Data.Migrations
                     b.Property<int?>("SeoId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Sort")
+                        .HasColumnType("int");
+
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
@@ -179,10 +182,16 @@ namespace Parsyn.Apps.Company.Data.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("DescriptionEn")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EmbedMapAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Fax")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
@@ -204,6 +213,9 @@ namespace Parsyn.Apps.Company.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("SeoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Sort")
                         .HasColumnType("int");
 
                     b.Property<string>("Telephone")

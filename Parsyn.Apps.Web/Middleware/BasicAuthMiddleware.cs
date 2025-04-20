@@ -14,6 +14,10 @@ namespace Parsyn.Apps.Web.Middleware
 
         public async Task InvokeAsync(HttpContext context)
         {
+            if (context.Request.Path.Value.Contains(".json") || context.Request.Path.Value.Contains(".manifest"))
+            {
+                await _next(context);
+            }
             // Check if the request is from a Google crawler
             var userAgent = context.Request.Headers["User-Agent"].ToString();
             if (IsGoogleCrawler(userAgent))

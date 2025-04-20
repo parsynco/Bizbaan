@@ -1,7 +1,7 @@
 ﻿"use strict";
 var problemSwiper;
 $(function () {
-    
+
     $(window).on("scroll", function () {
         if ($(window).scrollTop() > 30) {
             $(".header").addClass("active");
@@ -74,7 +74,7 @@ $(function () {
         const $slider = document.getElementById('Mile');
 
         // set properties
-        $slider.rtl = true; 
+        $slider.rtl = true;
         /*$('#Mile').rangeslider();*/
     }
     $("#showModal").on('click', function () {
@@ -88,7 +88,7 @@ $(function () {
 $(document).ready(function () {
     AOS.init({ disable: 'mobile' });
 });
-function SetCategoryAndCloseModal(catid,title) {
+function SetCategoryAndCloseModal(catid, title) {
     $("#CATID").val(catid);
     ignoreTitleToSearch = true;
     $("#ADTITLED").val(title);
@@ -120,6 +120,7 @@ async function SearchAd() {
             var cat = $("#CATID").val();
             var adtitle = $("#ADTITLE").val();
             var region = $("#REGION").val();
+            var mile = $("#MILE").val();
             if (cat == "") {
                 const index_currentSlide = problemSwiper.realIndex;
                 const currentSlide = problemSwiper.slides[index_currentSlide];
@@ -127,8 +128,9 @@ async function SearchAd() {
             }
             var model = {
                 CatId: parseInt(cat),
-                Title: (ignoreTitleToSearch ? "" : adtitle), 
-                Region: region
+                Title: (ignoreTitleToSearch ? "" : adtitle),
+                Region: region,
+                Mile: region != "" ? mile : 1
             };
 
             $.ajax({
@@ -178,22 +180,23 @@ function DisableTitleIgnoring() {
     ignoreTitleToSearch = false;
 }
 async function searchAdDesktop() {
-    e.preventDefault();
+
     grecaptcha.ready(function () {
         grecaptcha.execute('6LeGQOAqAAAAAIRbkRcc2DHs5h9R7KxegkDb5w4F', { action: 'submit' }).then(function (token) {
             var cat = $("#CATIDD").val();
             var adtitle = $("#ADTITLED").val();
             var region = $("#REGIOND").val();
+            var mile = $("#MILE").val();
             if (cat == "") {
                 cat = $("#firstItemToSelect").attr("data-itemid");
             }
             var model = {
                 CatId: parseInt(cat),
                 Title: (ignoreTitleToSearch ? "" : adtitle),
-                Region: region
+                Region: region,
+                Mile: region != "" ? mile : 1
             };
-            console.warn(model);
-            $("#res-loading").toggleClass("active");
+
             $.ajax({
                 type: "POST",
                 data: JSON.stringify(model),
@@ -219,24 +222,26 @@ async function searchAdDesktop() {
                         </a>
                         `;
                     });
-                    if (data.length < 6) {
-                        for (var i = 0; i < (6 - data.length); i++) {
+                    if (data.length < 4) {
+                        for (var i = 0; i < (4 - data.length); i++) {
                             html += `<a href="javascript:void(0)" class="result-item empty">نتیجه جستجو</a>`;
                         }
                     }
                     $("#desktop-search-result").html(html);
-                    var to = window.setTimeout(function () {
-                        clearTimeout(to);
-                        $("#res-loading").toggleClass("active");
-                    }, 1000);
+                    $(".fluid-search-options-section").addClass("active");
+
                 }
             });
         });
     });
 
 }
+async function CloseFilterResult() {
+    $("#desktop-search-result").html('');
+    $(".fluid-search-options-section").removeClass("active");
+}
 async function Subscribe() {
-    e.preventDefault();
+
     grecaptcha.ready(function () {
         grecaptcha.execute('6LeGQOAqAAAAAIRbkRcc2DHs5h9R7KxegkDb5w4F', { action: 'submit' }).then(function (token) {
             var cat = $("#subscribe").val();
@@ -260,11 +265,19 @@ async function Subscribe() {
     });
 
 }
-async function SetCategoryOnDesktop(id,title) {
+async function SetCategoryOnDesktop(id, title,color,element) {
     $("#CATIDD").val(id);
     ignoreTitleToSearch = true;
     $("#ADTITLED").val(title);
-    await searchAdDesktop();
+    const allBackgroundElements = document.querySelectorAll('.has-background');
+    allBackgroundElements.forEach(el => {
+        el.style.backgroundColor = 'transparent';
+    });
+
+    console.warn("ELEMENT : ", $("#" + element));
+
+    $("#" + element).css('background-color', color );
+ 
 }
 function ToggleSidebar() {
     $(".absolute-slider").toggleClass("active");
@@ -276,7 +289,7 @@ function GetGeoLocation() {
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
             (position) => {
-                 lat = position.coords.latitude;
+                lat = position.coords.latitude;
                 lng = position.coords.longitude;
                 getLocToZip();
                 console.log(`Latitude: ${lat}, longitude: ${lng}`);
@@ -297,8 +310,8 @@ function GetGeoLocation() {
                 // You can now access the location data in the "data" object
                 lat = data.location.latitude;
                 lng = data.location.longitude;
-;               getLocToZip();
-                console.log(lat,lng);
+                ; getLocToZip();
+                console.log(lat, lng);
             })
     }
     const getLocToZip = function () {
@@ -313,7 +326,7 @@ function GetGeoLocation() {
             })
             .catch(error => console.log('error', error));
     }
-    
+
 }
 
 function Err(msg) {

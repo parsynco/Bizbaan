@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Parysn.Apps.Admin",
   "resources": {
-    "hash": "sha256-9fMnRzpQSTenvNrAIbU2dvT3R+FfnV+1R0q93d5plp8=",
+    "hash": "sha256-0bv4L7Q2QZ5BrS97pigVPElj4UniYKx0yxrSkUDvq7g=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-DTUQS6Jc6BNnS7sYYezFfaUKVmQq0/lanhQuJfygH/k="
     },
@@ -293,16 +293,16 @@
       "mscorlib.dll": "sha256-IK+SnG36ZowqXlMrGSO7DTw7fUyzAUCi0DguxLNsIXQ=",
       "netstandard.dll": "sha256-LMgbq5tO+BnNRiWG9d4y3TdVyaxDVhIYWNql2GOSGRA=",
       "System.Private.CoreLib.dll": "sha256-sHTOfvP2YMb0v2PIQBcyHTBaOEvda0YDT/RA5q7QndQ=",
-      "Parsyn.Apps.Company.Data.Models.dll": "sha256-ofOXpxsLulBLzLIa5Z+j/vON/EqbqO/jcSuu4wpMMbM=",
-      "Parsyn.Apps.Company.Data.Models.Dtos.dll": "sha256-kNIZDKzDFg/hAOR2uqDhQoenPiyKbaXeqrvj0coKYCc=",
-      "Parsyn.Apps.Company.Service.Utiles.dll": "sha256-fMOJSM+VI3YgBfktLpNALq6RyVMv/LIeQxipFaTdqq4=",
-      "Parysn.Apps.Admin.dll": "sha256-qLoLWkvXRQLhOxR3tHiv4bE92heuk4J+jQPQuu3VGPk="
+      "Parsyn.Apps.Company.Data.Models.dll": "sha256-gRrG1836mJcaTA2UFXjFdr8p1Xym22v1/DuBZueWuBQ=",
+      "Parsyn.Apps.Company.Data.Models.Dtos.dll": "sha256-5CXGPR1Zvlh2STyp88T5pcDniz2pwDBeJRDzjCwsAGo=",
+      "Parsyn.Apps.Company.Service.Utiles.dll": "sha256-9hDLyaOKud1Ci6n0bFn2Zy02DVsq7nmfZJBB8sIQIPc=",
+      "Parysn.Apps.Admin.dll": "sha256-IFXPvOPZQQ1nCIELdRwSPx0Si5fbqam4faiLjeebh/k="
     },
     "pdb": {
-      "Parsyn.Apps.Company.Data.Models.Dtos.pdb": "sha256-IMDtEy9+RONM3xkD2qme3lXo/PKVED/FX9OGNZlYQCE=",
-      "Parsyn.Apps.Company.Service.Utiles.pdb": "sha256-1+8GxBJ4lL8crGk352WyR2ERSrrTa5oVZR9Gf35GOAk=",
-      "Parsyn.Apps.Company.Data.Models.pdb": "sha256-yzxO2MVP7XXhR64mt6vZjZ3DqulZ/KFW/Devw/+fP6Q=",
-      "Parysn.Apps.Admin.pdb": "sha256-WLbpm5bfJGjqQj+3H8Br+ur6lxUwrrBshVB5CRENsG0="
+      "Parsyn.Apps.Company.Data.Models.Dtos.pdb": "sha256-Tn2hBb34YiZ+bKpUtxmlxzopXD2l5VrHujysuLMxtf4=",
+      "Parsyn.Apps.Company.Service.Utiles.pdb": "sha256-7/2A+h51wKbHMxMtr59npVhBCf+nhm2tapR6edrleTk=",
+      "Parsyn.Apps.Company.Data.Models.pdb": "sha256-E5ZPXGKoe5BWA4/tIpILsjOjvYjO3Zdm3faGe2/ftaU=",
+      "Parysn.Apps.Admin.pdb": "sha256-/iRI9sR+vWwI+QURC0qCjDkiqq8BY7tw/RyXpPFCOtU="
     },
     "satelliteResources": {
       "cs": {

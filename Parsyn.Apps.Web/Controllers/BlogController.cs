@@ -1,5 +1,6 @@
 ﻿using BreadCrumb.Core;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OutputCaching;
 using Parsyn.Apps.Company.Services.Interfaces;
 using Parsyn.Apps.Web.Models.Blog;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ namespace Parsyn.Apps.Web.Controllers
 {
     [BreadCrumb(UseDefaultRouteUrl = true, Order = 0)]
     [DisplayName("اخبار و مقالات")]
+    [OutputCache(Duration = 120)]
     public class BlogController(IArticleCatIface articleCatIface, IArticleIface articleIface) : Controller
     {
         private readonly IArticleCatIface _articleCatIface = articleCatIface;

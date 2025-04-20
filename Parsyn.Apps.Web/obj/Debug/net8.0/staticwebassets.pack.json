@@ -57,6 +57,14 @@
       "PackagePath": "staticwebassets\\assets\\biz\\css\\responsive\\_mobile.scss"
     },
     {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_tablet.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\responsive\\_tablet.css"
+    },
+    {
+      "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_tablet.min.css",
+      "PackagePath": "staticwebassets\\assets\\biz\\css\\responsive\\_tablet.min.css"
+    },
+    {
       "Id": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Web\\wwwroot\\assets\\biz\\css\\responsive\\_tablet.scss",
       "PackagePath": "staticwebassets\\assets\\biz\\css\\responsive\\_tablet.scss"
     },

@@ -27,6 +27,7 @@ builder.Logging.ClearProviders();
 builder.Logging.AddSerilog(logger);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<PDBContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddScoped<DbContext, PDBContext>();
 builder.Services.AddScoped<IUserIface, UserService>();
 builder.Services.AddScoped<IMediaIface, MediaService>();
 builder.Services.AddScoped<ISeoIface, SeoService>();
@@ -63,7 +64,14 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 app.UseMiddleware<BasicAuthMiddleware>();
-app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    ServeUnknownFileTypes = true,
+    OnPrepareResponse = ctx =>
+    {
+        ctx.Context.Response.Headers.Append("Access-Control-Allow-Origin", "*");
+    }
+});
 
 app.UseRouting();
 

@@ -25,6 +25,7 @@
 					</CellTemplate>
 				</TemplateColumn>
 				<PropertyColumn Property="x => x.Title" Title="عنوان اصلی " />
+				<PropertyColumn Property="x => x.Sort" Title="اولویت " />
 				<TemplateColumn Title="رنگ دسته بندی">
 					<CellTemplate>
 						<MudChip Style="@($"background-color:{context.Item.Color} !important;color:#fff")">@context.Item.Color</MudChip>

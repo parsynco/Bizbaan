@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Parsyn.Apps.Company.Data.Models.Entity;
 using Parsyn.Apps.Company.Data.Models.Entity.Base;
@@ -22,11 +23,18 @@ namespace Parsyn.Apps.Company.Data.Contexts
 {
     public class PDBContext : DbContext
     {
-        //public  PDBContext()
-        //{
-        //    var myTypes = AppDomain.CurrentDomain.GetAssemblies().SelectMany(a => a.GetTypes()).Where(t => t.IsSubclassOf(typeof(BaseModel)));
 
-        //}
+        public PDBContext()
+        {
+            // Design-time constructor
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(
+                @"Data Source=188.40.192.230,1433;Initial Catalog=bizbaan;User=sa;Password=&UJMmju7;MultipleActiveResultSets=true;Encrypt=False;");
+        }
+
 
         public DbSet<UserModel> User { get; set; }
         public DbSet<MediaModel> Media { get; set; }
@@ -58,15 +66,8 @@ namespace Parsyn.Apps.Company.Data.Contexts
         public DbSet<AdModel> Ads { get; set; }
         public DbSet<ZipModel> Zipcodes { get; set; }
         public DbSet<SubscribeModel> Subscribe { get; set; }
-        public PDBContext(DbContextOptions<PDBContext> options) : base(options)
-        {
-        }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            //optionsBuilder.UseSqlServer("Data Source=.;Database=ISA;Trusted_Connection=true;MultipleActiveResultSets=true;TrustServerCertificate=True;");
-            //optionsBuilder.UseSqlServer("Data Source=.;Database=ISA;Trusted_Connection=true;MultipleActiveResultSets=true;TrustServerCertificate=True;");
-            optionsBuilder.UseSqlServer("Data Source=188.40.192.230,1433;Initial Catalog=bizbaan;User=sa;Password=&UJMmju7;MultipleActiveResultSets=true;Encrypt=False;");
-        }
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ArticleModel>()

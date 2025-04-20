@@ -1,9 +1,7 @@
 ﻿
 function InitVideo() {
-    alert("Hello");
     const videoElement = document.querySelector('youtube-video');
     if (videoElement) {
-        alert("HELLO DADDY");
         // must wait for DOM to be ready and for component to be accessible
 
         // wait for loading
@@ -40,13 +38,13 @@ function ActiveMap({ mode = false }) {
 }
 
 function AddMarker(cords) {
-    console.warn("AddMARJEJHUIHUDFGHDUI", cords.lng, cords.lat);
     var bicon = document.createElement('div');
     bicon.classList.add("business-icon-over-map");
     var bm = new maplibregl.Marker(bicon, {
         anchor: 'bottom',
         offset: [0, 6]
     }).setLngLat([cords.lng, cords.lat]).addTo(MAP);
+    bm.setOffset([0, 1])
 
 }
 

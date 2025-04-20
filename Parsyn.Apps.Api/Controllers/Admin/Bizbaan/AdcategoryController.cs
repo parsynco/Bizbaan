@@ -1,4 +1,6 @@
-﻿using Mapster;
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
+using Mapster;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -29,11 +31,14 @@ namespace Parsyn.Apps.Api.Controllers.Admin.Bizbaan
             var result = _srvc.GetAllInclude().ToArray();
             return Content(JsonConvert.SerializeObject(result, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore }));
         }
-        [HttpGet("l2")]
+        [HttpGet]
+        [Route("l2/{mc:int?}")]
         [EndpointName("Category GET ALL L2")]
-        public ActionResult GetAllL2()
+        public ActionResult GetAllL2(int? mc)
         {
             var result = _srvc.GetLevelTwo().ToArray();
+            if (mc is not null)
+                result = result.ToList().Where(x => x.ParentId == mc).ToArray();
             return Content(JsonConvert.SerializeObject(result, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore }));
         }
         [HttpGet("l1")]
@@ -46,8 +51,10 @@ namespace Parsyn.Apps.Api.Controllers.Admin.Bizbaan
         [HttpPost("GetById")]
         public ActionResult GetById(int Id)
         {
-            var opr = _srvc.GetInclude(Id);
-            return new JsonResult(_rspgen.MapOk(data: opr));
+            var opr = _srvc.GetIncludeOnlySeo(Id);
+            opr.Childs = null;
+            opr.Parent = null;
+            return new JsonResult(_rspgen.MapOk(data: opr), new JsonSerializerOptions() { ReferenceHandler = ReferenceHandler.Preserve });
         }
         [HttpPost]
         public IActionResult Add(AdCategoryModel userDto)

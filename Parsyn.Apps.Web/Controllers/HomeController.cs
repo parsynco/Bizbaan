@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Manage.Internal;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OutputCaching;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using Newtonsoft.Json;
 using Parsyn.Apps.Company.Data.Models.Dtos.Base.IndexSections;
@@ -18,7 +19,8 @@ using System.Text.Json.Serialization;
 namespace Parsyn.Apps.Web.Controllers
 {
     [ResponseCache(Duration = 43200, Location = ResponseCacheLocation.Client)]
-    public class HomeController(ILogger<HomeController> logger, IFormsIface forms, IAdIface adsIface, IArticleIface articleIface, IZipIface ziprad, ISubscribeIface subscribeIface,IOptionIface optionIface) : Controller
+    [OutputCache(Duration = 43200)]
+    public class HomeController(ILogger<HomeController> logger, IFormsIface forms, IAdIface adsIface, IArticleIface articleIface, IZipIface ziprad, ISubscribeIface subscribeIface, IOptionIface optionIface) : Controller
     {
         private readonly ILogger<HomeController> _logger = logger;
         private readonly IFormsIface _forms = forms;
@@ -71,10 +73,10 @@ namespace Parsyn.Apps.Web.Controllers
         }
 
         [HttpPost("/Subscribe")]
-        public async Task<IActionResult> Search([FromBody]SubscribeModel email)
+        public async Task<IActionResult> Search([FromBody] SubscribeModel email)
         {
             if (!ModelState.IsValid)
-                return Json(new { status = 1 , msg = "Invalid email format."});
+                return Json(new { status = 1, msg = "Invalid email format." });
 
             var ip = HttpContext.Connection.RemoteIpAddress?.ToString();
             email.IP = ip;

@@ -19,13 +19,13 @@ namespace Parsyn.Apps.Company.Services.Services.Bizbaan
 
         public List<AdModel> FilterByAdType(bool adtype)
         {
-            var data = _dbObj.Where(x => x.IsSpecial == adtype).Include(x => x.Seo).Include(x => x.Category).Include(x => x.Zip).ToList();
+            var data = _dbObj.Where(x => x.IsSpecial == adtype).OrderBy(x => x.Sort).Include(x => x.Seo).Include(x => x.Category).Include(x => x.Zip).ToList();
             return data;
         }
 
         public List<AdModel> GetAllInclude()
         {
-            return [.. _dbObj.Include(x => x.Seo).Include(x => x.Category).Include(x => x.Zip)];
+            return [.. _dbObj.Include(x => x.Seo).OrderBy(x => x.Sort).Include(x => x.Category).Include(x => x.Zip)];
         }
 
         public AdModel GetInclude(int id)
@@ -42,7 +42,7 @@ namespace Parsyn.Apps.Company.Services.Services.Bizbaan
 
         public List<AdModel> GetNewest()
         {
-            return [.. _dbObj.OrderByDescending(x => x.Created_At).Include(x => x.Zip).Include(x => x.Seo).Include(x => x.Category).Take(4)];
+            return [.. _dbObj.OrderByDescending(x => x.Created_At).OrderBy(x => x.Sort).Include(x => x.Zip).Include(x => x.Seo).Include(x => x.Category).Take(4)];
         }
 
 
@@ -69,7 +69,7 @@ namespace Parsyn.Apps.Company.Services.Services.Bizbaan
                     }
                 }
             }
-            return data.ToList();
+            return data.OrderBy(x => x.Sort).ToList();
         }
     }
 }

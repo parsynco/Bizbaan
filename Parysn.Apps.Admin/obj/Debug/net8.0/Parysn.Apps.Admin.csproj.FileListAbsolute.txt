@@ -1,3 +1,4 @@
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\staticwebassets\msbuild.Parysn.Apps.Admin.Microsoft.AspNetCore.StaticWebAssets.props
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\AuralizeBlazor.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\AutoMapper.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\BCrypt.Net-Next.dll
@@ -156,6 +157,7 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwro
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\ru\Microsoft.CodeAnalysis.resources.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\Serilog.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\SevenZip.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\SharpCompress.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\SixLabors.ImageSharp.dll
@@ -532,6 +534,7 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwro
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\System.Collections.Concurrent.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\Parsyn.Apps.Company.Data.Models.Dtos.pdb.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\Serilog.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\System.Net.Primitives.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\System.Windows.dll.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll.gz
@@ -791,6 +794,7 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\Newto
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\Nextended.Blazor.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\Nextended.Core.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\OneOf.dll
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\Serilog.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\SharpCompress.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\SixLabors.ImageSharp.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\System.CodeDom.dll
@@ -1147,6 +1151,7 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compr
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\nisz91a0jp-cqxg6dkaxq.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\4jripjo976-m3vrqh7pi5.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\qqxzwgr108-uc1rh50xhz.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\laxr1u7ck1-13ghhtnl0y.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\8w1whpwduo-6j3g8gtgg1.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\j26vpot72t-re1f6muzcw.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\59ukix6jq0-52c5fin0s2.gz
@@ -1391,10 +1396,11 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compr
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\odbvj135v4-tptq2av103.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\mvlfzkgvzk-lfu7j35m59.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\ri67voq9oq-oyz0vx2fzb.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\qkmejqbyfm-on55iq4hmz.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\la0pc0jwsh-62gcxoge7n.gz
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\staticwebassets.build.json
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\staticwebassets.development.json
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\staticwebassets\msbuild.Parysn.Apps.Admin.Microsoft.AspNetCore.StaticWebAssets.props
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\staticwebassets\msbuild.Parysn.Apps.Admin.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\staticwebassets\msbuild.build.Parysn.Apps.Admin.props
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Parysn.Apps.Admin.props
@@ -1406,16 +1412,10 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\Parys
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\refint\Parysn.Apps.Admin.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\Parysn.Apps.Admin.pdb
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\ref\Parysn.Apps.Admin.dll
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\Serilog.dll
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\wwwroot\_framework\Serilog.dll.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Debug\net8.0\Serilog.dll
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\laxr1u7ck1-13ghhtnl0y.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\2pt1wdpc1a-9y991ucfe8.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\qkmejqbyfm-ggmbjxxb6p.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\4k6yscweek-s45uq9n3ht.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\la0pc0jwsh-gglqlrduaq.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\6ulszn60tu-r7o5qzqqao.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\7cd7xix2rg-hlvdexjvqw.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\r7jz04frpn-s7gtmalzaa.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\w74k43wd2q-owddqubyl1.gz
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\4dszgf0g4o-bzbjrhamif.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\2pt1wdpc1a-5nojjpmbfw.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\4k6yscweek-euvvy7cbdl.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\6ulszn60tu-5zaqognywr.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\7cd7xix2rg-bicbm7bib2.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\r7jz04frpn-00qeyyb02f.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\w74k43wd2q-q1oxtccu98.gz
+G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\obj\Debug\net8.0\compressed\4dszgf0g4o-semdv9tvqg.gz

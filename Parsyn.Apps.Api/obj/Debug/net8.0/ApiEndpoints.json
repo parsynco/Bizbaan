@@ -88,11 +88,17 @@
   {
     "ContainingType": "Parsyn.Apps.Api.Controllers.Admin.Bizbaan.AdCategoryController",
     "Method": "GetAllL2",
-    "RelativePath": "api/admin/AdCategory/l2",
+    "RelativePath": "api/admin/AdCategory/l2/{mc}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "mc",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [],
     "EndpointName": "Category GET ALL L2"
   },

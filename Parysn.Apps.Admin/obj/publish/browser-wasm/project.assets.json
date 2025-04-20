@@ -8804,6 +8804,7 @@
       "Blazored.SessionStorage >= 2.4.0",
       "FisSst.BlazorMaps >= 1.0.1",
       "Mapster >= 7.4.0",
+      "Microsoft.AspNetCore.Components.Analyzers >= 8.0.12",
       "Microsoft.AspNetCore.Components.Authorization >= 8.0.12",
       "Microsoft.AspNetCore.Components.WebAssembly >= 8.0.7",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 8.0.7",
@@ -8895,6 +8896,10 @@
             "target": "Package",
             "version": "[7.4.0, )"
           },
+          "Microsoft.AspNetCore.Components.Analyzers": {
+            "target": "Package",
+            "version": "[8.0.12, )"
+          },
           "Microsoft.AspNetCore.Components.Authorization": {
             "target": "Package",
             "version": "[8.0.12, )"
@@ -8963,5 +8968,13 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

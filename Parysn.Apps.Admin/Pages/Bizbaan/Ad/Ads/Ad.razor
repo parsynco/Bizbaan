@@ -19,6 +19,7 @@
 
 				<PropertyColumn Property="x => x.Category.Title" Title="عنوان دسته بندی " />
 				<PropertyColumn Property="x => x.Title" Title="عنوان اصلی " />
+				<PropertyColumn Property="x => x.Sort" Title=" اولویت " />
 				<PropertyColumn Property="x => x.IsSpecial" Title=" نوع بیزینس ">
 					<CellTemplate>
 						@if (context.Item.IsSpecial)
@@ -103,7 +104,7 @@
 		{
 			_loading = true;
 			var data = await _hc.GetFromJsonAsync<AdModel[]>("ads");
-			_dataList = data;
+			_dataList = data.OrderBy(x => x.Sort).ToArray();
 			_loading = false;
 			StateHasChanged();
 

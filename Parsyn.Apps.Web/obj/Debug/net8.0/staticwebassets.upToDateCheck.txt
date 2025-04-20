@@ -11,6 +11,8 @@ wwwroot\assets\biz\css\rangeslider.scss
 wwwroot\assets\biz\css\responsive\_mobile.css
 wwwroot\assets\biz\css\responsive\_mobile.min.css
 wwwroot\assets\biz\css\responsive\_mobile.scss
+wwwroot\assets\biz\css\responsive\_tablet.css
+wwwroot\assets\biz\css\responsive\_tablet.min.css
 wwwroot\assets\biz\css\responsive\_tablet.scss
 wwwroot\assets\biz\css\responsive\modal.css
 wwwroot\assets\biz\css\responsive\modal.css.map

@@ -22,8 +22,6 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTm
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTmp\Out\SevenZip.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTmp\Out\Mapster.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTmp\Out\Mapster.Core.dll
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTmp\Out\System.Net.Http.Formatting.dll
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTmp\Out\System.Web.Http.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Authorization.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -89,7 +87,6 @@ G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTm
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTmp\Out\MimeTypes.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTmp\Out\Mono.TextTemplating.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll
-G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.Bson.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTmp\Out\NuGet.Common.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTmp\Out\NuGet.Configuration.dll
 G:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parsyn.Apps.Web\obj\Release\net8.0\PubTmp\Out\NuGet.DependencyResolver.Core.dll

@@ -60,23 +60,11 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-YkdA/EWRLtAsW1GbJ6aa145a1XgM7AFxPgN5NdSoZUU="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"781"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022YkdA/EWRLtAsW1GbJ6aa145a1XgM7AFxPgN5NdSoZUU=\u0022"},{"Name":"Last-Modified","Value":"Thu, 16 Jan 2025 09:36:04 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/index.6qpfqjmvcq.scss">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\index.scss'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"6qpfqjmvcq"},{"Name":"integrity","Value":"sha256-/tUIN2zx3HhrbuWXF3XdM4/K4i2fVqnQvqoIlQO1UUY="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/index.scss"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"71149"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022/tUIN2zx3HhrbuWXF3XdM4/K4i2fVqnQvqoIlQO1UUY=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Mar 2025 09:23:37 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/index.a6f4qfjzga.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\index.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"a6f4qfjzga"},{"Name":"integrity","Value":"sha256-LvQ5fBMd\u002BX/ysP8MLLiyKDEUry3valpwR5DMOCiK7Pg="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/index.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"148921"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022LvQ5fBMd\u002BX/ysP8MLLiyKDEUry3valpwR5DMOCiK7Pg=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Mar 2025 09:35:20 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/index.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\index.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-LvQ5fBMd\u002BX/ysP8MLLiyKDEUry3valpwR5DMOCiK7Pg="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"148921"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022LvQ5fBMd\u002BX/ysP8MLLiyKDEUry3valpwR5DMOCiK7Pg=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Mar 2025 09:35:20 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-DghoGjkQtgaWqfZoElGRJYu97hUyfDlDzlW4\u002BzslBsM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"150510"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022DghoGjkQtgaWqfZoElGRJYu97hUyfDlDzlW4\u002BzslBsM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 05:59:40 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/index.css.2f85rama00.map">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\index.css.map'))</AssetFile>
@@ -93,32 +81,44 @@
     <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/index.min.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\index.min.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-QsICbB2a5DrEfNBkY8sIH0TtFN5UXWcg3k\u002BA8VD6ivk="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"120688"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022QsICbB2a5DrEfNBkY8sIH0TtFN5UXWcg3k\u002BA8VD6ivk=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Mar 2025 09:35:21 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-5/xQvn\u002BBZsTBa3G0eI9g1rRjjiVJk9jGQeOorcP6uZE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"121943"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00225/xQvn\u002BBZsTBa3G0eI9g1rRjjiVJk9jGQeOorcP6uZE=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 05:59:40 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/index.min.yf4dyd3koo.css">
+    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/index.min.p8egvmsg5s.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\index.min.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"yf4dyd3koo"},{"Name":"integrity","Value":"sha256-QsICbB2a5DrEfNBkY8sIH0TtFN5UXWcg3k\u002BA8VD6ivk="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/index.min.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"120688"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022QsICbB2a5DrEfNBkY8sIH0TtFN5UXWcg3k\u002BA8VD6ivk=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Mar 2025 09:35:21 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"p8egvmsg5s"},{"Name":"integrity","Value":"sha256-5/xQvn\u002BBZsTBa3G0eI9g1rRjjiVJk9jGQeOorcP6uZE="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/index.min.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"121943"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00225/xQvn\u002BBZsTBa3G0eI9g1rRjjiVJk9jGQeOorcP6uZE=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 05:59:40 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/index.q3ow3nxo90.scss">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\index.scss'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"q3ow3nxo90"},{"Name":"integrity","Value":"sha256-\u002Bg5HQR0B7\u002BPebqD8ck\u002BLy7HI6Ftp8UZUys6qLWpSN3c="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/index.scss"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"73183"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022\u002Bg5HQR0B7\u002BPebqD8ck\u002BLy7HI6Ftp8UZUys6qLWpSN3c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 05:52:00 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/index.qmoteaa4e1.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\index.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"qmoteaa4e1"},{"Name":"integrity","Value":"sha256-DghoGjkQtgaWqfZoElGRJYu97hUyfDlDzlW4\u002BzslBsM="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/index.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"150510"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022DghoGjkQtgaWqfZoElGRJYu97hUyfDlDzlW4\u002BzslBsM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 05:59:40 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/index.scss">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\index.scss'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-/tUIN2zx3HhrbuWXF3XdM4/K4i2fVqnQvqoIlQO1UUY="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"71149"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022/tUIN2zx3HhrbuWXF3XdM4/K4i2fVqnQvqoIlQO1UUY=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Mar 2025 09:23:37 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-\u002Bg5HQR0B7\u002BPebqD8ck\u002BLy7HI6Ftp8UZUys6qLWpSN3c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"73183"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022\u002Bg5HQR0B7\u002BPebqD8ck\u002BLy7HI6Ftp8UZUys6qLWpSN3c=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 05:52:00 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/rangeslider.dmnbgdgivx.scss">
+    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/rangeslider.rpu26q7r0l.scss">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\rangeslider.scss'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"dmnbgdgivx"},{"Name":"integrity","Value":"sha256-q8/eqS4UpbfRieK0cyqNu0SYXEgtNAVFvCyH36VDLaA="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/rangeslider.scss"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3119"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022q8/eqS4UpbfRieK0cyqNu0SYXEgtNAVFvCyH36VDLaA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 16:53:00 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rpu26q7r0l"},{"Name":"integrity","Value":"sha256-AVqxDc\u002BDW9ecrZ1xebpV0gBxY9gJYcw2n8u6Yz4SZws="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/rangeslider.scss"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3118"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022AVqxDc\u002BDW9ecrZ1xebpV0gBxY9gJYcw2n8u6Yz4SZws=\u0022"},{"Name":"Last-Modified","Value":"Wed, 16 Apr 2025 09:06:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/rangeslider.scss">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\rangeslider.scss'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-q8/eqS4UpbfRieK0cyqNu0SYXEgtNAVFvCyH36VDLaA="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3119"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022q8/eqS4UpbfRieK0cyqNu0SYXEgtNAVFvCyH36VDLaA=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 16:53:00 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-AVqxDc\u002BDW9ecrZ1xebpV0gBxY9gJYcw2n8u6Yz4SZws="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3118"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022AVqxDc\u002BDW9ecrZ1xebpV0gBxY9gJYcw2n8u6Yz4SZws=\u0022"},{"Name":"Last-Modified","Value":"Wed, 16 Apr 2025 09:06:21 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/responsive/modal.12y147ei77.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\modal.css'))</AssetFile>
@@ -156,53 +156,53 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ereqp4NIkpkp3TmHOCEJf3FVzNZ84pmrk6oIE42EUzs="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3086"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022ereqp4NIkpkp3TmHOCEJf3FVzNZ84pmrk6oIE42EUzs=\u0022"},{"Name":"Last-Modified","Value":"Sat, 11 Jan 2025 17:26:25 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/responsive/_mobile.7ij1wm0gr7.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_mobile.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"7ij1wm0gr7"},{"Name":"integrity","Value":"sha256-Aa\u002B1vCdKcWylZRS5VRsefmbcXJYOZUzc\u002B6bSWo3Zm\u002BI="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/responsive/_mobile.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"43455"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Aa\u002B1vCdKcWylZRS5VRsefmbcXJYOZUzc\u002B6bSWo3Zm\u002BI=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Mar 2025 09:35:18 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/responsive/_mobile.96dgx8tp8b.scss">
+    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/responsive/_mobile.3cbnonvjbd.scss">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_mobile.scss'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"96dgx8tp8b"},{"Name":"integrity","Value":"sha256-T2h0CdvnmpOyghuDAnQM27l\u002BN4nqt0wwPEvwSHB6Cng="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/responsive/_mobile.scss"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"60124"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022T2h0CdvnmpOyghuDAnQM27l\u002BN4nqt0wwPEvwSHB6Cng=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Mar 2025 09:35:18 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"3cbnonvjbd"},{"Name":"integrity","Value":"sha256-3eIieXHG3D\u002BzVgF8qaCAkZRqgtVxNBAp7xtSktnw6a0="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/responsive/_mobile.scss"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"60182"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u00223eIieXHG3D\u002BzVgF8qaCAkZRqgtVxNBAp7xtSktnw6a0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 05:59:37 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/responsive/_mobile.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_mobile.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Aa\u002B1vCdKcWylZRS5VRsefmbcXJYOZUzc\u002B6bSWo3Zm\u002BI="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"43455"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Aa\u002B1vCdKcWylZRS5VRsefmbcXJYOZUzc\u002B6bSWo3Zm\u002BI=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Mar 2025 09:35:18 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-S/H0pe2DQSQUKXRVhnZNfMKZ6xNzDxYScbjw6F9ZD\u002B0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"43482"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022S/H0pe2DQSQUKXRVhnZNfMKZ6xNzDxYScbjw6F9ZD\u002B0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 05:59:38 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/responsive/_mobile.min.ci50emkir8.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_mobile.min.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ci50emkir8"},{"Name":"integrity","Value":"sha256-HD4WwyOtcxXcu1gjxOzn1PRBRujWqX74\u002BdUzMcYsUxg="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/responsive/_mobile.min.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"34412"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HD4WwyOtcxXcu1gjxOzn1PRBRujWqX74\u002BdUzMcYsUxg=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 05:59:38 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/responsive/_mobile.min.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_mobile.min.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-dlQnO5TvzUV4JGy\u002B4HqhV8izrtBJZymewvcBmFma5Tw="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"34391"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022dlQnO5TvzUV4JGy\u002B4HqhV8izrtBJZymewvcBmFma5Tw=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Mar 2025 09:35:18 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-HD4WwyOtcxXcu1gjxOzn1PRBRujWqX74\u002BdUzMcYsUxg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"34412"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022HD4WwyOtcxXcu1gjxOzn1PRBRujWqX74\u002BdUzMcYsUxg=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 05:59:38 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/responsive/_mobile.min.yd0m5xid8i.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_mobile.min.css'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/responsive/_mobile.n5cbnefmfc.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_mobile.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"yd0m5xid8i"},{"Name":"integrity","Value":"sha256-dlQnO5TvzUV4JGy\u002B4HqhV8izrtBJZymewvcBmFma5Tw="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/responsive/_mobile.min.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"34391"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022dlQnO5TvzUV4JGy\u002B4HqhV8izrtBJZymewvcBmFma5Tw=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Mar 2025 09:35:18 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"n5cbnefmfc"},{"Name":"integrity","Value":"sha256-S/H0pe2DQSQUKXRVhnZNfMKZ6xNzDxYScbjw6F9ZD\u002B0="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/responsive/_mobile.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"43482"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022S/H0pe2DQSQUKXRVhnZNfMKZ6xNzDxYScbjw6F9ZD\u002B0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 05:59:38 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/responsive/_mobile.scss">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_mobile.scss'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-T2h0CdvnmpOyghuDAnQM27l\u002BN4nqt0wwPEvwSHB6Cng="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"60124"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022T2h0CdvnmpOyghuDAnQM27l\u002BN4nqt0wwPEvwSHB6Cng=\u0022"},{"Name":"Last-Modified","Value":"Fri, 14 Mar 2025 09:35:18 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-3eIieXHG3D\u002BzVgF8qaCAkZRqgtVxNBAp7xtSktnw6a0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"60182"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u00223eIieXHG3D\u002BzVgF8qaCAkZRqgtVxNBAp7xtSktnw6a0=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 05:59:37 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/responsive/_tablet.g3n6ru2gll.scss">
+    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/responsive/_tablet.ao93cp27t8.scss">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_tablet.scss'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"g3n6ru2gll"},{"Name":"integrity","Value":"sha256-lPKsX\u002B4jWR6\u002B75OULlhAs1g6PGbABo/C946GgLpvY64="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/responsive/_tablet.scss"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"62915"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022lPKsX\u002B4jWR6\u002B75OULlhAs1g6PGbABo/C946GgLpvY64=\u0022"},{"Name":"Last-Modified","Value":"Sat, 01 Mar 2025 15:14:25 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ao93cp27t8"},{"Name":"integrity","Value":"sha256-usOenpnvGL87f4WvU60hf9jz/kXPGpP0YK5rYCr7csQ="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/css/responsive/_tablet.scss"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"62927"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022usOenpnvGL87f4WvU60hf9jz/kXPGpP0YK5rYCr7csQ=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 05:52:32 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/css/responsive/_tablet.scss">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_tablet.scss'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-lPKsX\u002B4jWR6\u002B75OULlhAs1g6PGbABo/C946GgLpvY64="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"62915"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022lPKsX\u002B4jWR6\u002B75OULlhAs1g6PGbABo/C946GgLpvY64=\u0022"},{"Name":"Last-Modified","Value":"Sat, 01 Mar 2025 15:14:25 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-usOenpnvGL87f4WvU60hf9jz/kXPGpP0YK5rYCr7csQ="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"62927"},{"Name":"Content-Type","Value":"application/octet-stream"},{"Name":"ETag","Value":"\u0022usOenpnvGL87f4WvU60hf9jz/kXPGpP0YK5rYCr7csQ=\u0022"},{"Name":"Last-Modified","Value":"Thu, 17 Apr 2025 05:52:32 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/favicon/apple-touch-icon.czeiz352s3.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\favicon\apple-touch-icon.png'))</AssetFile>
@@ -2940,29 +2940,29 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-TAWu/uFgwzrz93R71z/A41p98QKsMofsTg1qB\u002BP2S/s="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"288049"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022TAWu/uFgwzrz93R71z/A41p98QKsMofsTg1qB\u002BP2S/s=\u0022"},{"Name":"Last-Modified","Value":"Sun, 12 Jan 2025 16:57:05 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/js/rang/script.ixanqop42m.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\js\rang\script.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ixanqop42m"},{"Name":"integrity","Value":"sha256-6h56M9sbhl6GVWUzdhM/RrsAZfmScU5axuMeJg8qI/c="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/js/rang/script.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2506"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00226h56M9sbhl6GVWUzdhM/RrsAZfmScU5axuMeJg8qI/c=\u0022"},{"Name":"Last-Modified","Value":"Wed, 16 Apr 2025 10:14:27 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/js/rang/script.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\js\rang\script.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-KW4NTmoa1rzgEe2d3WTRiHl1LF7Rweqw57sHDj170so="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2265"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022KW4NTmoa1rzgEe2d3WTRiHl1LF7Rweqw57sHDj170so=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 16:34:32 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-6h56M9sbhl6GVWUzdhM/RrsAZfmScU5axuMeJg8qI/c="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2506"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00226h56M9sbhl6GVWUzdhM/RrsAZfmScU5axuMeJg8qI/c=\u0022"},{"Name":"Last-Modified","Value":"Wed, 16 Apr 2025 10:14:27 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/js/rang/script.rng2hsf91s.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\js\rang\script.js'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rng2hsf91s"},{"Name":"integrity","Value":"sha256-KW4NTmoa1rzgEe2d3WTRiHl1LF7Rweqw57sHDj170so="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/js/rang/script.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2265"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022KW4NTmoa1rzgEe2d3WTRiHl1LF7Rweqw57sHDj170so=\u0022"},{"Name":"Last-Modified","Value":"Sat, 22 Feb 2025 16:34:32 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/js/script.9ibnboeege.js">
+    <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/js/script.cbjzke7z3j.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\js\script.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"9ibnboeege"},{"Name":"integrity","Value":"sha256-/7qz\u002BXKca4DEApLKtV0rjakPAuIxiI9OvyKYkBCjqfk="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/js/script.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"11875"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022/7qz\u002BXKca4DEApLKtV0rjakPAuIxiI9OvyKYkBCjqfk=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 17:51:03 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"cbjzke7z3j"},{"Name":"integrity","Value":"sha256-ePflJpek7KqMXd0utipp02Exg7ySp/56M9OG3PMJjyI="},{"Name":"label","Value":"_content/Parsyn.Apps.Web/assets/biz/js/script.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"12221"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ePflJpek7KqMXd0utipp02Exg7ySp/56M9OG3PMJjyI=\u0022"},{"Name":"Last-Modified","Value":"Sun, 20 Apr 2025 11:47:46 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/js/script.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\js\script.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-/7qz\u002BXKca4DEApLKtV0rjakPAuIxiI9OvyKYkBCjqfk="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"11875"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022/7qz\u002BXKca4DEApLKtV0rjakPAuIxiI9OvyKYkBCjqfk=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 17:51:03 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ePflJpek7KqMXd0utipp02Exg7ySp/56M9OG3PMJjyI="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"12221"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022ePflJpek7KqMXd0utipp02Exg7ySp/56M9OG3PMJjyI=\u0022"},{"Name":"Last-Modified","Value":"Sun, 20 Apr 2025 11:47:46 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Parsyn.Apps.Web/assets/biz/libs/jquery/jq.3.x.9cah15yrze.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\libs\jquery\jq.3.x.js'))</AssetFile>

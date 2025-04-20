@@ -28,6 +28,9 @@
 									<MudTextField InputType="InputType.Text" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Title" Class="mud-rtl" T="string" Label="عنوان اصلی"></MudTextField>
 								</MudItem>
 								<MudItem xs="12" lg="12">
+									<MudTextField Style="direction:ltr !important" InputType="InputType.Number" Variant="Variant.Outlined" Margin="Margin.Dense" @bind-Value="Model.Sort" T="int" Label="اولویت"></MudTextField>
+								</MudItem>
+								<MudItem xs="12" lg="12">
 									<MudColorPicker @bind-Text="Model.Color" ColorPickerView="ColorPickerView.Spectrum" ShowAlpha ShowSliders Variant="Variant.Outlined" Margin="Margin.Dense" Class="mud-rtl" T="string" Label="رنگ دسته بندی"></MudColorPicker>
 								</MudItem>
 								<MudItem xs="12" lg="12">

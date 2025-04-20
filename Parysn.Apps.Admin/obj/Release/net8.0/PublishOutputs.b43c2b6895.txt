@@ -1,0 +1,5 @@
+F:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\publish\License.txt
+F:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\publish\Config\config.json
+F:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\publish\libman.json
+F:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\publish\emcc-props.json
+F:\Hosein\NET8 PROEJECTS\Parsyn.Bizbaan\Parysn.Apps.Admin\bin\Release\net8.0\publish\web.config

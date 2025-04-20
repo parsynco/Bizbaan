@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zWsczxkP5Es=",
+  "dgSpecHash": "e2INdz5lCeY=",
   "success": true,
   "projectFilePath": "G:\\Hosein\\NET8 PROEJECTS\\Parsyn.Bizbaan\\Parsyn.Apps.Company.Service.Utiles\\Parsyn.Apps.Company.Service.Utiles.csproj",
   "expectedPackageFiles": [
@@ -35,7 +35,6 @@
     "C:\\Users\\Hosein\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.3.1\\microsoft.identitymodel.jsonwebtokens.8.3.1.nupkg.sha512",
     "C:\\Users\\Hosein\\.nuget\\packages\\microsoft.identitymodel.logging\\8.3.1\\microsoft.identitymodel.logging.8.3.1.nupkg.sha512",
     "C:\\Users\\Hosein\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.3.1\\microsoft.identitymodel.tokens.8.3.1.nupkg.sha512",
-    "C:\\Users\\Hosein\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.14\\microsoft.net.illink.tasks.8.0.14.nupkg.sha512",
     "C:\\Users\\Hosein\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Hosein\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\Hosein\\.nuget\\packages\\mimetypemapofficial\\1.0.17\\mimetypemapofficial.1.0.17.nupkg.sha512",

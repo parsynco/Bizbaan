@@ -102,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>a6f4qfjzga</Fingerprint>
-      <Integrity>LvQ5fBMd+X/ysP8MLLiyKDEUry3valpwR5DMOCiK7Pg=</Integrity>
+      <Fingerprint>6330qvfvpd</Fingerprint>
+      <Integrity>ovUMlSncbx5WduzLuDmzHsC/EBwI78BawBdX6iTsDlE=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\index.css'))</OriginalItemSpec>
@@ -120,8 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>6qpfqjmvcq</Fingerprint>
-      <Integrity>/tUIN2zx3HhrbuWXF3XdM4/K4i2fVqnQvqoIlQO1UUY=</Integrity>
+      <Fingerprint>deljlr721x</Fingerprint>
+      <Integrity>FWSywAgGVaQD+0RDIrhe0sL6X64a97NTjK2y4m72rhs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\index.scss'))</OriginalItemSpec>
@@ -156,8 +156,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yf4dyd3koo</Fingerprint>
-      <Integrity>QsICbB2a5DrEfNBkY8sIH0TtFN5UXWcg3k+A8VD6ivk=</Integrity>
+      <Fingerprint>uhmsx10iwf</Fingerprint>
+      <Integrity>HroWltBSig++JGRk40bNtV5GlZcALEnyxycRaaAd9is=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\index.min.css'))</OriginalItemSpec>
@@ -174,8 +174,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>dmnbgdgivx</Fingerprint>
-      <Integrity>q8/eqS4UpbfRieK0cyqNu0SYXEgtNAVFvCyH36VDLaA=</Integrity>
+      <Fingerprint>rpu26q7r0l</Fingerprint>
+      <Integrity>AVqxDc+DW9ecrZ1xebpV0gBxY9gJYcw2n8u6Yz4SZws=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\rangeslider.scss'))</OriginalItemSpec>
@@ -246,8 +246,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7ij1wm0gr7</Fingerprint>
-      <Integrity>Aa+1vCdKcWylZRS5VRsefmbcXJYOZUzc+6bSWo3Zm+I=</Integrity>
+      <Fingerprint>n5cbnefmfc</Fingerprint>
+      <Integrity>S/H0pe2DQSQUKXRVhnZNfMKZ6xNzDxYScbjw6F9ZD+0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_mobile.css'))</OriginalItemSpec>
@@ -264,8 +264,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>96dgx8tp8b</Fingerprint>
-      <Integrity>T2h0CdvnmpOyghuDAnQM27l+N4nqt0wwPEvwSHB6Cng=</Integrity>
+      <Fingerprint>3cbnonvjbd</Fingerprint>
+      <Integrity>3eIieXHG3D+zVgF8qaCAkZRqgtVxNBAp7xtSktnw6a0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_mobile.scss'))</OriginalItemSpec>
@@ -282,11 +282,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yd0m5xid8i</Fingerprint>
-      <Integrity>dlQnO5TvzUV4JGy+4HqhV8izrtBJZymewvcBmFma5Tw=</Integrity>
+      <Fingerprint>ci50emkir8</Fingerprint>
+      <Integrity>HD4WwyOtcxXcu1gjxOzn1PRBRujWqX74+dUzMcYsUxg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_mobile.min.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_tablet.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Parsyn.Apps.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Parsyn.Apps.Web</BasePath>
+      <RelativePath>assets/biz/css/responsive/_tablet.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3kn5ey8jup</Fingerprint>
+      <Integrity>fSNSuxnzy/SWfQ/47B2KOtrMjRMqAGEeibR6T3yowjQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_tablet.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_tablet.scss'))">
       <SourceType>Package</SourceType>
@@ -300,11 +318,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>g3n6ru2gll</Fingerprint>
-      <Integrity>lPKsX+4jWR6+75OULlhAs1g6PGbABo/C946GgLpvY64=</Integrity>
+      <Fingerprint>yh7384wz3b</Fingerprint>
+      <Integrity>tqAtTNWkZq9guBGIWcnvlnLUNz797tgnwb20L9q87Xs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_tablet.scss'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_tablet.min.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Parsyn.Apps.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Parsyn.Apps.Web</BasePath>
+      <RelativePath>assets/biz/css/responsive/_tablet.min.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>4avu14w3tz</Fingerprint>
+      <Integrity>JBUwGf22f6a3wYxiDQfZ1faAMeZXT0BktwLVVdLcIZQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\css\responsive\_tablet.min.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\favicon\apple-touch-icon.png'))">
       <SourceType>Package</SourceType>
@@ -4422,8 +4458,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>rng2hsf91s</Fingerprint>
-      <Integrity>KW4NTmoa1rzgEe2d3WTRiHl1LF7Rweqw57sHDj170so=</Integrity>
+      <Fingerprint>ixanqop42m</Fingerprint>
+      <Integrity>6h56M9sbhl6GVWUzdhM/RrsAZfmScU5axuMeJg8qI/c=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\js\rang\script.js'))</OriginalItemSpec>
@@ -4440,8 +4476,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9ibnboeege</Fingerprint>
-      <Integrity>/7qz+XKca4DEApLKtV0rjakPAuIxiI9OvyKYkBCjqfk=</Integrity>
+      <Fingerprint>fquzlfyvuf</Fingerprint>
+      <Integrity>Vzfn8NBf3j9ZrJ8pG5+y1RErAQqizT+VmnFy3LHEwbw=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\biz\js\script.js'))</OriginalItemSpec>
